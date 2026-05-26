@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -190,20 +190,40 @@ export default function HomePage() {
         />
       </section>
 
-      {/* F) FEATURED PRODUCTS GRID */}
+      {/* F) FEATURED PRODUCTS — Horizontal Scroll Carousel */}
       <section className={styles.featuredSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Featured Products</h2>
-            <p className={styles.sectionSub}>Staff picks from our live inventory</p>
+            <h2 className={styles.sectionTitle}>🔥 Featured Products</h2>
+            <p className={styles.sectionSub}>Staff picks from our live inventory — swipe to explore</p>
           </div>
-          <div className={styles.featuredGrid}>
+        </div>
+        <div className={styles.featuredCarouselWrap}>
+          <button
+            className={`${styles.carouselBtn} ${styles.carouselBtnLeft}`}
+            onClick={() => {
+              const el = document.getElementById("featuredRail");
+              if (el) el.scrollBy({ left: -320, behavior: "smooth" });
+            }}
+            aria-label="Scroll left"
+          >‹</button>
+
+          <div id="featuredRail" className={styles.featuredRail}>
             {featuredStrains.map((strain, i) => (
-              <div key={`${strain.sku}-${i}`}>
+              <div key={`${strain.sku}-${i}`} className={styles.featuredRailItem}>
                 <FlowerCard flower={strain} tierKey={strain.tier} />
               </div>
             ))}
           </div>
+
+          <button
+            className={`${styles.carouselBtn} ${styles.carouselBtnRight}`}
+            onClick={() => {
+              const el = document.getElementById("featuredRail");
+              if (el) el.scrollBy({ left: 320, behavior: "smooth" });
+            }}
+            aria-label="Scroll right"
+          >›</button>
         </div>
       </section>
 

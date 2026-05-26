@@ -94,7 +94,7 @@ export default function BlogPage() {
   const [dynamicPosts, setDynamicPosts] = useState<BlogPost[]>([]);
 
   useEffect(() => {
-    fetch(`${APPS_SCRIPT_URL}?action=blog&store=MCM01`)
+    fetch(`${APPS_SCRIPT_URL}?action=blog&store=MEB01`)
       .then((r) => r.json())
       .then((data) => setDynamicPosts(data.posts || []))
       .catch(() => {});
