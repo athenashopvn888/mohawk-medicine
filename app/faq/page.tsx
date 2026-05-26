@@ -60,7 +60,7 @@ export default function FAQPage() {
       {/* FAQ Banner */}
       <section style={{ width: "100%", overflow: "hidden" }}>
         <img
-          src="/banners/14_Mohawk_FAQ_Info.webp"
+          src="/banners/FAQ.webp"
           alt="Mohawk Medicine FAQ"
           style={{ width: "100%", height: "auto", display: "block" }}
         />

@@ -15,14 +15,14 @@ const TIER_CARDS = [
     slug: "exotic",
     price: "Starting at $10/g",
     tagline: "Ultra-rare top-shelf genetics",
-    banner: "/banners/11_Mohawk_Exotic.webp",
+    banner: "/banners/EXOTIC.webp",
   },
   {
     name: "PREMIUM",
     slug: "premium",
     price: "Starting at $8/g",
     tagline: "Connoisseur-grade strains",
-    banner: "/banners/15_Mohawk_Premium.webp",
+    banner: "/banners/PREMIUM.webp",
   },
   {
     name: "AAA+",
@@ -56,12 +56,12 @@ const TIER_CARDS = [
 
 /* Category Strip Config */
 const CATEGORIES = [
-  { name: "Edibles", slug: "items/edibles", banner: "/banners/17_Mohawk_Edibles.webp" },
+  { name: "Edibles", slug: "items/edibles", banner: "/banners/EDIBLES.webp" },
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/21_Mohawk_Pre_Rolls.webp" },
-  { name: "Nic Vape", slug: "items/vapes", banner: "/banners/18_Mohawk_Nic_Vape.webp" },
+  { name: "Nic Vape", slug: "items/vapes", banner: "/banners/NIC%20VAPE.webp" },
   { name: "THC Vape", slug: "items/vape-disposables", banner: "/banners/22_Mohawk_THC_Vape.webp" },
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/07_Mohawk_Concentrate.webp" },
-  { name: "Magic Stuff", slug: "items/magic", banner: "/banners/16_Mohawk_Magic_Stuff.webp" },
+  { name: "Magic Stuff", slug: "items/magic", banner: "/banners/MAGIC%20STUFF.webp" },
   { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/06_Mohawk_Cigarettes_No_Nicotine.webp" },
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/03_Mohawk_Accessories.webp" },
 ];

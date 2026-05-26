@@ -1,4 +1,4 @@
-﻿/* -- Product & Item Types -- */
+/* -- Product & Item Types -- */
 export interface FlowerProduct {
   sku: string;
   name: string;
@@ -33,14 +33,14 @@ export interface ItemProduct {
   promoImage: string | null;
 }
 
-/* â”€â”€ Data imports (static fallback) â”€â”€ */
+/* ── Data imports (static fallback) ── */
 import flowersJson from "./flowers.json";
 import itemsJson from "./items.json";
 
 export const allFlowers: FlowerProduct[] = flowersJson as FlowerProduct[];
 export const allItems: ItemProduct[] = itemsJson as ItemProduct[];
 
-/* â”€â”€ Live stock fetch from Apps Script â”€â”€ */
+/* ── Live stock fetch from Apps Script ── */
 const APPS_SCRIPT_URL = process.env.APPS_SCRIPT_URL || "";
 
 interface LiveStockResponse {
@@ -98,7 +98,7 @@ export const TIER_CONFIG: Record<
     color: "#f59e0b",
     icon: "\uD83D\uDD25",
     tagline: "Ultra-rare, top-shelf genetics \u00B7 THC 35-39%",
-    banner: "/banners/11_Mohawk_Exotic.webp",
+    banner: "/banners/EXOTIC.webp",
     unitPrice: 20,
     deal3g: { label: "Buy 2g Get 1g FREE", total: "3G", price: 40 },
     deal6g: { label: "Buy 3g Get 3g FREE", total: "6G", price: 60 },
@@ -109,7 +109,7 @@ export const TIER_CONFIG: Record<
     color: "#a78bfa",
     icon: "\uD83D\uDC8E",
     tagline: "Hand-picked connoisseur grade \u00B7 THC 32-34%",
-    banner: "/banners/15_Mohawk_Premium.webp",
+    banner: "/banners/PREMIUM.webp",
     unitPrice: 15,
     deal3g: { label: "Buy 2g Get 1g FREE", total: "3G", price: 30 },
     deal6g: { label: "Buy 3g Get 3g FREE", total: "6G", price: 45 },
@@ -149,7 +149,7 @@ export const TIER_CONFIG: Record<
   },
 };
 
-/* â”€â”€ Item category config â”€â”€ */
+/* ── Item category config ── */
 export interface CategoryInfo {
   name: string; slug: string; color: string; icon: string; banner?: string;
   seoTitle: string; seoIntro: string; seoDescription: string;
@@ -158,11 +158,11 @@ export interface CategoryInfo {
 
 export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   EDIBLES: {
-    banner: "/banners/17_Mohawk_Edibles.webp",
-    name: "Edibles", slug: "edibles", color: "#f97316", icon: "ðŸ¬",
-    seoTitle: "Cannabis Edibles Mohawk â€” Gummies, Chocolates & Drinks",
+    banner: "/banners/EDIBLES.webp",
+    name: "Edibles", slug: "edibles", color: "#f97316", icon: "🍬",
+    seoTitle: "Cannabis Edibles Mohawk — Gummies, Chocolates & Drinks",
     seoIntro: "Browse the full cannabis edibles menu at Mohawk Medicine on Eglinton Ave E, Toronto. We carry THC gummies, chocolates, drinks, and more from top Canadian brands.",
-    seoDescription: "Looking for cannabis edibles in Toronto? Mohawk Medicine stocks a wide range of THC-infused gummies, chocolates, beverages, and baked goods. Our edibles range from micro-dose options for beginners to high-potency products for experienced consumers. All products are lab-tested and sourced from licensed Canadian producers. Visit us at 2655 Eglinton Ave E â€” open daily 24 hours.",
+    seoDescription: "Looking for cannabis edibles in Toronto? Mohawk Medicine stocks a wide range of THC-infused gummies, chocolates, beverages, and baked goods. Our edibles range from micro-dose options for beginners to high-potency products for experienced consumers. All products are lab-tested and sourced from licensed Canadian producers. Visit us at 2655 Eglinton Ave E — open daily 24 hours.",
     faqs: [
       { q: "What cannabis edibles do you carry?", a: "We stock THC gummies, chocolates, beverages, capsules, and baked goods from top Canadian brands. Potencies range from 10mg to 1000mg+ THC." },
       { q: "How long do edibles take to kick in?", a: "Cannabis edibles typically take 30-90 minutes to take effect. Start with a low dose (5-10mg) and wait at least 2 hours before consuming more." },
@@ -171,9 +171,9 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   },
   "VAPE PENS": {
     banner: "/banners/22_Mohawk_THC_Vape.webp",
-    name: "THC Vape", slug: "vapes", color: "#8b5cf6", icon: "ðŸ’¨",
-    seoTitle: "Vape Pens Mohawk â€” THC & Nicotine Cartridges",
-    seoIntro: "Shop THC and nicotine vape pens at Mohawk Medicine, Mohawk. Cartridges, 510-thread batteries, and premium vape brands â€” all in stock.",
+    name: "THC Vape", slug: "vapes", color: "#8b5cf6", icon: "💨",
+    seoTitle: "Vape Pens Mohawk — THC & Nicotine Cartridges",
+    seoIntro: "Shop THC and nicotine vape pens at Mohawk Medicine, Mohawk. Cartridges, 510-thread batteries, and premium vape brands — all in stock.",
     seoDescription: "Mohawk Medicine carries a curated selection of vape pens and cartridges in Toronto. From 510-thread THC cartridges to nicotine vape pods, we stock the most popular brands and flavours. Our knowledgeable budtenders can help you choose the right cartridge and battery setup. Visit us at 2655 Eglinton Ave E for the best vape selection in Scarborough.",
     faqs: [
       { q: "What vape pens do you sell?", a: "We carry 510-thread THC cartridges, nicotine vape pods, disposable vapes, and compatible batteries from top Canadian brands." },
@@ -181,10 +181,10 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     ],
   },
   "VAPE DISPOSABLE": {
-    banner: "/banners/18_Mohawk_Nic_Vape.webp",
-    name: "Nic Vape", slug: "vape-disposables", color: "#a78bfa", icon: "ðŸ’¨",
-    seoTitle: "Disposable Vapes Mohawk â€” THC Disposable Pens",
-    seoIntro: "THC disposable vapes available at Mohawk Medicine, Mohawk. No charging, no refilling â€” just open and enjoy.",
+    banner: "/banners/NIC%20VAPE.webp",
+    name: "Nic Vape", slug: "vape-disposables", color: "#a78bfa", icon: "💨",
+    seoTitle: "Disposable Vapes Mohawk — THC Disposable Pens",
+    seoIntro: "THC disposable vapes available at Mohawk Medicine, Mohawk. No charging, no refilling — just open and enjoy.",
     seoDescription: "Disposable THC vapes are the easiest way to enjoy cannabis on the go. Mohawk Medicine stocks a wide selection of pre-charged, pre-filled disposable vape pens with various strain profiles and potencies. Perfect for beginners and experienced users alike. Visit us at 2655 Eglinton Ave E, Mohawk.",
     faqs: [
       { q: "How long does a disposable vape last?", a: "Most disposable THC vapes contain 0.5g-1g of distillate and last between 100-300 puffs depending on usage." },
@@ -193,9 +193,9 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   },
   CONCENTRATES: {
     banner: "/banners/07_Mohawk_Concentrate.webp",
-    name: "Concentrates", slug: "concentrates", color: "#f59e0b", icon: "ðŸ’Ž",
-    seoTitle: "Cannabis Concentrates Mohawk â€” Shatter, Wax, Hash & Live Resin",
-    seoIntro: "Premium cannabis concentrates at Mohawk Medicine, Mohawk. Shatter, wax, hash, live resin, and diamonds â€” all in stock.",
+    name: "Concentrates", slug: "concentrates", color: "#f59e0b", icon: "💎",
+    seoTitle: "Cannabis Concentrates Mohawk — Shatter, Wax, Hash & Live Resin",
+    seoIntro: "Premium cannabis concentrates at Mohawk Medicine, Mohawk. Shatter, wax, hash, live resin, and diamonds — all in stock.",
     seoDescription: "Mohawk Medicine offers a premium selection of cannabis concentrates in Toronto. From traditional hash and kief to modern extracts like shatter, wax, live resin, and THC diamonds, we carry products for every preference and potency level. Our concentrates are sourced from trusted extractors and tested for purity. Visit us at 2655 Eglinton Ave E.",
     faqs: [
       { q: "What types of concentrates do you carry?", a: "We stock shatter, wax, budder, live resin, rosin, hash, kief, and THC diamonds from top Canadian extractors." },
@@ -203,19 +203,19 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     ],
   },
   PREROLLS: {
-    banner: "/banners/21_Mohawk_Pre_Rolls.webp", name: "Pre-Rolls", slug: "prerolls", color: "#22c55e", icon: "ðŸš¬",
-    seoTitle: "Pre-Rolls Mohawk â€” Ready-to-Smoke Cannabis Joints",
-    seoIntro: "Pre-rolled cannabis joints at Mohawk Medicine, Mohawk. Singles, multi-packs, and infused pre-rolls â€” ready to light up.",
-    seoDescription: "Skip the rolling and grab a pre-roll from Mohawk Medicine in Toronto. We carry singles, multi-packs, and infused pre-rolls from premium flower. Whether you want a quick smoke or a party pack, our pre-roll selection has something for everyone. Visit us at 2655 Eglinton Ave E â€” open daily 24 hours.",
+    banner: "/banners/21_Mohawk_Pre_Rolls.webp", name: "Pre-Rolls", slug: "prerolls", color: "#22c55e", icon: "🚬",
+    seoTitle: "Pre-Rolls Mohawk — Ready-to-Smoke Cannabis Joints",
+    seoIntro: "Pre-rolled cannabis joints at Mohawk Medicine, Mohawk. Singles, multi-packs, and infused pre-rolls — ready to light up.",
+    seoDescription: "Skip the rolling and grab a pre-roll from Mohawk Medicine in Toronto. We carry singles, multi-packs, and infused pre-rolls from premium flower. Whether you want a quick smoke or a party pack, our pre-roll selection has something for everyone. Visit us at 2655 Eglinton Ave E — open daily 24 hours.",
     faqs: [
       { q: "What pre-rolls do you carry?", a: "We stock singles, 3-packs, and multi-packs in various strains and potencies, including infused pre-rolls with concentrates." },
-      { q: "Are your pre-rolls made with quality flower?", a: "Yes! Our pre-rolls are filled with ground flower from our regular menu tiers â€” not shake or trim." },
+      { q: "Are your pre-rolls made with quality flower?", a: "Yes! Our pre-rolls are filled with ground flower from our regular menu tiers — not shake or trim." },
     ],
   },
   "ADD ONS": {
     banner: "/banners/03_Mohawk_Accessories.webp",
-    name: "Accessories", slug: "add-ons", color: "#34d399", icon: "âž•",
-    seoTitle: "Cannabis Accessories Mohawk â€” Grinders, Papers, Lighters & More",
+    name: "Accessories", slug: "add-ons", color: "#34d399", icon: "➕",
+    seoTitle: "Cannabis Accessories Mohawk — Grinders, Papers, Lighters & More",
     seoIntro: "Essential cannabis accessories at Mohawk Medicine, Mohawk. Grinders, rolling papers, lighters, trays, and more.",
     seoDescription: "Mohawk Medicine carries all the accessories you need for the perfect smoke session. From premium grinders and rolling papers to lighters, trays, and storage containers, we have everything in stock. Visit us at 2655 Eglinton Ave E, Mohawk.",
     faqs: [
@@ -224,8 +224,8 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   },
   CIGARETTES: {
     banner: "/banners/06_Mohawk_Cigarettes_No_Nicotine.webp",
-    name: "Cigarettes", slug: "cigarettes", color: "#78716c", icon: "ðŸ·ï¸",
-    seoTitle: "Native Cigarettes Mohawk â€” Discount Tobacco at Mohawk Medicine",
+    name: "Cigarettes", slug: "cigarettes", color: "#78716c", icon: "🏷️",
+    seoTitle: "Native Cigarettes Mohawk — Discount Tobacco at Mohawk Medicine",
     seoIntro: "Discount native cigarettes at Mohawk Medicine, Mohawk. Premium and value brands at the best prices on Mohawk St.",
     seoDescription: "Mohawk Medicine is your go-to source for affordable native cigarettes in Toronto. We carry a wide selection of premium and value tobacco brands at competitive prices. Located at 2655 Eglinton Ave E in the heart of Scarborough, we're open daily 24 hours. Stop by for the best cigarette prices in the neighbourhood.",
     faqs: [
@@ -235,9 +235,9 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     ],
   },
   "MAGIC & OTHERS": {
-    banner: "/banners/16_Mohawk_Magic_Stuff.webp",
-    name: "Magic & Others", slug: "magic", color: "#ec4899", icon: "ðŸ„",
-    seoTitle: "Magic Mushrooms & More â€” Mohawk",
+    banner: "/banners/MAGIC%20STUFF.webp",
+    name: "Magic & Others", slug: "magic", color: "#ec4899", icon: "🍄",
+    seoTitle: "Magic Mushrooms & More — Mohawk",
     seoIntro: "Magic mushrooms, psilocybin products, and specialty items at Mohawk Medicine, Mohawk.",
     seoDescription: "Mohawk Medicine carries a curated selection of magic mushrooms and specialty products in Toronto. From micro-dose capsules to dried psilocybin mushrooms, we stock products for both beginners and experienced psychonauts. Visit us at 2655 Eglinton Ave E for our full selection.",
     faqs: [
@@ -247,7 +247,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   },
 };
 
-/* â”€â”€ Helper functions â”€â”€ */
+/* ── Helper functions ── */
 export function getFlowersByTier(tier: string): FlowerProduct[] {
   return allFlowers.filter(
     (f) => f.tier.toUpperCase() === tier.toUpperCase()
@@ -292,7 +292,7 @@ export function getLowestPrice(flower: FlowerProduct): number | null {
 }
 
 export function formatPrice(p: PricePoint | null): string {
-  if (!p) return "â€”";
+  if (!p) return "—";
   if (p.sale !== null) return `$${p.sale}`;
   return `$${p.regular}`;
 }

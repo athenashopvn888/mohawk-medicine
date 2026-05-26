@@ -30,7 +30,7 @@ const TIER_UNIT: Record<string,string> = {
 };
 const TIER_DEAL: Record<string,string> = {
   EXOTIC:"Buy 3g Get 3 FREE", PREMIUM:"Buy 3g Get 3 FREE",
-  "AAA+":"Buy 3g Get 3 FREE", BUDGET:"Buy 2g Get 1g FREE"
+  "AAA+":"Buy 3g Get 3 FREE", BUDGET:"$10 / 3g Special"
 };
 
 
@@ -436,7 +436,7 @@ function OZCard({ flowers, hiIdx }: { flowers: Flower[]; hiIdx: number }) {
             <div className={styles.ozDetailName}>{hi?.name||""}</div>
             <div className={styles.ozDetailMeta}>
               {hi?.thc && <span className={styles.ozDetailThc}>{fmtTHC(hi.thc)}</span>}
-              {hi?.price28g && <><span className={styles.ozDetailSep}>â€¢</span><span className={styles.ozDetailPrice}>oz <b>${hi.price28g.sale ?? hi.price28g.regular}</b></span></>}
+              {hi?.price28g && <><span className={styles.ozDetailSep}>·</span><span className={styles.ozDetailPrice}>oz <b>${hi.price28g.sale ?? hi.price28g.regular}</b></span></>}
             </div>
             {hi?.type && <VibeCard type={hi.type} />}
           </div>
