@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./page.module.css";
@@ -37,7 +37,7 @@ export default function ContactPage() {
               <p>Toronto, ON M1K 2S2</p>
               <p>Scarborough, near Brimley Rd</p>
               <a
-                href="https://maps.google.com/?q=2655+Eglinton+Ave+E,+Toronto,+ON+M1K+2S2"
+                href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.link}
@@ -63,7 +63,7 @@ export default function ContactPage() {
 
           <div className={styles.mapWrap}>
             <iframe
-              src="https://maps.google.com/maps?q=2655%20Eglinton%20Ave%20E%2C%20Toronto%2C%20ON%20M1K%202S2&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6/maps?q=2655%20Eglinton%20Ave%20E%2C%20Toronto%2C%20ON%20M1K%202S2&t=&z=14&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="450"
               style={{ border: 0, display: "block" }}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -192,7 +192,7 @@ export default function BlogPage() {
           </div>
           <div className={styles.reviewsCta}>
             <a
-              href="https://maps.google.com"
+              href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.reviewsBtn}

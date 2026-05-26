@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 import AgeGate from "./components/AgeGate";
 
@@ -34,7 +34,7 @@ const jsonLd = {
   address: { "@type": "PostalAddress", streetAddress: "2655 Eglinton Ave E", addressLocality: "Toronto", addressRegion: "ON", postalCode: "M1K 2S2", addressCountry: "CA" },
   geo: { "@type": "GeoCoordinates", latitude: 43.7615, longitude: -79.265 },
   openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "00:00", closes: "23:59" }],
-  hasMap: "https://maps.google.com/?q=2655+Eglinton+Ave+E,+Toronto,+ON+M1K+2S2",
+  hasMap: "https://maps.app.goo.gl/QLXiNDUaaMBTjKey6",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

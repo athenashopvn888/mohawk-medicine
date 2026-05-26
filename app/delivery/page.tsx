@@ -51,7 +51,7 @@ export default function DeliveryPage() {
               Visit us at 2655 Eglinton Ave E, Toronto, ON M1K 2S2 or contact us to arrange delivery.
             </p>
             <a
-              href="https://maps.google.com/?q=2655+Eglinton+Ave+E,+Toronto,+ON+M1K+2S2"
+              href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
               target="_blank"
               rel="noopener noreferrer"
               style={{ display: "inline-block", padding: "12px 32px", background: "white", color: "#1B5E20", fontFamily: "Inter,system-ui,sans-serif", fontWeight: 700, fontSize: "14px", textTransform: "uppercase", letterSpacing: "0.06em", borderRadius: "8px", textDecoration: "none" }}

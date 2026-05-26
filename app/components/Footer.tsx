@@ -34,7 +34,7 @@ export default function Footer() {
                 closes: "23:59",
               },
             ],
-            hasMap: "https://maps.google.com/?q=2655+Eglinton+Ave+E,+Toronto,+ON+M1K+2S2",
+            hasMap: "https://maps.app.goo.gl/QLXiNDUaaMBTjKey6",
           }),
         }}
       />
@@ -49,7 +49,7 @@ export default function Footer() {
             </p>
             <div className={styles.buttons}>
               <a
-                href="https://maps.google.com/?q=2655+Eglinton+Ave+E,+Toronto,+ON+M1K+2S2"
+                href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.btnPrimary}
@@ -104,7 +104,7 @@ export default function Footer() {
               <Link href="/blog">Blog</Link>
               <Link href="/contact">Contact</Link>
               <a
-                href="https://maps.google.com/?q=2655+Eglinton+Ave+E,+Toronto,+ON+M1K+2S2"
+                href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
                 target="_blank"
                 rel="noopener noreferrer"
               >

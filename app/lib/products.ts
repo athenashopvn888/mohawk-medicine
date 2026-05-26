@@ -66,7 +66,7 @@ export async function fetchLiveProducts(): Promise<{
   }
 
   try {
-    const res = await fetch(`${APPS_SCRIPT_URL}?store=MCM01`, {
+    const res = await fetch(`${APPS_SCRIPT_URL}?store=MEB01`, {
       next: { revalidate: 300 }, // Cache for 5 min during build
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -100,8 +100,8 @@ export const TIER_CONFIG: Record<
     tagline: "Ultra-rare, top-shelf genetics \u00B7 THC 35-39%",
     banner: "/banners/EXOTIC.webp",
     unitPrice: 20,
-    deal3g: { label: "Buy 2g Get 1g FREE", total: "3G", price: 40 },
-    deal6g: { label: "Buy 3g Get 3g FREE", total: "6G", price: 60 },
+    deal3g: { label: "Buy 2g Get 1g FREE = 3g", total: "3G", price: 40 },
+    deal6g: { label: "Buy 3g Get 3g FREE = 6g", total: "6G", price: 60 },
   },
   PREMIUM: {
     name: "Premium",
@@ -111,8 +111,8 @@ export const TIER_CONFIG: Record<
     tagline: "Hand-picked connoisseur grade \u00B7 THC 32-34%",
     banner: "/banners/PREMIUM.webp",
     unitPrice: 15,
-    deal3g: { label: "Buy 2g Get 1g FREE", total: "3G", price: 30 },
-    deal6g: { label: "Buy 3g Get 3g FREE", total: "6G", price: 45 },
+    deal3g: { label: "Buy 2g Get 1g FREE = 3g", total: "3G", price: 30 },
+    deal6g: { label: "Buy 3g Get 3g FREE = 6g", total: "6G", price: 45 },
   },
   "AAA+": {
     name: "AAA+",
@@ -122,8 +122,8 @@ export const TIER_CONFIG: Record<
     tagline: "Heavy hitters, proven strains \u00B7 THC 30-32%",
     banner: "/banners/02_Mohawk_AAA_Plus.webp",
     unitPrice: 10,
-    deal3g: { label: "Buy 2g Get 1g FREE", total: "3G", price: 20 },
-    deal6g: { label: "Buy 3g Get 3g FREE", total: "6G", price: 30 },
+    deal3g: { label: "Buy 2g Get 1g FREE = 3g", total: "3G", price: 20 },
+    deal6g: { label: "Buy 3g Get 3g FREE = 6g", total: "6G", price: 30 },
   },
   AA: {
     name: "AA",
@@ -144,7 +144,7 @@ export const TIER_CONFIG: Record<
     tagline: "Shreds & value OZs \u00B7 From $40/oz",
     banner: "/banners/05_Mohawk_Budget.webp",
     unitPrice: 3,
-    deal3g: { label: "Buy 2g Get 1g FREE", total: "3G", price: 10 },
+    deal3g: { label: "$10 / 3g Special", total: "3G", price: 10 },
     deal6g: null,
   },
 };
