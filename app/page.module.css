@@ -1,0 +1,398 @@
+﻿/* ============================================
+   MOHAWK MEDICINE - HOMEPAGE STYLES
+   ============================================ */
+
+.main {
+  min-height: 100vh;
+  padding-top: 100px; /* navbar height */
+  background: #FFFFFF;
+}
+
+.container {
+  width: min(100% - 2rem, 1440px);
+  margin-inline: auto;
+}
+
+/* ---- HERO BANNER ---- */
+.heroBanner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 5;
+  background: #E8F5E9;
+}
+
+@media (max-width: 768px) { .heroBanner { aspect-ratio: 4 / 3; } }
+
+.heroBannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.heroBannerGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(255,255,255,0.6) 100%);
+}
+
+/* ---- WELCOME STRIP ---- */
+.welcomeStrip {
+  padding: 40px 0 32px;
+  text-align: center;
+  background: #FFFFFF;
+}
+
+.welcomeH1 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  color: #1B5E20;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.welcomeSub {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: #424242;
+  margin-bottom: 20px;
+}
+
+.trustBadges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.trustBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  background: #E8F5E9;
+  color: #1B5E20;
+  border: 1.5px solid rgba(27, 94, 32, 0.2);
+  letter-spacing: 0.04em;
+}
+
+/* ---- TIER SECTION ---- */
+.tierSection {
+  padding: 56px 0;
+  background: #F8FDF8;
+}
+
+.sectionHeader { text-align: center; margin-bottom: 36px; }
+
+.sectionTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: #1A1A1A;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.sectionSub {
+  font-size: 15px;
+  color: #757575;
+}
+
+/* Tier Grid - 3 cols on desktop, 2 on tablet, 1 on mobile */
+.tierGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 640px) { .tierGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .tierGrid { grid-template-columns: repeat(3, 1fr); } }
+
+.tierCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(27, 94, 32, 0.08);
+}
+
+.tierCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(27, 94, 32, 0.2);
+  border-color: rgba(27, 94, 32, 0.25);
+}
+
+.tierCardImg {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  background: #E8F5E9;
+}
+
+.tierCardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.tierCard:hover .tierCardImg img { transform: scale(1.04); }
+
+.tierCardBody {
+  padding: 16px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tierCardBadge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1B5E20;
+  background: #E8F5E9;
+  padding: 4px 10px;
+  border-radius: 100px;
+  width: fit-content;
+  border: 1px solid rgba(27, 94, 32, 0.2);
+}
+
+.tierCardName {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #1A1A1A;
+  letter-spacing: -0.02em;
+}
+
+.tierCardTagline {
+  font-size: 13px;
+  color: #757575;
+}
+
+.tierCardBtn {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1B5E20;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ---- CATEGORY SECTION ---- */
+.categorySection {
+  padding: 40px 0;
+  background: #FFFFFF;
+}
+
+.categoryStrip {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.categoryPill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.categoryPill:hover { transform: translateY(-4px); }
+
+.categoryPillImg {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1.5px solid rgba(27, 94, 32, 0.15);
+  box-shadow: 0 2px 8px rgba(27, 94, 32, 0.1);
+}
+
+.categoryPillName {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1B5E20;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---- HOT BANNER ---- */
+.hotBanner {
+  width: 100%;
+  overflow: hidden;
+  border-top: 3px solid #1B5E20;
+  border-bottom: 3px solid #1B5E20;
+}
+
+.hotBannerImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ---- FEATURED SECTION ---- */
+.featuredSection {
+  padding: 56px 0;
+  background: #F8FDF8;
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 500px) { .featuredGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) { .featuredGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .featuredGrid { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---- ABOUT SECTION ---- */
+.aboutSection {
+  padding: 48px 0;
+  background: #FFFFFF;
+}
+
+.aboutPanel {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+  background: #F8FDF8;
+  border-radius: 16px;
+  border: 1px solid rgba(27, 94, 32, 0.12);
+  box-shadow: 0 4px 20px rgba(27, 94, 32, 0.07);
+}
+
+.aboutTitle {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 800;
+  color: #1B5E20;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.aboutText {
+  font-size: 15px;
+  color: #424242;
+  line-height: 1.75;
+}
+
+/* ---- FAQ SECTION ---- */
+.faqSection {
+  padding: 48px 0;
+  background: #F1F8E9;
+}
+
+.faqList {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faqItem {
+  border: 1px solid rgba(27, 94, 32, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+.faqQ {
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A1A1A;
+  cursor: pointer;
+  list-style: none;
+  transition: background 0.2s ease;
+}
+
+.faqQ:hover { background: #E8F5E9; }
+.faqItem[open] .faqQ { background: #E8F5E9; color: #1B5E20; }
+
+.faqA {
+  padding: 0 20px 16px;
+  font-size: 14px;
+  color: #424242;
+  line-height: 1.7;
+}
+
+/* ---- STORE SECTION ---- */
+.storeSection {
+  padding: 56px 0;
+  background: #FFFFFF;
+}
+
+.storeGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 640px) { .storeGrid { grid-template-columns: repeat(3, 1fr); } }
+
+.storeCard {
+  text-align: center;
+  padding: 28px 20px;
+  background: #F8FDF8;
+  border: 1px solid rgba(27, 94, 32, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(27, 94, 32, 0.06);
+}
+
+.storeIcon { font-size: 32px; display: block; margin-bottom: 12px; }
+
+.storeCardTitle {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1B5E20;
+  margin-bottom: 8px;
+}
+
+.storeCardText {
+  font-size: 14px;
+  color: #424242;
+  line-height: 1.7;
+}
+
+.storeHighlight {
+  font-weight: 700;
+  color: #1B5E20;
+}
+
+.storeLink {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 700;
+  color: #1B5E20;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+/* ---- MAP ---- */
+.mapWrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(27, 94, 32, 0.15);
+  box-shadow: 0 8px 32px rgba(27, 94, 32, 0.1);
+}

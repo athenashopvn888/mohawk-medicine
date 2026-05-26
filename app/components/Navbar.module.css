@@ -1,0 +1,149 @@
+﻿.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #FFFFFF;
+  border-bottom: 2px solid var(--green-mid);
+  box-shadow: 0 2px 12px rgba(27, 94, 32, 0.1);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 56px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logoImg {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.open {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1B5E20;
+  background: #E8F5E9;
+  border: 1.5px solid rgba(27, 94, 32, 0.3);
+  padding: 6px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2E7D32;
+  box-shadow: 0 0 8px #4CAF50;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px #4CAF50; }
+  50% { opacity: 0.5; box-shadow: 0 0 4px #4CAF50; }
+}
+
+.scrollBar {
+  border-top: 1px solid rgba(27, 94, 32, 0.08);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  background: #FAFFFE;
+}
+
+.scrollBar::-webkit-scrollbar { display: none; }
+
+.scrollInner {
+  display: flex;
+  gap: 4px;
+  padding: 8px 20px;
+  min-width: max-content;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.pill:hover {
+  color: var(--green-dark);
+  background: var(--green-pale);
+  border-color: rgba(27, 94, 32, 0.2);
+}
+
+.pill:active { transform: scale(0.96); }
+
+.pillActive {
+  color: #FFFFFF;
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+  box-shadow: 0 2px 8px rgba(27, 94, 32, 0.25);
+}
+
+.pillActive:hover {
+  background: var(--green-mid);
+  border-color: var(--green-mid);
+}
+
+/* Mobile hamburger (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--green-dark);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .hamburger { display: flex; }
+}
