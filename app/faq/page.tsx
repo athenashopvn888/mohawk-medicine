@@ -3,10 +3,12 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "FAQ | Mohawk Medicine — Toronto Cannabis Dispensary",
+  title: "FAQ — Mohawk Medicine | Toronto Dispensary Questions",
   description:
-    "Frequently asked questions about Mohawk Medicine at 2655 Eglinton Ave E, Toronto. Open 24/7, walk-ins welcome.",
-  alternates: { canonical: "https://mohawkmedicine.com/faq" },
+    "Frequently asked questions about Mohawk Medicine in Toronto. Hours, location, products, pricing, promotions, and everything you need to know before visiting.",
+  alternates: {
+    canonical: "https://mohawkmedicine.com/faq",
+  },
 };
 
 const FAQS = [

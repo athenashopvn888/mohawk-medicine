@@ -1,13 +1,20 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact | Mohawk Medicine — Toronto Cannabis Dispensary",
+  title: "Contact Us — Mohawk Medicine | 2655 Eglinton Ave E, Toronto",
   description:
-    "Contact Mohawk Medicine at 2655 Eglinton Ave E, Toronto. Open 24 hours, 7 days a week. Walk-ins always welcome in Scarborough.",
-  alternates: { canonical: "https://mohawkmedicine.com/contact" },
+    "Visit Mohawk Medicine at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Open 24 Hours a day, 7 days a week. Walk-ins welcome.",
+  alternates: {
+    canonical: "https://mohawkmedicine.com/contact",
+  },
+  openGraph: {
+    title: "Contact Mohawk Medicine — Toronto Dispensary",
+    description:
+      "2655 Eglinton Ave E, Toronto. Open 24 Hours a day, 7 days a week. Premium cannabis, always fire.",
+  },
 };
 
 export default function ContactPage() {
@@ -63,7 +70,7 @@ export default function ContactPage() {
 
           <div className={styles.mapWrap}>
             <iframe
-              src="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6/maps?q=2655%20Eglinton%20Ave%20E%2C%20Toronto%2C%20ON%20M1K%202S2&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=2655+Eglinton+Ave+E+Toronto+ON+M1K+2S2&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="450"
               style={{ border: 0, display: "block" }}

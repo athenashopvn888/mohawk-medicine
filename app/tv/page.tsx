@@ -26,7 +26,7 @@ const TIER_CROWN: Record<string,string> = {
   EXOTIC:"👑", PREMIUM:"👑", "AAA+":"👑", AA:"🏅", BUDGET:"💰", OZ:"🎯"
 };
 const TIER_UNIT: Record<string,string> = {
-  EXOTIC:"{{TIER_UNIT_EXOTIC}}", PREMIUM:"{{TIER_UNIT_PREMIUM}}", "AAA+":"{{TIER_UNIT_AAA}}", AA:"{{TIER_UNIT_AA}}", BUDGET:"{{TIER_UNIT_BUDGET}}"
+  EXOTIC:"$20/G", PREMIUM:"$15/G", "AAA+":"$10/G", AA:"$5/G", BUDGET:"$3.33/G"
 };
 const TIER_DEAL: Record<string,string> = {
   EXOTIC:"Buy 3g Get 3 FREE", PREMIUM:"Buy 3g Get 3 FREE",
@@ -671,11 +671,11 @@ function AddOnsCard({ items, hiIdx }: { items: Item[]; hiIdx: number }) {
    VERTICAL TICKER
    ============================================================ */
 const TICKER_SLIDES = [
-  "🔥 {{STORE_NAME}} — {{STREET_ADDRESS}}, {{CITY}}",
+  "🔥 Mohawk Medicine — 2655 Eglinton Ave E, Toronto",
   "200+ Strains In Stock",
   "Open 24 Hours",
   "ALL SALES ARE FINAL",
-  "🎮 Play Games at {{DOMAIN_NAME}}/games",
+  "🎮 Play Games at mohawkmedicine.com/games",
 ];
 
 function VerticalTicker() {

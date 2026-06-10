@@ -1,4 +1,4 @@
-﻿import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
@@ -30,6 +30,9 @@ export async function generateMetadata({
   return {
     title: catInfo.config.seoTitle || `${catInfo.config.name} — ${items.length} Products`,
     description: catInfo.config.seoIntro || `Shop ${items.length} ${catInfo.config.name.toLowerCase()} at Mohawk Medicine.`,
+    alternates: {
+      canonical: `https://mohawkmedicine.com/items/${catSlug}`,
+    },
   };
 }
 
@@ -120,7 +123,7 @@ export default async function ItemsCategoryPage({
               2655 Eglinton Ave E, Toronto, ON M1K 2S2 · Open 24 Hours
             </p>
             <a
-              href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
+              href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.visitBtn}
@@ -141,7 +144,15 @@ function ItemCard({ item, catColor }: { item: ItemProduct; catColor: string }) {
     <Link href={`/item/${item.slug}`} className={styles.card} style={{ "--cat-color": catColor } as React.CSSProperties}>
       <div className={styles.cardMedia}>
         {item.image ? (
-          <img src={item.image} alt={item.name} loading="lazy" className={styles.cardImg} />
+          <img src={item.image} alt={item.name} loading="lazy" className={styles.cardImg} 
+            onError={(e) => {
+              const t = e.currentTarget;
+              if (t.src.indexOf('r2.dev') !== -1 || t.src.indexOf('images.torontodispensaryhub.com') !== -1) {
+                const filename = t.src.split('/').pop();
+                t.src = 'https://athena-cannabis-images.vercel.app/products/' + filename;
+              }
+            }}
+          />
         ) : (
           <div className={styles.cardPlaceholder}>
             {item.name[0]}
