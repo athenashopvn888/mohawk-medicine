@@ -48,6 +48,17 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Toronto, Scarborough" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-56DQVKRW14"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-56DQVKRW14');
+            `
+          }}
+        />
       </head>
       <body>
         {children}
