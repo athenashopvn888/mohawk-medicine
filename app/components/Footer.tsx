@@ -76,6 +76,10 @@ export default function Footer() {
               <span className={styles.highlight}>Open 24 Hours / 7 Days a Week</span>
             </div>
             <div className={styles.infoBlock}>
+              <span className={styles.infoLabel}>Phone</span>
+              <span>(437) 577-1809</span>
+            </div>
+            <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Website</span>
               <span>mohawkmedicine.com</span>
             </div>

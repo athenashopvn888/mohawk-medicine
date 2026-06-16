@@ -104,7 +104,7 @@ export default async function SeoLandingPage({
             <h2 className={styles.sectionTitle}>Find Us</h2>
             <div className={styles.mapWrap}>
               <iframe
-                src="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6/maps?q=2655%20Eglinton%20Ave%20E,%20Toronto,%20ON%20M1K%202S2%20M9N%202S1&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=2655+Eglinton+Ave+E,+Toronto,+ON+M1K+2S2&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="350"
                 style={{ border: 0, borderRadius: "var(--radius-lg)" }}

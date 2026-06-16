@@ -299,7 +299,7 @@ export default function HomePage() {
           {/* I) GOOGLE MAP */}
           <div className={styles.mapWrap}>
             <iframe
-              src="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6/maps?q=2655%20Eglinton%20Ave%20E%2C%20Toronto%2C%20ON%20M1K%202S2&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=2655+Eglinton+Ave+E,+Toronto,+ON+M1K+2S2&t=&z=14&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="400"
               style={{ border: 0, display: "block", borderRadius: "12px" }}
