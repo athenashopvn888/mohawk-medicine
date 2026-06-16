@@ -23,8 +23,8 @@ export default function Footer() {
             },
             geo: {
               "@type": "GeoCoordinates",
-              latitude: 43.7615,
-              longitude: -79.265,
+              latitude: 43.7330,
+              longitude: -79.2500,
             },
             openingHoursSpecification: [
               {
