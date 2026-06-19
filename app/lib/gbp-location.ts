@@ -24,8 +24,8 @@ export const gbpLocation = {
     "Accessories"
   ],
   menuUrl: "/",
-  directionsUrl: "https://maps.google.com",
-  mapEmbedUrl: "https://maps.google.com/maps?q=Mohawk%20Medicine%202655%20Eglinton%20Ave%20E%2C%20Toronto%2C%20ON%20M1K%202S2&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  directionsUrl: "https://www.google.com/maps/search/?api=1&query=2655%20Eglinton%20Ave%20E%2C%20Toronto%2C%20ON%20M1K%202S2",
+  mapEmbedUrl: "https://maps.google.com/maps?q=2655%20Eglinton%20Ave%20E%2C%20Toronto%2C%20ON%20M1K%202S2&t=&z=15&ie=UTF8&iwloc=&output=embed",
   latitude: "43.7330",
   longitude: "-79.2500",
   hours: ["Open 24 Hours"],
