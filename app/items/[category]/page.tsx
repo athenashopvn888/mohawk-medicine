@@ -123,14 +123,6 @@ export default async function ItemsCategoryPage({
             <p className={styles.visitText}>
               2655 Eglinton Ave E, Toronto, ON M1K 2S2 · Open 24 Hours
             </p>
-            <a
-              href="https://maps.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.visitBtn}
-            >
-              📍 Get Directions
-            </a>
           </div>
         </div>
       </section>

@@ -191,14 +191,6 @@ export default function BlogPage() {
             ))}
           </div>
           <div className={styles.reviewsCta}>
-            <a
-              href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.reviewsBtn}
-            >
-              📍 See All Reviews on Google
-            </a>
           </div>
         </div>
       </section>

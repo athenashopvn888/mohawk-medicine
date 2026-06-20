@@ -234,29 +234,6 @@ export default function DeliveryContent() {
           }}>
             Meanwhile — Visit Us In-Store
           </p>
-          <a
-            href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '12px 24px',
-              border: '1.5px solid rgba(255,255,255,0.25)',
-              borderRadius: '8px',
-              color: 'rgba(255,255,255,0.85)',
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '14px',
-              fontWeight: 600,
-              textDecoration: 'none',
-              transition: 'all 0.2s',
-              backdropFilter: 'blur(8px)',
-              background: 'rgba(255,255,255,0.06)',
-            }}
-          >
-            📍 2655 Eglinton Ave E, Toronto
-          </a>
         </div>
       </div>
 

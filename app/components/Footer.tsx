@@ -34,7 +34,6 @@ export default function Footer() {
                 closes: "23:59",
               },
             ],
-            hasMap: "https://maps.app.goo.gl/QLXiNDUaaMBTjKey6",
           }),
         }}
       />
@@ -48,14 +47,6 @@ export default function Footer() {
               Scarborough. Open every day, all day. Walk-ins always welcome.
             </p>
             <div className={styles.buttons}>
-              <a
-                href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.btnPrimary}
-              >
-                Get Directions
-              </a>
               <Link href="/contact" className={styles.btnSecondary}>
                 Contact Us
               </Link>
@@ -108,13 +99,6 @@ export default function Footer() {
               <Link href="/blog">Blog</Link>
               <Link href="/weed-dispensary-toronto/">Mohawk Medicine Weed Dispensary in Toronto</Link>
               <Link href="/contact">Contact</Link>
-              <a
-                href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Google Maps
-              </a>
             </nav>
           </div>
         </div>

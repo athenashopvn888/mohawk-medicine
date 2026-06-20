@@ -43,14 +43,6 @@ export default function ContactPage() {
               <p>2655 Eglinton Ave E</p>
               <p>Toronto, ON M1K 2S2</p>
               <p>Scarborough, near Brimley Rd</p>
-              <a
-                href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                Get Directions →
-              </a>
             </div>
 
             <div className={styles.infoCard}>
@@ -69,16 +61,6 @@ export default function ContactPage() {
           </div>
 
           <div className={styles.mapWrap}>
-            <iframe
-              src="https://maps.google.com/maps?q=2655+Eglinton+Ave+E+Toronto+ON+M1K+2S2&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="450"
-              style={{ border: 0, display: "block" }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Mohawk Medicine Location"
-            />
           </div>
         </div>
       </div>

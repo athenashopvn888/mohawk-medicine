@@ -268,14 +268,6 @@ export default function HomePage() {
               <p className={styles.storeCardText}>
                 2655 Eglinton Ave E<br />
                 Toronto, ON M1K 2S2<br />
-                <a
-                  href="https://maps.app.goo.gl/QLXiNDUaaMBTjKey6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.storeLink}
-                >
-                  Get Directions →
-                </a>
               </p>
             </div>
             <div className={styles.storeCard}>
@@ -298,16 +290,6 @@ export default function HomePage() {
 
           {/* I) GOOGLE MAP */}
           <div className={styles.mapWrap}>
-            <iframe
-              src="https://maps.google.com/maps?q=2655+Eglinton+Ave+E,+Toronto,+ON+M1K+2S2&t=&z=14&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="400"
-              style={{ border: 0, display: "block", borderRadius: "12px" }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Mohawk Medicine — 2655 Eglinton Ave E, Toronto"
-            ></iframe>
           </div>
         </div>
       </section>

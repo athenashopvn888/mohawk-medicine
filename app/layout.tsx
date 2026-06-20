@@ -34,7 +34,6 @@ const jsonLd = {
   address: { "@type": "PostalAddress", streetAddress: "2655 Eglinton Ave E", addressLocality: "Toronto", addressRegion: "ON", postalCode: "M1K 2S2", addressCountry: "CA" },
   geo: { "@type": "GeoCoordinates", latitude: 43.7330, longitude: -79.2500 },
   openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "00:00", closes: "23:59" }],
-  hasMap: "https://maps.app.goo.gl/QLXiNDUaaMBTjKey6",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

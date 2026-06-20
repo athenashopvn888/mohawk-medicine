@@ -98,7 +98,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
 
   BUDGET: {
     seoTitle: "Budget Cannabis Scarborough â€” Cheap Weed From $3/g",
-    seoIntro: "Cheap weed in Toronto, Scarborough starting at $3/g. Mohawk Medicine Budget tier features shreds and value ounces for cost-conscious smokers. Open daily on Scarborough St.",
+    seoIntro: "Cheap weed in Toronto, Scarborough starting at $3/g. Mohawk Medicine Budget tier features shreds and value ounces for cost-conscious smokers. Check current store hours before visiting Mohawk Medicine.",
     sections: [
       {
         heading: "Affordable Cannabis Without Compromise",
