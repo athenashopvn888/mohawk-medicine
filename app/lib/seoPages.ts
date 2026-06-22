@@ -1,4 +1,4 @@
-﻿/* â”€â”€ Geo-targeted SEO landing pages for Mohawk Medicine / Scarborough keywords â”€â”€ */
+/* â”€â”€ Geo-targeted SEO landing pages for Mohawk Medicine / Scarborough keywords â”€â”€ */
 
 export interface SeoPageData {
   slug: string;
@@ -39,8 +39,8 @@ export const SEO_PAGES: SeoPageData[] = [
         body: "Unlike most dispensaries that close at midnight, Mohawk Medicine is open around the clock â€” 24 hours a day, 7 days a week, 365 days a year. Whether you're finishing a late shift, heading out for the night, or need something at 3 AM, our doors are always open. We're centrally located at 2655 Eglinton Ave E, steps from Weston Road, near major TTC bus routes, and minutes from the Weston GO Station and Highway 401. Free street parking is available in the evenings.",
       },
       {
-        heading: "Unbeatable Promotions on Every Purchase",
-        body: "Every purchase at Mohawk Medicine comes with our signature promotions. Our Buy 2g Get 1g FREE deal applies to every single tier â€” you always get a bonus gram. Our top three tiers (Exotic, Premium, and AAA+) also qualify for Buy 3g Get 3g FREE, effectively doubling your order. Combined with our already competitive pricing, Mohawk Medicine offers some of the best cannabis value in Mohawk, Toronto, and the surrounding area.",
+        heading: "Clear Bundle Pricing on Flower",
+        body: "Every purchase at Mohawk Medicine comes with our bundle offers. Our 3g bundle offer applies to every single tier â€” the 3g total is shown clearly before purchase. Our top three tiers (Exotic, Premium, and AAA+) also qualify for 6g bundle pricing for 6g total. Combined with our already competitive pricing, Mohawk Medicine offers some of the best cannabis value in Mohawk, Toronto, and the surrounding area.",
       },
       {
         heading: "Serving Mohawk, Toronto & Mississauga",
@@ -51,9 +51,9 @@ export const SEO_PAGES: SeoPageData[] = [
       { q: "Where is Mohawk Medicine located?", a: "We are located at 2655 Eglinton Ave E, Toronto, ON M1K 2S2 â€” in the heart of Weston and Mount Dennis, one of Mohawk's most accessible neighbourhoods. We're near the Weston GO Station, Highway 401, and major bus routes." },
       { q: "What are the hours for Mohawk Medicine?", a: "We are open 24 hours a day, 7 days a week, 365 days a year. Walk in anytime â€” no appointment needed. Whether it's 2 PM or 2 AM, our staff is here to help." },
       { q: "What cannabis products does Mohawk Medicine carry?", a: "We carry 200+ strains of cannabis flower across 5 quality tiers (Exotic, Premium, AAA+, AA, Budget), plus edibles, vapes, concentrates, pre-rolls, native cigarettes, and accessories. Our menu updates in real time online." },
-      { q: "What is the cheapest weed at Mohawk Medicine?", a: "Our Budget tier starts at $3/g with value ounces from $40. Our AA tier is $4/g. Every tier includes our Buy 2g Get 1g FREE promotion, making our prices even more competitive." },
+      { q: "What is the cheapest weed at Mohawk Medicine?", a: "Our Budget tier starts at $3/g with value ounces from $40. Our AA tier is $4/g. Every tier includes our 3g bundle pricing, making our prices even more competitive." },
       { q: "Does Mohawk Medicine have a live menu?", a: "Yes! Our online menu at mohawkmedicine.com updates in real time with current stock, prices, and availability. You can see exactly what we have before you visit." },
-      { q: "What makes Mohawk Medicine different from other Mohawk dispensaries?", a: "Three things set us apart: (1) We're open 24 hours, (2) our transparent 5-tier pricing system means no confusing markups, and (3) every purchase includes our Buy 2g Get 1g FREE promotion. Plus we carry one of Mohawk's largest selections with over 200 strains." },
+      { q: "What makes Mohawk Medicine different from other Mohawk dispensaries?", a: "Three things set us apart: (1) We're open 24 hours, (2) our transparent 5-tier pricing system means no confusing markups, and (3) every purchase includes our 3g bundle pricing. Plus we carry one of Mohawk's largest selections with over 200 strains." },
       { q: "Can I check stock before visiting?", a: "Absolutely. Visit mohawkmedicine.com to see our live menu. All flower, edibles, vapes, and accessories are listed with real-time stock status, THC levels, and pricing." },
       { q: "Is there parking near Mohawk Medicine?", a: "Yes. Free street parking is available in the evenings on Eglinton Ave E and surrounding residential streets. We're also easily accessible via TTC." },
     ],
@@ -62,7 +62,7 @@ export const SEO_PAGES: SeoPageData[] = [
   {
     slug: "cheap-weed-york",
     title: "Cheap Weed Mohawk â€” Budget Cannabis Deals From $3/g | Mohawk Medicine",
-    metaDescription: "Looking for cheap weed in Mohawk? Mohawk Medicine has budget flower from $3/g, ounces from $40, and Buy 2g Get 1g FREE promos. Open 24 hours at 2655 Eglinton Ave E.",
+    metaDescription: "Looking for cheap weed in Mohawk? Mohawk Medicine has budget flower from $3/g, ounces from $40, and 3g bundle pricing. Open 24 hours at 2655 Eglinton Ave E.",
     h1: "Cheap Weed Mohawk â€” Budget Cannabis Deals",
     icon: "ðŸ’°",
     heroTagline: "Budget Flower From $3/g Â· Ounces From $40 Â· Always Open",
@@ -73,8 +73,8 @@ export const SEO_PAGES: SeoPageData[] = [
         body: "Looking for cheap weed in Mohawk without sacrificing quality? Mohawk Medicine offers some of the most competitive cannabis prices in the city. Our Budget tier starts at just $3/g with value ounces from $40. Our AA tier ($4/g) and AAA+ tier ($5-$6/g) also deliver incredible value with THC levels from 27% to 32%. We believe great cannabis shouldn't break the bank, and our transparent tier-based pricing ensures you always get exactly what you pay for â€” no hidden markups, no gimmicks.",
       },
       {
-        heading: "Unbeatable Promotions That Stack",
-        body: "Every tier at Mohawk Medicine comes with our signature Buy 2g Get 1g FREE promotion â€” meaning you always get a free gram with every purchase. Our top three tiers (Exotic, Premium, AAA+) also offer Buy 3g Get 3g FREE, effectively doubling your order. When you combine our already low prices with these promos, Mohawk Medicine delivers the best cannabis value in Mohawk. A $15 AAA+ 3g purchase actually gets you 3g of flower â€” that's just $5/g for THC 30%+ cannabis.",
+        heading: "Flower Bundle Pricing",
+        body: "Every tier at Mohawk Medicine comes with our signature 3g bundle pricing â€” so the total grams and price are shown before purchase. Our top three tiers (Exotic, Premium, AAA+) also offer 6g bundle pricing for 6g total. When you combine our already low prices with these bundle offers, Mohawk Medicine delivers the best cannabis value in Mohawk. A $15 AAA+ 3g purchase actually gets you 3g of flower â€” that's just $5/g for THC 30%+ cannabis.",
       },
       {
         heading: "Budget Doesn't Mean Low Quality",
@@ -82,15 +82,15 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Compare Our Prices",
-        body: "Budget: $3/g â€” $40/oz. AA: $4/g â€” $90/oz. AAA+: $5-$6/g â€” $100/oz. Premium: $7-$10/g. Exotic: $10-$12/g. Every tier includes Buy 2g Get 1g FREE. Top tiers include Buy 3g Get 3g FREE. These are some of the lowest prices you'll find at any dispensary in Mohawk, Weston, Mount Dennis, Etobicoke, or North Mohawk.",
+        body: "Budget: $3/g â€” $40/oz. AA: $4/g â€” $90/oz. AAA+: $5-$6/g â€” $100/oz. Premium: $7-$10/g. Exotic: $10-$12/g. Every tier includes 3g bundle pricing. Top tiers include 6g bundle pricing. These are some of the lowest prices you'll find at any dispensary in Mohawk, Weston, Mount Dennis, Etobicoke, or North Mohawk.",
       },
     ],
     faqs: [
       { q: "What is the cheapest weed at Mohawk Medicine?", a: "Our Budget tier starts at $3/g with value ounces from $40. These are quality, properly-cured strains at Mohawk's most competitive prices." },
-      { q: "Do you have ounce deals?", a: "Yes! Budget ounces from $40, AA ounces from $90, AAA+ ounces from $100. All with excellent quality, freshness guaranteed, and Buy 2g Get 1g FREE promotions on top." },
+      { q: "Do you have ounce deals?", a: "Yes! Budget ounces from $40, AA ounces from $90, AAA+ ounces from $100. All with excellent quality, freshness guaranteed, and 3g bundle pricing on top." },
       { q: "Is cheap weed still good quality?", a: "Absolutely. Our Budget flower delivers THC 24-27% from trusted Canadian growers. We never sell old, dry, or improperly stored flower. Every product meets our quality standards regardless of price point." },
       { q: "Where can I buy cheap weed in Mohawk?", a: "Mohawk Medicine at 2655 Eglinton Ave E, Mohawk. Open 24 hours a day, walk in anytime, no appointment needed. We're in the heart of Weston neighbourhood." },
-      { q: "What promotions do you offer?", a: "Every tier includes Buy 2g Get 1g FREE (pay for 2g, get 3g). Our Exotic, Premium, and AAA+ tiers also offer Buy 3g Get 3g FREE (pay for 3g, get 6g). These promos apply on every visit." },
+      { q: "What bundle pricing do you offer?", a: "Every tier includes 3g bundle pricing (3g total). Our Exotic, Premium, and AAA+ tiers also offer 6g bundle pricing (6g total). These bundle offers apply on every visit." },
       { q: "Do you offer bulk discounts?", a: "Yes â€” our ounce pricing is deeply discounted compared to per-gram rates. Budget ounces are $40, AA ounces $90, and AAA+ ounces $100. The more you buy, the more you save." },
     ],
   },
@@ -146,7 +146,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Why Make the Drive to Mohawk Medicine?",
-        body: "Mohawk Medicine offers a wider selection and more competitive pricing than most local Peel options. You'll find over 200 strains across five quality tiers â€” from ultra-rare Exotic genetics (THC 35-39%) to affordable Budget flower at just $3/g. Our Buy 2g Get 1g FREE promotion applies to every tier, and our top three tiers offer Buy 3g Get 3g FREE. With prices starting at $3/g and ounces from $40, Mohawk Medicine delivers value that's worth the short drive from Mississauga.",
+        body: "Mohawk Medicine offers a wider selection and more competitive pricing than most local Peel options. You'll find over 200 strains across five quality tiers â€” from ultra-rare Exotic genetics (THC 35-39%) to affordable Budget flower at just $3/g. Our 3g bundle pricing applies to every tier, and our top three tiers offer 6g bundle pricing. With prices starting at $3/g and ounces from $40, Mohawk Medicine delivers value that's worth the short drive from Mississauga.",
       },
       {
         heading: "Open 24 Hours â€” Perfect for Late Night Visits",
@@ -163,9 +163,9 @@ export const SEO_PAGES: SeoPageData[] = [
     ],
     faqs: [
       { q: "How far is Mohawk Medicine from Mississauga?", a: "We're located at 2655 Eglinton Ave E in Mohawk â€” just a 15-20 minute drive from central Mississauga via Highway 401 East." },
-      { q: "Is it worth driving from Mississauga for cannabis?", a: "Absolutely. Mohawk Medicine offers 200+ strains, prices starting at $3/g, and promotions like Buy 2g Get 1g FREE that make the short drive incredibly worthwhile." },
+      { q: "Is it worth driving from Mississauga for cannabis?", a: "Absolutely. Mohawk Medicine offers 200+ strains, prices starting at $3/g, and bundle pricing options like 3g total that make the short drive incredibly worthwhile." },
       { q: "Is Mohawk Medicine open late?", a: "We're open 24 hours a day, 7 days a week. Whether you're driving up from Mississauga at noon or midnight, we're open and ready to serve you." },
-      { q: "What's the cheapest weed near Mississauga?", a: "Mohawk Medicine has Budget flower from $3/g and value ounces from $40. With our Buy 2g Get 1g FREE promo, these are some of the best prices in the Greater Toronto Area." },
+      { q: "What's the cheapest weed near Mississauga?", a: "Mohawk Medicine has Budget flower from $3/g and value ounces from $40. With our 3g bundle pricing, these are some of the best prices in the Greater Toronto Area." },
       { q: "Is there parking at Mohawk Medicine?", a: "Yes. Free evening street parking is available near the store on Eglinton Ave E and surrounding residential streets." },
       { q: "Can I take transit from Mississauga to Mohawk Medicine?", a: "Yes! MiWay connects directly to TTC subway and bus routes that will drop you off right near our location on Eglinton Ave E." },
       { q: "Do you carry products besides cannabis?", a: "Yes â€” we also carry native cigarettes, rolling papers, grinders, and other accessories. Many Mississauga customers appreciate the one-stop convenience." },
@@ -187,7 +187,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Why Choose Mohawk Medicine Over Other Dispensaries?",
-        body: "What sets Mohawk Medicine apart from other Mohawk dispensaries is our combination of selection, pricing, and convenience. We carry 200+ strains across five clear quality tiers â€” no confusing markups, no inconsistent pricing. Our Buy 2g Get 1g FREE promotion applies to every tier, every purchase. And unlike most dispensaries that close at midnight, we're open 24 hours a day, 7 days a week. Whether you need flower, edibles, vapes, or concentrates at any hour, Mohawk Medicine is here.",
+        body: "What sets Mohawk Medicine apart from other Mohawk dispensaries is our combination of selection, pricing, and convenience. We carry 200+ strains across five clear quality tiers â€” no confusing markups, no inconsistent pricing. Our 3g bundle pricing applies to every tier, every purchase. And unlike most dispensaries that close at midnight, we're open 24 hours a day, 7 days a week. Whether you need flower, edibles, vapes, or concentrates at any hour, Mohawk Medicine is here.",
       },
       {
         heading: "Areas We Serve in Greater Toronto Area",
