@@ -5,11 +5,11 @@ import AgeGate from "./components/AgeGate";
 export const metadata: Metadata = {
   metadataBase: new URL("https://mohawkmedicine.com"),
   title: {
-    default: "Mohawk Medicine | Toronto 24-Hour Cannabis Dispensary | 2655 Eglinton Ave E",
+    default: "Mohawk Medicine | 24-Hour Scarborough Cannabis Dispensary",
     template: "%s | Mohawk Medicine",
   },
   description:
-    "Mohawk Medicine - Toronto's premier 24-hour cannabis dispensary at 2655 Eglinton Ave E, Scarborough. 200+ strains, exotic to budget, walk-ins welcome. Open 24/7.",
+    "Mohawk Medicine is a 24-hour cannabis dispensary on Eglinton Ave E in Scarborough with menu categories, local store details, walk-in shopping info, and adult 19+ details. Open 24/7.",
   openGraph: {
     type: "website",
     locale: "en_CA",
