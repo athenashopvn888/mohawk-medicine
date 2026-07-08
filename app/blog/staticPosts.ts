@@ -39,7 +39,7 @@ export const STATIC_POSTS: StaticBlogPost[] = [
     meta_description: "Adult 19+ guide to Mohawk Medicine in Scarborough, with local store-page checks, menu-category context, and safe visit planning.",
     h1: "Mohawk Medicine Scarborough Store Guide for Adults 19+",
     excerpt: "Mohawk Medicine guide for adults 19+ reviewing store information in Scarborough.",
-    author: "Athena SEO Team",
+    author: "The Mohawk Medicine Team",
     date: "2026-07-02",
     category: "Store Guide",
     readTime: "4 min",
