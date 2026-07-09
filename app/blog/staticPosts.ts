@@ -189,17 +189,17 @@ This guide is for adults 19+ who want a simple way to understand Mohawk Medicine
     relatedLinks: [
       {
         title: "Mohawk Medicine store page",
-        url: "https://mohawkmedicine.ca/weed-dispensary-toronto",
+        url: "https://mohawkmedicine.com/weed-dispensary-toronto",
         description: "Store-specific page for directions, contact details, and visit planning."
       },
       {
         title: "Mohawk Medicine homepage",
-        url: "https://mohawkmedicine.ca/",
+        url: "https://mohawkmedicine.com/",
         description: "Store-scoped homepage navigation for adults 19+."
       },
       {
         title: "More Mohawk Medicine guides",
-        url: "https://mohawkmedicine.ca/blog",
+        url: "https://mohawkmedicine.com/blog",
         description: "Store-scoped blog index for future approved guides."
       }
     ],
