@@ -97,6 +97,7 @@ export default function Footer() {
               <Link href="/delivery">Delivery</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/blog">Blog</Link>
+              <Link href="/blog/mohawk-medicine-local-visit-guide-2026">Local Visit Guide</Link>
               <Link href="/weed-dispensary-toronto/">Mohawk Medicine Weed Dispensary in Toronto</Link>
               <Link href="/contact">Contact</Link>
             </nav>
