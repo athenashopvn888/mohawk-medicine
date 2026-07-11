@@ -1,5 +1,6 @@
 export interface StaticBlogPost {
   slug: string;
+  oldTitle?: string;
   title: string;
   seoTitle: string;
   seo_title: string;
@@ -8,309 +9,221 @@ export interface StaticBlogPost {
   h1: string;
   excerpt: string;
   author: string;
+  authorName: string;
+  authorHandle: string;
+  authorRole: string;
   date: string;
+  modifiedDate: string;
   category: string;
   readTime: string;
   content: string;
   faq: string;
   internal_links_used: string;
+  editorialRemark: {
+    label: string;
+    authorName: string;
+    authorHandle: string;
+    authorRole: string;
+    body: string;
+  };
   relatedLinks: Array<{
     title: string;
     url: string;
     description: string;
   }>;
+  rewriteAction?: string;
+  primaryKeyword?: string;
+  wordCount?: number;
 }
 
 export const STORE_BLOG_CONFIG = {
-  storeCode: "MEB01",
-  storeName: "Mohawk Medicine",
-  city: "Toronto",
-  domain: "mohawkmedicine.com",
-  storePath: "/weed-dispensary-toronto",
+  "storeCode": "MEB01",
+  "storeName": "Mohawk Medicine",
+  "city": "Toronto",
+  "domain": "mohawkmedicine.com",
+  "storePath": "/weed-dispensary-toronto"
 };
 
 export const STATIC_POSTS: StaticBlogPost[] = [
   {
-    slug: "mohawk-medicine-scarborough-shopper-guide",
-    title: "Mohawk Medicine Scarborough Store Guide for Adults 19+",
-    seoTitle: "Mohawk Medicine Guide | Toronto Adult 19+",
-    seo_title: "Mohawk Medicine Guide | Toronto Adult 19+",
-    metaDescription: "Adult 19+ guide to Mohawk Medicine in Scarborough, with local store-page checks, menu-category context, and safe visit planning.",
-    meta_description: "Adult 19+ guide to Mohawk Medicine in Scarborough, with local store-page checks, menu-category context, and safe visit planning.",
-    h1: "Mohawk Medicine Scarborough Store Guide for Adults 19+",
-    excerpt: "Mohawk Medicine guide for adults 19+ reviewing store information in Scarborough.",
-    author: "The Mohawk Medicine Team",
-    date: "2026-07-02",
-    category: "Store Guide",
-    readTime: "4 min",
-    content: `## Mohawk Medicine Local Store Guide for Adults 19+
-
-Mohawk Medicine serves adults 19+ looking for store information in Scarborough. Use this guide to get oriented, compare the store page with menu categories, and choose the most useful next step before visiting.
-
-The focus is practical and store-specific: confirm the right storefront, browse helpful category links, and use the store page for directions, contact options, and visit planning.
-
-## Why Local Context Helps
-
-Mohawk Medicine is tied to Eglinton East and Kennedy Road context in Toronto. Useful local content should make the page easier for shoppers to understand by connecting the store to nearby streets, neighbourhood language, and visit-planning details already supported by the site.
-
-Searchers often want to confirm that they are looking at the right storefront before they visit. A concise guide can support that decision by explaining the local context and the most helpful next steps.
-
-## Plan A Better Visit
-
-Start with the official Mohawk Medicine store page, then use the menu/category links to browse what the site makes easy to compare. Shoppers can confirm the right storefront, directions, contact options, and local visit details in one place.
-
-If you need a quick answer before heading out, check the store page first and contact the store directly for help from staff.
-
-## Browse Menu Categories With Confidence
-
-Menu category labels help adults 19+ move quickly from general store research to the product areas they care about. Use them to compare the sections already shown on the site, such as flower, pre-rolls, vapes, edibles, concentrates, accessories, or other store categories.
-
-That makes the page easier to scan and gives shoppers a cleaner path from local research to the right store page.
-
-## Adult 19+ Visit Basics
-
-Adults 19+ should bring valid government identification, confirm the store page before leaving, and use the menu/category links to narrow down what they want to ask about in-store.
-
-The goal is simple: help real shoppers feel confident they are on the right store site and know where to find the next useful page.
-
-## FAQ
-
-### Is this guide for Mohawk Medicine only?
-
-Yes. This guide is written for Mohawk Medicine and the local Toronto context connected to this website.
-
-### How can shoppers check current menu details?
-
-Use the store page and menu/category links before visiting, then ask staff if you need help comparing options.
-
-### Who can use this guide?
-
-This guide is for adults 19+ who want to understand the store page before visiting.
-
-### What is the best next step after reading?
-
-Open the store page, browse the available menu/category sections, and use the contact or directions options when you are ready to plan your visit.`,
-    faq: "",
-    internal_links_used: "[Mohawk Medicine Toronto store page](/weed-dispensary-toronto)\\n[Mohawk Medicine homepage](/)\\n[More Mohawk Medicine guides](/blog)",
-    relatedLinks: [
+    "slug": "mohawk-medicine-scarborough-shopper-guide",
+    "oldTitle": "Mohawk Medicine Scarborough Store Guide for Adults 19+",
+    "title": "Is Mohawk Medicine the Right Weed Dispensary in Scarborough for Your Visit?",
+    "seoTitle": "Mohawk Medicine Weed Dispensary in Scarborough | Visit Guide",
+    "seo_title": "Mohawk Medicine Weed Dispensary in Scarborough | Visit Guide",
+    "metaDescription": "Plan a Scarborough visit to Mohawk Medicine with store-page checks, natural menu-category context, and useful next steps before visiting.",
+    "meta_description": "Plan a Scarborough visit to Mohawk Medicine with store-page checks, natural menu-category context, and useful next steps before visiting.",
+    "h1": "Is Mohawk Medicine the Right Weed Dispensary in Scarborough for Your Visit?",
+    "excerpt": "A practical Scarborough visit guide for adults 19+ checking Mohawk Medicine.",
+    "author": "Cedar Miles",
+    "authorName": "Cedar Miles",
+    "authorHandle": "@CedarCrafts",
+    "authorRole": "House Writer",
+    "date": "2026-07-02",
+    "modifiedDate": "2026-07-11",
+    "category": "Store Guide",
+    "readTime": "4 min",
+    "content": "## Is Mohawk Medicine the Right Weed Dispensary in Scarborough for Your Visit?\n\nShort answer: Mohawk Medicine is the store page to use when you are planning a Scarborough cannabis stop and want the right local context before leaving. Confirm the storefront, scan the menu categories, and use the store page for current details. This guide keeps the decision practical for adults 19+ without turning the visit into guesswork.\n\n## Confirm The Store Before You Compare\n\nSearch results can make nearby cannabis stores blur together, especially when a shopper is comparing a few map listings at the same time. Mohawk Medicine is tied to Scarborough, Eglinton East, Kennedy Road, and nearby east Toronto routes. That local wording is useful because it helps shoppers confirm they are reading about the right storefront before they start comparing menu categories.\n\nThe best first move is simple: open the store page, check that the name and area match the visit you are planning, and then choose the product category you want to browse. A weed dispensary in Scarborough should make that path easy to follow, not force shoppers through a pile of repeated city keywords.\n\nThat matters for commercial searches too. A shopper may search for a cannabis dispensary, weed store, cheap weed, or affordable weed and still need the same basic answer: which store page should they trust for the next step. This article keeps that answer tied to Mohawk Medicine and the local page context already supported by the site.\n\n## What To Check Before Leaving\n\nUse the store page as the final checkpoint before heading out. It is the cleanest place to confirm the store identity, local page context, directions, contact options, and the broad menu path that fits the visit. If timing or a current item question matters, contact the store directly before leaving.\n\nThis is also where practical browsing starts. Some shoppers want affordable weed or budget weed first, while others want premium flower, exotic flower, pre-rolls, edibles, THC vapes, or concentrates. Starting with the right section makes the next question sharper.\n\n## Browse With A Clear First Question\n\nA focused visit usually starts with one question: what category are you trying to compare today? Flower shoppers can use the flower sections. Pre-roll shoppers should start with pre-rolls. Edible, THC vape, concentrate, and accessory shoppers should use those category paths instead of scanning everything at once.\n\nThat does not promise a specific product will be available. Menus change, and the current listing is what matters. The category simply gives the shopper a better way to ask about what is listed right now.\n\n## Keep The Visit Practical\n\nFor Mohawk Medicine, the useful route is: confirm the store page, choose the first category, then ask staff about current listings if something needs clarification. That is enough structure for shoppers who want a cannabis store in Scarborough without adding unsupported claims about inventory, pricing, hours, ratings, or personal experiences.\n\n## Helpful Takeaway\n\nUse this article as a planning guide, not a stock promise. If you want a smoother visit, decide whether you are comparing cheap weed, flower sections, pre-rolls, edibles, THC vapes, concentrates, or accessories before you call or visit. Then use the store page for the current store-specific details.",
+    "faq": "",
+    "internal_links_used": "",
+    "editorialRemark": {
+      "label": "Another House Writer Adds",
+      "authorName": "Ari Craft",
+      "authorHandle": "@AriMohawk",
+      "authorRole": "House Writer",
+      "body": "The useful move here is choosing the first category before the visit. If someone already knows they are comparing flower, pre-rolls, edibles, THC vapes, or concentrates, the store page becomes a faster starting point and the staff question gets much clearer."
+    },
+    "relatedLinks": [
       {
-            "title": "Mohawk Medicine Toronto store page",
-            "url": "https://mohawkmedicine.com/weed-dispensary-toronto",
-            "description": "Primary store-specific destination for current store details after reading the guide."
+        "title": "Mohawk Medicine store page",
+        "url": "https://mohawkmedicine.com/weed-dispensary-toronto",
+        "description": "Primary store page for current store details, directions, and contact options."
       },
       {
-            "title": "Mohawk Medicine homepage",
-            "url": "https://mohawkmedicine.com/",
-            "description": "Store-scoped general navigation for adults 19+."
+        "title": "Mohawk Medicine homepage",
+        "url": "https://mohawkmedicine.com/",
+        "description": "Store-scoped navigation for menu categories and current browsing paths."
       },
       {
-            "title": "More Mohawk Medicine guides",
-            "url": "https://mohawkmedicine.com/blog",
-            "description": "Store-scoped blog index for future approved posts."
-      }
-],
-  },
-  {
-    slug: "mohawk-medicine-price-flower-tier-guide",
-    title: "Mohawk Medicine Price and Flower Tier Guide",
-    seoTitle: "Mohawk Medicine Price Tier Guide",
-    seo_title: "Mohawk Medicine Price Tier Guide",
-    metaDescription: "Mohawk Medicine guide to flower tiers, weight choices, unit value, and store visit planning in Toronto.",
-    meta_description: "Mohawk Medicine guide to flower tiers, weight choices, unit value, and store visit planning in Toronto.",
-    h1: "Mohawk Medicine Price and Flower Tier Guide",
-    excerpt: "A simple guide to Mohawk Medicine flower tiers, weights, and unit value.",
-    author: "The Mohawk Medicine Team",
-    date: "2026-07-09",
-    category: "Price Guide",
-    readTime: "4 min",
-    content: `## Mohawk Medicine Price and Flower Tier Guide
-
-Mohawk Medicine makes flower shopping easier by organizing the menu into clear tiers. Start with the tier that matches the kind of flower you want, then choose the weight that fits your budget and visit.
-
-The simple idea is: pick the grade, compare the weight, and use the live menu before you head in. Larger weights usually improve unit value, so both the total price and the price per gram are worth checking.
-
-## Start With A Tier
-
-Use these tier pages when you want to compare the menu directly:
-
-- [Exotic flower](/exotic): a top-shelf lane for shoppers who want the highest tier first.
-- [Premium flower](/premium): a strong middle-to-top lane for shoppers balancing quality and value.
-- [AAA+ flower](/aaa): a simple quality lane with easy weight comparisons.
-- [AA flower](/aa): a value-focused lane for straightforward everyday browsing.
-- [Budget flower](/budget): the clearest low-cost lane when price is the main priority.
-
-Once the tier feels right, the live menu helps shoppers compare the current strains and weights inside that tier.
-
-## How The Weight Ladder Helps Value
-
-Moving up in weight usually improves the unit value. That means the shopper can look beyond the total price and see how the price per gram changes as the amount gets larger.
-
-Current tier examples commonly shown across the store menu include:
-
-- Exotic flower: 1g at $20/g; 3g at $40, about $13.33/g; 6g at $60, about $10/g.
-- Premium flower: 1g at $15/g; 3g at $30, about $10/g; 6g at $45, about $7.50/g.
-- AAA+ flower: 1g at $10/g; 3g at $20, about $6.67/g; 6g at $30, about $5/g.
-- AA flower: a simple value tier around $4/g where listed on the menu.
-- Budget flower: a low-cost lane around $3/g or $10/3g where listed on the menu.
-
-That structure keeps the buying path easy: choose the grade, choose the weight, and compare the unit value before visiting.
-
-## Match The Visit To The Budget
-
-If the goal is the smallest spend, start with the smaller weight options. If you already know the tier you like, compare the next weight step and see how much the unit value improves. If you want a stronger flower lane, stay in Premium or Exotic and compare from there.
-
-This is why a tiered menu works well for local storefront shopping. It keeps the decision organized, makes value easier to understand, and gives shoppers better questions to ask staff when they visit.
-
-## Use The Live Menu Before Visiting
-
-For the smoothest visit, open the Mohawk Medicine menu before heading out. The live menu is the best place to compare current flower tiers, weights, and store-specific options. The store page is also useful for directions, contact details, and visit planning.
-
-If you are comparing flower tiers in Toronto, use this page as the simple guide, then use the live menu for the current selection.
-
-## Helpful Next Steps
-
-- Compare [Exotic flower](/exotic), [Premium flower](/premium), [AAA+ flower](/aaa), [AA flower](/aa), and [Budget flower](/budget).
-- Open the Mohawk Medicine store page for directions, contact details, and visit planning.
-- Use the blog index for more store-specific guides.
-
-## FAQ
-
-### How do I choose the right flower tier?
-
-Start with the grade that fits the visit, then compare the weight options inside that tier. This makes it easier to balance quality, amount, and budget.
-
-### Why does unit value matter?
-
-Unit value shows the approximate price per gram at different weights. It helps shoppers see how value changes as they move from 1g to larger options like 3g or 6g.
-
-### Why link to each tier page?
-
-Each tier page gives shoppers a faster path to the exact flower lane they want instead of forcing everyone through the full menu first.
-
-### Where should shoppers check current strains?
-
-Use the live menu for current store-specific selection, then use the store page for directions, contact details, and visit planning.`,
-    faq: "",
-    internal_links_used: "[Exotic flower](/exotic)\\n[Premium flower](/premium)\\n[AAA+ flower](/aaa)\\n[AA flower](/aa)\\n[Budget flower](/budget)\\n[Mohawk Medicine store page](/weed-dispensary-toronto)",
-    relatedLinks: [
-      {
-        title: "Exotic flower",
-        url: "https://mohawkmedicine.com/exotic",
-        description: "Top-shelf flower tier for quick comparison."
-      },
-      {
-        title: "Premium flower",
-        url: "https://mohawkmedicine.com/premium",
-        description: "Premium flower tier for quality and value comparison."
-      },
-      {
-        title: "AAA+ flower",
-        url: "https://mohawkmedicine.com/aaa",
-        description: "AAA+ flower tier for easy weight comparisons."
-      },
-      {
-        title: "AA flower",
-        url: "https://mohawkmedicine.com/aa",
-        description: "AA flower tier for straightforward value browsing."
-      },
-      {
-        title: "Budget flower",
-        url: "https://mohawkmedicine.com/budget",
-        description: "Budget flower tier for low-cost browsing."
-      },
-      {
-        title: "Mohawk Medicine store page",
-        url: "https://mohawkmedicine.com/weed-dispensary-toronto",
-        description: "Store-specific page for directions, contact details, and visit planning."
-      }
-    ]
-  },
-  {
-    slug: "mohawk-medicine-local-visit-guide-2026",
-    title: "Mohawk Medicine Local Visit Guide for Adults 19+",
-    seoTitle: "Mohawk Medicine Local Visit Guide | Toronto",
-    seo_title: "Mohawk Medicine Local Visit Guide | Toronto",
-    metaDescription: "Plan a visit to Mohawk Medicine in Toronto with adult 19+ store-page checks, menu-category paths, and local directions context.",
-    meta_description: "Plan a visit to Mohawk Medicine in Toronto with adult 19+ store-page checks, menu-category paths, and local directions context.",
-    h1: "Mohawk Medicine Local Visit Guide for Adults 19+",
-    excerpt: "Mohawk Medicine local visit guide for adults 19+ around Scarborough and east Toronto.",
-    author: "The Mohawk Medicine Team",
-    date: "2026-07-09",
-    category: "Local Guide",
-    readTime: "4 min",
-    content: `Use this guide to confirm the right Mohawk Medicine storefront around Scarborough and east Toronto, understand nearby street context, and choose the most useful store page or menu path before visiting.
-
-For current details, start with the official store page or contact staff before leaving.
-
-## Confirm The Right Storefront
-
-Mohawk Medicine is tied to Scarborough, east Toronto, nearby plazas, and local arterial roads. Local shoppers often compare several map results and store pages at once, so matching the store name, city, and nearby street language matters before making the trip.
-
-If you are checking directions, start with the official store page and confirm the destination there. That keeps the visit focused on the right storefront instead of relying on a copied listing or an old search result.
-
-## Use The Menu Before Visiting
-
-Start with the menu category that matches what you want to compare. Most shoppers move fastest when they check flower tiers, pre-rolls, vapes, edibles, concentrates, and accessories first, then ask staff if they need help choosing between options.
-
-The live menu is the best place for current product details. This guide gives local context and points you toward the pages that are most useful before visiting.
-
-## What To Check Before You Go
-
-- The exact store page and map destination.
-- Current hours, directions, and contact options.
-- Menu categories you want to compare before asking staff.
-- Valid adult 19+ identification for the visit.
-
-## Why The Local Context Matters
-
-Good local store pages should answer real visit-planning questions instead of repeating a city name. Clear store identity, nearby street context, and helpful internal links make it easier for adults 19+ to decide whether they are looking at the right store.
-
-For Mohawk Medicine, that means keeping the page focused on Scarborough and east Toronto, practical category browsing, and direct next steps for shoppers who are ready to plan a visit.
-
-## Helpful Next Steps
-
-- Open the Mohawk Medicine store page for directions and contact details.
-- Use the homepage if you want the broadest store navigation.
-- Browse the blog for more adult 19+ store guides.
-
-## FAQ
-
-### Is this guide only for Mohawk Medicine?
-
-Yes. It is written for Mohawk Medicine and its Toronto local context.
-
-### How can shoppers check current product details?
-
-Use the live menu or contact staff for current store-specific details before visiting.
-
-### What should shoppers check first?
-
-Confirm the store page, then use menu categories and directions to plan the visit.
-
-### Why mention nearby streets and areas?
-
-Nearby street and neighbourhood context helps shoppers confirm they are looking at the right storefront before they leave.`,
-    faq: "",
-    internal_links_used: "[Mohawk Medicine store page](/weed-dispensary-toronto)\\n[Mohawk Medicine homepage](/)\\n[More Mohawk Medicine guides](/blog)",
-    relatedLinks: [
-      {
-        title: "Mohawk Medicine store page",
-        url: "https://mohawkmedicine.com/weed-dispensary-toronto",
-        description: "Primary store-specific page for directions, contact details, and visit planning."
-      },
-      {
-        title: "Mohawk Medicine homepage",
-        url: "https://mohawkmedicine.com/",
-        description: "Store-scoped navigation for adults 19+."
-      },
-      {
-        title: "More Mohawk Medicine guides",
-        url: "https://mohawkmedicine.com/blog",
-        description: "Store-scoped blog index for additional visit-planning guides."
+        "title": "More Mohawk Medicine guides",
+        "url": "https://mohawkmedicine.com/blog",
+        "description": "Store blog index for additional planning and menu guides."
       }
     ],
+    "rewriteAction": "RETITLE AND REWRITE",
+    "primaryKeyword": "weed dispensary in Scarborough",
+    "wordCount": 539
   },
+  {
+    "slug": "mohawk-medicine-price-flower-tier-guide",
+    "oldTitle": "Mohawk Medicine Price and Flower Tier Guide",
+    "title": "How Mohawk Medicine Flower Sections Help Shoppers Compare",
+    "seoTitle": "Mohawk Medicine Flower Sections | Budget to Exotic Flower Guide",
+    "seo_title": "Mohawk Medicine Flower Sections | Budget to Exotic Flower Guide",
+    "metaDescription": "Compare Mohawk Medicine flower sections including Budget, AA, AAA+, Premium, and Exotic without relying on old prices or unsupported stock claims.",
+    "meta_description": "Compare Mohawk Medicine flower sections including Budget, AA, AAA+, Premium, and Exotic without relying on old prices or unsupported stock claims.",
+    "h1": "How Mohawk Medicine Flower Sections Help Shoppers Compare",
+    "excerpt": "How to use Mohawk Medicine flower sections to compare current listings.",
+    "author": "Ari Craft",
+    "authorName": "Ari Craft",
+    "authorHandle": "@AriMohawk",
+    "authorRole": "House Writer",
+    "date": "2026-07-09",
+    "modifiedDate": "2026-07-11",
+    "category": "Price Guide",
+    "readTime": "4 min",
+    "content": "## How Mohawk Medicine Flower Sections Help Shoppers Compare\n\nFlower shopping is easier when the menu has clear sections. Mohawk Medicine gives shoppers a way to start with Budget, AA, AAA+, Premium, or Exotic flower before comparing the current listings. The section name organizes the menu, while the current listing provides the product details.\n\n## Start With The Section That Matches The Visit\n\nIf value is the main priority, the Budget section is the natural first stop for shoppers comparing cheap weed or affordable weed. AA, AAA+, Premium, and Exotic give additional flower sections to compare when the visit is less about the lowest spend and more about browsing a different flower lane.\n\nThe important part is restraint. A section name should help shoppers navigate, but it should not be treated as a guarantee of price, potency, quality, or availability. Current listings can change, so the live menu and staff conversation matter more than any old example.\n\nThis also keeps value language honest. It is natural for shoppers to compare cheap weed, affordable weed, budget weed, premium flower, and exotic flower, but the article should not turn those phrases into a fixed promise. The section gives the shopper a place to start; the current menu gives the shopper the current details.\n\n## Compare The Current Listing, Not A Memory\n\nA practical flower guide should not ask shoppers to memorize past prices or specific strains. Open the flower section, compare what is currently listed, and look at the posted product name, weight, and item details at the time of browsing.\n\nThat approach keeps the page useful for real shopping. Someone looking for budget weed can start with Budget. Someone looking for premium flower or exotic flower can open those sections directly. Someone who wants a wider cannabis store comparison can move between sections without losing the thread.\n\nThe same structure helps staff conversations. Instead of asking a vague flower question, the shopper can say which section they are comparing and what detail still matters: current item, weight, posted price, or another product note shown on the menu. That is a cleaner path than treating the section name as the whole answer.\n\n## Keep Flower Separate From Other Categories\n\nFlower sections are for flower. If the visit is really about pre-rolls, edibles, THC vapes, concentrates, or accessories, use those category paths instead. Each format answers a different shopper question, and mixing every category into one flower decision makes the visit harder than it needs to be.\n\nFor Mohawk Medicine, the cleaner path is to choose the flower section first, then compare current listings inside that section. If the product-specific details still are not clear, ask staff before deciding.\n\n## A Simple Flower Comparison Path\n\nUse this order when browsing the Mohawk Medicine flower menu:\n\n- Pick Budget, AA, AAA+, Premium, or Exotic.\n- Review the current listings in that section.\n- Compare posted product names, weights, and item details.\n- Use the store page if you need store-specific visit information.\n- Ask staff about current items if the listing does not answer the question.\n\nThat keeps the article honest and useful. It supports commercial searches for cheap weed, affordable weed, premium flower, and exotic flower without inventing prices or pretending a specific item is always in stock.",
+    "faq": "",
+    "internal_links_used": "",
+    "editorialRemark": {
+      "label": "Another House Writer Adds",
+      "authorName": "Mohawk Crafts Desk",
+      "authorHandle": "@MohawkCraftsDesk",
+      "authorRole": "Store Editorial Desk",
+      "body": "The section names are useful, but the current listing should do the final work. Start with the flower lane that fits the visit, then compare the posted product details and ask staff if price, weight, or item information needs a current answer."
+    },
+    "relatedLinks": [
+      {
+        "title": "Budget flower",
+        "url": "https://mohawkmedicine.com/budget",
+        "description": "Budget flower section for value-first browsing."
+      },
+      {
+        "title": "AA flower",
+        "url": "https://mohawkmedicine.com/aa",
+        "description": "AA flower section for a separate flower comparison path."
+      },
+      {
+        "title": "AAA+ flower",
+        "url": "https://mohawkmedicine.com/aaa",
+        "description": "AAA+ flower section for current listings in that lane."
+      },
+      {
+        "title": "Premium flower",
+        "url": "https://mohawkmedicine.com/premium",
+        "description": "Premium flower section for shoppers comparing a higher flower lane."
+      },
+      {
+        "title": "Exotic flower",
+        "url": "https://mohawkmedicine.com/exotic",
+        "description": "Exotic flower section for top-tier browsing in the store menu."
+      },
+      {
+        "title": "Mohawk Medicine store page",
+        "url": "https://mohawkmedicine.com/weed-dispensary-toronto",
+        "description": "Store page for current store details before visiting."
+      }
+    ],
+    "rewriteAction": "RETITLE AND REWRITE",
+    "primaryKeyword": "Mohawk Medicine flower sections",
+    "wordCount": 545
+  },
+  {
+    "slug": "mohawk-medicine-local-visit-guide-2026",
+    "oldTitle": "Mohawk Medicine Local Visit Guide for Adults 19+",
+    "title": "Mohawk Medicine Menu Categories for a Focused Toronto Visit",
+    "seoTitle": "Mohawk Medicine Menu Categories | Toronto Cannabis Store Guide",
+    "seo_title": "Mohawk Medicine Menu Categories | Toronto Cannabis Store Guide",
+    "metaDescription": "Use this Mohawk Medicine menu guide to choose among flower, pre-rolls, edibles, THC vapes, concentrates, and accessories before visiting.",
+    "meta_description": "Use this Mohawk Medicine menu guide to choose among flower, pre-rolls, edibles, THC vapes, concentrates, and accessories before visiting.",
+    "h1": "Mohawk Medicine Menu Categories for a Focused Toronto Visit",
+    "excerpt": "A focused Toronto menu-category guide for Mohawk Medicine.",
+    "author": "Mohawk Crafts Desk",
+    "authorName": "Mohawk Crafts Desk",
+    "authorHandle": "@MohawkCraftsDesk",
+    "authorRole": "Store Editorial Desk",
+    "date": "2026-07-09",
+    "modifiedDate": "2026-07-11",
+    "category": "Menu Guide",
+    "readTime": "4 min",
+    "content": "## Mohawk Medicine Menu Categories for a Focused Toronto Visit\n\nA focused cannabis store visit usually starts with the product format. Mohawk Medicine gives adults 19+ several practical starting points: flower, pre-rolls, edibles, THC vapes, concentrates, and accessories. Use the category first, then use the current listing or staff help to answer item-specific questions.\n\n## If You Want Flower\n\nFlower shoppers should start with the flower sections instead of scanning every product format. Budget, AA, AAA+, Premium, and Exotic give the menu a simple structure. The section name organizes browsing, while the current listing provides the product details.\n\nThat helps both value-focused and quality-focused browsing stay natural. A shopper looking for cheap weed or budget weed can start with Budget. A shopper comparing premium flower or exotic flower can use those sections directly. The page does not need to promise stock or a fixed price to be useful.\n\n## If You Want Pre-Rolls\n\nPre-rolls are already rolled cannabis products. If that is the format you want, start with the pre-roll category instead of comparing loose flower first. This keeps the visit focused and makes the staff question easier to answer.\n\n## If You Want Edibles, THC Vapes, Or Concentrates\n\nSome shoppers know the format before they know the exact item. Edibles, THC vapes, and concentrates each deserve their own category path because the comparison details are different. Current listings can change, so treat the category as a starting point rather than a guarantee that a specific item will be available.\n\nAccessories are listed separately from cannabis product categories. They can support a visit, but they should not be mixed into flower, pre-roll, edible, THC vape, or concentrate comparisons.\n\nThat separation is useful for shoppers and for the page itself. A cannabis store menu can mention several commercial categories without pretending they all answer the same need. Flower, pre-rolls, edibles, THC vapes, and concentrates are cannabis product paths; accessories are a separate support category.\n\n## If You Need Store Details First\n\nIf the practical store details matter before the menu, start with the store page. Mohawk Medicine is connected to Scarborough, Eglinton East, Kennedy Road, and nearby east Toronto routes. That local context helps shoppers confirm they are looking at the right Toronto store page before choosing a category.\n\nThis is especially helpful when a shopper is moving from a broad search like weed store or cannabis dispensary into a specific buying question. The store page confirms the local destination. The category page narrows the format. The current listing answers the item-specific part.\n\n## Keep The First Choice Simple\n\nBefore calling or visiting, choose the first path:\n\n- Flower section.\n- Pre-rolls.\n- Edibles.\n- THC vapes.\n- Concentrates.\n- Accessories.\n- Store details.\n\nOnce the first choice is clear, the rest of the visit is easier. Open the category that matches the visit, compare the current listing, then contact the store or ask staff if a product-specific question still needs a current answer.",
+    "faq": "",
+    "internal_links_used": "",
+    "editorialRemark": {
+      "label": "Another House Writer Adds",
+      "authorName": "Cedar Miles",
+      "authorHandle": "@CedarCrafts",
+      "authorRole": "House Writer",
+      "body": "Choosing the format first is the shortcut I would keep. If the shopper already knows it is flower, pre-rolls, edibles, THC vapes, or concentrates, the menu feels less crowded and the store question becomes more practical."
+    },
+    "relatedLinks": [
+      {
+        "title": "Mohawk Medicine store page",
+        "url": "https://mohawkmedicine.com/weed-dispensary-toronto",
+        "description": "Store page for local details before choosing a category."
+      },
+      {
+        "title": "Flower menu sections",
+        "url": "https://mohawkmedicine.com/exotic",
+        "description": "Start with flower sections when comparing flower."
+      },
+      {
+        "title": "Pre-rolls",
+        "url": "https://mohawkmedicine.com/items/prerolls",
+        "description": "Pre-roll category for already rolled cannabis products."
+      },
+      {
+        "title": "Edibles",
+        "url": "https://mohawkmedicine.com/items/edibles",
+        "description": "Edibles category for current edible listings."
+      },
+      {
+        "title": "THC vapes",
+        "url": "https://mohawkmedicine.com/items/vapes",
+        "description": "THC vape category for current vape listings."
+      },
+      {
+        "title": "Concentrates",
+        "url": "https://mohawkmedicine.com/items/concentrates",
+        "description": "Concentrates category for current concentrate listings."
+      }
+    ],
+    "rewriteAction": "REPLACE WITH BETTER SUPPORTED TOPIC",
+    "primaryKeyword": "Mohawk Medicine menu categories",
+    "wordCount": 493
+  }
 ];
+
 export function getStaticPost(slug: string) {
   return STATIC_POSTS.find((post) => post.slug === slug);
 }
