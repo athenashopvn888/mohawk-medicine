@@ -21,6 +21,7 @@ const ALL_LINKS = [
   { href: "/delivery", label: "?? Delivery" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
+  { href: "/resources", label: "Resources" },
 ];
 
 export default function Navbar() {
