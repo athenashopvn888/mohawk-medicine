@@ -39,7 +39,7 @@ export default function Footer() {
       />
       <div className={styles.inner}>
         <div className={styles.grid}>
-          {/* Column 1 — Store Description */}
+          {/* Column 1 â€” Store Description */}
           <div className={styles.col}>
             <div className={styles.brand}>MOHAWK MEDICINE</div>
             <p className={styles.desc}>
@@ -53,7 +53,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2 — Contact Info */}
+          {/* Column 2 â€” Contact Info */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
@@ -76,7 +76,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3 — Quick Links */}
+          {/* Column 3 â€” Quick Links */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Quick Links</h3>
             <nav className={styles.links}>
