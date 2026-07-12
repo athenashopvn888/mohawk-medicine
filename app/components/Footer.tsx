@@ -1,4 +1,4 @@
-ï»¿import Link from "next/link";
+import Link from "next/link";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -39,7 +39,7 @@ export default function Footer() {
       />
       <div className={styles.inner}>
         <div className={styles.grid}>
-          {/* Column 1 â€” Store Description */}
+          {/* Column 1 — Store Description */}
           <div className={styles.col}>
             <div className={styles.brand}>MOHAWK MEDICINE</div>
             <p className={styles.desc}>
@@ -53,7 +53,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2 â€” Contact Info */}
+          {/* Column 2 — Contact Info */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
@@ -76,7 +76,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3 â€” Quick Links */}
+          {/* Column 3 — Quick Links */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Quick Links</h3>
             <nav className={styles.links}>
@@ -96,8 +96,6 @@ export default function Footer() {
               <Link href="/items/add-ons">Accessories</Link>
               <Link href="/delivery">Delivery</Link>
               <Link href="/faq">FAQ</Link>
-              <Link href="/blog">Blog</Link>
-              <Link href="/blog/mohawk-medicine-local-visit-guide-2026">Local Visit Guide</Link>
               <Link href="/weed-dispensary-toronto/">Mohawk Medicine Weed Dispensary in Toronto</Link>
               <Link href="/contact">Contact</Link>
             </nav>
