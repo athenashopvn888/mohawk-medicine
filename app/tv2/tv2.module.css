@@ -1,9 +1,9 @@
-﻿/* ================================================================
-   Mohawk Medicine â€” TV MENU 2: ITEMS (Landscape 3840Ã—2160)
-   Clone of TVMenu2.html â€” 3Ã—2 grid of item category cards
+/* ================================================================
+   Mohawk Medicine - TV MENU 2: ITEMS (Landscape 3840x2160)
+   Clone of TVMenu2.html - 3x2 grid of item category cards
    ================================================================ */
 
-/* â”€â”€ FULLSCREEN RESET â”€â”€ */
+/*  FULLSCREEN RESET  */
 .tvPage {
   position: fixed;
   inset: 0;
@@ -26,7 +26,7 @@
   z-index: 0;
 }
 
-/* â”€â”€ CANVAS (3840Ã—2160 auto-fit) â”€â”€ */
+/*  CANVAS (3840x2160 auto-fit)  */
 .wrap {
   position: fixed;
   left: 0;
@@ -43,7 +43,7 @@
   box-sizing: border-box;
 }
 
-/* â”€â”€ STAGE â”€â”€ */
+/*  STAGE  */
 .stage {
   flex: 1 1 auto;
   min-height: 0;
@@ -69,7 +69,7 @@
   background: linear-gradient(180deg, rgba(0,0,0,.03) 0%, rgba(0,0,0,.01) 55%, rgba(0,0,0,0) 100%);
 }
 
-/* â”€â”€ GRID: 3Ã—2 â”€â”€ */
+/*  GRID: 3x2  */
 .grid {
   position: relative;
   z-index: 1;
@@ -81,7 +81,7 @@
   gap: 48px;
 }
 
-/* â”€â”€ CARD â”€â”€ */
+/*  CARD  */
 .card {
   background: #fff;
   border: 2px solid transparent;
@@ -93,7 +93,7 @@
   position: relative;
 }
 
-/* â”€â”€ CARD HEADER â”€â”€ */
+/*  CARD HEADER  */
 .cardHeader {
   font-weight: 900;
   letter-spacing: 1.6px;
@@ -123,7 +123,7 @@
   box-shadow: 6px 0 22px rgba(0,0,0,.45);
 }
 
-/* â”€â”€ CARD MAIN (image left, list right) â”€â”€ */
+/*  CARD MAIN (image left, list right)  */
 .cardMain {
   flex: 1 1 auto;
   display: flex;
@@ -137,7 +137,7 @@
   box-sizing: border-box;
 }
 
-/* â”€â”€ MEDIA SIDE (left 44%) â”€â”€ */
+/*  MEDIA SIDE (left 44%)  */
 .mediaSide {
   flex: 0 0 44%;
   width: 44%;
@@ -191,7 +191,7 @@
 @keyframes dissolveIn { 0%{opacity:0;} 100%{opacity:1;} }
 @keyframes dissolveOut { 0%{opacity:1;} 100%{opacity:0;} }
 
-/* â”€â”€ DETAIL CARD â”€â”€ */
+/*  DETAIL CARD  */
 .detailCard {
   margin-top: 10px;
   background: rgba(255,255,255,.16);
@@ -253,7 +253,7 @@
   text-transform: uppercase;
 }
 
-/* â”€â”€ LIST SIDE (right 56%) â”€â”€ */
+/*  LIST SIDE (right 56%)  */
 .listSide {
   flex: 1 1 56%;
   width: 56%;
@@ -285,7 +285,7 @@
   background: linear-gradient(180deg, rgba(2,6,23,.04), rgba(255,255,255,1));
 }
 
-/* â”€â”€ ROWS â”€â”€ */
+/*  ROWS  */
 .listBody {
   flex: 1 1 auto;
   overflow: hidden;
@@ -336,7 +336,7 @@
   white-space: nowrap;
   text-align: right;
 }
-/* â”€â”€ PROMO CARD (daytime cigarette poster) â”€â”€ */
+/*  PROMO CARD (daytime cigarette poster)  */
 .promoMain {
   flex: 1 1 auto;
   padding: 12px;
@@ -368,7 +368,7 @@
   opacity: 1;
 }
 
-/* â”€â”€ TICKER (vertical scroll, section by section) â”€â”€ */
+/*  TICKER (vertical scroll, section by section)  */
 .ticker {
   height: 100px;
   border-radius: 18px;
@@ -420,7 +420,7 @@
   transform: translateY(-100%);
 }
 
-/* â”€â”€ LAST UPDATED â”€â”€ */
+/*  LAST UPDATED  */
 .lastUpdated {
   position: fixed;
   bottom: 8px;

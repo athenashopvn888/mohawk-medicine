@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar} id="main-nav">
-      {/* Top bar — logo + open now */}
+      {/* Top bar  logo + open now */}
       <div className={styles.topBar}>
         <Link href="/" className={styles.logo}>
           <img
