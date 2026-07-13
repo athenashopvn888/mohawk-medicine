@@ -14,192 +14,217 @@ export interface SeoPageData {
 
 export const SEO_PAGES: SeoPageData[] = [
   {
-    slug: "york-weed-dispensary",
-    title: "Mohawk Weed Dispensary - Mohawk Medicine | 24 Hours | Eglinton Ave E",
-    metaDescription: "Mohawk Medicine is Mohawk's #1 24-hour weed dispensary at 2655 Eglinton Ave E near Weston. 200+ strains, THC up to 39%, edibles, vapes, concentrates & more. Walk in anytime.",
-    h1: "Mohawk Weed Dispensary - Mohawk Medicine",
-    icon: "*",
-    heroTagline: "Premium Cannabis on Eglinton Ave E - Open 24 Hours - Walk-In Welcome",
+    slug: "scarborough-weed-dispensary",
+    title: "Scarborough Weed Dispensary | Mohawk Medicine | Eglinton Ave E",
+    metaDescription:
+      "Mohawk Medicine is a 24-hour Scarborough weed dispensary at 2655 Eglinton Ave E with flower tiers, edibles, vapes, concentrates, cigarettes, accessories, and local store details.",
+    h1: "Scarborough Weed Dispensary",
+    icon: "MM",
+    heroTagline: "Mohawk Medicine on Eglinton Ave E in Scarborough.",
     banner: "/banners/23_Mohawk_Welcome_Banner.webp",
     sections: [
       {
-        heading: "Mohawk's Premier Cannabis Destination",
-        body: "Mohawk Medicine is a premium cannabis dispensary located at 2655 Eglinton Ave E in the heart of Mohawk's vibrant Weston and Mount Dennis neighbourhoods. We carry over 200 hand-picked cannabis strains across five quality tiers - from ultra-rare Exotic genetics with THC up to 39% to affordable Budget flower starting at just $3/g. Whether you're a connoisseur seeking the rarest strains or a daily smoker looking for reliable value, Mohawk Medicine has the perfect flower for you. We're proud to be one of Mohawk's most trusted dispensaries, serving our community 24 hours a day, 7 days a week.",
+        heading: "Mohawk Medicine On Eglinton Ave E",
+        body:
+          "Mohawk Medicine is located at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. The site is organized around the store's main shopper paths: flower tiers, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, and local visit details.",
       },
       {
-        heading: "Five Tiers of Quality Cannabis - Transparent Pricing",
-        body: "Our unique tier system ensures transparent pricing and quality grading so you always know what you're getting. Exotic ($10-$12/g) features top-shelf, ultra-rare genetics with THC levels reaching 35-39% - these are the strains connoisseurs travel across Mohawk to find. Premium ($7-$10/g) offers connoisseur-grade strains at THC 32-34%, balancing quality and value. AAA+ ($5-$6/g) delivers heavy hitters at THC 30-32% - our most popular tier for experienced users. AA ($4/g) provides quality daily drivers at THC 27-29%, perfect for regular consumption. Budget ($3/g) offers value ounces from $40 without sacrificing reliability. Every tier is lab-tested, properly cured, and freshly rotated.",
+        heading: "Scarborough Menu Categories",
+        body:
+          "Flower shoppers can start with Exotic, Premium, AAA+, AA, or Budget. Format-first shoppers can jump to edibles, pre-rolls, vapes, concentrates, cigarettes, accessories, or specialty categories without sorting through every flower page.",
       },
       {
-        heading: "Beyond Flower - Edibles, Vapes, Concentrates & More",
-        body: "Mohawk Medicine is more than just a flower shop. We carry a comprehensive selection of cannabis edibles (gummies, chocolates, baked goods), vape pens and disposable vapes, concentrates (shatter, wax, hash, diamonds, live resin), pre-rolled joints, native cigarettes, rolling papers, and accessories. Our live digital menu at mohawkmedicine.com updates in real time so you always know exactly what's in stock before you make the trip.",
+        heading: "Open 24 Hours",
+        body:
+          "Mohawk Medicine lists Open 24 Hours for adult shoppers. Bring valid 19+ government ID, check the current category page before visiting, and use the contact or FAQ pages for store basics.",
       },
       {
-        heading: "Open 24 Hours on Eglinton Ave E",
-        body: "Unlike most dispensaries that close at midnight, Mohawk Medicine is open around the clock - 24 hours a day, 7 days a week, 365 days a year. Whether you're finishing a late shift, heading out for the night, or need something at 3 AM, our doors are always open. We're centrally located at 2655 Eglinton Ave E, steps from Weston Road, near major TTC bus routes, and minutes from the Weston GO Station and Highway 401. Free street parking is available in the evenings.",
-      },
-      {
-        heading: "Clear Bundle Pricing on Flower",
-        body: "Every purchase at Mohawk Medicine comes with our bundle offers. Our 3g bundle offer applies to every single tier - the 3g total is shown clearly before purchase. Our top three tiers (Exotic, Premium, and AAA+) also qualify for 6g bundle pricing for 6g total. Combined with our already competitive pricing, Mohawk Medicine offers some of the best cannabis value in Mohawk, Toronto, and the surrounding area.",
-      },
-      {
-        heading: "Serving Mohawk, Toronto & Mississauga",
-        body: "Mohawk Medicine proudly serves customers from across the Greater Toronto Area. Whether you're coming from Weston, Mount Dennis, North Mohawk, Etobicoke, Mississauga, Brampton, or downtown Toronto, we welcome you. Our 24-hour operation means you can visit on your own schedule. Call us at (555) 555-5555 or visit us at 2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
+        heading: "Eglinton East And Kennedy Area",
+        body:
+          "The store identity is tied to Eglinton Ave E in Scarborough, with nearby-area language focused on Eglinton East, Kennedy Road, Brimley Road, Golden Mile, Birchmount, Warden, and surrounding Toronto routes.",
       },
     ],
     faqs: [
-      { q: "Where is Mohawk Medicine located?", a: "We are located at 2655 Eglinton Ave E, Toronto, ON M1K 2S2 - in the heart of Weston and Mount Dennis, one of Mohawk's most accessible neighbourhoods. We're near the Weston GO Station, Highway 401, and major bus routes." },
-      { q: "What are the hours for Mohawk Medicine?", a: "We are open 24 hours a day, 7 days a week, 365 days a year. Walk in anytime - no appointment needed. Whether it's 2 PM or 2 AM, our staff is here to help." },
-      { q: "What cannabis products does Mohawk Medicine carry?", a: "We carry 200+ strains of cannabis flower across 5 quality tiers (Exotic, Premium, AAA+, AA, Budget), plus edibles, vapes, concentrates, pre-rolls, native cigarettes, and accessories. Our menu updates in real time online." },
-      { q: "What is the cheapest weed at Mohawk Medicine?", a: "Our Budget tier starts at $3/g with value ounces from $40. Our AA tier is $4/g. Every tier includes our 3g bundle pricing, making our prices even more competitive." },
-      { q: "Does Mohawk Medicine have a live menu?", a: "Yes! Our online menu at mohawkmedicine.com updates in real time with current stock, prices, and availability. You can see exactly what we have before you visit." },
-      { q: "What makes Mohawk Medicine different from other Mohawk dispensaries?", a: "Three things set us apart: (1) We're open 24 hours, (2) our transparent 5-tier pricing system means no confusing markups, and (3) every purchase includes our 3g bundle pricing. Plus we carry one of Mohawk's largest selections with over 200 strains." },
-      { q: "Can I check stock before visiting?", a: "Absolutely. Visit mohawkmedicine.com to see our live menu. All flower, edibles, vapes, and accessories are listed with real-time stock status, THC levels, and pricing." },
-      { q: "Is there parking near Mohawk Medicine?", a: "Yes. Free street parking is available in the evenings on Eglinton Ave E and surrounding residential streets. We're also easily accessible via TTC." },
+      {
+        q: "Where is Mohawk Medicine located?",
+        a: "Mohawk Medicine is located at 2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
+      },
+      {
+        q: "What are the hours for Mohawk Medicine?",
+        a: "The store lists Open 24 Hours. Bring valid 19+ government ID when visiting.",
+      },
+      {
+        q: "What product categories are shown on the site?",
+        a: "The site includes flower tiers, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, and specialty categories.",
+      },
     ],
   },
 
   {
-    slug: "cheap-weed-york",
-    title: "Cheap Weed Mohawk - Budget Cannabis Deals From $3/g | Mohawk Medicine",
-    metaDescription: "Looking for cheap weed in Mohawk? Mohawk Medicine has budget flower from $3/g, ounces from $40, and 3g bundle pricing. Open 24 hours at 2655 Eglinton Ave E.",
-    h1: "Cheap Weed Mohawk - Budget Cannabis Deals",
-    icon: "*",
-    heroTagline: "Budget Flower From $3/g - Ounces From $40 - Always Open",
+    slug: "cheap-weed-scarborough",
+    title: "Cheap Weed Scarborough | Mohawk Medicine Budget Flower",
+    metaDescription:
+      "Looking for cheap weed in Scarborough? Mohawk Medicine has Budget, AA, AAA+, Premium, and Exotic flower paths at 2655 Eglinton Ave E. Open 24 Hours.",
+    h1: "Cheap Weed Scarborough",
+    icon: "$",
+    heroTagline: "Budget flower paths and clear tier shopping on Eglinton Ave E.",
     banner: "/banners/05_Mohawk_Budget.webp",
     sections: [
       {
-        heading: "Mohawk's Best Prices on Quality Cannabis",
-        body: "Looking for cheap weed in Mohawk without sacrificing quality? Mohawk Medicine offers some of the most competitive cannabis prices in the city. Our Budget tier starts at just $3/g with value ounces from $40. Our AA tier ($4/g) and AAA+ tier ($5-$6/g) also deliver incredible value with THC levels from 27% to 32%. We believe great cannabis shouldn't break the bank, and our transparent tier-based pricing ensures you always get exactly what you pay for - no hidden markups, no gimmicks.",
+        heading: "Budget Starts With The Tier Page",
+        body:
+          "Mohawk Medicine keeps value shopping organized through the Budget, AA, AAA+, Premium, and Exotic flower pages. Start with the tier that matches the visit, then check current listings and prices before heading to Eglinton Ave E.",
       },
       {
-        heading: "Flower Bundle Pricing",
-        body: "Every tier at Mohawk Medicine comes with our signature 3g bundle pricing - so the total grams and price are shown before purchase. Our top three tiers (Exotic, Premium, AAA+) also offer 6g bundle pricing for 6g total. When you combine our already low prices with these bundle offers, Mohawk Medicine delivers the best cannabis value in Mohawk. A $15 AAA+ 3g purchase actually gets you 3g of flower - that's just $5/g for THC 30%+ cannabis.",
+        heading: "Bundle Pricing Where Listed",
+        body:
+          "Some flower tiers show 3g or 6g bundle pricing, and the tier page carries the current total. Use the page price shown at the time of browsing rather than relying on old screenshots or older copy.",
       },
       {
-        heading: "Budget Doesn't Mean Low Quality",
-        body: "At Mohawk Medicine, cheap doesn't mean low quality. Every strain in our Budget and AA tiers delivers reliable potency (THC 24-29%) from trusted Canadian growers. We rotate our inventory frequently to ensure freshness and maintain our quality standards across all price points. Our Budget strains are perfect for rolling, sessions, or anyone who prefers value over premium aesthetics. Our AA tier is a step up - solid daily drivers with consistent effects.",
-      },
-      {
-        heading: "Compare Our Prices",
-        body: "Budget: $3/g - $40/oz. AA: $4/g - $90/oz. AAA+: $5-$6/g - $100/oz. Premium: $7-$10/g. Exotic: $10-$12/g. Every tier includes 3g bundle pricing. Top tiers include 6g bundle pricing. These are some of the lowest prices you'll find at any dispensary in Mohawk, Weston, Mount Dennis, Etobicoke, or North Mohawk.",
+        heading: "Current Listings Matter",
+        body:
+          "Brands, strains, and value options can rotate. The budget page is useful as a starting point, while product detail pages and staff can confirm current product details.",
       },
     ],
     faqs: [
-      { q: "What is the cheapest weed at Mohawk Medicine?", a: "Our Budget tier starts at $3/g with value ounces from $40. These are quality, properly-cured strains at Mohawk's most competitive prices." },
-      { q: "Do you have ounce deals?", a: "Yes! Budget ounces from $40, AA ounces from $90, AAA+ ounces from $100. All with excellent quality, freshness guaranteed, and 3g bundle pricing on top." },
-      { q: "Is cheap weed still good quality?", a: "Absolutely. Our Budget flower delivers THC 24-27% from trusted Canadian growers. We never sell old, dry, or improperly stored flower. Every product meets our quality standards regardless of price point." },
-      { q: "Where can I buy cheap weed in Mohawk?", a: "Mohawk Medicine at 2655 Eglinton Ave E, Mohawk. Open 24 hours a day, walk in anytime, no appointment needed. We're in the heart of Weston neighbourhood." },
-      { q: "What bundle pricing do you offer?", a: "Every tier includes 3g bundle pricing (3g total). Our Exotic, Premium, and AAA+ tiers also offer 6g bundle pricing (6g total). These bundle offers apply on every visit." },
-      { q: "Do you offer bulk discounts?", a: "Yes - our ounce pricing is deeply discounted compared to per-gram rates. Budget ounces are $40, AA ounces $90, and AAA+ ounces $100. The more you buy, the more you save." },
+      {
+        q: "What is the lowest-priced flower tier listed?",
+        a: "The Budget tier is the lowest-priced flower path shown on the site. Check the Budget page for current listings and prices.",
+      },
+      {
+        q: "Does Mohawk Medicine show bundle pricing?",
+        a: "Yes, where bundle pricing is available, the matching tier page shows the current bundle label, total amount, and price.",
+      },
+      {
+        q: "Where should I start for value flower?",
+        a: "Start with Budget or AA, then compare the current product cards on those pages.",
+      },
     ],
   },
 
   {
-    slug: "native-cigarettes-york",
-    title: "Native Cigarettes Mohawk - Discount Tobacco | Mohawk Medicine",
-    metaDescription: "Buy native cigarettes in Mohawk at Mohawk Medicine. Wide selection of premium and value tobacco brands at the best prices. 2655 Eglinton Ave E, Weston. Open 24/7.",
-    h1: "Native Cigarettes Mohawk - Discount Tobacco",
-    icon: "*",
-    heroTagline: "Premium & Value Brands - Best Prices in Mohawk - Open 24 Hours",
+    slug: "native-cigarettes-scarborough",
+    title: "Native Cigarettes Scarborough | Mohawk Medicine",
+    metaDescription:
+      "Mohawk Medicine lists cigarette options at 2655 Eglinton Ave E in Scarborough. Check the current cigarette category for brands, prices, and availability before visiting.",
+    h1: "Native Cigarettes Scarborough",
+    icon: "CG",
+    heroTagline: "Cigarette category details for Mohawk Medicine shoppers.",
     banner: "/banners/24_Mohawk_Edibles_Concentrates_More.webp",
     sections: [
       {
-        heading: "Mohawk's Best Selection of Native Cigarettes",
-        body: "Mohawk Medicine carries one of the widest selections of native cigarettes in Mohawk. Located at 2655 Eglinton Ave E near Weston Road, we stock a comprehensive range of both premium and value native cigarette brands at competitive prices. Whether you prefer full-flavour, light, menthol, or specialty blends, our tobacco selection has something for every smoker. We're proud to be one of the few stores in Mohawk that combines a full cannabis dispensary with a comprehensive tobacco counter - one stop for everything you need.",
+        heading: "Cigarette Category At Mohawk Medicine",
+        body:
+          "Mohawk Medicine has a cigarette category for shoppers checking listed brands, pack options, and prices before visiting 2655 Eglinton Ave E.",
       },
       {
-        heading: "Why Mohawk Smokers Choose Mohawk Medicine",
-        body: "There are three reasons Mohawk smokers keep coming back to Mohawk Medicine for their cigarettes. First, our prices are among the lowest in the Weston and Mount Dennis area - we buy in volume and pass the savings to our customers. Second, our selection is comprehensive - we carry brands and varieties that many other shops simply don't stock. Third, we're open 24 hours a day, 7 days a week. Need cigarettes at midnight? 3 AM? We're here. No other tobacco shop in Mohawk offers this level of convenience.",
+        heading: "Check The Current Brand Mix",
+        body:
+          "Brand mix, flavours, carton options, and prices can rotate. Use the cigarette category as the current public reference, then confirm details with staff when needed.",
       },
       {
-        heading: "Convenient Eglinton Ave E Location",
-        body: "Our shop at 2655 Eglinton Ave E is centrally located in Mohawk - easily accessible from Weston Rd, Lawrence Ave W, Highway 401, and all major Peel/Toronto routes. Whether you're walking, driving, or taking the bus, Mohawk Medicine is easy to reach. Free evening street parking is available on Eglinton Ave E and nearby streets. We serve customers from across Mohawk including Weston, Mount Dennis, Etobicoke, North Mohawk, and Mississauga.",
-      },
-      {
-        heading: "More Than Just Cigarettes",
-        body: "While you're picking up your cigarettes, browse our full cannabis menu - over 200 strains of flower, plus edibles, vapes, concentrates, pre-rolls, and accessories. Many of our customers appreciate the convenience of getting their cigarettes and cannabis in one trip. Our knowledgeable staff can help you with both sides of our inventory.",
+        heading: "One Store, Separate Categories",
+        body:
+          "Cigarettes sit beside the cannabis categories, but shoppers should still use the matching page for the product type they need: flower, edibles, vapes, concentrates, accessories, or cigarettes.",
       },
     ],
     faqs: [
-      { q: "Does Mohawk Medicine sell native cigarettes?", a: "Yes! We carry one of the widest selections of native cigarettes in Mohawk, including premium brands, value brands, full-flavour, light, and menthol varieties." },
-      { q: "What cigarette brands do you carry?", a: "We stock a comprehensive range of native cigarette brands in multiple varieties. Our selection rotates regularly. Visit us at 2655 Eglinton Ave E to see our full current inventory and pricing." },
-      { q: "Where can I buy cheap cigarettes in Mohawk?", a: "Mohawk Medicine at 2655 Eglinton Ave E offers some of the best cigarette prices in Mohawk's Weston area. We're open 24 hours so you can shop on your own schedule." },
-      { q: "Are you open late for cigarette purchases?", a: "We're open 24 hours a day, 7 days a week. Whether you need cigarettes at noon or 3 AM, our doors are always open." },
-      { q: "Can I buy cigarettes and cannabis at Mohawk Medicine?", a: "Absolutely. Mohawk Medicine is both a fully-licensed cannabis dispensary and a tobacco retailer. Many customers appreciate the convenience of one stop for both products." },
-      { q: "Where is Mohawk Medicine located?", a: "2655 Eglinton Ave E, Toronto, ON M1K 2S2 - in Weston/Mount Dennis area. Near Weston GO Station, close to TTC bus routes, with free evening street parking available." },
+      {
+        q: "Does Mohawk Medicine list cigarettes?",
+        a: "Yes. The site includes a cigarette category with listed brands and prices where available.",
+      },
+      {
+        q: "Do cigarette brands and prices change?",
+        a: "Yes. Brand mix, flavours, carton options, and prices can rotate, so check the current cigarette category before visiting.",
+      },
+      {
+        q: "Where is the store?",
+        a: "Mohawk Medicine is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
+      },
     ],
   },
 
   {
-    slug: "weed-store-near-mississauga",
-    title: "Weed Store Near Mississauga - Mohawk Medicine | 5 Min From Highway 410 / 401",
-    metaDescription: "Looking for a weed store near Mississauga? Mohawk Medicine at 2655 Eglinton Ave E, Mohawk is just minutes away via Highway 410/401. 200+ strains, open 24 hours.",
-    h1: "Weed Store Near Mississauga - Mohawk Medicine",
-    icon: "*",
-    heroTagline: "Just Minutes From Mississauga via Highway 410 & 401 - Open 24 Hours",
+    slug: "weed-store-near-eglinton-east",
+    title: "Weed Store Near Eglinton East | Mohawk Medicine",
+    metaDescription:
+      "Mohawk Medicine is a 24-hour weed store on Eglinton Ave E in Scarborough with local menu paths for flower, edibles, vapes, concentrates, cigarettes, and accessories.",
+    h1: "Weed Store Near Eglinton East",
+    icon: "EG",
+    heroTagline: "A Scarborough cannabis stop tied to Eglinton Ave E.",
     banner: "/banners/23_Mohawk_Welcome_Banner.webp",
     sections: [
       {
-        heading: "The Closest Quality Dispensary to Mississauga",
-        body: "Mohawk Medicine is one of the closest premium cannabis dispensaries to Mississauga. Located at 2655 Eglinton Ave E in Mohawk - just minutes up Highway 410 and East on 401 - we're the easiest dispensary to reach when you're coming from the south-west. Whether you're driving from Square One, Port Credit, Streetsville, or anywhere in the Peel Region, Mohawk Medicine is the fastest, most convenient option for top-tier cannabis.",
+        heading: "Eglinton Ave E Store Details",
+        body:
+          "Mohawk Medicine is located at 2655 Eglinton Ave E in Toronto's Scarborough area. The site keeps store details and menu categories close together so shoppers can plan the visit without relying on stale city pages.",
       },
       {
-        heading: "Why Make the Drive to Mohawk Medicine?",
-        body: "Mohawk Medicine offers a wider selection and more competitive pricing than most local Peel options. You'll find over 200 strains across five quality tiers - from ultra-rare Exotic genetics (THC 35-39%) to affordable Budget flower at just $3/g. Our 3g bundle pricing applies to every tier, and our top three tiers offer 6g bundle pricing. With prices starting at $3/g and ounces from $40, Mohawk Medicine delivers value that's worth the short drive from Mississauga.",
+        heading: "Start With The Right Category",
+        body:
+          "Use the category that matches the visit: flower tier, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, or specialty items.",
       },
       {
-        heading: "Open 24 Hours - Perfect for Late Night Visits",
-        body: "Unlike most dispensaries in Peel Region with limited hours, Mohawk Medicine is open 24 hours a day, 7 days a week. Whether you're heading home from a late shift in Mississauga, going out for the night, or just need a quick pickup after hours, you can stop by Mohawk Medicine anytime. Early morning, late night, weekends, holidays - we're always here.",
-      },
-      {
-        heading: "Directions From Mississauga",
-        body: "From central Mississauga (Square One area): Take Highway 403 East to Highway 410 North or Hwy 401 East. Exit at Eglinton Ave E in Mohawk and head south to 2655 Eglinton Ave E. Total drive time: approximately 15-20 minutes. Free evening street parking is available near the dispensary. We're also accessible via TTC routes connecting from Mississauga Transit (MiWay) at subway terminals.",
-      },
-      {
-        heading: "Full Menu - Cannabis, Edibles, Vapes & More",
-        body: "When you make the trip up to Mohawk, make it count. Mohawk Medicine carries a full selection including 200+ flower strains, edibles, vape pens, disposable vapes, concentrates (shatter, wax, hash, live resin), pre-rolled joints, native cigarettes, and accessories. Check our live online menu at mohawkmedicine.com before you visit to see exactly what's in stock.",
+        heading: "Built For Nearby Scarborough Shoppers",
+        body:
+          "This page keeps the local focus around Eglinton East, Kennedy Road, Brimley Road, Golden Mile, Birchmount, Warden, and nearby Scarborough routes.",
       },
     ],
     faqs: [
-      { q: "How far is Mohawk Medicine from Mississauga?", a: "We're located at 2655 Eglinton Ave E in Mohawk - just a 15-20 minute drive from central Mississauga via Highway 401 East." },
-      { q: "Is it worth driving from Mississauga for cannabis?", a: "Absolutely. Mohawk Medicine offers 200+ strains, prices starting at $3/g, and bundle pricing options like 3g total that make the short drive incredibly worthwhile." },
-      { q: "Is Mohawk Medicine open late?", a: "We're open 24 hours a day, 7 days a week. Whether you're driving up from Mississauga at noon or midnight, we're open and ready to serve you." },
-      { q: "What's the cheapest weed near Mississauga?", a: "Mohawk Medicine has Budget flower from $3/g and value ounces from $40. With our 3g bundle pricing, these are some of the best prices in the Greater Toronto Area." },
-      { q: "Is there parking at Mohawk Medicine?", a: "Yes. Free evening street parking is available near the store on Eglinton Ave E and surrounding residential streets." },
-      { q: "Can I take transit from Mississauga to Mohawk Medicine?", a: "Yes! MiWay connects directly to TTC subway and bus routes that will drop you off right near our location on Eglinton Ave E." },
-      { q: "Do you carry products besides cannabis?", a: "Yes - we also carry native cigarettes, rolling papers, grinders, and other accessories. Many Mississauga customers appreciate the one-stop convenience." },
+      {
+        q: "Is Mohawk Medicine near Eglinton East?",
+        a: "The store is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2, in the Scarborough area.",
+      },
+      {
+        q: "What should I check before visiting?",
+        a: "Check the current category page for product names, pricing, and availability details before visiting.",
+      },
+      {
+        q: "Is the old Mississauga page still active?",
+        a: "The site now points that old route to the Eglinton East local page so the public copy stays focused on Mohawk Medicine's actual area.",
+      },
     ],
   },
 
   {
-    slug: "dispensary-near-me-york",
-    title: "Cannabis Dispensary Near Me Mohawk - Mohawk Medicine | Open 24 Hours",
-    metaDescription: "Find a cannabis dispensary near you in Mohawk. Mohawk Medicine at 2655 Eglinton Ave E has 200+ strains from $3/g. Open 24 hours. Walk in anytime, no appointment needed.",
-    h1: "Cannabis Dispensary Near Me - Mohawk",
-    icon: "*",
-    heroTagline: "Walk-In Welcome - Open 24 Hours - 200+ Strains In Stock",
+    slug: "dispensary-near-me-scarborough",
+    title: "Cannabis Dispensary Near Me Scarborough | Mohawk Medicine",
+    metaDescription:
+      "Find Mohawk Medicine at 2655 Eglinton Ave E in Scarborough. Open 24 Hours with flower tiers, edibles, vapes, concentrates, cigarettes, accessories, and local store details.",
+    h1: "Cannabis Dispensary Near Me In Scarborough",
+    icon: "NEAR",
+    heroTagline: "A 24-hour Eglinton Ave E dispensary path for nearby Toronto shoppers.",
     banner: "/banners/23_Mohawk_Welcome_Banner.webp",
     sections: [
       {
-        heading: "Find Premium Cannabis Near You in Mohawk",
-        body: "If you're searching for a cannabis dispensary near you in Mohawk, Mohawk Medicine is conveniently located at 2655 Eglinton Ave E - in the heart of Weston and Mount Dennis neighbourhoods. We serve customers from across Mohawk, North Mohawk, Etobicoke, Mississauga, and Toronto.",
+        heading: "Find The Eglinton Ave E Shop",
+        body:
+          "Mohawk Medicine is located at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Nearby shoppers can use the menu to pick a flower tier or format category before visiting.",
       },
       {
-        heading: "Why Choose Mohawk Medicine Over Other Dispensaries?",
-        body: "What sets Mohawk Medicine apart from other Mohawk dispensaries is our combination of selection, pricing, and convenience. We carry 200+ strains across five clear quality tiers - no confusing markups, no inconsistent pricing. Our 3g bundle pricing applies to every tier, every purchase. And unlike most dispensaries that close at midnight, we're open 24 hours a day, 7 days a week. Whether you need flower, edibles, vapes, or concentrates at any hour, Mohawk Medicine is here.",
+        heading: "Menu Paths For Repeat Visits",
+        body:
+          "The site is organized for fast scanning: Exotic, Premium, AAA+, AA, Budget, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, and specialty categories.",
       },
       {
-        heading: "Areas We Serve in Greater Toronto Area",
-        body: "Mohawk Medicine is centrally located and easily accessible from anywhere in Mohawk and West Toronto. We regularly serve customers from: Weston, Mount Dennis, Silverthorn, Humber Heights, Kingsview Village, Pelmo Park, North Mohawk, Etobicoke, Rexdale, Mississauga, Brampton, and downtown Toronto. We're near the Weston GO Station, TTC routes, and Highway 401/Hwy 400."
+        heading: "Local Resource Pages",
+        body:
+          "The Resource hub adds guides for Eglinton Ave E visits, Scarborough menu planning, flower tiers, value shopping, pre-rolls, and native smokes.",
       },
     ],
     faqs: [
-      { q: "Where is the closest dispensary in Weston/Mohawk?", a: "Mohawk Medicine at 2655 Eglinton Ave E is conveniently located in the heart of Mohawk - easily accessible from Weston Rd and Lawrence Ave W." },
-      { q: "Is Mohawk Medicine walk-in friendly?", a: "Absolutely! No appointment needed. Walk in anytime - we're open 24 hours a day, 7 days a week. Our friendly staff is always ready to help." },
-      { q: "What neighbourhoods does Mohawk Medicine serve?", a: "We serve all of Mohawk and surrounding areas, including Weston, Mount Dennis, Etobicoke, North Mohawk, Mississauga, Brampton, and Toronto." },
-      { q: "How do I check what's in stock?", a: "Visit mohawkmedicine.com for our live menu with real-time stock, pricing, and THC levels for all products." },
-      { q: "Do you sell edibles and vapes?", a: "Yes! In addition to 200+ flower strains, we carry edibles (gummies, chocolates), vape pens, disposable vapes, concentrates, pre-rolls, and accessories." },
+      {
+        q: "What is the address?",
+        a: "2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
+      },
+      {
+        q: "Is Mohawk Medicine walk-in friendly?",
+        a: "The site presents Mohawk Medicine as a 24-hour Scarborough dispensary. Bring valid 19+ ID and check the current menu before visiting.",
+      },
+      {
+        q: "Where are the Resource pages?",
+        a: "Use /resources for Mohawk Medicine guides covering visits, flower tiers, value shopping, pre-rolls, cigarettes, and menu planning.",
+      },
     ],
   },
 ];
@@ -208,3 +233,14 @@ export function getSeoPageBySlug(slug: string): SeoPageData | undefined {
   return SEO_PAGES.find((p) => p.slug === slug);
 }
 
+const LEGACY_SEO_REDIRECTS: Record<string, string> = {
+  "york-weed-dispensary": "scarborough-weed-dispensary",
+  "cheap-weed-york": "cheap-weed-scarborough",
+  "native-cigarettes-york": "native-cigarettes-scarborough",
+  "weed-store-near-mississauga": "weed-store-near-eglinton-east",
+  "dispensary-near-me-york": "dispensary-near-me-scarborough",
+};
+
+export function getLegacySeoRedirect(slug: string): string | undefined {
+  return LEGACY_SEO_REDIRECTS[slug];
+}
