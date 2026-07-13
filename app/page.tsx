@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -120,7 +120,7 @@ export default function HomePage() {
       <section className={styles.heroBanner}>
         <img
           src="/banners/13_Mohawk_Home_Hero.webp"
-          alt="Mohawk Medicine — Toronto's 24-Hour Cannabis Dispensary"
+          alt="Mohawk Medicine  Toronto's 24-Hour Cannabis Dispensary"
           className={styles.heroBannerImg}
         />
         <div className={styles.heroBannerGradient} />
@@ -134,9 +134,9 @@ export default function HomePage() {
             Toronto&apos;s Premier 24-Hour Cannabis Dispensary &bull; 2655 Eglinton Ave E
           </p>
           <div className={styles.trustBadges}>
-            <span className={styles.trustBadge}>🕐 Open 24/7</span>
-            <span className={styles.trustBadge}>📍 Scarborough, Toronto</span>
-            <span className={styles.trustBadge}>✅ Walk-Ins Welcome</span>
+            <span className={styles.trustBadge}> Open 24/7</span>
+            <span className={styles.trustBadge}> Scarborough, Toronto</span>
+            <span className={styles.trustBadge}> Walk-Ins Welcome</span>
           </div>
         </div>
       </section>
@@ -146,7 +146,7 @@ export default function HomePage() {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Shop By Tier</h2>
-            <p className={styles.sectionSub}>Six quality tiers — transparent pricing, always fresh</p>
+            <p className={styles.sectionSub}>Six quality tiers  transparent pricing, always fresh</p>
           </div>
           <div className={styles.tierGrid}>
             {TIER_CARDS.map((tier) => (
@@ -158,7 +158,7 @@ export default function HomePage() {
                   <span className={styles.tierCardBadge}>{tier.price}</span>
                   <h3 className={styles.tierCardName}>{tier.name}</h3>
                   <p className={styles.tierCardTagline}>{tier.tagline}</p>
-                  <span className={styles.tierCardBtn}>Shop Now →</span>
+                  <span className={styles.tierCardBtn}>Shop Now </span>
                 </div>
               </Link>
             ))}
@@ -190,12 +190,12 @@ export default function HomePage() {
         />
       </section>
 
-      {/* F) FEATURED PRODUCTS — Horizontal Scroll Carousel */}
+      {/* F) FEATURED PRODUCTS  Horizontal Scroll Carousel */}
       <section className={styles.featuredSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>🔥 Featured Products</h2>
-            <p className={styles.sectionSub}>Staff picks from our live inventory — swipe to explore</p>
+            <h2 className={styles.sectionTitle}> Featured Products</h2>
+            <p className={styles.sectionSub}>Staff picks from our live inventory  swipe to explore</p>
           </div>
         </div>
         <div className={styles.featuredCarouselWrap}>
@@ -206,7 +206,7 @@ export default function HomePage() {
               if (el) el.scrollBy({ left: -320, behavior: "smooth" });
             }}
             aria-label="Scroll left"
-          >‹</button>
+          ></button>
 
           <div id="featuredRail" className={styles.featuredRail}>
             {featuredStrains.map((strain, i) => (
@@ -223,7 +223,7 @@ export default function HomePage() {
               if (el) el.scrollBy({ left: 320, behavior: "smooth" });
             }}
             aria-label="Scroll right"
-          >›</button>
+          ></button>
         </div>
       </section>
 
@@ -231,10 +231,10 @@ export default function HomePage() {
       <section className={styles.aboutSection}>
         <div className={styles.container}>
           <div className={styles.aboutPanel}>
-            <h2 className={styles.aboutTitle}>Toronto&apos;s Best Dispensary — Open 24 Hours</h2>
+            <h2 className={styles.aboutTitle}>Toronto&apos;s Best Dispensary  Open 24 Hours</h2>
             <p className={styles.aboutText}>
               Mohawk Medicine at 2655 Eglinton Ave E is Scarborough&apos;s premier cannabis destination.
-              Open 24 hours a day, 7 days a week, we carry 200+ strains across 6 quality tiers — from
+              Open 24 hours a day, 7 days a week, we carry 200+ strains across 6 quality tiers  from
               budget-friendly $4/g to ultra-rare exotic fire. Walk-ins always welcome. No appointment needed.
             </p>
           </div>
@@ -263,7 +263,7 @@ export default function HomePage() {
         <div className={styles.container}>
           <div className={styles.storeGrid}>
             <div className={styles.storeCard}>
-              <span className={styles.storeIcon}>📍</span>
+              <span className={styles.storeIcon}></span>
               <h3 className={styles.storeCardTitle}>Location</h3>
               <p className={styles.storeCardText}>
                 2655 Eglinton Ave E<br />
@@ -271,7 +271,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className={styles.storeCard}>
-              <span className={styles.storeIcon}>🕒</span>
+              <span className={styles.storeIcon}></span>
               <h3 className={styles.storeCardTitle}>Hours</h3>
               <p className={styles.storeCardText}>
                 Open 7 Days a Week<br />
@@ -279,7 +279,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className={styles.storeCard}>
-              <span className={styles.storeIcon}>✅</span>
+              <span className={styles.storeIcon}></span>
               <h3 className={styles.storeCardTitle}>Walk In</h3>
               <p className={styles.storeCardText}>
                 No appointment needed<br />

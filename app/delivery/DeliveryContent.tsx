@@ -75,7 +75,7 @@ export default function DeliveryContent() {
           marginBottom: '32px',
           backdropFilter: 'blur(8px)',
         }}>
-          <span style={{ fontSize: '18px' }}>🚚</span>
+          <span style={{ fontSize: '18px' }}></span>
           <span style={{
             fontFamily: 'Inter, system-ui, sans-serif',
             fontSize: '12px', fontWeight: 700,
@@ -118,7 +118,7 @@ export default function DeliveryContent() {
           marginBottom: '48px',
         }}>
           We&apos;re working on bringing cannabis delivery to your door.
-          Be the first to know when we launch — drop your email below.
+          Be the first to know when we launch  drop your email below.
         </p>
 
         {/* Email form / success state */}
@@ -132,7 +132,7 @@ export default function DeliveryContent() {
             maxWidth: '440px',
             width: '100%',
           }}>
-            <div style={{ fontSize: '40px', marginBottom: '12px' }}>✅</div>
+            <div style={{ fontSize: '40px', marginBottom: '12px' }}></div>
             <h2 style={{
               fontFamily: 'Inter, system-ui, sans-serif',
               fontSize: '20px', fontWeight: 800,
@@ -232,7 +232,7 @@ export default function DeliveryContent() {
             textTransform: 'uppercase',
             letterSpacing: '0.08em',
           }}>
-            Meanwhile — Visit Us In-Store
+            Meanwhile  Visit Us In-Store
           </p>
         </div>
       </div>
