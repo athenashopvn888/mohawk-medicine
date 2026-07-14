@@ -672,7 +672,7 @@ function AddOnsCard({ items, hiIdx }: { items: Item[]; hiIdx: number }) {
    ============================================================ */
 const TICKER_SLIDES = [
   "🔥 Mohawk Medicine — 2655 Eglinton Ave E, Toronto",
-  "200+ Strains In Stock",
+  "Flower Tiers, Edibles, Vapes, Concentrates",
   "Open 24 Hours",
   "ALL SALES ARE FINAL",
   "🎮 Play Games at mohawkmedicine.com/games",

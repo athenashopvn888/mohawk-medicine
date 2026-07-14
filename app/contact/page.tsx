@@ -4,16 +4,16 @@ import Footer from "../components/Footer";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Mohawk Medicine | 2655 Eglinton Ave E, Toronto",
+  title: "Contact Us - Mohawk Medicine | 2655 Eglinton Ave E, Toronto",
   description:
     "Visit Mohawk Medicine at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Open 24 Hours a day, 7 days a week. Walk-ins welcome.",
   alternates: {
     canonical: "https://mohawkmedicine.com/contact",
   },
   openGraph: {
-    title: "Contact Mohawk Medicine — Toronto Dispensary",
+    title: "Contact Mohawk Medicine - Toronto Dispensary",
     description:
-      "2655 Eglinton Ave E, Toronto. Open 24 Hours a day, 7 days a week. Premium cannabis, always fire.",
+      "2655 Eglinton Ave E, Toronto. Open 24 Hours a day, 7 days a week. Check current menu categories before visiting.",
   },
 };
 
@@ -33,7 +33,7 @@ export default function ContactPage() {
         <div className={styles.content}>
           <h1 className={styles.h1}>Contact Mohawk Medicine</h1>
           <p className={styles.subtext}>
-            Have a question? Stop by any time — we&apos;re open 24/7. Or browse our FAQ below.
+            Have a question? Stop by any time or browse the FAQ below.
           </p>
 
           <div className={styles.grid}>

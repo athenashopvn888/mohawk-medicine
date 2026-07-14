@@ -32,9 +32,9 @@ export const gbpLocation = {
   seoTitle: "Mohawk Medicine | Weed Dispensary in Toronto",
   metaDescription: "Mohawk Medicine is a local weed dispensary in Toronto offering flower, pre-rolls, edibles, vapes, concentrates, CBD, and service for adults 19+.",
   localLandmarks: ["Eglinton East", "Kennedy Road", "Scarborough"],
-  introVariant: "Welcome to Mohawk Medicine, your premier weed dispensary in Toronto situated right on 2655 Eglinton Ave E. We are dedicated to providing adults 19+ with top-tier weed, premium cannabis flower, pre-rolls, edibles, THC vapes, concentrates, and CBD products. If you are looking for a trusted cannabis store near Eglinton East / Scarborough / Kennedy or a weed shop near Kennedy Road, stop by today to consult with our knowledgeable staff.",
+  introVariant: "Mohawk Medicine is a weed dispensary in Toronto situated at 2655 Eglinton Ave E. Adults 19+ can use this page to check store basics, menu categories, and current public listings before visiting the Scarborough area shop.",
   neighborhoodDescription: "Located in the vibrant Eglinton East / Scarborough / Kennedy district, our cannabis store fits right into this active and historic community, surrounded by local retail shops and convenient transit links.",
   parkingNote: "Ample free parking is available in the retail plaza lot",
-  transitNote: "Conveniently located near Kennedy Subway Station and served by TTC routes.",
+  transitNote: "Check current local transit or map details before visiting.",
   sectionTitle: "Serving Customers Near Eglinton East and Scarborough"
 };

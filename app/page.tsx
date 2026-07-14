@@ -231,11 +231,11 @@ export default function HomePage() {
       <section className={styles.aboutSection}>
         <div className={styles.container}>
           <div className={styles.aboutPanel}>
-            <h2 className={styles.aboutTitle}>Toronto&apos;s Best Dispensary  Open 24 Hours</h2>
+            <h2 className={styles.aboutTitle}>Scarborough Cannabis On Eglinton Ave E</h2>
             <p className={styles.aboutText}>
-              Mohawk Medicine at 2655 Eglinton Ave E is Scarborough&apos;s premier cannabis destination.
-              Open 24 hours a day, 7 days a week, we carry 200+ strains across 6 quality tiers  from
-              budget-friendly $4/g to ultra-rare exotic fire. Walk-ins always welcome. No appointment needed.
+              Mohawk Medicine at 2655 Eglinton Ave E organizes the menu by flower tiers,
+              edibles, pre-rolls, vapes, concentrates, cigarettes, accessories, and specialty
+              categories. The store lists Open 24 Hours. Check the current category page before visiting.
             </p>
           </div>
         </div>

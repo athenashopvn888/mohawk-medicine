@@ -79,8 +79,8 @@ export function getItemData(category: string, name: string): ItemEffects {
       { emoji: "⭐", label: "Premium Quality" },
       { emoji: "✅", label: "Reliable" },
     ],
-    description: `${name} is a top-quality product available right now at Mohawk Medicine. We source only the best products to ensure our customers are fully satisfied.`,
-    metaDescription: `Buy ${name} in Toronto at Mohawk Medicine. Premium quality and best prices. Walk-in available 24/7.`,
+    description: `${name} is listed on the Mohawk Medicine menu. Check the current product page or ask staff for product details, pricing, and availability before buying.`,
+    metaDescription: `Buy ${name} in Toronto at Mohawk Medicine. Check current details before visiting 2655 Eglinton Ave E. Walk-in available 24/7.`,
     consume: "Use as directed on the packaging.",
   };
 }

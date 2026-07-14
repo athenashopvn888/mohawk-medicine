@@ -180,8 +180,8 @@ export const SEO_PAGES: SeoPageData[] = [
         a: "Check the current category page for product names, pricing, and availability details before visiting.",
       },
       {
-        q: "Is the old Mississauga page still active?",
-        a: "The site now points that old route to the Eglinton East local page so the public copy stays focused on Mohawk Medicine's actual area.",
+        q: "Do older local info routes still work?",
+        a: "Older local info routes now point to the Eglinton East local page so the public copy stays focused on Mohawk Medicine's actual area.",
       },
     ],
   },
