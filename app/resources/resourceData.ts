@@ -21,244 +21,298 @@ export interface ResourcePage {
   sections: ResourceSection[];
 }
 
+const localAreas = "Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, and the Kennedy Station area";
+
+const menuCards: ResourceCard[] = [
+  { title: "Flower Tiers", href: "/resources/flower-guide", text: "Compare Exotic, Premium, AAA+, AA, and Budget flower before opening a tier page." },
+  { title: "Pre-Rolls", href: "/resources/pre-roll-guide", text: "Use this when the visit is about ready-to-smoke options." },
+  { title: "Value Guide", href: "/resources/value-guide", text: "Start here for Budget, AA, and AAA+ flower comparisons." },
+  { title: "Native Smokes", href: "/resources/native-smokes", text: "Review cigarette, Backwoods, grabba, and pouch notes where listed." },
+];
+
 export const RESOURCE_PAGES: ResourcePage[] = [
   {
     slug: "",
     title: "Mohawk Medicine Resources",
-    seoTitle: "Mohawk Medicine Resources | Eglinton East / Scarborough / Kennedy Menu And Visit Guides",
-    description: "Mohawk Medicine resource pages for Eglinton East / Scarborough / Kennedy shoppers, with local visit planning, menu shortcuts, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
+    seoTitle: "Mohawk Medicine Resources | Scarborough Menu And Visit Guides",
+    description:
+      "Mohawk Medicine resource pages for Scarborough shoppers, with visit planning, menu categories, flower tier pricing, value shopping, pre-roll tips, and Native smokes notes.",
     eyebrow: "Scarborough Resource Hub",
-    intro: "A practical resource hub for Scarborough and Eglinton East shoppers. Use it to move from local search intent to the right menu shelf: flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, Native smokes, Backwoods, and grabba.",
+    intro:
+      "A practical resource hub for Mohawk Medicine shoppers near Eglinton East and Kennedy Road. Use these guides to compare menu categories, plan the visit, and check the current category pages before heading to the store.",
     cards: [
-      { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: "Plan the stop around Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, Kennedy Station area, and TTC routes." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the right category before jumping into product pages." },
-      { title: "Flower Tier Guide", href: "/resources/flower-guide", text: "Compare Exotic, Premium, AAA+, AA, and Budget with 3g and 6g deal math." },
-      { title: "Value Guide", href: "/resources/value-guide", text: "A cleaner path for cheap weed, budget weed, and affordable flower searches." },
-      { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Brand and price notes for cigarettes, Backwoods, grabba, and pouch listings." }
+      { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: `Plan the stop around ${localAreas}.` },
+      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the category that matches the visit." },
+      { title: "Flower Tier Guide", href: "/resources/flower-guide", text: "Compare posted flower tiers and bundle math." },
+      { title: "Value Guide", href: "/resources/value-guide", text: "Review Budget, AA, and AAA+ options before comparing higher tiers." },
+      { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Brand and price notes for cigarettes, Backwoods, grabba, and pouch listings." },
     ],
     sections: [
       {
-        heading: "Local Search, Useful Next Step",
-        body: "Mohawk Medicine is listed at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. These resources support the protected GBP landing page, not replace it. Start with the local page for address and visit context, then use the resource guides for menu decisions.",
-        bullets: ["GBP landing page: /weed-dispensary-toronto", "Local areas: Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, Kennedy Station area, and TTC routes", "Store hours shown in the site data: Open 24 Hours"]
+        heading: "Start With The Store Details",
+        body:
+          "Mohawk Medicine is listed at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Use the store page for address, hours, and contact details, then use these guides to compare the menu category that fits the visit.",
+        bullets: [
+          "Store page: /weed-dispensary-toronto",
+          `Nearby areas: ${localAreas}`,
+          "Listed hours: Open 24 Hours",
+        ],
       },
       {
-        heading: "Built Around Real Menu Paths",
-        body: "The pages are organized around high-intent keywords shoppers actually use: weed dispensary near Eglinton East / Scarborough / Kennedy, cannabis store Toronto, cheap weed, budget weed, pre-rolls, edibles, THC vapes, concentrates, Native cigarettes, Backwoods, and grabba."
-      }
+        heading: "Shop By Category",
+        body:
+          "Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, Backwoods, grabba, and pouches are easier to compare when each category is checked on its own current page.",
+      },
     ],
   },
   {
     slug: "eglinton-east-scarborough-visit-guide",
     title: "Eglinton East And Scarborough Weed Dispensary Visit Guide",
     seoTitle: "Eglinton East And Scarborough Weed Dispensary Visit Guide | Mohawk Medicine",
-    description: "Local visit planning for Mohawk Medicine at 2655 Eglinton Ave E, with Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, Kennedy Station area, and TTC routes context, menu shortcuts, hours, and category paths.",
+    description:
+      "Local visit planning for Mohawk Medicine at 2655 Eglinton Ave E, with Scarborough area context, menu shortcuts, hours, and category links.",
     eyebrow: "Visit Guide",
-    intro: "Use this page when the search starts local: weed dispensary near Eglinton East / Scarborough / Kennedy, cannabis store near 2655 Eglinton Ave E, or a quick menu check before visiting from Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, Kennedy Station area, and TTC routes.",
+    intro:
+      `Use this guide when visiting Mohawk Medicine from ${localAreas}. Confirm current store details and category listings before making a special trip.`,
     cards: [
-      { title: "GBP Store Page", href: "/weed-dispensary-toronto", text: "Use the main local landing page for address, directions, hours, and NAP details." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the product category before opening detailed menu pages." },
-      { title: "Value Guide", href: "/resources/value-guide", text: "Fast help for affordable flower and budget weed searches." }
+      { title: "Store Page", href: "/weed-dispensary-toronto", text: "Use the main store page for address, hours, and contact details." },
+      { title: "Menu Guide", href: "/resources/menu-guide", text: "Pick the category that matches the visit." },
+      { title: "Value Guide", href: "/resources/value-guide", text: "Review Budget, AA, and AAA+ flower notes." },
     ],
     sections: [
       {
         heading: "Address Anchor",
-        body: "Mohawk Medicine is listed at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Keep that address as the local anchor, then use the resource pages to decide whether the trip is about flower, pre-rolls, edibles, THC vapes, concentrates, accessories, or cigarettes."
+        body:
+          "Mohawk Medicine is listed at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Keep that address as the anchor, then check whether the visit is about flower, pre-rolls, edibles, THC vapes, concentrates, accessories, or cigarettes.",
       },
       {
-        heading: "Neighborhood Search Paths",
-        body: "Eglinton East searches usually include Kennedy, Golden Mile, Birchmount, Warden, and Kennedy Station language, so the resource pages give local shoppers a straight store-to-menu path.",
-        bullets: ["Eglinton East cannabis store search path", "Kennedy Road cannabis store search path", "Scarborough cannabis store search path", "Golden Mile cannabis store search path", "Birchmount cannabis store search path", "Warden cannabis store search path", "Kennedy Station area cannabis store search path", "TTC cannabis store search path"]
+        heading: "Nearby Scarborough Areas",
+        body:
+          `This location is useful for shoppers around ${localAreas}. Use the current map listing or contact page for route details before visiting.`,
       },
       {
-        heading: "Best First Click",
-        body: "If you need store details, start with /weed-dispensary-toronto. If you are comparing product types, start with the menu guide. If the trip is about Native smokes or cigarettes, start with the Native smokes page and then confirm the current category page."
-      }
+        heading: "Good First Clicks",
+        body:
+          "Use the store page for visit details, the menu guide for product categories, the flower guide for tier comparisons, and the Native smokes guide when cigarettes or smoke accessories are part of the same stop.",
+      },
     ],
   },
   {
     slug: "menu-guide",
     title: "Mohawk Medicine Menu Guide",
     seoTitle: "Mohawk Medicine Menu Guide | Flower, Pre-Rolls, Edibles, Vapes And Cigarettes",
-    description: "A category-first menu guide for Mohawk Medicine, covering flower tiers, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, and Native smokes.",
+    description:
+      "A menu guide for Mohawk Medicine, covering flower tiers, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, and Native smokes.",
     eyebrow: "Menu Guide",
-    intro: "The menu gets easier when you choose the lane first. Flower has tier math. Pre-rolls have format details. Edibles, THC vapes, concentrates, and accessories need category notes. Cigarettes need brand and price checks.",
+    intro:
+      "Start with the category that matches the visit. Flower shoppers can compare tiers, pre-roll shoppers can check ready-to-smoke options, and cigarette shoppers can review brand and price notes where listed.",
     cards: [
-      { title: "Flower Tiers", href: "/resources/flower-guide", text: "Start here for Exotic, Premium, AAA+, AA, and Budget flower." },
-      { title: "Pre-Rolls", href: "/resources/pre-roll-guide", text: "Use this for ready-to-smoke singles, packs, and quick-trip browsing." },
-      { title: "Cigarettes", href: "/items/cigarettes", text: "Open the cigarette category for current Native smokes listings." },
-      { title: "GBP Store Page", href: "/weed-dispensary-toronto", text: "Return to the protected local store page." }
+      ...menuCards,
+      { title: "Store Page", href: "/weed-dispensary-toronto", text: "Return to store details, address, hours, and contact information." },
     ],
     sections: [
       {
-        heading: "Pick The Shelf First",
-        body: "For Scarborough and Eglinton East shoppers, the menu path is simple: flower shoppers compare tiers, pre-roll shoppers compare format, edible and vape shoppers read product notes, and cigarette shoppers compare brand, full/light/menthol style, and price.",
-        bullets: ["Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes each need their own pass.", "Use current category pages for live product details.", "Use resources for shopping logic and local planning."]
+        heading: "Choose A Category",
+        body:
+          "For Scarborough and Eglinton East shoppers, the simplest move is to choose the product type first: flower, pre-rolls, edibles, THC vapes, concentrates, accessories, cigarettes, or specialty items.",
+        bullets: [
+          "Use flower tiers when comparing Exotic, Premium, AAA+, AA, or Budget.",
+          "Use the pre-roll category when the visit is about ready-to-smoke options.",
+          "Use the cigarette category when brand, full/light/menthol style, Backwoods, grabba, or pouch listings matter.",
+        ],
       },
       {
-        heading: "Local Keywords Without The Mess",
-        body: "This page supports searches like weed dispensary near Eglinton East / Scarborough / Kennedy, cannabis store Toronto, cheap weed near me, Native cigarettes, and THC vape menu while keeping the actual shopper path clear."
-      }
+        heading: "Check The Current Category Page",
+        body:
+          "Product names, prices, pack sizes, flavours, and availability can change. Use the current category page before visiting for a specific item.",
+      },
     ],
   },
   {
     slug: "flower-guide",
     title: "Mohawk Medicine Flower Tier And 6g Price Guide",
     seoTitle: "Mohawk Medicine Flower Tier Guide | Exotic, Premium, AAA+, AA And Budget",
-    description: "Compare Mohawk Medicine flower tiers with posted per-gram prices, 3g specials, 6g deal math, Budget flower, AA flower, AAA+, Premium, and Exotic.",
+    description:
+      "Compare Mohawk Medicine flower tiers with posted per-gram prices, 3g specials, 6g deal math, Budget flower, AA flower, AAA+, Premium, and Exotic.",
     eyebrow: "Flower Tiers",
-    intro: "Here is the clean flower read: Exotic is posted at $20/g, Premium at $15/g, AAA+ at $10/g, AA at $4/g, and Budget at $3/g. Where the 6g tier deal applies, shoppers can compare Exotic around $60 for 6g, Premium around $45 for 6g, and AAA+ around $30 for 6g.",
+    intro:
+      "Mohawk Medicine flower is organized by tier: Exotic, Premium, AAA+, AA, and Budget. Use the tier pages to confirm current strain names, prices, and availability before visiting.",
     cards: [
       { title: "Exotic Flower", href: "/exotic", text: "$20/g, with 3g and 6g deal logic where listed." },
       { title: "Premium Flower", href: "/premium", text: "$15/g, with 3g and 6g deal logic where listed." },
       { title: "AAA+ Flower", href: "/aaa", text: "$10/g, with 3g and 6g deal logic where listed." },
-      { title: "AA Flower", href: "/aa", text: "$4/g for a direct value lane." },
-      { title: "Budget Flower", href: "/budget", text: "$3/g, with a $10 / 3g special where listed." }
+      { title: "AA Flower", href: "/aa", text: "$4/g where listed." },
+      { title: "Budget Flower", href: "/budget", text: "$3/g, with a $10 / 3g special where listed." },
     ],
     sections: [
       {
-        heading: "Why The 6g Line Matters",
-        body: "A straight per-gram price does not always tell the whole shelf story. The top flower lanes can show 3g and 6g deal logic, so a shopper comparing Exotic, Premium, and AAA+ should read the bundle line before judging value.",
-        bullets: ["Exotic: $20/g, 3g for $40 or 6g around $60 where listed.", "Premium: $15/g, 3g for $30 or 6g around $45 where listed.", "AAA+: $10/g, 3g for $20 or 6g around $30 where listed."]
+        heading: "Compare The Posted Tier Math",
+        body:
+          "The top flower tiers can show 3g and 6g deal logic, so compare the bundle line before deciding which tier fits the visit.",
+        bullets: [
+          "Exotic: $20/g, 3g for $40 or 6g around $60 where listed.",
+          "Premium: $15/g, 3g for $30 or 6g around $45 where listed.",
+          "AAA+: $10/g, 3g for $20 or 6g around $30 where listed.",
+        ],
       },
       {
-        heading: "Budget And AA Keep It Simple",
-        body: "For cheap weed and budget weed searches, Budget at $3/g and AA at $4/g are the simplest lanes to compare. The final product name, strain note, and availability should still be checked on the current tier page."
-      }
+        heading: "Budget And AA",
+        body:
+          "Budget at $3/g and AA at $4/g are the simplest value comparisons. Confirm current product names, strain notes, and availability on the tier page before visiting.",
+      },
     ],
   },
   {
     slug: "value-guide",
     title: "Mohawk Medicine Value Weed Guide",
-    seoTitle: "Mohawk Medicine Value Weed Guide | Cheap Weed Near Eglinton East / Scarborough / Kennedy",
-    description: "A value shopping guide for Mohawk Medicine, covering cheap weed, budget weed, AA flower, AAA+ deals, 6g tier math, and affordable menu paths.",
+    seoTitle: "Mohawk Medicine Value Weed Guide | Budget And AA Flower Near Scarborough",
+    description:
+      "A value shopping guide for Mohawk Medicine, covering Budget flower, AA flower, AAA+ deals, 6g tier math, and affordable menu categories.",
     eyebrow: "Value Guide",
-    intro: "For Scarborough and Eglinton East value shopping, start with Budget, AA, and AAA+ before jumping into higher tiers or mixed categories.",
+    intro:
+      "For value shopping near Eglinton East and Scarborough, start with Budget, AA, and AAA+ before comparing higher flower tiers or mixed categories.",
     cards: [
-      { title: "Budget Flower", href: "/budget", text: "$3/g for the lowest posted flower lane." },
-      { title: "AA Flower", href: "/aa", text: "$4/g for a simple low-spend lane." },
+      { title: "Budget Flower", href: "/budget", text: "$3/g for the lowest posted flower tier where listed." },
+      { title: "AA Flower", href: "/aa", text: "$4/g for a simple low-spend flower comparison." },
       { title: "AAA+ Flower", href: "/aaa", text: "$10/g, 3g for $20, or 6g around $30 where listed." },
-      { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Use this if cigarettes or Backwoods are part of the same stop." }
+      { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Use this if cigarettes or Backwoods are part of the same stop." },
     ],
     sections: [
       {
         heading: "Start With Budget, Then Move Up",
-        body: "If the search is cheap weed, budget weed, or affordable cannabis near Eglinton East / Scarborough / Kennedy, start with Budget and AA. If the trip can stretch a little, AAA+ gives shoppers another value lane with 3g and 6g deal logic."
+        body:
+          "If the visit is about lower-priced flower, start with Budget and AA. If the budget can stretch, AAA+ gives shoppers another posted tier to compare before moving into Premium or Exotic.",
       },
       {
-        heading: "Compare Inside The Category",
-        body: "Value means something different for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes. Keep each comparison inside the right category so the decision does not get muddy."
-      }
+        heading: "Compare Inside The Same Category",
+        body:
+          "Value means something different for flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes. Keep the comparison inside the category that matches the visit.",
+      },
     ],
   },
   {
     slug: "pre-roll-guide",
     title: "Mohawk Medicine Pre-Roll And Quick Trip Guide",
     seoTitle: "Mohawk Medicine Pre-Roll Guide | Ready-To-Smoke Menu Tips",
-    description: "A pre-roll guide for Mohawk Medicine, with quick-trip tips for ready-to-smoke options, flower cross-shopping, edibles, vapes, concentrates, and accessories.",
+    description:
+      "A pre-roll guide for Mohawk Medicine, with quick-trip tips for ready-to-smoke options, flower cross-shopping, edibles, vapes, concentrates, and accessories.",
     eyebrow: "Pre-Roll Guide",
-    intro: "Pre-roll shoppers usually want a faster path than loose flower shoppers. Use this page when the goal is ready-to-smoke options, a quick stop, or a small add-on beside another category.",
+    intro:
+      "Use this guide when the visit is about ready-to-smoke options, a quick stop, or a small add-on beside another category.",
     cards: [
       { title: "Pre-Rolls", href: "/items/prerolls", text: "Open the current pre-roll category." },
       { title: "Flower Tiers", href: "/resources/flower-guide", text: "Switch here if the visit turns into loose flower." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Use this if the stop includes edibles, vapes, concentrates, or accessories." }
+      { title: "Menu Guide", href: "/resources/menu-guide", text: "Use this if the stop includes edibles, vapes, concentrates, or accessories." },
     ],
     sections: [
       {
-        heading: "Keep Pre-Rolls In Their Own Lane",
-        body: "Pre-rolls should be compared by format, pack size, posted notes, and current price. Do not force loose-flower tier logic onto pre-roll shopping unless the visit actually changes categories."
+        heading: "Compare Pre-Rolls By Format",
+        body:
+          "Pre-rolls should be compared by format, pack size, posted notes, and current price. Use loose-flower tier pages only when the visit changes categories.",
       },
       {
-        heading: "Useful For Local Quick Stops",
-        body: "For Scarborough and Eglinton East shoppers, pre-rolls can be a quick category to check before heading through Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, Kennedy Station area, and TTC routes. Use the current category page for details."
-      }
+        heading: "Useful For Quick Stops",
+        body:
+          `For shoppers around ${localAreas}, pre-rolls can be a quick category to check before visiting. Use the current category page for details.`,
+      },
     ],
   },
   {
     slug: "native-smokes",
     title: "Mohawk Medicine Native Smokes Price Guide",
     seoTitle: "Mohawk Medicine Native Smokes Prices | Cigarettes, Backwoods And Grabba",
-    description: "Mohawk Medicine Native smokes resource with cigarette brands and listed prices for Canadian, Putters, Canadian Goose, Nexus, Time, Backwoods, grabba, pouches, and mixed smoke items where shown.",
+    description:
+      "Mohawk Medicine Native smokes resource with cigarette brands and listed prices for Canadian, Putters, Canadian Goose, Nexus, Time, Backwoods, grabba, pouches, and mixed smoke items where shown.",
     eyebrow: "Native Smokes",
-    intro: "This page gives cigarette shoppers a real starting point instead of a vague category page. Use it for Native cigarettes, Canadian brands, Backwoods, grabba, nicotine pouches, and mixed smoke item price checks at Mohawk Medicine.",
+    intro:
+      "Use this guide for Native cigarettes, Canadian brands, Backwoods, grabba, nicotine pouches, and mixed smoke item price checks at Mohawk Medicine.",
     cards: [
-      { title: "$25 Cigarette Brands", href: "/items/cigarettes", text: "The cigarette category lists CANADIAN LIGHTS, CANADIAN FULL, CANADIAN GOOSE FULL, CANADIAN GOOSE LIGHTS, CANADIAN MENTHOL, CANADIAN CLASSICS ORIGINAL, CANADIAN CLASSICS SILVER, ROLLED GOLD LIGHTS, NEXUS FULL, NEXUS LIGHTS, TIME FULL, NEW BACKWOODS FLAVORS at $25 where shown." },
-      { title: "Backwoods And Grabba", href: "/items/cigarettes", text: "NICOTINE POUCHES , VELO, PABLO, KILLA at $20; GRABBA at $5; GRABBA SHAKER *RedRose / Red Herring* at $19; BACKWOODS ASSORTED FLAVORS $20-$25 at $20; NEW BACKWOODS FLAVORS at $25; 10 X PREMIUM MIX CIGARETTES at $3" },
-      { title: "Native Cigarettes Guide", href: "/resources/native-smokes/native-cigarettes-guide", text: "A fuller brand and price breakdown for cigarette shoppers." }
+      { title: "$25 Cigarette Brands", href: "/items/cigarettes", text: "The cigarette category lists several Canadian, Canadian Goose, Canadian Classics, Rolled Gold, Nexus, Time, and Backwoods items at $25 where shown." },
+      { title: "Backwoods And Grabba", href: "/items/cigarettes", text: "The cigarette category also lists nicotine pouches, grabba, grabba shaker, Backwoods, and 10 x Premium Mix Cigarettes where shown." },
+      { title: "Native Cigarettes Guide", href: "/resources/native-smokes/native-cigarettes-guide", text: "Open the fuller brand and price breakdown." },
     ],
     sections: [
       {
         heading: "$25 Cigarette Brand List",
-        body: "The cigarette category lists CANADIAN LIGHTS, CANADIAN FULL, CANADIAN GOOSE FULL, CANADIAN GOOSE LIGHTS, CANADIAN MENTHOL, CANADIAN CLASSICS ORIGINAL, CANADIAN CLASSICS SILVER, ROLLED GOLD LIGHTS, NEXUS FULL, NEXUS LIGHTS, TIME FULL, NEW BACKWOODS FLAVORS at $25 where shown.",
-        bullets: ["CANADIAN LIGHTS - $25", "CANADIAN FULL - $25", "CANADIAN GOOSE FULL - $25", "CANADIAN GOOSE LIGHTS - $25", "CANADIAN MENTHOL - $25", "CANADIAN CLASSICS ORIGINAL - $25", "CANADIAN CLASSICS SILVER - $25", "ROLLED GOLD LIGHTS - $25", "NEXUS FULL - $25", "NEXUS LIGHTS - $25", "TIME FULL - $25", "NEW BACKWOODS FLAVORS - $25"]
+        body:
+          "The cigarette category lists CANADIAN LIGHTS, CANADIAN FULL, CANADIAN GOOSE FULL, CANADIAN GOOSE LIGHTS, CANADIAN MENTHOL, CANADIAN CLASSICS ORIGINAL, CANADIAN CLASSICS SILVER, ROLLED GOLD LIGHTS, NEXUS FULL, NEXUS LIGHTS, TIME FULL, and NEW BACKWOODS FLAVORS at $25 where shown.",
       },
       {
         heading: "Backwoods, Grabba, Pouches, And Mix Items",
-        body: "NICOTINE POUCHES , VELO, PABLO, KILLA at $20; GRABBA at $5; GRABBA SHAKER *RedRose / Red Herring* at $19; BACKWOODS ASSORTED FLAVORS $20-$25 at $20; NEW BACKWOODS FLAVORS at $25; 10 X PREMIUM MIX CIGARETTES at $3"
+        body:
+          "The category also lists nicotine pouches with Velo, Pablo, and Killa at $20; Grabba at $5; Grabba Shaker RedRose / Red Herring at $19; Backwoods Assorted Flavors at $20-$25; New Backwoods Flavors at $25; and 10 x Premium Mix Cigarettes at $3 where shown.",
       },
       {
         heading: "Confirm The Current Shelf",
-        body: "Cigarette inventory, flavors, and brand mix can change. Use the cigarette category for the current public list, then confirm in store when one exact brand, full/light/menthol style, pouch, grabba, or Backwoods flavor matters."
-      }
+        body:
+          "Cigarette inventory, flavours, and brand mix can change. Use the cigarette category for the current public list, then confirm in store when one exact brand, style, pouch, grabba, or Backwoods flavour matters.",
+      },
     ],
   },
   {
     slug: "native-smokes/native-cigarettes-guide",
     title: "Mohawk Medicine Native Cigarettes Brand Guide",
     seoTitle: "Mohawk Medicine Native Cigarettes Guide | Brand And Price List",
-    description: "A detailed Native cigarettes brand guide for Mohawk Medicine, including $25 cigarette listings and smoke add-on prices where shown.",
+    description:
+      "A detailed Native cigarettes brand guide for Mohawk Medicine, including $25 cigarette listings and smoke add-on prices where shown.",
     eyebrow: "Native Cigarettes",
-    intro: "If the trip includes cigarettes, start with brand and price first. This guide keeps Native cigarettes, Backwoods, grabba, pouches, and mixed smoke items separate from flower, pre-rolls, edibles, THC vapes, and concentrates.",
+    intro:
+      "If the visit includes cigarettes, start with brand and price first. This guide keeps Native cigarettes, Backwoods, grabba, pouches, and mixed smoke items separate from cannabis category browsing.",
     cards: [
       { title: "Cigarette Category", href: "/items/cigarettes", text: "Open the current cigarette category." },
       { title: "Native Smokes Overview", href: "/resources/native-smokes", text: "Return to the shorter price guide." },
-      { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: "Plan the store stop around the local area." }
+      { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: "Plan the store stop around the local area." },
     ],
     sections: [
       {
         heading: "Brand Names To Check",
-        body: "The cigarette category lists CANADIAN LIGHTS, CANADIAN FULL, CANADIAN GOOSE FULL, CANADIAN GOOSE LIGHTS, CANADIAN MENTHOL, CANADIAN CLASSICS ORIGINAL, CANADIAN CLASSICS SILVER, ROLLED GOLD LIGHTS, NEXUS FULL, NEXUS LIGHTS, TIME FULL, NEW BACKWOODS FLAVORS at $25 where shown.",
-        bullets: ["CANADIAN LIGHTS - $25", "CANADIAN FULL - $25", "CANADIAN GOOSE FULL - $25", "CANADIAN GOOSE LIGHTS - $25", "CANADIAN MENTHOL - $25", "CANADIAN CLASSICS ORIGINAL - $25", "CANADIAN CLASSICS SILVER - $25", "ROLLED GOLD LIGHTS - $25", "NEXUS FULL - $25", "NEXUS LIGHTS - $25", "TIME FULL - $25", "NEW BACKWOODS FLAVORS - $25"]
+        body:
+          "The cigarette category lists CANADIAN LIGHTS, CANADIAN FULL, CANADIAN GOOSE FULL, CANADIAN GOOSE LIGHTS, CANADIAN MENTHOL, CANADIAN CLASSICS ORIGINAL, CANADIAN CLASSICS SILVER, ROLLED GOLD LIGHTS, NEXUS FULL, NEXUS LIGHTS, TIME FULL, and NEW BACKWOODS FLAVORS at $25 where shown.",
       },
       {
         heading: "Smoke Category Add-Ons",
-        body: "NICOTINE POUCHES , VELO, PABLO, KILLA at $20; GRABBA at $5; GRABBA SHAKER *RedRose / Red Herring* at $19; BACKWOODS ASSORTED FLAVORS $20-$25 at $20; NEW BACKWOODS FLAVORS at $25; 10 X PREMIUM MIX CIGARETTES at $3"
+        body:
+          "Nicotine pouches, Grabba, Grabba Shaker, Backwoods, and 10 x Premium Mix Cigarettes may also appear in the cigarette category. Confirm current details before visiting for one exact item.",
       },
       {
-        heading: "Separate The Smoke Shelf From Cannabis Shopping",
-        body: "When the same visit includes flower, pre-rolls, edibles, THC vapes, concentrates, or accessories, keep cigarettes as their own lane. It makes the category easier for both cannabis shoppers and Native smokes shoppers."
-      }
+        heading: "Keep Cigarettes Separate From Cannabis Categories",
+        body:
+          "When the same visit includes flower, pre-rolls, edibles, THC vapes, concentrates, or accessories, keep cigarette items in their own category so the list stays easier to compare.",
+      },
     ],
   },
   {
     slug: "resource-centre-launch",
-    title: "Mohawk Medicine Resource Centre Update",
-    seoTitle: "Mohawk Medicine Resource Centre Update | Local Menu Guides",
-    description: "Mohawk Medicine resource centre update with local visit planning, menu guide pages, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
-    eyebrow: "Resource Update",
-    intro: "The resource centre has been rebuilt around real shopper paths: local visit planning, category-first browsing, flower tier math, value shopping, pre-roll shortcuts, and cigarette price notes.",
+    title: "Mohawk Medicine Resource Centre",
+    seoTitle: "Mohawk Medicine Resource Centre | Local Menu Guides",
+    description:
+      "Mohawk Medicine resource centre with local visit planning, menu guide pages, flower tier pricing, value shopping, pre-roll tips, and Native smokes prices.",
+    eyebrow: "Resource Centre",
+    intro:
+      "Mohawk Medicine resources help shoppers compare local visit details, flower tiers, value options, pre-rolls, and cigarette notes before visiting the Eglinton Ave E store.",
     cards: [
       { title: "Resource Home", href: "/resources", text: "Start at the main resource hub." },
-      { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: "Plan around Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, Kennedy Station area, and TTC routes." },
-      { title: "Flower Tier Guide", href: "/resources/flower-guide", text: "Review the 3g and 6g pricing logic." },
-      { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Check brand and price notes." }
+      { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: `Plan around ${localAreas}.` },
+      { title: "Flower Tier Guide", href: "/resources/flower-guide", text: "Review posted tier and bundle notes." },
+      { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Check brand and price notes where listed." },
     ],
     sections: [
       {
-        heading: "What Changed",
-        body: "The resources now sound like Mohawk Medicine and Eglinton East / Scarborough / Kennedy, not a copied store template. Each page supports a specific shopper task and points back to the right category or local landing page."
+        heading: "Plan The Visit",
+        body:
+          "Start with store details, choose the category that matches the trip, then confirm current product details on the category page before visiting Mohawk Medicine.",
       },
       {
-        heading: "What Stayed Protected",
-        body: "The important SEO paths stay intact: /weed-dispensary-toronto, /resources, /resources/menu-guide, /resources/flower-guide, /resources/value-guide, /resources/pre-roll-guide, /resources/native-smokes, and /resources/native-smokes/native-cigarettes-guide."
-      }
+        heading: "Main Resource Pages",
+        body:
+          "Use the visit guide for local planning, the menu guide for categories, the flower guide for tier comparisons, the value guide for Budget and AA, and the Native smokes guide for cigarettes and related smoke items.",
+      },
     ],
-  }
+  },
 ];
 
 export const RESOURCE_HOME = RESOURCE_PAGES[0];
 
 export function getResourcePage(slug: string) {
-  const cleanSlug = slug.replace(/^\/+|\/+$/g, "");
-  return RESOURCE_PAGES.find((page) => page.slug === cleanSlug);
+  return RESOURCE_PAGES.find((page) => page.slug === slug);
 }
