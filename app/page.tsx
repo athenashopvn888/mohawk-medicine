@@ -48,7 +48,7 @@ const TIER_CARDS = [
   {
     name: "DAILY DEALS",
     slug: "budget",
-    price: "Today's Best Prices",
+    price: "Current Menu Prices",
     tagline: "Fresh deals every day",
     banner: "/banners/09_Mohawk_Daily_Deals.webp",
   },
@@ -131,7 +131,7 @@ export default function HomePage() {
         <div className={styles.container}>
           <h1 className={styles.welcomeH1}>MOHAWK MEDICINE</h1>
           <p className={styles.welcomeSub}>
-            Toronto&apos;s Premier 24-Hour Cannabis Dispensary &bull; 2655 Eglinton Ave E
+            Scarborough Cannabis Dispensary &bull; 2655 Eglinton Ave E
           </p>
           <div className={styles.trustBadges}>
             <span className={styles.trustBadge}> Open 24/7</span>
