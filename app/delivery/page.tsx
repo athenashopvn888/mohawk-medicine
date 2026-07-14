@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import DeliveryContent from "./DeliveryContent";
 
 export const metadata: Metadata = {
-  title: "Delivery Coming Soon — Mohawk Medicine | Toronto",
-  description: "Get notified when Mohawk Medicine launches same-day weed delivery across Toronto and surrounding areas.",
+  title: "Delivery Updates - Mohawk Medicine | Scarborough",
+  description: "Mohawk Medicine delivery updates for Scarborough shoppers. Check this page for local delivery information as details are prepared.",
   alternates: {
     canonical: "https://mohawkmedicine.com/delivery",
   },

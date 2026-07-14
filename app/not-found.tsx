@@ -39,7 +39,7 @@ export default function NotFound() {
           }}
         >
           This page doesn&apos;t exist — but our shelves are fully stocked.
-          Browse 200+ strains at Mohawk&apos;s most fire dispensary.
+          Use the menu to get back to Mohawk Medicine&apos;s Scarborough categories.
         </p>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
           <Link

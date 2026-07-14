@@ -149,7 +149,7 @@ export const TIER_CONFIG: Record<
   },
 };
 
-/* ── Item category config ── */
+/* Item category config */
 export interface CategoryInfo {
   name: string; slug: string; color: string; icon: string; banner?: string;
   seoTitle: string; seoIntro: string; seoDescription: string;
@@ -159,33 +159,33 @@ export interface CategoryInfo {
 export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   EDIBLES: {
     banner: "/banners/EDIBLES.webp",
-    name: "Edibles", slug: "edibles", color: "#f97316", icon: "🍬",
-    seoTitle: "Cannabis Edibles Mohawk — Gummies, Chocolates & Drinks",
-    seoIntro: "Browse the full cannabis edibles menu at Mohawk Medicine on Eglinton Ave E, Toronto. We carry THC gummies, chocolates, drinks, and more from top Canadian brands.",
-    seoDescription: "Looking for cannabis edibles in Toronto? Mohawk Medicine stocks a wide range of THC-infused gummies, chocolates, beverages, and baked goods. Our edibles range from micro-dose options for beginners to high-potency products for experienced consumers. All products are lab-tested and sourced from licensed Canadian producers. Visit us at 2655 Eglinton Ave E — open daily 24 hours.",
+    name: "Edibles", slug: "edibles", color: "#f97316", icon: "ED",
+    seoTitle: "Cannabis Edibles Scarborough - Gummies, Chocolates & Drinks",
+    seoIntro: "Browse the cannabis edibles category at Mohawk Medicine on Eglinton Ave E in Scarborough. Check the current page for listed gummies, chocolates, drinks, and other edible formats.",
+    seoDescription: "Looking for cannabis edibles in Scarborough? Mohawk Medicine keeps an edibles category for shoppers checking listed gummies, chocolates, beverages, and baked goods before visiting 2655 Eglinton Ave E. Product mix, potency, and pricing can change.",
     faqs: [
-      { q: "What cannabis edibles do you carry?", a: "We stock THC gummies, chocolates, beverages, capsules, and baked goods from top Canadian brands. Potencies range from 10mg to 1000mg+ THC." },
+      { q: "What cannabis edibles do you carry?", a: "The edibles category may include gummies, chocolates, beverages, capsules, and baked goods. Check the current page for listed products." },
       { q: "How long do edibles take to kick in?", a: "Cannabis edibles typically take 30-90 minutes to take effect. Start with a low dose (5-10mg) and wait at least 2 hours before consuming more." },
-      { q: "Can I buy edibles at Mohawk Medicine?", a: "Yes! Visit us at 2655 Eglinton Ave E, Mohawk. We're open daily 24 hours with a full edibles selection in store." },
+      { q: "Can I buy edibles at Mohawk Medicine?", a: "Visit 2655 Eglinton Ave E and check the current edibles page before visiting. The store lists Open 24 Hours." },
     ],
   },
   "VAPE PENS": {
     banner: "/banners/22_Mohawk_THC_Vape.webp",
-    name: "THC Vape", slug: "vapes", color: "#8b5cf6", icon: "💨",
-    seoTitle: "Vape Pens Mohawk — THC & Nicotine Cartridges",
-    seoIntro: "Shop THC and nicotine vape pens at Mohawk Medicine, Mohawk. Cartridges, 510-thread batteries, and premium vape brands — all in stock.",
-    seoDescription: "Mohawk Medicine carries a curated selection of vape pens and cartridges in Toronto. From 510-thread THC cartridges to nicotine vape pods, we stock the most popular brands and flavours. Our knowledgeable budtenders can help you choose the right cartridge and battery setup. Visit us at 2655 Eglinton Ave E for the best vape selection in Scarborough.",
+    name: "THC Vape", slug: "vapes", color: "#8b5cf6", icon: "V",
+    seoTitle: "Vape Pens Scarborough - THC & Nicotine Cartridges",
+    seoIntro: "Shop THC and nicotine vape categories at Mohawk Medicine in Scarborough. Check the current pages for listed cartridges, disposables, batteries, and vape formats.",
+    seoDescription: "Mohawk Medicine carries vape categories for Scarborough shoppers checking 510-thread THC cartridges, nicotine vape pods, disposables, and compatible accessories. Product mix can change, so check the current category page or ask staff at 2655 Eglinton Ave E.",
     faqs: [
-      { q: "What vape pens do you sell?", a: "We carry 510-thread THC cartridges, nicotine vape pods, disposable vapes, and compatible batteries from top Canadian brands." },
-      { q: "Do you sell vape batteries?", a: "Yes! We stock 510-thread batteries and pod systems that pair with our cartridge selection." },
+      { q: "What vape pens do you sell?", a: "The vape pages may list 510-thread THC cartridges, nicotine vape pods, disposable vapes, and compatible batteries." },
+      { q: "Do you sell vape batteries?", a: "Check the current vape or accessories category for listed batteries and compatible hardware." },
     ],
   },
   "VAPE DISPOSABLE": {
     banner: "/banners/NIC%20VAPE.webp",
-    name: "Nic Vape", slug: "vape-disposables", color: "#a78bfa", icon: "💨",
-    seoTitle: "Disposable Vapes Mohawk — THC Disposable Pens",
-    seoIntro: "THC disposable vapes available at Mohawk Medicine, Mohawk. No charging, no refilling — just open and enjoy.",
-    seoDescription: "Disposable THC vapes are the easiest way to enjoy cannabis on the go. Mohawk Medicine stocks a wide selection of pre-charged, pre-filled disposable vape pens with various strain profiles and potencies. Perfect for beginners and experienced users alike. Visit us at 2655 Eglinton Ave E, Mohawk.",
+    name: "Nic Vape", slug: "vape-disposables", color: "#a78bfa", icon: "NV",
+    seoTitle: "Disposable Vapes Scarborough - Vape Disposables",
+    seoIntro: "Disposable vape listings at Mohawk Medicine in Scarborough. Check the current category page before visiting Eglinton Ave E.",
+    seoDescription: "Mohawk Medicine keeps a vape disposables category for Scarborough shoppers checking listed disposable vape formats. Product mix, profiles, and potency details can change, so use the current category page before visiting 2655 Eglinton Ave E.",
     faqs: [
       { q: "How long does a disposable vape last?", a: "Most disposable THC vapes contain 0.5g-1g of distillate and last between 100-300 puffs depending on usage." },
       { q: "Are disposable vapes rechargeable?", a: "Most are designed for single use, but some models include a USB-C charging port to ensure you can use the full cartridge." },
@@ -193,33 +193,33 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   },
   CONCENTRATES: {
     banner: "/banners/07_Mohawk_Concentrate.webp",
-    name: "Concentrates", slug: "concentrates", color: "#f59e0b", icon: "💎",
-    seoTitle: "Cannabis Concentrates Mohawk — Shatter, Wax, Hash & Live Resin",
-    seoIntro: "Premium cannabis concentrates at Mohawk Medicine, Mohawk. Shatter, wax, hash, live resin, and diamonds — all in stock.",
-    seoDescription: "Mohawk Medicine offers a premium selection of cannabis concentrates in Toronto. From traditional hash and kief to modern extracts like shatter, wax, live resin, and THC diamonds, we carry products for every preference and potency level. Our concentrates are sourced from trusted extractors and tested for purity. Visit us at 2655 Eglinton Ave E.",
+    name: "Concentrates", slug: "concentrates", color: "#f59e0b", icon: "C",
+    seoTitle: "Cannabis Concentrates Scarborough - Shatter, Wax, Hash & Live Resin",
+    seoIntro: "Cannabis concentrate listings at Mohawk Medicine in Scarborough. Check the current page for shatter, wax, hash, live resin, diamonds, and related formats.",
+    seoDescription: "Mohawk Medicine keeps a concentrates category for Scarborough shoppers checking hash, kief, shatter, wax, live resin, THC diamonds, and related formats. Product mix and potency details can rotate, so check the current page before visiting 2655 Eglinton Ave E.",
     faqs: [
-      { q: "What types of concentrates do you carry?", a: "We stock shatter, wax, budder, live resin, rosin, hash, kief, and THC diamonds from top Canadian extractors." },
+      { q: "What types of concentrates do you carry?", a: "The concentrates page may list shatter, wax, budder, live resin, rosin, hash, kief, THC diamonds, and related formats." },
       { q: "How do I consume concentrates?", a: "Concentrates can be dabbed with a rig, vaped with a concentrate pen, or added to flower in a joint or bowl for extra potency." },
     ],
   },
   PREROLLS: {
-    banner: "/banners/21_Mohawk_Pre_Rolls.webp", name: "Pre-Rolls", slug: "prerolls", color: "#22c55e", icon: "🚬",
-    seoTitle: "Pre-Rolls Mohawk — Ready-to-Smoke Cannabis Joints",
-    seoIntro: "Pre-rolled cannabis joints at Mohawk Medicine, Mohawk. Singles, multi-packs, and infused pre-rolls — ready to light up.",
-    seoDescription: "Skip the rolling and grab a pre-roll from Mohawk Medicine in Toronto. We carry singles, multi-packs, and infused pre-rolls from premium flower. Whether you want a quick smoke or a party pack, our pre-roll selection has something for everyone. Visit us at 2655 Eglinton Ave E — open daily 24 hours.",
+    banner: "/banners/21_Mohawk_Pre_Rolls.webp", name: "Pre-Rolls", slug: "prerolls", color: "#22c55e", icon: "PR",
+    seoTitle: "Pre-Rolls Scarborough - Cannabis Joints",
+    seoIntro: "Pre-roll listings at Mohawk Medicine in Scarborough. Check the current page for singles, multi-packs, infused pre-rolls, and related formats.",
+    seoDescription: "Mohawk Medicine keeps a pre-roll category for Scarborough shoppers checking singles, multi-packs, infused pre-rolls, and related formats before visiting 2655 Eglinton Ave E. Product mix and pricing can change.",
     faqs: [
-      { q: "What pre-rolls do you carry?", a: "We stock singles, 3-packs, and multi-packs in various strains and potencies, including infused pre-rolls with concentrates." },
-      { q: "Are your pre-rolls made with quality flower?", a: "Yes! Our pre-rolls are filled with ground flower from our regular menu tiers — not shake or trim." },
+      { q: "What pre-rolls do you carry?", a: "The pre-roll page may list singles, 3-packs, multi-packs, and infused pre-rolls. Check the current page for listed products." },
+      { q: "Do pre-roll listings change?", a: "Yes. Strain names, pack sizes, potency details, and prices can rotate." },
     ],
   },
   "ADD ONS": {
     banner: "/banners/03_Mohawk_Accessories.webp",
-    name: "Accessories", slug: "add-ons", color: "#34d399", icon: "➕",
-    seoTitle: "Cannabis Accessories Mohawk — Grinders, Papers, Lighters & More",
+    name: "Accessories", slug: "add-ons", color: "#34d399", icon: "+",
+    seoTitle: "Cannabis Accessories Scarborough - Grinders, Papers, Lighters & More",
     seoIntro: "Essential cannabis accessories at Mohawk Medicine, Mohawk. Grinders, rolling papers, lighters, trays, and more.",
-    seoDescription: "Mohawk Medicine carries all the accessories you need for the perfect smoke session. From premium grinders and rolling papers to lighters, trays, and storage containers, we have everything in stock. Visit us at 2655 Eglinton Ave E, Mohawk.",
+    seoDescription: "Mohawk Medicine keeps an accessories category for Scarborough shoppers checking grinders, rolling papers, lighters, trays, storage containers, and related items. Product mix can change, so check the current page before visiting 2655 Eglinton Ave E.",
     faqs: [
-      { q: "What accessories do you sell?", a: "We carry grinders, rolling papers, filter tips, lighters, rolling trays, storage jars, and more." },
+      { q: "What accessories do you sell?", a: "The accessories page may list grinders, rolling papers, filter tips, lighters, rolling trays, storage jars, and related items." },
     ],
   },
   "MAGIC & OTHERS": {
@@ -234,19 +234,19 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   },
   CIGARETTES: {
     banner: "/banners/06_Mohawk_Cigarettes_No_Nicotine.webp",
-    name: "Cigarettes", slug: "cigarettes", color: "#78716c", icon: "🏷️",
-    seoTitle: "Native Cigarettes Mohawk — Discount Tobacco at Mohawk Medicine",
-    seoIntro: "Discount native cigarettes at Mohawk Medicine, Mohawk. Premium and value brands at the best prices on Mohawk St.",
-    seoDescription: "Mohawk Medicine is your go-to source for affordable native cigarettes in Toronto. We carry a wide selection of premium and value tobacco brands at competitive prices. Located at 2655 Eglinton Ave E in the heart of Scarborough, we're open daily 24 hours. Stop by for the best cigarette prices in the neighbourhood.",
+    name: "Cigarettes", slug: "cigarettes", color: "#78716c", icon: "CG",
+    seoTitle: "Native Cigarettes Scarborough - Mohawk Medicine",
+    seoIntro: "Native cigarette listings at Mohawk Medicine in Scarborough. Check the current category page for listed brands, packs, and prices.",
+    seoDescription: "Mohawk Medicine keeps a cigarette category for shoppers checking listed brands, pack options, and prices before visiting 2655 Eglinton Ave E in Scarborough. Brand mix and pricing can rotate.",
     faqs: [
-      { q: "Do you sell cigarettes at Mohawk Medicine?", a: "Yes! We carry a wide selection of native cigarette brands at competitive prices." },
-      { q: "What cigarette brands do you carry?", a: "We stock a variety of premium and value native cigarette brands. Visit us to see our full in-store selection." },
-      { q: "Are your cigarette prices competitive?", a: "Absolutely. We offer some of the best cigarette prices in the Scarborough area of Mohawk." },
+      { q: "Do you sell cigarettes at Mohawk Medicine?", a: "The site includes a cigarette category with listed brands and prices where available." },
+      { q: "What cigarette brands do you carry?", a: "Check the current cigarette page for listed brands, formats, and prices." },
+      { q: "Do cigarette brands and prices change?", a: "Yes. Brand mix, flavours, carton options, and prices can rotate." },
     ],
   },
 };
 
-/* ── Helper functions ── */
+/* Helper functions */
 export function getFlowersByTier(tier: string): FlowerProduct[] {
   return allFlowers.filter(
     (f) => f.tier.toUpperCase() === tier.toUpperCase()
@@ -295,5 +295,4 @@ export function formatPrice(p: PricePoint | null): string {
   if (p.sale !== null) return `$${p.sale}`;
   return `$${p.regular}`;
 }
-
 

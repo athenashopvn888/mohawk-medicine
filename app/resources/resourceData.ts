@@ -57,7 +57,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro: "Use this page when the search starts local: weed dispensary near Eglinton East / Scarborough / Kennedy, cannabis store near 2655 Eglinton Ave E, or a quick menu check before visiting from Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, Kennedy Station area, and TTC routes.",
     cards: [
       { title: "GBP Store Page", href: "/weed-dispensary-toronto", text: "Use the main local landing page for address, directions, hours, and NAP details." },
-      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the product lane before opening deep menu pages." },
+      { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the product category before opening detailed menu pages." },
       { title: "Value Guide", href: "/resources/value-guide", text: "Fast help for affordable flower and budget weed searches." }
     ],
     sections: [
@@ -92,7 +92,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     sections: [
       {
         heading: "Pick The Shelf First",
-        body: "For Scarborough and Eglinton East shoppers, the best menu path is simple: flower shoppers compare tiers, pre-roll shoppers compare format, edible and vape shoppers read product notes, and cigarette shoppers compare brand, full/light/menthol style, and price.",
+        body: "For Scarborough and Eglinton East shoppers, the menu path is simple: flower shoppers compare tiers, pre-roll shoppers compare format, edible and vape shoppers read product notes, and cigarette shoppers compare brand, full/light/menthol style, and price.",
         bullets: ["Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes each need their own pass.", "Use current category pages for live product details.", "Use resources for shopping logic and local planning."]
       },
       {
@@ -133,7 +133,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     seoTitle: "Mohawk Medicine Value Weed Guide | Cheap Weed Near Eglinton East / Scarborough / Kennedy",
     description: "A value shopping guide for Mohawk Medicine, covering cheap weed, budget weed, AA flower, AAA+ deals, 6g tier math, and affordable menu paths.",
     eyebrow: "Value Guide",
-    intro: "For Scarborough and Eglinton East value shopping, value shopping works best when the shelf is clear. Start with Budget, AA, and AAA+ before jumping into higher tiers or mixed categories.",
+    intro: "For Scarborough and Eglinton East value shopping, start with Budget, AA, and AAA+ before jumping into higher tiers or mixed categories.",
     cards: [
       { title: "Budget Flower", href: "/budget", text: "$3/g for the lowest posted flower lane." },
       { title: "AA Flower", href: "/aa", text: "$4/g for a simple low-spend lane." },
@@ -170,7 +170,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         heading: "Useful For Local Quick Stops",
-        body: "For Scarborough and Eglinton East shoppers, pre-rolls can be the fastest shelf to check before heading through Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, Kennedy Station area, and TTC routes. Use the current category page for live details."
+        body: "For Scarborough and Eglinton East shoppers, pre-rolls can be a quick category to check before heading through Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, Kennedy Station area, and TTC routes. Use the current category page for details."
       }
     ],
   },

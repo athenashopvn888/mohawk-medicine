@@ -43,8 +43,8 @@ export default function Footer() {
           <div className={styles.col}>
             <div className={styles.brand}>MOHAWK MEDICINE</div>
             <p className={styles.desc}>
-              Toronto&apos;s premier 24-hour cannabis dispensary at 2655 Eglinton Ave E,
-              Scarborough. Open every day, all day. Walk-ins always welcome.
+              24-hour cannabis dispensary at 2655 Eglinton Ave E in Scarborough.
+              Check the current menu before visiting.
             </p>
             <div className={styles.buttons}>
               <Link href="/contact" className={styles.btnSecondary}>
