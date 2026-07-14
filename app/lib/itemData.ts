@@ -76,7 +76,7 @@ export function getItemData(category: string, name: string): ItemEffects {
   // Fallback for Add-Ons, Cigarettes, etc.
   return {
     effects: [
-      { emoji: "⭐", label: "Premium Quality" },
+      { emoji: "i", label: "Product Info" },
       { emoji: "✅", label: "Reliable" },
     ],
     description: `${name} is listed on the Mohawk Medicine menu. Check the current product page or ask staff for product details, pricing, and availability before buying.`,
