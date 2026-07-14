@@ -312,3 +312,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
 ];
 
 export const RESOURCE_HOME = RESOURCE_PAGES[0];
+
+export function getResourcePage(slug: string) {
+  return RESOURCE_PAGES.find((page) => page.slug === slug);
+}
