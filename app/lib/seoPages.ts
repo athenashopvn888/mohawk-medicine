@@ -1,4 +1,4 @@
-/* Geo-targeted SEO landing pages for Mohawk Medicine / Scarborough keywords */
+/* Local information pages for Mohawk Medicine / Scarborough */
 
 export interface SeoPageData {
   slug: string;
@@ -26,7 +26,7 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading: "Mohawk Medicine On Eglinton Ave E",
         body:
-          "Mohawk Medicine is located at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. The site is organized around the store's main shopper paths: flower tiers, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, and local visit details.",
+          "Mohawk Medicine is located at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Shoppers can review flower tiers, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, and local visit details before visiting.",
       },
       {
         heading: "Scarborough Menu Categories",
@@ -148,7 +148,7 @@ export const SEO_PAGES: SeoPageData[] = [
     slug: "weed-store-near-eglinton-east",
     title: "Weed Store Near Eglinton East | Mohawk Medicine",
     metaDescription:
-      "Mohawk Medicine is a 24-hour weed store on Eglinton Ave E in Scarborough with local menu paths for flower, edibles, vapes, concentrates, cigarettes, and accessories.",
+      "Mohawk Medicine is a 24-hour weed store on Eglinton Ave E in Scarborough with flower, edibles, vapes, concentrates, cigarettes, accessories, and local store details.",
     h1: "Weed Store Near Eglinton East",
     icon: "EG",
     heroTagline: "A Scarborough cannabis stop tied to Eglinton Ave E.",
@@ -160,7 +160,7 @@ export const SEO_PAGES: SeoPageData[] = [
           "Mohawk Medicine is located at 2655 Eglinton Ave E in Toronto's Scarborough area. The site keeps store details and menu categories close together so shoppers can plan the visit without relying on stale city pages.",
       },
       {
-        heading: "Start With The Right Category",
+        heading: "Start With A Category",
         body:
           "Use the category that matches the visit: flower tier, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, or specialty items.",
       },
@@ -202,7 +202,7 @@ export const SEO_PAGES: SeoPageData[] = [
           "Mohawk Medicine is located at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Nearby shoppers can use the menu to pick a flower tier or format category before visiting.",
       },
       {
-        heading: "Menu Paths For Repeat Visits",
+        heading: "Categories For Repeat Visits",
         body:
           "The site is organized for fast scanning: Exotic, Premium, AAA+, AA, Budget, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, and specialty categories.",
       },
