@@ -208,7 +208,7 @@ export default function HomePage() {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}> Featured Products</h2>
-            <p className={styles.sectionSub}>Staff picks from our live inventory  swipe to explore</p>
+            <p className={styles.sectionSub}>Featured menu listings — swipe to explore</p>
           </div>
         </div>
         <div className={styles.featuredCarouselWrap}>
