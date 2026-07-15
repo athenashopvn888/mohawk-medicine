@@ -90,7 +90,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       {
         heading: "What Is AAA+ Flower?",
         body:
-          "AAA+ is the middle-upper flower tier for shoppers comparing potency, price, and current strain listings without moving into Premium or Exotic pricing.",
+          "AAA+ is a flower tier for shoppers comparing price and current strain listings without moving into Premium or Exotic pricing.",
       },
       {
         heading: "AAA+ Pricing",

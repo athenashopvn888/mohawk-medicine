@@ -106,7 +106,7 @@ export default function Footer() {
         <div className={styles.bottom}>
           <p>
             &copy; {new Date().getFullYear()} Mohawk Medicine. All rights reserved. &nbsp;|&nbsp;
-            Must be 19+ to enter. Please consume responsibly. &nbsp;|&nbsp;
+            Must be 19+ to enter. Please follow applicable laws and product labels. &nbsp;|&nbsp;
             2655 Eglinton Ave E, Toronto, ON M1K 2S2
           </p>
         </div>

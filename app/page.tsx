@@ -14,7 +14,7 @@ const TIER_CARDS = [
     name: "EXOTIC",
     slug: "exotic",
     price: "Starting at $10/g",
-    tagline: "Ultra-rare top-shelf genetics",
+    tagline: "Explore the current Exotic menu",
     banner: "/banners/EXOTIC.webp",
   },
   {
@@ -78,7 +78,7 @@ const FAQS = [
   },
   {
     q: "Do I need an appointment?",
-    a: "No appointment needed. Walk in any time and our staff will help you find the perfect strain.",
+    a: "No appointment needed. Walk in any time and our staff can help you compare current menu options.",
   },
   {
     q: "What's the cheapest weed at Mohawk Medicine?",

@@ -33,7 +33,7 @@ export async function generateMetadata({
     description: seo?.seoIntro || `Shop ${flowers.length} ${tierInfo.config.name.toLowerCase()} cannabis strains at Mohawk Medicine.`,
     openGraph: {
       title: `${tierInfo.config.name} Flower | Mohawk Medicine`,
-      description: `${flowers.length} curated ${tierInfo.config.name.toLowerCase()} strains in stock now. From $${tierInfo.config.unitPrice}/g.`,
+      description: `Browse the current ${tierInfo.config.name.toLowerCase()} flower menu. Listed prices start from $${tierInfo.config.unitPrice}/g.`,
     },
   };
 }
