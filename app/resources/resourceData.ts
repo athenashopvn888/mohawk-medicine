@@ -167,7 +167,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     title: "Mohawk Medicine Value Weed Guide",
     seoTitle: "Mohawk Medicine Value Weed Guide | Budget And AA Flower Near Scarborough",
     description:
-      "A value shopping guide for Mohawk Medicine, covering Budget flower, AA flower, AAA+ deals, 6g tier math, and affordable menu categories.",
+      "A value shopping guide for Mohawk Medicine, covering Budget flower, AA flower, AAA+ deals, 6g tier math, and affordable menu choices.",
     eyebrow: "Value Guide",
     intro:
       "For value shopping near Eglinton East and Scarborough, start with Budget, AA, and AAA+ before comparing higher flower tiers or mixed categories.",
@@ -208,7 +208,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       {
         heading: "Compare Pre-Rolls By Format",
         body:
-          "Pre-rolls should be compared by format, pack size, posted notes, and current price. Use loose-flower tier pages only when the visit changes categories.",
+          "Pre-rolls should be compared by format, pack size, posted details, and current price. Use loose-flower tier pages only when the visit changes categories.",
       },
       {
         heading: "Useful For Quick Stops",

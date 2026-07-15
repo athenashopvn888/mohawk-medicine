@@ -126,6 +126,19 @@ export default function HomePage() {
         <div className={styles.heroBannerGradient} />
       </section>
 
+      <section className={styles.hiringCallout} aria-label="Hiring at Mohawk Medicine">
+        <div className={styles.hiringCalloutInner}>
+          <div>
+            <span className={styles.hiringEyebrow}>Budtenders / Managers Wanted</span>
+            <h2>Join Mohawk Medicine</h2>
+            <p>Mohawk Medicine is taking online applications for budtender and manager roles. We are looking for motivated, reliable people who can help customers and stay sharp during 24-hour service. Online applications only. Please do not call the store about hiring.</p>
+          </div>
+          <Link href="/careers/budtender" className={styles.hiringButton}>Apply Online</Link>
+        </div>
+      </section>
+
+
+
       {/* B) WELCOME STRIP */}
       <section className={styles.welcomeStrip}>
         <div className={styles.container}>
