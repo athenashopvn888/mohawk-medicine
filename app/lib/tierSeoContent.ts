@@ -16,12 +16,12 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       {
         heading: "What Is Exotic Flower?",
         body:
-          "Exotic is the highest-priced flower tier shown on the Mohawk Medicine site. Use this page when the visit is about premium flower listings, higher THC ranges, and current product cards.",
+          "Exotic is a separate flower tier on the Mohawk Medicine site. Use this page to compare current product cards, listed weights, prices, and package details.",
       },
       {
         heading: "Exotic Pricing",
         body:
-          "The Exotic tier is listed at $20 per gram. Where available, the page also shows 3g bundle pricing at $40 and 6g bundle pricing at $60. Check current product cards for any larger-format listings.",
+          "The Exotic tier is listed at $20 per gram. Where listed, the page also shows 3g bundle pricing at $40 and 6g bundle pricing at $60. Check current product cards for any larger-format listings.",
       },
       {
         heading: "Eglinton Ave E Shopping Notes",
@@ -36,10 +36,10 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         q: "How much does Exotic flower cost?",
-        a: "The Exotic tier is listed at $20/g, with 3g and 6g bundle pricing shown where available.",
+        a: "The Exotic tier is listed at $20/g, with 3g and 6g bundle pricing shown where listed.",
       },
       {
-        q: "How do I know what Exotic strains are available?",
+        q: "How do I know what Exotic strains are listed?",
         a: "Check the current Exotic category page before visiting Eglinton Ave E.",
       },
     ],
@@ -58,7 +58,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       {
         heading: "Premium Pricing",
         body:
-          "Premium flower is listed at $15 per gram. Where available, the tier page shows 3g bundle pricing at $30 and 6g bundle pricing at $45.",
+          "Premium flower is listed at $15 per gram. Where listed, the tier page shows 3g bundle pricing at $30 and 6g bundle pricing at $45.",
       },
       {
         heading: "Compare Before Visiting",
@@ -73,7 +73,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         q: "How much does Premium flower cost?",
-        a: "Premium is listed at $15/g, with 3g and 6g bundle pricing shown where available.",
+        a: "Premium is listed at $15/g, with 3g and 6g bundle pricing shown where listed.",
       },
       {
         q: "What is the difference between Exotic and Premium?",
@@ -95,7 +95,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       {
         heading: "AAA+ Pricing",
         body:
-          "AAA+ flower is listed at $10 per gram. Where available, the page shows 3g bundle pricing at $20 and 6g bundle pricing at $30.",
+          "AAA+ flower is listed at $10 per gram. Where listed, the page shows 3g bundle pricing at $20 and 6g bundle pricing at $30.",
       },
       {
         heading: "Use The Current Page",
@@ -110,7 +110,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         q: "How much does AAA+ flower cost?",
-        a: "AAA+ is listed at $10/g, with 3g and 6g bundle pricing shown where available.",
+        a: "AAA+ is listed at $10/g, with 3g and 6g bundle pricing shown where listed.",
       },
       {
         q: "Is AAA+ good quality?",
@@ -155,12 +155,12 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       {
         heading: "Budget Flower Path",
         body:
-          "Budget is the lowest-priced flower tier shown on the Mohawk Medicine site. It is useful for shoppers comparing value listings before visiting 2655 Eglinton Ave E.",
+          "Budget is a value-focused flower tier on the Mohawk Medicine site. Use it to compare listed names and prices before visiting 2655 Eglinton Ave E.",
       },
       {
         heading: "Budget Pricing",
         body:
-          "Budget flower is listed at $3 per gram. The current tier configuration also shows a $10 / 3g special where available.",
+          "Budget flower is listed at $3 per gram. The current tier configuration also shows a $10 / 3g special where listed.",
       },
     ],
     faqs: [
@@ -170,11 +170,11 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         q: "Does Budget flower have bundle pricing?",
-        a: "The current tier configuration shows a $10 / 3g special where available.",
+        a: "The current tier configuration shows a $10 / 3g special where listed.",
       },
       {
         q: "Do Budget listings change?",
-        a: "Yes. Product names, formats, and availability can rotate, so check the current Budget page before visiting.",
+        a: "Yes. Product names, formats, and listings can rotate, so check the current Budget page before visiting.",
       },
     ],
   },

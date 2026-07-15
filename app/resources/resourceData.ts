@@ -124,7 +124,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       {
         heading: "Check The Current Category Page",
         body:
-          "Product names, prices, pack sizes, flavours, and availability can change. Use the current category page before visiting for a specific item.",
+          "Product names, prices, pack sizes, flavours, and listings can change. Use the current category page before visiting for a specific item.",
       },
     ],
   },
@@ -136,7 +136,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       "Compare Mohawk Medicine flower tiers with posted per-gram prices, 3g specials, 6g deal math, Budget flower, AA flower, AAA+, Premium, and Exotic.",
     eyebrow: "Flower Tiers",
     intro:
-      "Mohawk Medicine flower is organized by tier: Exotic, Premium, AAA+, AA, and Budget. Use the tier pages to confirm current strain names, prices, and availability before visiting.",
+      "Mohawk Medicine flower is organized by tier: Exotic, Premium, AAA+, AA, and Budget. Use the tier pages to confirm current strain names, prices, and listings before visiting.",
     cards: [
       { title: "Exotic Flower", href: "/exotic", text: "$20/g, with 3g and 6g deal logic where listed." },
       { title: "Premium Flower", href: "/premium", text: "$15/g, with 3g and 6g deal logic where listed." },
@@ -158,7 +158,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       {
         heading: "Budget And AA",
         body:
-          "Budget at $3/g and AA at $4/g are the simplest value comparisons. Confirm current product names, strain notes, and availability on the tier page before visiting.",
+          "Budget at $3/g and AA at $4/g are the simplest value comparisons. Confirm current product names, strain notes, and listings on the tier page before visiting.",
       },
     ],
   },

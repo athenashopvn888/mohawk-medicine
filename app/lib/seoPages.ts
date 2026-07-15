@@ -89,11 +89,11 @@ export const SEO_PAGES: SeoPageData[] = [
     faqs: [
       {
         q: "What is the lowest-priced flower tier listed?",
-        a: "The Budget tier is the lowest-priced flower path shown on the site. Check the Budget page for current listings and prices.",
+        a: "The Budget tier is a value-focused flower path on the site. Check the Budget page for current listings and prices.",
       },
       {
         q: "Does Mohawk Medicine show bundle pricing?",
-        a: "Yes, where bundle pricing is available, the matching tier page shows the current bundle label, total amount, and price.",
+        a: "Yes, where bundle pricing is listed, the matching tier page shows the current bundle label, total amount, and price.",
       },
       {
         q: "Where should I start for value flower?",
@@ -106,7 +106,7 @@ export const SEO_PAGES: SeoPageData[] = [
     slug: "native-cigarettes-scarborough",
     title: "Native Cigarettes Scarborough | Mohawk Medicine",
     metaDescription:
-      "Mohawk Medicine lists cigarette options at 2655 Eglinton Ave E in Scarborough. Check the current cigarette category for brands, prices, and availability before visiting.",
+      "Mohawk Medicine lists cigarette options at 2655 Eglinton Ave E in Scarborough. Check the current cigarette category for brands, prices, and listings before visiting.",
     h1: "Native Cigarettes Scarborough",
     icon: "CG",
     heroTagline: "Cigarette category details for Mohawk Medicine shoppers.",
@@ -131,7 +131,7 @@ export const SEO_PAGES: SeoPageData[] = [
     faqs: [
       {
         q: "Does Mohawk Medicine list cigarettes?",
-        a: "Yes. The site includes a cigarette category with listed brands and prices where available.",
+        a: "Yes. The site includes a cigarette category with listed brands and prices where listed.",
       },
       {
         q: "Do cigarette brands and prices change?",
@@ -177,7 +177,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         q: "What should I check before visiting?",
-        a: "Check the current category page for product names, pricing, and availability details before visiting.",
+        a: "Check the current category page for listed product names, prices, and package details before visiting.",
       },
       {
         q: "Do older local info routes still work?",

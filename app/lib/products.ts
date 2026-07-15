@@ -225,11 +225,11 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   "MAGIC & OTHERS": {
     name: "Magic Stuff", slug: "magic", color: "#64748b", icon: "*",
     seoTitle: "Magic Stuff - Specialty Items",
-    seoIntro: "Browse current menu for available specialty products. Availability may vary by store.",
-    seoDescription: "Current specialty items are listed when they are carried on the menu. Product availability may vary by store and by day. Check the live menu for current selection.",
+    seoIntro: "Browse current menu for listed specialty products. Listings may vary by store.",
+    seoDescription: "Current specialty items are listed when they are carried on the menu. Product listings may vary by store and by day. Check the live menu for current selection.",
     faqs: [
-      { q: "What specialty items are available?", a: "Selection varies by store and by day. Check the current menu for available specialty products." },
-      { q: "Does availability vary by location?", a: "Yes. Specialty item availability may vary by store, so please check the current menu for this location." },
+      { q: "What specialty items are listed?", a: "Selection varies by store and by day. Check the current menu for listed specialty products." },
+      { q: "Do listings vary by location?", a: "Yes. Specialty item listings may vary by store, so please check the current menu for this location." },
     ],
   },
   CIGARETTES: {
@@ -239,7 +239,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoIntro: "Native cigarette listings at Mohawk Medicine in Scarborough. Check the current category page for listed brands, packs, and prices.",
     seoDescription: "Mohawk Medicine keeps a cigarette category for shoppers checking listed brands, pack options, and prices before visiting 2655 Eglinton Ave E in Scarborough. Brand mix and pricing can rotate.",
     faqs: [
-      { q: "Do you sell cigarettes at Mohawk Medicine?", a: "The site includes a cigarette category with listed brands and prices where available." },
+      { q: "Do you sell cigarettes at Mohawk Medicine?", a: "The site includes a cigarette category with listed brands and prices where listed." },
       { q: "What cigarette brands do you carry?", a: "Check the current cigarette page for listed brands, formats, and prices." },
       { q: "Do cigarette brands and prices change?", a: "Yes. Brand mix, flavours, carton options, and prices can rotate." },
     ],
