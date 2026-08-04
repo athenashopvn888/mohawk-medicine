@@ -13,6 +13,7 @@ export default function Footer() {
             name: "Mohawk Medicine",
             description: "Toronto's 24-hour cannabis dispensary at 2655 Eglinton Ave E, Scarborough.",
             url: "https://mohawkmedicine.com",
+            telephone: "+14375249335",
             address: {
               "@type": "PostalAddress",
               streetAddress: "2655 Eglinton Ave E",
@@ -68,7 +69,7 @@ export default function Footer() {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Phone</span>
-              <span>(437) 577-1809</span>
+              <span><a href="tel:+14375249335" style={{ color: "inherit" }}>+1 (437) 524-9335</a></span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Website</span>

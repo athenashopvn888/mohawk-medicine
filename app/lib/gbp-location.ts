@@ -8,8 +8,8 @@ export const gbpLocation = {
   address: "2655 Eglinton Ave E, Toronto, ON M1K 2S2",
   streetAddress: "2655 Eglinton Ave E",
   postalCode: "M1K 2S2",
-  phone: "(437) 577-1809",
-  phoneIntl: "+14375771809",
+  phone: "+1 (437) 524-9335",
+  phoneIntl: "+14375249335",
   neighborhood: "Eglinton East / Scarborough / Kennedy",
   nearbyAreas: ["Eglinton East", "Kennedy Road", "Scarborough", "Golden Mile", "Birchmount", "Warden", "Kennedy Station area", "TTC"],
   products: [

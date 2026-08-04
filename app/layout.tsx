@@ -30,6 +30,7 @@ const jsonLd = {
   name: "Mohawk Medicine",
   description: "24-hour cannabis dispensary at 2655 Eglinton Ave E in Scarborough.",
   url: "https://mohawkmedicine.com",
+  telephone: "+14375249335",
   priceRange: "$4 - $20/g",
   address: { "@type": "PostalAddress", streetAddress: "2655 Eglinton Ave E", addressLocality: "Toronto", addressRegion: "ON", postalCode: "M1K 2S2", addressCountry: "CA" },
   geo: { "@type": "GeoCoordinates", latitude: 43.7330, longitude: -79.2500 },
