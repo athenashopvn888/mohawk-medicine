@@ -2,6 +2,30 @@
    MOHAWK MEDICINE - DESIGN SYSTEM
    White + Deep Forest Green Theme
    ================================================================ */
+.deliveryAnnouncement {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(90deg, #14532d, #16a34a, #14532d);
+  color: #fff;
+  font: 800 clamp(0.78rem, 2.5vw, 0.95rem)/1.25 system-ui, sans-serif;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.deliveryAnnouncement:hover,
+.deliveryAnnouncement:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.deliveryAnnouncement:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: -4px;
+}
+
 :root {
   --bg-primary: #FFFFFF;
   --bg-secondary: #F8FDF8;

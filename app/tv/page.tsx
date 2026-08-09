@@ -675,7 +675,7 @@ const TICKER_SLIDES = [
   "Flower Tiers, Edibles, Vapes, Concentrates",
   "Open 24 Hours",
   "ALL SALES ARE FINAL",
-  "🎮 Play Games at mohawkmedicine.com/games",
+  "DELIVERY MENU at mohawkmedicine.com/delivery",
 ];
 
 function VerticalTicker() {
