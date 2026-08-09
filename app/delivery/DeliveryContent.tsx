@@ -1,243 +1,130 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Image from "next/image";
+import { useEffect, useMemo, useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import menu from "./delivery-menu.json";
+import styles from "./delivery.module.css";
+
+type Tier = "SHREDS" | "Budget" | "BC Premium" | "CRAFTS" | "Exotics";
+type PriceOption = { key: string; label: string; price: number };
+type Offer = { kind: "prime_time" | "multi_ounce"; quantity?: number; price?: number; bonus?: string; perUnitPrice?: number; totalPrice?: number };
+type Product = { publicProductId: string; name: string; tier: Tier; category: string; strain: string; thc: string; effects: string[]; description: string | null; images: string[]; priceOptions: PriceOption[]; offers?: Offer[] };
+type Filter = "ALL" | Tier;
+
+const fallbackProducts = menu.products as Product[];
+const filters: Filter[] = ["ALL", "Exotics", "CRAFTS", "BC Premium", "Budget", "SHREDS"];
+const tierOrder: Tier[] = ["Exotics", "CRAFTS", "BC Premium", "Budget", "SHREDS"];
+
+function entryPrice(product: Product) {
+  return Math.min(...product.priceOptions.map((option) => option.price));
+}
+function ProductPricing({ product }: { product: Product }) {
+  const standard28 = product.priceOptions.find((option) => option.label === "28g");
+  const compact = product.priceOptions.filter((option) => option.label !== "28g");
+  const explicit = product.offers?.find((offer) => offer.kind === "prime_time");
+  const eligible = ["Exotics", "CRAFTS", "BC Premium"].includes(product.tier);
+  const explicitPrice = Number(explicit?.price);
+  const loyalty = Number.isFinite(explicitPrice) && explicitPrice > 0 ? explicitPrice : eligible && standard28 ? standard28.price - 30 : null;
+  const suppliedBundles = product.offers?.filter((offer) => offer.kind === "multi_ounce" && Number(offer.quantity) !== 2) ?? [];
+  const bundles = eligible && loyalty ? [{ quantity: 2, perUnitPrice: loyalty, totalPrice: loyalty * 2 }, ...suppliedBundles] : product.offers?.filter((offer) => offer.kind === "multi_ounce") ?? [];
+
+  return <div className={styles.pricing}>
+    {compact.length > 0 && <div className={styles.compactPrices}>{compact.map((option) => <span key={option.key}>{option.label} <strong>${option.price}</strong></span>)}</div>}
+    <div className={styles.decisionPrices}>
+      {loyalty !== null && <span className={styles.loyalty}><small>MEMBER LOYALTY 28g</small><strong>${loyalty}</strong></span>}
+      {bundles.map((offer, index) => { const quantity = Number(offer.quantity); const total = Number(offer.totalPrice); const each = Number(offer.perUnitPrice) || total / quantity; return <span key={`${quantity}-${index}`}><small>{quantity} × 28g DEAL</small><strong>${each} each</strong><em>${total} total</em></span>; })}
+      {standard28 && <span><small>STANDARD 28g</small><strong>${standard28.price}</strong></span>}
+    </div>
+  </div>;
+}
 
 export default function DeliveryContent() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errorMsg, setErrorMsg] = useState('');
+  const [products, setProducts] = useState<Product[]>(fallbackProducts);
+  const [filter, setFilter] = useState<Filter>("ALL");
+  const [search, setSearch] = useState("");
+  const [selected, setSelected] = useState<Product | null>(null);
+  const [email, setEmail] = useState("");
+  const [emailStatus, setEmailStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
+  async function handleEmailSubmit(event: React.FormEvent) {
+    event.preventDefault();
     if (!email.trim()) return;
-
-    setStatus('loading');
-    setErrorMsg('');
-
+    setEmailStatus("loading");
     try {
-      const res = await fetch('/api/delivery-notify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/delivery-notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: email.trim() }),
       });
-
-      if (res.ok) {
-        setStatus('success');
-        setEmail('');
-      } else {
-        throw new Error('Server error');
-      }
+      if (!response.ok) throw new Error("Delivery notification request failed");
+      setEmailStatus("success");
+      setEmail("");
     } catch {
-      setStatus('error');
-      setErrorMsg('Something went wrong. Please try again.');
+      setEmailStatus("error");
     }
   }
 
-  return (
-    <main style={{ minHeight: '100vh', background: '#FFFFFF' }}>
-      <Navbar />
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch("https://milestone-1-demo.vercel.app/api/catalog?store=MCM01", { signal: controller.signal })
+      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then((payload) => {
+        if (Array.isArray(payload.products) && payload.products.length === 63 && payload.products.every((product: Product) => product.publicProductId && product.tier && Array.isArray(product.images))) setProducts(payload.products);
+      })
+      .catch(() => {});
+    return () => controller.abort();
+  }, []);
 
-      {/* Full-screen Coming Soon section */}
-      <div style={{
-        minHeight: '100vh',
-        background: 'linear-gradient(135deg, #0a2e0a 0%, #1B5E20 50%, #2E7D32 100%)',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '120px 24px 80px',
-        textAlign: 'center',
-        position: 'relative',
-        overflow: 'hidden',
-      }}>
+  useEffect(() => {
+    if (!selected) return;
+    const overflow = document.body.style.overflow;
+    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === "Escape") setSelected(null); };
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = overflow;
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [selected]);
 
-        {/* Background decorative circles */}
-        <div style={{
-          position: 'absolute', top: '-120px', right: '-120px',
-          width: '500px', height: '500px', borderRadius: '50%',
-          background: 'rgba(255,255,255,0.03)', pointerEvents: 'none',
-        }} />
-        <div style={{
-          position: 'absolute', bottom: '-80px', left: '-80px',
-          width: '350px', height: '350px', borderRadius: '50%',
-          background: 'rgba(255,255,255,0.04)', pointerEvents: 'none',
-        }} />
+  const visible = useMemo(() => {
+    const needle = search.trim().toLowerCase();
+    return products.filter((product) => (filter === "ALL" || product.tier === filter) && (!needle || `${product.name} ${product.category} ${product.strain}`.toLowerCase().includes(needle)))
+      .sort((a, b) => tierOrder.indexOf(a.tier) - tierOrder.indexOf(b.tier) || entryPrice(a) - entryPrice(b) || a.name.localeCompare(b.name));
+  }, [filter, products, search]);
 
-        {/* Badge */}
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: '8px',
-          background: 'rgba(255,255,255,0.12)',
-          border: '1px solid rgba(255,255,255,0.2)',
-          borderRadius: '100px',
-          padding: '8px 20px',
-          marginBottom: '32px',
-          backdropFilter: 'blur(8px)',
-        }}>
-          <span style={{ fontSize: '18px' }}></span>
-          <span style={{
-            fontFamily: 'Inter, system-ui, sans-serif',
-            fontSize: '12px', fontWeight: 700,
-            textTransform: 'uppercase', letterSpacing: '0.1em',
-            color: 'rgba(255,255,255,0.9)',
-          }}>
-            Delivery Service
-          </span>
-        </div>
-
-        {/* Main heading */}
-        <h1 style={{
-          fontFamily: 'Inter, system-ui, sans-serif',
-          fontSize: 'clamp(3rem, 8vw, 6rem)',
-          fontWeight: 900,
-          color: '#FFFFFF',
-          letterSpacing: '-0.04em',
-          lineHeight: 1.05,
-          marginBottom: '16px',
-          textShadow: '0 4px 32px rgba(0,0,0,0.3)',
-        }}>
-          Coming Soon
-        </h1>
-
-        {/* Divider line */}
-        <div style={{
-          width: '60px', height: '3px',
-          background: 'rgba(255,255,255,0.4)',
-          borderRadius: '100px',
-          margin: '0 auto 28px',
-        }} />
-
-        {/* Subtext */}
-        <p style={{
-          fontFamily: 'Inter, system-ui, sans-serif',
-          fontSize: 'clamp(15px, 2.5vw, 18px)',
-          color: 'rgba(255,255,255,0.75)',
-          lineHeight: 1.7,
-          maxWidth: '480px',
-          marginBottom: '48px',
-        }}>
-          We&apos;re working on bringing cannabis delivery to your door.
-          Be the first to know when we launch  drop your email below.
-        </p>
-
-        {/* Email form / success state */}
-        {status === 'success' ? (
-          <div style={{
-            background: 'rgba(255,255,255,0.12)',
-            border: '1px solid rgba(255,255,255,0.25)',
-            borderRadius: '16px',
-            padding: '32px 40px',
-            backdropFilter: 'blur(12px)',
-            maxWidth: '440px',
-            width: '100%',
-          }}>
-            <div style={{ fontSize: '40px', marginBottom: '12px' }}></div>
-            <h2 style={{
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '20px', fontWeight: 800,
-              color: '#FFFFFF', marginBottom: '8px',
-            }}>
-              You&apos;re on the list!
-            </h2>
-            <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, margin: 0 }}>
-              We&apos;ll email you the moment delivery goes live. In the meantime,
-              visit us in-store at 2655 Eglinton Ave E, Toronto.
-            </p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} style={{ width: '100%', maxWidth: '440px' }}>
-            <div style={{
-              display: 'flex',
-              gap: '0',
-              borderRadius: '12px',
-              overflow: 'hidden',
-              border: '1.5px solid rgba(255,255,255,0.25)',
-              boxShadow: '0 8px 40px rgba(0,0,0,0.25)',
-              background: 'rgba(255,255,255,0.08)',
-              backdropFilter: 'blur(12px)',
-            }}>
-              <input
-                type="email"
-                required
-                placeholder="your@email.com"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                disabled={status === 'loading'}
-                style={{
-                  flex: 1,
-                  padding: '16px 20px',
-                  fontSize: '15px',
-                  background: 'transparent',
-                  border: 'none',
-                  outline: 'none',
-                  color: '#FFFFFF',
-                  fontFamily: 'Inter, system-ui, sans-serif',
-                }}
-              />
-              <button
-                type="submit"
-                disabled={status === 'loading'}
-                style={{
-                  padding: '16px 28px',
-                  background: '#FFFFFF',
-                  color: '#1B5E20',
-                  border: 'none',
-                  fontFamily: 'Inter, system-ui, sans-serif',
-                  fontSize: '13px',
-                  fontWeight: 800,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.06em',
-                  cursor: status === 'loading' ? 'wait' : 'pointer',
-                  whiteSpace: 'nowrap',
-                  transition: 'background 0.2s',
-                  flexShrink: 0,
-                }}
-              >
-                {status === 'loading' ? '...' : 'Notify Me'}
-              </button>
-            </div>
-
-            {status === 'error' && (
-              <p style={{
-                marginTop: '12px', fontSize: '13px',
-                color: 'rgba(255,180,180,0.9)', textAlign: 'center',
-              }}>
-                {errorMsg}
-              </p>
-            )}
-
-            <p style={{
-              marginTop: '14px', fontSize: '12px',
-              color: 'rgba(255,255,255,0.45)', textAlign: 'center',
-            }}>
-              No spam. Just one email when delivery goes live.
-            </p>
-          </form>
-        )}
-
-        {/* In-store CTA */}
-        <div style={{
-          marginTop: '60px',
-          paddingTop: '40px',
-          borderTop: '1px solid rgba(255,255,255,0.1)',
-          width: '100%',
-          maxWidth: '440px',
-        }}>
-          <p style={{
-            fontSize: '13px',
-            color: 'rgba(255,255,255,0.5)',
-            marginBottom: '16px',
-            fontFamily: 'Inter, system-ui, sans-serif',
-            textTransform: 'uppercase',
-            letterSpacing: '0.08em',
-          }}>
-            Meanwhile  Visit Us In-Store
-          </p>
-        </div>
+  return <main className={styles.main}>
+    <Navbar />
+    <section className={`${styles.hero} ${styles.heroPlain}`}>
+      <div><p>Mohawk Medicine</p><h1>Delivery Menu</h1><span>Browse the shared product catalog. The store confirms current availability and delivery details before an order is accepted.</span></div>
+    </section>
+    <section className={styles.loyalty} aria-labelledby="loyalty-title">
+      <div><p>MEMBER PRICING</p><h2 id="loyalty-title">Compare every price clearly</h2></div>
+      <p>Explicit Farmers Link offers are shown first. Otherwise, eligible BC Premium, CRAFTS, and Exotics 28g products show the standard price and member loyalty price. Budget and SHREDS do not receive the fallback discount.</p>
+    </section>
+    <section className={styles.catalogShell}>
+      <aside className={styles.filters}><h2>Flower tiers</h2>{filters.map((tier) => <button type="button" key={tier} className={filter === tier ? styles.active : ""} onClick={() => setFilter(tier)}>{tier}<span>{tier === "ALL" ? products.length : products.filter((product) => product.tier === tier).length}</span></button>)}</aside>
+      <div className={styles.catalog}>
+        <header className={styles.tools}><div><p>DELIVERY CATALOG</p><h2>{filter === "ALL" ? "All products" : filter}</h2><span>{visible.length} products</span></div><label><span>Search products</span><input type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Product or strain" /></label></header>
+        <div className={styles.mobileFilters}>{filters.map((tier) => <button type="button" key={tier} className={filter === tier ? styles.active : ""} onClick={() => setFilter(tier)}>{tier}</button>)}</div>
+        <div className={styles.grid}>{visible.map((product) => <article className={styles.card} key={product.publicProductId}>
+          <button type="button" className={styles.imageButton} onClick={() => setSelected(product)} aria-label={`View details for ${product.name}`}>
+            {product.images[0] ? <Image src={product.images[0]} alt={`${product.name} on the Mohawk Medicine delivery menu`} fill sizes="(max-width: 640px) 50vw, 280px" unoptimized /> : <span>Mohawk Medicine</span>}
+          </button>
+          <div className={styles.cardBody}><div className={styles.badges}><span>{product.tier}</span><span>{product.category}</span></div><h3><button type="button" onClick={() => setSelected(product)}>{product.name}</button></h3><ProductPricing product={product} /><button type="button" className={styles.detailsButton} onClick={() => setSelected(product)}>View details</button></div>
+        </article>)}</div>
       </div>
-
-      <Footer />
-    </main>
-  );
+    </section>
+    <section className={styles.updates} aria-labelledby="delivery-updates-title">
+      <div><p>DELIVERY UPDATES</p><h2 id="delivery-updates-title">Get store delivery updates</h2><span>Enter your email to keep the existing Mohawk Medicine delivery notification active.</span></div>
+      <form onSubmit={handleEmailSubmit}><input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="your@email.com" required disabled={emailStatus === "loading"} /><button type="submit" disabled={emailStatus === "loading"}>{emailStatus === "loading" ? "Sending..." : "Notify Me"}</button></form>
+      {emailStatus === "success" && <p role="status">You&apos;re on the delivery update list.</p>}
+      {emailStatus === "error" && <p role="alert">Something went wrong. Please try again.</p>}
+    </section>
+    <div className={styles.ctaSection}><p>Visit us in-store at <strong>2655 Eglinton Ave E, Toronto</strong>. We are <strong>Open 24 Hours</strong>. Call <strong>(437) 577-1809</strong>.</p></div>
+    {selected && <div className={styles.backdrop} onMouseDown={(event) => { if (event.target === event.currentTarget) setSelected(null); }}><section className={styles.drawer} role="dialog" aria-modal="true" aria-labelledby="product-title"><header><strong>Product details</strong><button type="button" onClick={() => setSelected(null)} aria-label="Close product details">×</button></header><div className={styles.drawerContent}>{selected.images.map((src, index) => <div className={styles.drawerImage} key={src}><Image src={src} alt={`${selected.name}${index ? ` alternate ${index + 1}` : ""}`} fill sizes="(max-width: 720px) 100vw, 420px" unoptimized /></div>)}<h2 id="product-title">{selected.name}</h2><p>{selected.description || "Ask the store for current product details."}</p>{selected.effects.length > 0 && <div className={styles.effects}>{selected.effects.map((effect) => <span key={effect}>{effect}</span>)}</div>}<ProductPricing product={selected} /></div></section></div>}
+    <Footer />
+  </main>;
 }
