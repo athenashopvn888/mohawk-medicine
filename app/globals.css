@@ -29,6 +29,13 @@ body > .deliveryAnnouncement ~ * nav {
   top: var(--delivery-announcement-height) !important;
 }
 
+#main-nav {
+  position: fixed !important;
+  top: var(--delivery-announcement-height) !important;
+  right: 0;
+  left: 0;
+}
+
 .deliveryAnnouncement:hover,
 .deliveryAnnouncement:focus-visible {
   color: #fff;
