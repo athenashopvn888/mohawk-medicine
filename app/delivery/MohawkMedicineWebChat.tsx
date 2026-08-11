@@ -62,7 +62,6 @@ async function preparePhoto(file: File) {
   if (!photo || photo.size > MAX_BYTES) throw new Error("That photo is too large. Please retake it closer to the ID.");
   return photo;
 }
-
 export default function MohawkMedicineWebChat() {
   const [open, setOpen] = useState(false);
   const [token, setToken] = useState(() => typeof window === "undefined" ? "" : localStorage.getItem(SESSION_KEY) || "");
@@ -214,4 +213,3 @@ export default function MohawkMedicineWebChat() {
     </section>}
   </aside>;
 }
-
