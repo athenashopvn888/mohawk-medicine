@@ -95,7 +95,7 @@ export default function Footer() {
               <Link href="/items/magic">Magic Stuff</Link>
               <Link href="/items/cigarettes">Cigarettes</Link>
               <Link href="/items/add-ons">Accessories</Link>
-              <Link href="/delivery">Delivery</Link>
+              <Link href="/delivery">Delivery Menu</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/weed-dispensary-toronto/">Mohawk Medicine Weed Dispensary in Toronto</Link>
               <Link href="/contact">Contact</Link>
