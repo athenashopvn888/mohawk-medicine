@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./page.module.css";
@@ -56,7 +57,7 @@ export default function ContactPage() {
               <span className={styles.icon}>💬</span>
               <h2 className={styles.cardTitle}>Questions?</h2>
               <p>Visit our FAQ page for common questions, or stop by the store.</p>
-              <a href="/faq" className={styles.link}>View FAQ →</a>
+              <Link href="/faq" className={styles.link}>View FAQ →</Link>
             </div>
           </div>
 

@@ -37,8 +37,12 @@ export default function FlappyBudPage() {
   const animRef = useRef<number>(0);
 
   useEffect(() => {
-    const stored = localStorage.getItem("flappyBudHighScore");
-    if (stored) setHighScore(parseInt(stored));
+    const timeout = window.setTimeout(() => {
+      const stored = localStorage.getItem("flappyBudHighScore");
+      if (stored) setHighScore(Number.parseInt(stored, 10));
+    }, 0);
+
+    return () => window.clearTimeout(timeout);
   }, []);
 
   const resetGame = useCallback(() => {

@@ -31,12 +31,6 @@ export default function MemoryMatchPage() {
   const [bestScore, setBestScore] = useState(0);
   const [gameWon, setGameWon] = useState(false);
 
-  useEffect(() => {
-    const s = localStorage.getItem("memoryMatchBest");
-    if (s) setBestScore(parseInt(s));
-    initGame();
-  }, []);
-
   const initGame = useCallback(() => {
     const pairs = [...STRAINS, ...STRAINS];
     const shuffled = pairs
@@ -48,6 +42,16 @@ export default function MemoryMatchPage() {
     setMatched(0);
     setGameWon(false);
   }, []);
+
+  useEffect(() => {
+    const timeout = window.setTimeout(() => {
+      const s = localStorage.getItem("memoryMatchBest");
+      if (s) setBestScore(Number.parseInt(s, 10));
+      initGame();
+    }, 0);
+
+    return () => window.clearTimeout(timeout);
+  }, [initGame]);
 
   const handleFlip = (id: number) => {
     if (flipped.length === 2) return;

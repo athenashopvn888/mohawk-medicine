@@ -188,9 +188,12 @@ export default function TV2Page() {
   const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setDaytime(isDaytime());
+    const initial = window.setTimeout(() => setDaytime(isDaytime()), 0);
     const iv = setInterval(() => setDaytime(isDaytime()), 60_000);
-    return () => clearInterval(iv);
+    return () => {
+      window.clearTimeout(initial);
+      clearInterval(iv);
+    };
   }, []);
 
   const loadData = useCallback(async () => {
@@ -215,10 +218,17 @@ export default function TV2Page() {
   }, []);
 
   useEffect(() => {
-    loadData(); fitToScreen();
+    const initial = window.requestAnimationFrame(() => {
+      void loadData();
+      fitToScreen();
+    });
     window.addEventListener("resize", fitToScreen);
     const refresh = setInterval(loadData, 5*60*1000);
-    return () => { window.removeEventListener("resize", fitToScreen); clearInterval(refresh); };
+    return () => {
+      window.cancelAnimationFrame(initial);
+      window.removeEventListener("resize", fitToScreen);
+      clearInterval(refresh);
+    };
   }, [loadData, fitToScreen]);
 
   useEffect(() => {
