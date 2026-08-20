@@ -107,18 +107,18 @@ export default function Game2048Page() {
   const [bestScore, setBestScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [won, setWon] = useState(false);
-  const initialized = useRef(false);
 
   useEffect(() => {
-    const s = localStorage.getItem("2048StrainsBest");
-    if (s) setBestScore(parseInt(s));
-    if (!initialized.current) {
-      initialized.current = true;
+    const timeout = window.setTimeout(() => {
+      const s = localStorage.getItem("2048StrainsBest");
+      if (s) setBestScore(Number.parseInt(s, 10));
       let g = createEmpty();
       g = addRandom(g);
       g = addRandom(g);
       setGrid(g);
-    }
+    }, 0);
+
+    return () => window.clearTimeout(timeout);
   }, []);
 
   const resetGame = useCallback(() => {

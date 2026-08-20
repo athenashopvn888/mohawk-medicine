@@ -32,8 +32,12 @@ export default function SnakeMunchiesPage() {
   const scoreRef = useRef(0);
 
   useEffect(() => {
-    const s = localStorage.getItem("snakeMunchiesHS");
-    if (s) setHighScore(parseInt(s));
+    const timeout = window.setTimeout(() => {
+      const s = localStorage.getItem("snakeMunchiesHS");
+      if (s) setHighScore(Number.parseInt(s, 10));
+    }, 0);
+
+    return () => window.clearTimeout(timeout);
   }, []);
 
   const spawnFood = useCallback(() => {

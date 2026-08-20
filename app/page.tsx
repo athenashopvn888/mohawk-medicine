@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
-import { allFlowers } from "./lib/products";
+import { allFlowers, type FlowerProduct } from "./lib/products";
 
 /* Tier Grid Config */
 const TIER_CARDS = [
@@ -91,25 +91,29 @@ const FAQS = [
 ];
 
 export default function HomePage() {
-  const [featuredStrains, setFeaturedStrains] = useState<any[]>([]);
+  const [featuredStrains, setFeaturedStrains] = useState<FlowerProduct[]>([]);
 
   useEffect(() => {
-    const pool = [...allFlowers].filter((f) => f.image);
-    for (let i = pool.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [pool[i], pool[j]] = [pool[j], pool[i]];
-    }
-    const picked: typeof pool = [];
-    const tierCounts: Record<string, number> = {};
-    for (const f of pool) {
-      if (picked.length >= 8) break;
-      const tc = tierCounts[f.tier] || 0;
-      if (tc >= 2) continue;
-      if (picked.some((p) => p.name === f.name)) continue;
-      picked.push(f);
-      tierCounts[f.tier] = tc + 1;
-    }
-    setFeaturedStrains(picked);
+    const frame = window.requestAnimationFrame(() => {
+      const pool = [...allFlowers].filter((f) => f.image);
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      const picked: typeof pool = [];
+      const tierCounts: Record<string, number> = {};
+      for (const f of pool) {
+        if (picked.length >= 8) break;
+        const tc = tierCounts[f.tier] || 0;
+        if (tc >= 2) continue;
+        if (picked.some((p) => p.name === f.name)) continue;
+        picked.push(f);
+        tierCounts[f.tier] = tc + 1;
+      }
+      setFeaturedStrains(picked);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, []);
 
   return (

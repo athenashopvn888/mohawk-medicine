@@ -1,7 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef, useState } from "react";
 import styles from "./magnifier.module.css";
+
+const LENS_SIZE = 160;
+const ZOOM = 2.5;
 
 interface MagnifierProps {
   src: string;
@@ -12,21 +15,18 @@ interface MagnifierProps {
 export default function Magnifier({ src, alt, className }: MagnifierProps) {
   const [show, setShow] = useState(false);
   const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [imageSize, setImageSize] = useState({ width: 400, height: 400 });
   const imgRef = useRef<HTMLImageElement>(null);
-
-  const LENS_SIZE = 160; // diameter of the lens
-  const ZOOM = 2.5;      // zoom factor
-
-  const [currentSrc, setCurrentSrc] = useState(src);
-  
-  useEffect(() => {
-    setCurrentSrc(src);
-  }, [src]);
+  const [sourceState, setSourceState] = useState(() => ({ requested: src, current: src }));
+  const currentSrc = sourceState.requested === src ? sourceState.current : src;
 
   const handleImageError = () => {
     if (currentSrc && (currentSrc.indexOf('r2.dev') !== -1 || currentSrc.indexOf('images.torontodispensaryhub.com') !== -1)) {
       const filename = currentSrc.split('/').pop();
-      setCurrentSrc(`https://athena-cannabis-images.vercel.app/products/${filename}`);
+      setSourceState({
+        requested: src,
+        current: `https://athena-cannabis-images.vercel.app/products/${filename}`,
+      });
     }
   };
 
@@ -39,6 +39,12 @@ export default function Magnifier({ src, alt, className }: MagnifierProps) {
   }
 
   function handleMouseEnter() {
+    if (imgRef.current) {
+      setImageSize({
+        width: imgRef.current.offsetWidth || 400,
+        height: imgRef.current.offsetHeight || 400,
+      });
+    }
     setShow(true);
   }
 
@@ -75,7 +81,7 @@ export default function Magnifier({ src, alt, className }: MagnifierProps) {
             left: pos.x - LENS_SIZE / 2,
             top: pos.y - LENS_SIZE / 2,
             backgroundImage: `url(${currentSrc})`,
-            backgroundSize: `${(imgRef.current?.offsetWidth || 400) * ZOOM}px ${(imgRef.current?.offsetHeight || 400) * ZOOM}px`,
+            backgroundSize: `${imageSize.width * ZOOM}px ${imageSize.height * ZOOM}px`,
             backgroundPosition: `-${bgX}px -${bgY}px`,
           }}
         />

@@ -45,8 +45,12 @@ export default function BrickBreakerPage() {
   const animRef = useRef<number>(0);
 
   useEffect(() => {
-    const s = localStorage.getItem("brickBreaker420HS");
-    if (s) setHighScore(parseInt(s));
+    const timeout = window.setTimeout(() => {
+      const s = localStorage.getItem("brickBreaker420HS");
+      if (s) setHighScore(Number.parseInt(s, 10));
+    }, 0);
+
+    return () => window.clearTimeout(timeout);
   }, []);
 
   const initBricks = useCallback(() => {
