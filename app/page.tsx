@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
+import SmokePilotSpotlight from "./components/SmokePilotSpotlight";
 import { allFlowers, type FlowerProduct } from "./lib/products";
 
 /* Tier Grid Config */
@@ -62,7 +63,6 @@ const CATEGORIES = [
   { name: "THC Vape", slug: "items/vape-disposables", banner: "/banners/22_Mohawk_THC_Vape.webp" },
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/07_Mohawk_Concentrate.webp" },
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/MAGIC%20STUFF.webp" },
-  { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/06_Mohawk_Cigarettes_No_Nicotine.webp" },
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/03_Mohawk_Accessories.webp" },
 ];
 
@@ -197,6 +197,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <SmokePilotSpotlight
+        storeName="Mohawk Medicine"
+        locationLabel="Scarborough"
+        cigaretteHref="/info/native-cigarettes-scarborough"
+        nicotineHref="/info/nicotine-vapes-scarborough"
+      />
 
       {/* E) HOT RIGHT NOW BANNER */}
       <section className={styles.hotBanner}>
