@@ -21,43 +21,43 @@ export default function NativeCigarettesScarboroughPage() {
         canonicalUrl="https://mohawkmedicine.com/info/native-cigarettes-scarborough"
         storeName="Mohawk Medicine"
         locationLabel="Scarborough"
-        eyebrow="Eglinton East Cigarette Guide"
+        eyebrow="Native Cigarettes · Eglinton East"
         title="Native Cigarettes in Scarborough"
-        intro="Start with the cigarette lineup. Browse Native cigarette brands, full, lights and menthol styles, plus the pack prices listed at Mohawk Medicine on Eglinton Avenue East."
+        intro="Shop Native cigarette brands, full, light and menthol styles, plus Backwoods, grabba and other smoke-shop essentials at Mohawk Medicine on Eglinton Avenue East."
         items={items}
         menuHref="/items/cigarettes"
         menuLabel="Shop the cigarette menu"
-        menuHeading="Cigarette Menu Highlights"
-        menuIntro="See cigarette-category products listed for Mohawk Medicine, then open the full menu for the complete lineup."
+        menuHeading="Native Cigarette Brands & Prices"
+        menuIntro="Compare the cigarette brands, styles and listed prices available from Mohawk Medicine in Scarborough."
         crossLink={{
           href: "/info/nicotine-vapes-scarborough",
           eyebrow: "Also at Mohawk Medicine",
-          title: "Looking for nicotine vapes?",
-          body: "Nicotine vapes have their own Scarborough guide, with a direct path to devices, flavours and listed menu prices.",
-          label: "Explore nicotine vapes",
+          title: "Prefer a nicotine vape?",
+          body: "Shop disposable nicotine vapes with brand, flavour, puff-count and listed price details from Mohawk Medicine.",
+          label: "Shop nicotine vapes",
         }}
         sections={[
           {
-            heading: "A Dedicated Cigarette Guide for Eglinton East",
-            body: "Mohawk Medicine is at 2655 Eglinton Ave E in Scarborough. This page pulls the cigarette lineup forward so shoppers can skip the larger cannabis menu.",
+            heading: "Native Cigarettes on Eglinton Avenue East",
+            body: "Mohawk Medicine brings Native cigarettes and smoke-shop essentials together at 2655 Eglinton Ave E in Scarborough, with 24-hour shopping every day of the week.",
           },
           {
-            heading: "Start With Brand and Style",
-            body: "Use the product cards to compare the brand and style names shown on the menu. Full, lights, menthol and other options appear when they are part of the listing.",
+            heading: "Full, Light and Menthol Styles",
+            body: "Look for familiar names across Canadian, Canadian Goose, Canadian Classics, Nexus and Time, with full, light and menthol choices represented when available.",
           },
           {
-            heading: "See Packs, Prices and Smoke-Shop Extras",
-            body: "The full cigarette category carries the clearest listed price for each item and may also include pouches, grabba or Backwoods products from the same smoke-shop section.",
+            heading: "Backwoods, Grabba and Smoke-Shop Extras",
+            body: "Round out the stop with Backwoods, grabba, grabba shakers and nicotine pouch options when they are part of the current selection.",
           },
         ]}
         faqs={[
           {
             q: "Does Mohawk Medicine sell Native cigarettes in Scarborough?",
-            a: "Mohawk Medicine has a dedicated cigarette category. This page highlights the cigarette products listed for the Eglinton Avenue East store.",
+            a: "Yes. Mohawk Medicine carries Native cigarette brands and related smoke-shop products at 2655 Eglinton Ave E in Scarborough.",
           },
           {
             q: "Can I see cigarette prices online?",
-            a: "Yes. Product cards show a menu price when one is listed. Open the full cigarette menu for the complete lineup.",
+            a: "Yes. Current listed prices appear with the cigarette selection, and staff can confirm the latest shelf details when you visit.",
           },
           {
             q: "Where is Mohawk Medicine?",

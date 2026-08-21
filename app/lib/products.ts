@@ -240,7 +240,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     seoDescription: "The cigarette menu at Mohawk Medicine shows the brands, styles, and prices listed for the Scarborough store at 2655 Eglinton Ave E. The store lists open 24 hours.",
     faqs: [
       { q: "Does Mohawk Medicine list cigarettes?", a: "Yes. This category shows the cigarette products and menu prices listed for the Scarborough store." },
-      { q: "What cigarette brands are listed?", a: "Use the product cards on this page to compare the brand and style names shown." },
+      { q: "What cigarette brands are listed?", a: "The selection may include Canadian, Canadian Goose, Canadian Classics, Nexus, Time and other Native cigarette brands in full, light and menthol styles." },
       { q: "Where is the store?", a: "Mohawk Medicine is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2." },
     ],
   },
