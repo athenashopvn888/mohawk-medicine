@@ -120,7 +120,7 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading: "Check The Current Brand Mix",
         body:
-          "Brand mix, flavours, carton options, and prices can rotate. Use the cigarette category as the current public reference, then confirm details with staff when needed.",
+          "Brand mix, flavours, carton options, and prices can rotate. Use the cigarette category to see what is listed, then confirm exact details with staff when needed.",
       },
       {
         heading: "One Store, Separate Categories",
@@ -140,6 +140,44 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         q: "Where is the store?",
         a: "Mohawk Medicine is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
+      },
+    ],
+  },
+
+  {
+    slug: "nicotine-vapes-scarborough",
+    title: "Nicotine Vapes Scarborough | Mohawk Medicine",
+    metaDescription:
+      "Browse nicotine vape devices, flavours, formats, and listed menu prices at Mohawk Medicine, 2655 Eglinton Ave E in Scarborough. Open 24 hours.",
+    h1: "Nicotine Vapes Scarborough",
+    icon: "NV",
+    heroTagline: "Nicotine vapes on Eglinton Avenue East.",
+    sections: [
+      {
+        heading: "Nicotine Vape Menu",
+        body: "Browse nicotine vape devices, formats, and listed prices at Mohawk Medicine.",
+      },
+      {
+        heading: "Separate From THC Vapes",
+        body: "Nicotine vapes and THC vapes have separate menu categories, making each lineup easier to browse.",
+      },
+      {
+        heading: "Open 24 Hours",
+        body: "Mohawk Medicine is at 2655 Eglinton Ave E in Scarborough and lists open 24 hours.",
+      },
+    ],
+    faqs: [
+      {
+        q: "Does Mohawk Medicine list nicotine vapes?",
+        a: "Yes. Use the nicotine vape menu for the devices and prices listed.",
+      },
+      {
+        q: "Where are THC vapes?",
+        a: "THC vapes have a separate menu category on the site.",
+      },
+      {
+        q: "Where is Mohawk Medicine?",
+        a: "The store is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
       },
     ],
   },

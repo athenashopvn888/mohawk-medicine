@@ -94,6 +94,8 @@ export default function Footer() {
               <Link href="/items/concentrates">Concentrates</Link>
               <Link href="/items/magic">Magic Stuff</Link>
               <Link href="/items/cigarettes">Cigarettes</Link>
+              <Link href="/info/native-cigarettes-scarborough">Native Cigarettes Scarborough</Link>
+              <Link href="/info/nicotine-vapes-scarborough">Nicotine Vapes Scarborough</Link>
               <Link href="/items/add-ons">Accessories</Link>
               <Link href="/delivery">Delivery Menu</Link>
               <Link href="/faq">FAQ</Link>
