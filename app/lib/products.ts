@@ -233,7 +233,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     ],
   },
   CIGARETTES: {
-    banner: "",
+    banner: "/banners/native-cigarette-offer-20260822.webp",
     name: "Cigarettes", slug: "cigarettes", color: "#78716c", icon: "CG",
     seoTitle: "Cigarette Menu Scarborough | Mohawk Medicine",
     seoIntro: "Browse cigarette brands, pack styles, and listed menu prices at Mohawk Medicine on Eglinton Avenue East.",
