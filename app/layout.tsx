@@ -34,7 +34,7 @@ const jsonLd = {
   telephone: "+14375249335",
   priceRange: "$4 - $20/g",
   address: { "@type": "PostalAddress", streetAddress: "2655 Eglinton Ave E", addressLocality: "Toronto", addressRegion: "ON", postalCode: "M1K 2S2", addressCountry: "CA" },
-  geo: { "@type": "GeoCoordinates", latitude: 43.7330, longitude: -79.2500 },
+  geo: { "@type": "GeoCoordinates", latitude: 43.73562, longitude: -79.25086 },
   openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "00:00", closes: "23:59" }],
 };
 
