@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { SmokePilotLanding } from "../../components/SmokePilot";
+import { SMOKE_PILOT_HERO_DISCLOSURE, SmokePilotLanding } from "../../components/SmokePilot";
 import { getItemsByCategory } from "../../lib/products";
 
 export const metadata: Metadata = {
@@ -10,6 +10,15 @@ export const metadata: Metadata = {
     "Explore Native cigarette brands, pack styles, and listed menu prices at Mohawk Medicine, 2655 Eglinton Ave E in Scarborough. Open 24 hours.",
   alternates: { canonical: "https://mohawkmedicine.com/info/native-cigarettes-scarborough" },
 };
+
+const HERO_ITEMS = [
+  { name: "BB Lights", image: "/products/1001-BB-LIGHTS-CARTONS.webp" },
+  { name: "BB Full", image: "/products/1003-BB-FULL-CARTON.webp" },
+  { name: "Canadian Lights", image: "/products/1005-CANADIAN-LIGHTS.webp" },
+  { name: "Canadian Full", image: "/products/1006-CANADIAN-FULL.webp" },
+  { name: "Canadian Classics Silver", image: "/products/1015-CANADIAN-CLASSICS-SILVER.webp" },
+  { name: "Canadian Menthol", image: "/products/1013-CANADIAN-MENTHOL.webp" },
+] as const;
 
 export default function NativeCigarettesScarboroughPage() {
   const items = getItemsByCategory("CIGARETTES");
@@ -67,6 +76,8 @@ export default function NativeCigarettesScarboroughPage() {
         address="2655 Eglinton Ave E, Scarborough"
         hours="Open 24 Hours"
         theme="cigarettes"
+        heroItems={HERO_ITEMS}
+        heroDisclosure={SMOKE_PILOT_HERO_DISCLOSURE}
       />
       <Footer />
     </>
