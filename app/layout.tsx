@@ -34,7 +34,7 @@ const jsonLd = {
   telephone: "+14375249335",
   priceRange: "$4 - $20/g",
   address: { "@type": "PostalAddress", streetAddress: "2655 Eglinton Ave E", addressLocality: "Toronto", addressRegion: "ON", postalCode: "M1K 2S2", addressCountry: "CA" },
-  geo: { "@type": "GeoCoordinates", latitude: 43.7330, longitude: -79.2500 },
+  geo: { "@type": "GeoCoordinates", latitude: 43.73562, longitude: -79.25086 },
   openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "00:00", closes: "23:59" }],
 };
 
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <meta name="geo.position" content="43.7330;-79.2500" />
+        <meta name="geo.position" content="43.73562;-79.25086" />
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Toronto, Scarborough" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
