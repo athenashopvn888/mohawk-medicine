@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "eslint",
     "verify:mojibake": "node scripts/verify-mojibake.mjs",
+    "test:footer-guides": "node --experimental-strip-types --experimental-specifier-resolution=node --test tests/footer-local-guides.test.ts",
     "test:staff-photo": "node --experimental-strip-types --experimental-specifier-resolution=node --test tests/staff-photo.test.ts",
     "verify:delivery-images": "node scripts/verify-athena-delivery-images.mjs"
   },
@@ -29,3 +30,4 @@
     "typescript": "^5"
   }
 }
+
