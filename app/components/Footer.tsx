@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
-export default function Footer() {
+export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean }) {
   return (
     <footer className={styles.footer}>
       <script
@@ -90,7 +90,7 @@ export default function Footer() {
               <Link href="/items/edibles">Edibles</Link>
               <Link href="/items/prerolls">Pre-Rolls</Link>
               <Link href="/items/vapes">Nic Vape</Link>
-              <Link href="/items/vape-disposables">THC Vape</Link>
+              {!hideThcVape && <Link href="/items/vape-disposables">THC Vape</Link>}
               <Link href="/items/concentrates">Concentrates</Link>
               <Link href="/items/magic">Magic Stuff</Link>
               <Link href="/items/cigarettes">Cigarettes</Link>
@@ -117,3 +117,4 @@ export default function Footer() {
     </footer>
   );
 }
+

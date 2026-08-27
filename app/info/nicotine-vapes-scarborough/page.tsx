@@ -2,73 +2,113 @@ import type { Metadata } from "next";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { SmokePilotLanding } from "../../components/SmokePilot";
-import { getItemsByCategory } from "../../lib/products";
 
 export const metadata: Metadata = {
   title: { absolute: "Nicotine Vapes Scarborough | Mohawk Medicine" },
   description:
-    "Browse nicotine vape devices, flavours, formats, and listed menu prices at Mohawk Medicine, 2655 Eglinton Ave E in Scarborough. Open 24 hours.",
+    "Adults 19+: review six live-checked nicotine vape product pages from Mohawk Medicine in Scarborough. Nicotine is addictive.",
   alternates: { canonical: "https://mohawkmedicine.com/info/nicotine-vapes-scarborough" },
 };
 
-export default function NicotineVapesScarboroughPage() {
-  const items = getItemsByCategory("VAPE PENS");
+const VERIFIED_NICOTINE_VAPES = [
+  {
+    slug: "geek-promax-5-30k-puffs",
+    name: "GEEK PROMAX – 5% | 30K PUFFS",
+    image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/GEEK-PROMAX.jpg",
+  },
+  {
+    slug: "geek-universe-25k-puffs",
+    name: "GEEK UNIVERSE 25k PUFFS",
+    image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/geek_universe_pulse_x_25k.webp",
+  },
+  {
+    slug: "nexa-pix-30k-puffs-many-flavors",
+    name: "NEXA PIX | 30K PUFFS | MANY FLAVORS",
+    image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/nexa_showcase_600x600.webp",
+  },
+  {
+    slug: "ovns-10000-5-10k-puffs",
+    name: "OVNS 10000 – 5% | 10K PUFFS",
+    image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/1081OVNS10000.jpg",
+  },
+  {
+    slug: "ovns-disposable-5-8ml-many-flavors",
+    name: "OVNS DISPOSABLE – 5% | 8ML | MANY FLAVORS",
+    image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/OVNS500x500HQ.webp",
+  },
+  {
+    slug: "ovns-pioneer-5-22k-puffs",
+    name: "OVNS PIONEER – 5% | 22K PUFFS",
+    image: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/OVNS_PIONEER_5_22K_PUFFS.webp",
+  },
+] as const;
 
+export default function NicotineVapesScarboroughPage() {
   return (
     <>
-      <Navbar />
+      <Navbar hideThcVape />
       <SmokePilotLanding
         canonicalUrl="https://mohawkmedicine.com/info/nicotine-vapes-scarborough"
         storeName="Mohawk Medicine"
         locationLabel="Scarborough"
-        eyebrow="Nicotine Vapes · Eglinton East"
+        eyebrow="Mohawk Medicine · Scarborough · Eglinton East · Adults 19+"
         title="Nicotine Vapes in Scarborough"
-        intro="Shop nicotine vape devices from names such as Geek, NEXA and OVNS at Mohawk Medicine on Eglinton Avenue East. Compare formats, flavours, puff counts and listed prices."
-        items={items}
+        intro="This Mohawk Medicine guide highlights six live-checked nicotine vape product pages for adults in Scarborough near Eglinton Avenue East. Use the nicotine vape category for product information. The cards are a limited evidence set. Nicotine is addictive."
+        items={[]}
         menuHref="/items/vapes"
-        menuLabel="Shop the nicotine vape menu"
-        menuHeading="Nicotine Vape Devices & Prices"
-        menuIntro="Compare disposable nicotine vape options listed by Mohawk Medicine in Scarborough."
+        menuLabel="Browse Nicotine Vapes"
+        menuHeading="Six Live-Checked Nicotine Vape Pages"
+        menuIntro="Six verified pages only; use the nicotine vape category for product information."
         crossLink={{
           href: "/info/native-cigarettes-scarborough",
-          eyebrow: "Also at Mohawk Medicine",
-          title: "Need Native cigarettes instead?",
-          body: "Shop full, light and menthol cigarette styles alongside Backwoods, grabba and other smoke-shop essentials at Mohawk Medicine.",
-          label: "Shop Native cigarettes",
+          eyebrow: "Separate Mohawk Medicine guide",
+          title: "Native Cigarettes in Scarborough",
+          body: "Use the verified Mohawk Medicine Native Cigarettes guide for the separate cigarette category.",
+          label: "Read the Native Cigarettes guide",
         }}
         sections={[
           {
-            heading: "Nicotine Vapes on Eglinton Avenue East",
-            body: "Mohawk Medicine carries nicotine vape options at 2655 Eglinton Ave E in Scarborough, with a changing mix of disposable devices and listed flavour choices.",
+            heading: "Six Live-Checked Nicotine Vape Pages",
+            body: "This focused set covers verified Geek, NEXA and OVNS product pages. Each card keeps its exact supported name and image attached to the correct page. It is a six-page reference set, not a claim about the complete nicotine vape selection.",
           },
           {
-            heading: "Flavours, Puff Counts and Device Formats",
-            body: "Compare disposable puff counts, device formats and flavour details from Geek, NEXA, OVNS and other names in the current selection.",
+            heading: "Keep Product Details Attached to Each Page",
+            body: "Names on the live-checked pages include product-specific nicotine strength, format and puff-count details. Use those details only to identify the corresponding listing; they are not guarantees of duration, performance or superiority.",
           },
           {
-            heading: "Open 24 Hours in Scarborough",
-            body: "Visit Mohawk Medicine at 2655 Eglinton Ave E any time of day or night for nicotine vapes, cigarettes and other smoke-shop essentials.",
+            heading: "Scarborough and Eglinton East Context",
+            body: "This Mohawk Medicine resource is written for adults looking for nicotine vape information around Scarborough, Eglinton Avenue East and Eglinton East. Product facts remain tied to the six verified pages rather than broad local assumptions.",
+          },
+          {
+            heading: "Keep Nicotine and THC Vapes Separate",
+            body: "This page is limited to six live-checked products from the VAPE PENS category. THC and cannabis vape products are excluded from this nicotine guide.",
           },
         ]}
         faqs={[
           {
-            q: "Does Mohawk Medicine sell nicotine vapes?",
-            a: "Yes. Mohawk Medicine carries nicotine vape devices with formats, flavours, puff counts and listed prices for the Eglinton Avenue East store.",
+            q: "How many nicotine vape product pages are featured here?",
+            a: "Six live-checked product pages are featured. The cards are a focused evidence set and do not claim to show a complete or currently available selection.",
           },
           {
-            q: "Are nicotine vapes different from THC vapes?",
-            a: "Yes. Nicotine devices and THC vapes are different product groups at Mohawk Medicine, with separate selections for each.",
+            q: "Where should adults review nicotine vape category information?",
+            a: "Use /items/vapes. Product details can change, so keep each detail attached to its own current product page.",
           },
           {
-            q: "Where is Mohawk Medicine?",
-            a: "Mohawk Medicine is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2 and lists open 24 hours.",
+            q: "Does this Mohawk Medicine page include THC vapes?",
+            a: "No. This guide covers nicotine products from the VAPE PENS category for adults 19+. THC and cannabis vape products are excluded.",
           },
         ]}
-        address="2655 Eglinton Ave E, Scarborough"
-        hours="Open 24 Hours"
+        address=""
+        hours=""
         theme="nicotine"
+        heroItems={VERIFIED_NICOTINE_VAPES}
+        heroDisclosure="Six live-checked product pages only. These cards do not describe the complete selection, current stock, price or availability."
+        heroSecondaryLabel="Review the Six Vape Cards"
+        warning="Adults 19+. Nicotine is addictive."
+        reducedCardsOnly
       />
-      <Footer />
+      <Footer hideThcVape />
     </>
   );
 }
+
