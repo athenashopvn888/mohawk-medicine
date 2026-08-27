@@ -233,6 +233,16 @@
   line-height: 1.55;
 }
 
+.nicotineWarning {
+  position: relative;
+  width: min(1180px, calc(100% - 48px));
+  margin: 30px auto 0;
+  color: #dbc9ff;
+  font-size: .9rem;
+  font-weight: 800;
+  text-align: center;
+}
+
 .stageEmpty {
   grid-column: 1 / -1;
   min-height: 360px;
@@ -450,3 +460,4 @@
   .productGrid { grid-template-columns: 1fr; }
   .productImage { height: 230px; }
 }
+

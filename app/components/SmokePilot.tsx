@@ -16,6 +16,7 @@ interface LandingFaq {
 }
 
 interface HeroPreviewItem {
+  slug?: string;
   name: string;
   image: string;
 }
@@ -48,12 +49,15 @@ interface SmokePilotLandingBaseProps {
   theme: "cigarettes" | "nicotine";
   inventoryVersion?: string;
   inventoryAsOf?: string;
+  reducedCardsOnly?: boolean;
+  heroSecondaryLabel?: string;
+  warning?: string;
 }
 
 type SmokePilotLandingProps = SmokePilotLandingBaseProps & (
   | {
       heroItems: readonly HeroPreviewItem[];
-      heroDisclosure: typeof SMOKE_PILOT_HERO_DISCLOSURE;
+      heroDisclosure: string;
     }
   | {
       heroItems?: never;
@@ -92,6 +96,9 @@ export function SmokePilotLanding({
   heroDisclosure,
   inventoryVersion,
   inventoryAsOf,
+  reducedCardsOnly = false,
+  heroSecondaryLabel,
+  warning,
 }: SmokePilotLandingProps) {
   const featuredItems = items.filter((item) => item.image).slice(0, 4);
   const menuItems = items.slice(0, 12);
@@ -142,14 +149,14 @@ export function SmokePilotLanding({
             <div className={styles.heroActions}>
               <Link href={menuHref} className={styles.primaryButton}>{menuLabel}</Link>
               {heroItems ? (
-                <Link href={menuHref} className={styles.secondaryButton}>See the selection</Link>
+                <Link href={menuHref} className={styles.secondaryButton}>{heroSecondaryLabel ?? "See the selection"}</Link>
               ) : (
                 <a href="#menu-highlights" className={styles.secondaryButton}>See the selection</a>
               )}
             </div>
-            <div className={styles.storeLine}>
+            {!reducedCardsOnly && <div className={styles.storeLine}>
               <span>{storeName}</span><i /> <span>{address}</span><i /> <span>{hours}</span>
-            </div>
+            </div>}
           </div>
 
           <div className={`${styles.productStage} ${heroItems ? styles.curatedProductStage : ""}`} aria-label={`${title} menu preview`}>
@@ -158,6 +165,7 @@ export function SmokePilotLanding({
                 key={item.name}
                 href={menuHref}
                 className={styles.stageProduct}
+                data-product-slug={item.slug}
               >
                 <Image
                   src={item.image}
@@ -165,6 +173,7 @@ export function SmokePilotLanding({
                   width={800}
                   height={800}
                   priority={index === 0}
+                  unoptimized={item.image.startsWith("http")}
                   sizes="(max-width: 720px) 42vw, (max-width: 980px) 46vw, 220px"
                 />
                 <span>{item.name}</span>
@@ -188,9 +197,10 @@ export function SmokePilotLanding({
             {heroItems && <p className={styles.heroDisclosure}>{heroDisclosure}</p>}
           </div>
         </div>
+        {warning && <p className={styles.nicotineWarning}>{warning}</p>}
       </section>
 
-      <section className={styles.menuSection} id="menu-highlights">
+      {!reducedCardsOnly && <section className={styles.menuSection} id="menu-highlights">
         <div className={styles.contentWidth}>
           <div className={styles.sectionHeader}>
             <div>
@@ -223,7 +233,7 @@ export function SmokePilotLanding({
             <Link href={menuHref} className={styles.primaryButton}>{menuLabel}</Link>
           </div>
         </div>
-      </section>
+      </section>}
 
       <section className={styles.guideSection}>
         <div className={styles.contentWidth}>
@@ -248,14 +258,14 @@ export function SmokePilotLanding({
         </div>
       </section>
 
-      <section className={styles.visitSection}>
+      {!reducedCardsOnly && <section className={styles.visitSection}>
         <div className={styles.contentWidth}>
           <div className={styles.visitCard}>
             <div><span className={styles.kicker}>Visit {storeName}</span><h2>{address}</h2></div>
             <strong>{hours}</strong>
           </div>
         </div>
-      </section>
+      </section>}
 
       <section className={styles.faqSection}>
         <div className={styles.faqWrap}>
@@ -274,3 +284,4 @@ export function SmokePilotLanding({
     </main>
   );
 }
+
