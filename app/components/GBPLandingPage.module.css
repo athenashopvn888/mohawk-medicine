@@ -231,3 +231,40 @@
   color: var(--text-secondary);
   line-height: 1.6;
 }
+
+.preferredSources {
+  text-align: center;
+}
+
+.preferredSourcesEyebrow {
+  margin: 0 0 10px;
+  color: var(--green-mid, #2DB872);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.preferredSources .h2 {
+  display: inline-block;
+}
+
+.preferredSourcesControl {
+  display: flex;
+  min-height: 40px;
+  margin: 20px 0 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.preferredSourcesFallback {
+  color: var(--green-deep, #0B2D1B);
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 390px) {
+  .preferredSources {
+    padding: 24px 18px;
+  }
+}
