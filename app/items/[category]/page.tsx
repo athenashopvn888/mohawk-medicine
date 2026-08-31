@@ -12,6 +12,8 @@ import {
 } from "../../lib/products";
 import styles from "./items.module.css";
 
+const SITE_ORIGIN = "https://mohawkmedicine.com";
+
 /* ── Generate all category pages ── */
 export function generateStaticParams() {
   return Object.values(CATEGORY_CONFIG).map((c) => ({ category: c.slug }));
@@ -32,7 +34,10 @@ export async function generateMetadata({
     title: catInfo.config.seoTitle || `${catInfo.config.name} — ${items.length} Products`,
     description: catInfo.config.seoIntro || `Shop ${items.length} ${catInfo.config.name.toLowerCase()} at Mohawk Medicine.`,
     alternates: {
-      canonical: `https://mohawkmedicine.com/items/${catSlug}`,
+      canonical: `${SITE_ORIGIN}/items/${catSlug}`,
+    },
+    openGraph: {
+      url: `${SITE_ORIGIN}/items/${catSlug}`,
     },
   };
 }
@@ -63,11 +68,18 @@ export default async function ItemsCategoryPage({
       {/* Hero Banner */}
       <section style={{ width: "100%", overflow: "hidden", marginTop: "92px", marginBottom: "24px" }}>
         {config.banner ? (
-          <img
-            src={config.banner}
-            alt={config.name}
-            style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
-          />
+          <>
+            <img
+              src={config.banner}
+              alt={config.name}
+              style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
+            />
+            <div className={styles.heroContent} style={{ background: config.color, padding: "20px 24px", textAlign: "center" }}>
+              <h1 className={styles.heroTitle}>
+                <span style={{ color: "#fff" }}>{config.name}</span>
+              </h1>
+            </div>
+          </>
         ) : (
           <div className={styles.heroContent} style={{ background: config.color, padding: "60px 24px", textAlign: "center" }}>
             <span className={styles.heroIcon}>{config.icon}</span>
