@@ -109,6 +109,9 @@ export function GBPLandingPage() {
       <section className={styles.section}>
         <h2 className={styles.h2}>A Local Weed Dispensary</h2>
         <p className={styles.introText}>{gbpLocation.introVariant}</p>
+        <p className={styles.infoText}>
+          If you searched for a weed dispensary near me in {gbpLocation.city}, this page helps you confirm {gbpLocation.storeName}&apos;s store details, browse its menu categories, and plan a visit using its local information.
+        </p>
       </section>
 
       {/* Product Section */}
