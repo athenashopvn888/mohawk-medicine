@@ -31,7 +31,9 @@ export async function generateMetadata({
   const items = getItemsByCategory(catInfo.key);
 
   return {
-    title: catInfo.config.seoTitle || `${catInfo.config.name} — ${items.length} Products`,
+    title: {
+      absolute: catInfo.config.seoTitle || `${catInfo.config.name} — ${items.length} Products`,
+    },
     description: catInfo.config.seoIntro || `Shop ${items.length} ${catInfo.config.name.toLowerCase()} at Mohawk Medicine.`,
     alternates: {
       canonical: `${SITE_ORIGIN}/items/${catSlug}`,
