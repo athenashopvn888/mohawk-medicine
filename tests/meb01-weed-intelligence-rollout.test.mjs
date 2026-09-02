@@ -33,7 +33,6 @@ test("every legacy Weed-campaign route has one permanent direct redirect", () =>
   const destinations = new Set(routeMap.map(([, destination]) => destination));
   for (const [, destination] of routeMap) assert.equal(destinations.has(routeMap.find(([source]) => source === destination)?.[1]), false);
 });
-
 test("tier routes, labels, metadata and H1s satisfy Weed Standard v2", () => {
   for (const [label, slug] of [
     ["Exotic Weed", "exotic-weed"],
@@ -54,7 +53,6 @@ test("tier routes, labels, metadata and H1s satisfy Weed Standard v2", () => {
   assert.match(tierPage, /title: \{ absolute: seo\?\.metadataTitle/);
   assert.match(tierPage, /seo\?\.h1 \|\| config\.name/);
 });
-
 test("delivery is a single Weed canonical while its operational component remains shared", () => {
   assert.match(delivery, /Weed Delivery Toronto \| Mohawk Medicine/);
   assert.match(delivery, /canonical: "https:\/\/mohawkmedicine\.com\/weed-delivery-toronto"/);
@@ -112,4 +110,3 @@ test("local runtime exposes canonical pages and one-hop redirects", async () => 
     assert.equal(new URL(response.headers.get("location"), base).pathname, destination, source);
   }
 });
-

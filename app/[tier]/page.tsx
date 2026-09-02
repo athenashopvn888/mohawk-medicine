@@ -17,7 +17,6 @@ const SITE_ORIGIN = "https://mohawkmedicine.com";
 export function generateStaticParams() {
   return Object.values(TIER_CONFIG).map((t) => ({ tier: t.slug }));
 }
-
 /* -- Dynamic SEO metadata -- */
 export async function generateMetadata({
   params,
@@ -43,7 +42,6 @@ export async function generateMetadata({
     },
   };
 }
-
 /* -- Page component -- */
 export default async function TierPage({
   params,
@@ -207,4 +205,3 @@ export default async function TierPage({
     </main>
   );
 }
-

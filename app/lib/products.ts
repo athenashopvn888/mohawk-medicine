@@ -14,12 +14,10 @@ export interface FlowerProduct {
   price28g: PricePoint | null;
   image: string;
 }
-
 export interface PricePoint {
   regular: number;
   sale: number | null;
 }
-
 export interface ItemProduct {
   sku: string;
   name: string;
@@ -295,4 +293,3 @@ export function formatPrice(p: PricePoint | null): string {
   if (p.sale !== null) return `$${p.sale}`;
   return `$${p.regular}`;
 }
-

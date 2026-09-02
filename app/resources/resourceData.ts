@@ -3,13 +3,11 @@ export interface ResourceCard {
   href: string;
   text: string;
 }
-
 export interface ResourceSection {
   heading: string;
   body: string;
   bullets?: string[];
 }
-
 export interface ResourcePage {
   slug: string;
   title: string;
@@ -317,4 +315,3 @@ export const RESOURCE_HOME = RESOURCE_PAGES[0];
 export function getResourcePage(slug: string) {
   return RESOURCE_PAGES.find((page) => page.slug === slug);
 }
-

@@ -120,5 +120,3 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
     </footer>
   );
 }
-
-

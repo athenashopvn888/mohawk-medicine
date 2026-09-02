@@ -78,5 +78,3 @@ export default function Navbar({ hideThcVape = false }: { hideThcVape?: boolean 
     </nav>
   );
 }
-
-

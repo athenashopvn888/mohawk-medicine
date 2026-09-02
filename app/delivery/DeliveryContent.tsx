@@ -50,7 +50,6 @@ function ProductPricing({ product }: { product: Product }) {
     </div>
   </div>;
 }
-
 export default function DeliveryContent() {
   const [products, setProducts] = useState<Product[]>(fallbackProducts);
   const [filter, setFilter] = useState<Filter>("ALL");
@@ -144,4 +143,3 @@ export default function DeliveryContent() {
     <Footer />
   </main>;
 }
-

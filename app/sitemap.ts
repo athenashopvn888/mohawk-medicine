@@ -65,4 +65,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...seoPages, ...resourcePages];
 }
-
