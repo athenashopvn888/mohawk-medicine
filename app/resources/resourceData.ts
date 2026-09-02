@@ -24,7 +24,7 @@ export interface ResourcePage {
 const localAreas = "Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, and the Kennedy Station area";
 
 const menuCards: ResourceCard[] = [
-  { title: "Flower Tiers", href: "/resources/flower-guide", text: "Compare Exotic, Premium, AAA+, AA, and Budget flower before opening a tier page." },
+  { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Explore Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, and Budget Weed." },
   { title: "Pre-Rolls", href: "/resources/pre-roll-guide", text: "Use this when the visit is about ready-to-smoke options." },
   { title: "Value Guide", href: "/resources/value-guide", text: "Start here for Budget, AA, and AAA+ flower comparisons." },
   { title: "Native Smokes", href: "/resources/native-smokes", text: "Review cigarette, Backwoods, grabba, and pouch notes where listed." },
@@ -43,7 +43,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     cards: [
       { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: `Plan the stop around ${localAreas}.` },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the category that matches the visit." },
-      { title: "Flower Tier Guide", href: "/resources/flower-guide", text: "Compare posted flower tiers and bundle math." },
+      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Explore the five Weed flower collections." },
       { title: "Value Guide", href: "/resources/value-guide", text: "Review Budget, AA, and AAA+ options before comparing higher tiers." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Brand and price notes for cigarettes, Backwoods, grabba, and pouch listings." },
     ],
@@ -129,36 +129,37 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     ],
   },
   {
-    slug: "flower-guide",
-    title: "Mohawk Medicine Flower Tier And 6g Price Guide",
-    seoTitle: "Mohawk Medicine Flower Tier Guide | Exotic, Premium, AAA+, AA And Budget",
+    slug: "weed-flower-guide",
+    title: "Mohawk Medicine Weed & Flower Guide",
+    seoTitle: "Weed & Cannabis Flower Guide Toronto | Mohawk Medicine",
     description:
-      "Compare Mohawk Medicine flower tiers with posted per-gram prices, 3g specials, 6g deal math, Budget flower, AA flower, AAA+, Premium, and Exotic.",
-    eyebrow: "Flower Tiers",
+      "Explore Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed at Mohawk Medicine, with a straightforward guide to the five flower collections.",
+    eyebrow: "Mohawk Medicine · Weed & Flower",
     intro:
-      "Mohawk Medicine flower is organized by tier: Exotic, Premium, AAA+, AA, and Budget. Use the tier pages to confirm current strain names, prices, and listings before visiting.",
+      "Mohawk Medicine brings together five Weed flower collections for shoppers who want to explore different parts of the selection: Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed. Browse the collections that interest you, compare more than one, or begin with Mohawk Medicine’s broader Toronto Weed selection.",
     cards: [
-      { title: "Exotic Flower", href: "/exotic", text: "$20/g, with 3g and 6g deal logic where listed." },
-      { title: "Premium Flower", href: "/premium", text: "$15/g, with 3g and 6g deal logic where listed." },
-      { title: "AAA+ Flower", href: "/aaa", text: "$10/g, with 3g and 6g deal logic where listed." },
-      { title: "AA Flower", href: "/aa", text: "$4/g where listed." },
-      { title: "Budget Flower", href: "/budget", text: "$3/g, with a $10 / 3g special where listed." },
+      { title: "Explore Mohawk Medicine Weed in Toronto", href: "/weed-dispensary-toronto/", text: "Begin with Mohawk Medicine’s broader Toronto Weed selection." },
+      { title: "Exotic Weed", href: "/exotic-weed", text: "Explore Mohawk Medicine’s Exotic Weed flower collection and the products presented within it." },
+      { title: "Premium Weed", href: "/premium-weed", text: "Browse the Premium Weed flower collection from Mohawk Medicine." },
+      { title: "AAA+ Weed", href: "/aaa-weed", text: "Explore Mohawk Medicine’s AAA+ Weed flower collection." },
+      { title: "AA Weed", href: "/aa-weed", text: "Browse the AA Weed flower collection from Mohawk Medicine." },
+      { title: "Budget Weed", href: "/budget-weed", text: "Explore Mohawk Medicine’s Budget Weed flower collection." },
     ],
     sections: [
       {
-        heading: "Compare The Posted Tier Math",
+        heading: "Explore Five Weed Flower Collections",
         body:
-          "The top flower tiers can show 3g and 6g deal logic, so compare the bundle line before deciding which tier fits the visit.",
-        bullets: [
-          "Exotic: $20/g, 3g for $40 or 6g around $60 where listed.",
-          "Premium: $15/g, 3g for $30 or 6g around $45 where listed.",
-          "AAA+: $10/g, 3g for $20 or 6g around $30 where listed.",
-        ],
+          "Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed are five separate flower collections to explore without ranking one above another.",
       },
       {
-        heading: "Budget And AA",
+        heading: "Weed, Cannabis and Flower at Mohawk Medicine",
         body:
-          "Budget at $3/g and AA at $4/g are the simplest value comparisons. Confirm current product names, strain notes, and listings on the tier page before visiting.",
+          "Shoppers may use terms such as Weed, cannabis, bud and flower when exploring a dispensary selection. Mohawk Medicine uses those terms naturally while offering five distinct flower collections to browse.",
+      },
+      {
+        heading: "Compare the Collections That Interest You",
+        body:
+          "You can start with one flower collection and explore others as you browse. Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed each give you a different part of the Mohawk Medicine flower selection to look through.",
       },
     ],
   },
@@ -172,9 +173,9 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro:
       "For value shopping near Eglinton East and Scarborough, start with Budget, AA, and AAA+ before comparing higher flower tiers or mixed categories.",
     cards: [
-      { title: "Budget Flower", href: "/budget", text: "$3/g for the lowest posted flower tier where listed." },
-      { title: "AA Flower", href: "/aa", text: "$4/g for a simple low-spend flower comparison." },
-      { title: "AAA+ Flower", href: "/aaa", text: "$10/g, 3g for $20, or 6g around $30 where listed." },
+      { title: "Budget Weed", href: "/budget-weed", text: "$3/g for the lowest posted flower tier where listed." },
+      { title: "AA Weed", href: "/aa-weed", text: "$4/g for a simple low-spend flower comparison." },
+      { title: "AAA+ Weed", href: "/aaa-weed", text: "$10/g, 3g for $20, or 6g around $30 where listed." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Use this if cigarettes or Backwoods are part of the same stop." },
     ],
     sections: [
@@ -201,7 +202,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       "Use this guide when the visit is about ready-to-smoke options, a quick stop, or a small add-on beside another category.",
     cards: [
       { title: "Pre-Rolls", href: "/items/prerolls", text: "Open the current pre-roll category." },
-      { title: "Flower Tiers", href: "/resources/flower-guide", text: "Switch here if the visit turns into loose flower." },
+      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Switch here if the visit turns into loose flower." },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Use this if the stop includes edibles, vapes, concentrates, or accessories." },
     ],
     sections: [
@@ -293,7 +294,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     cards: [
       { title: "Resource Home", href: "/resources", text: "Start at the main resource hub." },
       { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: `Plan around ${localAreas}.` },
-      { title: "Flower Tier Guide", href: "/resources/flower-guide", text: "Review posted tier and bundle notes." },
+      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Explore the five Weed flower collections." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Check brand and price notes where listed." },
     ],
     sections: [
@@ -316,3 +317,4 @@ export const RESOURCE_HOME = RESOURCE_PAGES[0];
 export function getResourcePage(slug: string) {
   return RESOURCE_PAGES.find((page) => page.slug === slug);
 }
+

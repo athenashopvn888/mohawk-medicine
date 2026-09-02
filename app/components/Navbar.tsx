@@ -6,11 +6,11 @@ import Link from "next/link";
 import styles from "./Navbar.module.css";
 
 const ALL_LINKS: { href: string; label: string; featured?: boolean }[] = [
-  { href: "/exotic", label: "Exotic" },
-  { href: "/premium", label: "Premium" },
-  { href: "/aaa", label: "AAA+" },
-  { href: "/aa", label: "AA" },
-  { href: "/budget", label: "Budget" },
+  { href: "/exotic-weed", label: "Exotic Weed" },
+  { href: "/premium-weed", label: "Premium Weed" },
+  { href: "/aaa-weed", label: "AAA+ Weed" },
+  { href: "/aa-weed", label: "AA Weed" },
+  { href: "/budget-weed", label: "Budget Weed" },
   { href: "/items/edibles", label: "Edibles" },
   { href: "/items/prerolls", label: "Pre-Rolls" },
   { href: "/items/vapes", label: "Nic Vape" },
@@ -19,7 +19,7 @@ const ALL_LINKS: { href: string; label: string; featured?: boolean }[] = [
   { href: "/items/magic", label: "Magic Stuff" },
   { href: "/items/cigarettes", label: "Cigarettes" },
   { href: "/items/add-ons", label: "Accessories" },
-  { href: "/delivery", label: "Delivery" },
+  { href: "/weed-delivery-toronto", label: "Weed Delivery" },
     { href: "/careers/budtender", label: "Join Team", featured: true },
 
   { href: "/faq", label: "FAQ" },
@@ -78,4 +78,5 @@ export default function Navbar({ hideThcVape = false }: { hideThcVape?: boolean 
     </nav>
   );
 }
+
 

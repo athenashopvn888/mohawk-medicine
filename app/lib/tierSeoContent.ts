@@ -1,6 +1,8 @@
 /* Tier-specific SEO content for below-the-fold sections */
 
 export interface TierSeoData {
+  metadataTitle: string;
+  h1: string;
   seoTitle: string;
   seoIntro: string;
   sections: { heading: string; body: string }[];
@@ -9,6 +11,8 @@ export interface TierSeoData {
 
 export const TIER_SEO: Record<string, TierSeoData> = {
   EXOTIC: {
+    metadataTitle: "Exotic Weed & Cannabis Flower Toronto | Mohawk Medicine",
+    h1: "Exotic Weed & Cannabis Flower in Toronto",
     seoTitle: "Exotic Weed & Cannabis Flower in Scarborough",
     seoIntro:
       "Mohawk Medicine keeps Exotic as its own cannabis flower category for adults 19+ exploring weed and flower in Scarborough. The Exotic tier stands on its own within the broader Mohawk Medicine flower lineup and remains separate from Premium, AAA+, AA and Budget.",
@@ -41,6 +45,8 @@ export const TIER_SEO: Record<string, TierSeoData> = {
   },
 
   PREMIUM: {
+    metadataTitle: "Premium Weed & Cannabis Flower Toronto | Mohawk Medicine",
+    h1: "Premium Weed & Cannabis Flower in Toronto",
     seoTitle: "Premium Weed & Cannabis Flower in Scarborough",
     seoIntro:
       "Premium has its own place in the Mohawk Medicine flower lineup for adults 19+ exploring weed and cannabis flower around Scarborough and Eglinton East. It remains a separate category from Exotic, AAA+, AA and Budget.",
@@ -73,6 +79,8 @@ export const TIER_SEO: Record<string, TierSeoData> = {
   },
 
   "AAA+": {
+    metadataTitle: "AAA+ Weed & Cannabis Flower Toronto | Mohawk Medicine",
+    h1: "AAA+ Weed & Cannabis Flower in Toronto",
     seoTitle: "AAA+ Weed & Cannabis Flower in Scarborough",
     seoIntro:
       "AAA+ is a distinct Mohawk Medicine flower category for adults 19+ who want to focus on that part of the weed and cannabis flower lineup. It sits alongside Exotic, Premium, AA and Budget without changing the broader role of the Mohawk Medicine Weed owner page.",
@@ -105,6 +113,8 @@ export const TIER_SEO: Record<string, TierSeoData> = {
   },
 
   AA: {
+    metadataTitle: "AA Weed & Cannabis Flower Toronto | Mohawk Medicine",
+    h1: "AA Weed & Cannabis Flower in Toronto",
     seoTitle: "AA Weed & Cannabis Flower in Scarborough",
     seoIntro:
       "AA is its own Mohawk Medicine flower category for adults 19+ exploring weed and cannabis flower in Scarborough. The section remains distinct from Budget, AAA+, Premium and Exotic.",
@@ -137,6 +147,8 @@ export const TIER_SEO: Record<string, TierSeoData> = {
   },
 
   BUDGET: {
+    metadataTitle: "Budget Weed & Cannabis Flower Toronto | Mohawk Medicine",
+    h1: "Budget Weed & Cannabis Flower in Toronto",
     seoTitle: "Budget Weed & Cannabis Flower in Scarborough",
     seoIntro:
       "Budget is a separate Mohawk Medicine flower category for adults 19+ exploring weed and cannabis flower in Scarborough. The Budget label identifies the tier without making a current price, promotion, stock or availability claim.",
@@ -168,3 +180,4 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     ],
   },
 };
+
