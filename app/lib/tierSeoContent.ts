@@ -9,172 +9,161 @@ export interface TierSeoData {
 
 export const TIER_SEO: Record<string, TierSeoData> = {
   EXOTIC: {
-    seoTitle: "Exotic Cannabis Flower Scarborough | Mohawk Medicine",
+    seoTitle: "Exotic Weed & Cannabis Flower in Scarborough",
     seoIntro:
-      "Explore the Exotic tier at Mohawk Medicine on Eglinton Ave E in Scarborough. Check current listings, bundle options, and product details before visiting.",
+      "Mohawk Medicine keeps Exotic as its own cannabis flower category for adults 19+ exploring weed and flower in Scarborough. The Exotic tier stands on its own within the broader Mohawk Medicine flower lineup and remains separate from Premium, AAA+, AA and Budget.",
     sections: [
       {
-        heading: "What Is Exotic Flower?",
+        heading: "Explore Exotic Weed & Flower",
         body:
-          "Exotic is a separate flower tier on the Mohawk Medicine site. Use this page to compare current product cards, listed weights, prices, and package details.",
+          "Use the Exotic section when that specific flower category is what you want to explore. Mohawk Medicine keeps each tier distinct so shoppers can move through the flower lineup without mixing every category together.",
       },
       {
-        heading: "Exotic Pricing",
+        heading: "Exotic Within the Mohawk Medicine Flower Lineup",
         body:
-          "The Exotic tier is listed at $20 per gram. Where listed, the page also shows 3g bundle pricing at $40 and 6g bundle pricing at $60. Check current product cards for any larger-format listings.",
-      },
-      {
-        heading: "Eglinton Ave E Shopping Notes",
-        body:
-          "Mohawk Medicine is located at 2655 Eglinton Ave E in Scarborough. Check the current Exotic page before visiting because strains, product details, and larger-format listings can rotate.",
+          "Exotic is one of five named flower categories at Mohawk Medicine alongside Premium, AAA+, AA and Budget. The tier label identifies the section only and does not make a claim about current products, stock, potency or availability.",
       },
     ],
     faqs: [
       {
-        q: "What is Exotic cannabis flower?",
-        a: "Exotic is Mohawk Medicine's highest-priced flower tier, listed for shoppers comparing the premium end of the flower menu.",
+        q: "What is Exotic weed at Mohawk Medicine?",
+        a: "Exotic is one of Mohawk Medicine's separate cannabis flower categories.",
       },
       {
-        q: "How much does Exotic flower cost?",
-        a: "The Exotic tier is listed at $20/g, with 3g and 6g bundle pricing shown where listed.",
+        q: "Is Exotic separate from Premium flower?",
+        a: "Yes. Exotic and Premium are separate named flower tiers at Mohawk Medicine.",
       },
       {
-        q: "How do I know what Exotic strains are listed?",
-        a: "Check the current Exotic category page before visiting Eglinton Ave E.",
+        q: "Does the Exotic section confirm what is currently available?",
+        a: "No. The Exotic label identifies the flower category only and does not confirm current stock or availability.",
       },
     ],
   },
 
   PREMIUM: {
-    seoTitle: "Premium Cannabis Flower Scarborough | Mohawk Medicine",
+    seoTitle: "Premium Weed & Cannabis Flower in Scarborough",
     seoIntro:
-      "Shop the Premium flower tier at Mohawk Medicine in Scarborough. Use the current page to compare listed strains, prices, and bundle options.",
+      "Premium has its own place in the Mohawk Medicine flower lineup for adults 19+ exploring weed and cannabis flower around Scarborough and Eglinton East. It remains a separate category from Exotic, AAA+, AA and Budget.",
     sections: [
       {
-        heading: "What Is Premium Flower?",
+        heading: "Browse Premium Weed & Flower",
         body:
-          "Premium sits below Exotic in the Mohawk Medicine flower ladder. It is built for shoppers who want a higher-priced flower path without starting at the Exotic tier.",
+          "The Premium section gives shoppers a focused flower category without combining it with the rest of the Mohawk Medicine tier lineup.",
       },
       {
-        heading: "Premium Pricing",
+        heading: "Premium as a Separate Flower Category",
         body:
-          "Premium flower is listed at $15 per gram. Where listed, the tier page shows 3g bundle pricing at $30 and 6g bundle pricing at $45.",
-      },
-      {
-        heading: "Compare Before Visiting",
-        body:
-          "Use the Premium page to compare product cards, then check the current menu details before heading to 2655 Eglinton Ave E.",
+          "Mohawk Medicine presents Premium alongside Exotic, AAA+, AA and Budget as distinct named tiers. The Premium label describes the category and does not imply current availability, potency or product characteristics.",
       },
     ],
     faqs: [
       {
-        q: "What is Premium cannabis flower?",
-        a: "Premium is a higher-priced flower tier below Exotic, with current strain details shown on the Premium page.",
+        q: "What is Premium weed at Mohawk Medicine?",
+        a: "Premium is one of Mohawk Medicine's separate cannabis flower categories.",
       },
       {
-        q: "How much does Premium flower cost?",
-        a: "Premium is listed at $15/g, with 3g and 6g bundle pricing shown where listed.",
+        q: "Is Premium the same as Exotic?",
+        a: "No. Premium and Exotic are separate named flower tiers.",
       },
       {
-        q: "What is the difference between Exotic and Premium?",
-        a: "Exotic is the highest-priced tier. Premium sits below it for shoppers comparing a lower price point than Exotic.",
+        q: "Does Premium mean a particular product is currently available?",
+        a: "No. Premium is the tier name only and does not confirm current product availability.",
       },
     ],
   },
 
   "AAA+": {
-    seoTitle: "AAA+ Cannabis Flower Scarborough | Mohawk Medicine",
+    seoTitle: "AAA+ Weed & Cannabis Flower in Scarborough",
     seoIntro:
-      "Shop AAA+ cannabis flower at Mohawk Medicine on Eglinton Ave E. Check current products, per-gram pricing, and bundle options before visiting.",
+      "AAA+ is a distinct Mohawk Medicine flower category for adults 19+ who want to focus on that part of the weed and cannabis flower lineup. It sits alongside Exotic, Premium, AA and Budget without changing the broader role of the Mohawk Medicine Weed owner page.",
     sections: [
       {
-        heading: "What Is AAA+ Flower?",
+        heading: "Explore AAA+ Weed & Flower",
         body:
-          "AAA+ is a flower tier for shoppers comparing price and current strain listings without moving into Premium or Exotic pricing.",
+          "The AAA+ section keeps this flower category separate so shoppers can explore it without moving through every Mohawk Medicine tier at once.",
       },
       {
-        heading: "AAA+ Pricing",
+        heading: "AAA+ in the Mohawk Medicine Tier Lineup",
         body:
-          "AAA+ flower is listed at $10 per gram. Where listed, the page shows 3g bundle pricing at $20 and 6g bundle pricing at $30.",
-      },
-      {
-        heading: "Use The Current Page",
-        body:
-          "Strains and product details can rotate. Use the current AAA+ page as the public reference before visiting Mohawk Medicine.",
+          "AAA+ is one of the five named flower categories used by Mohawk Medicine. The label identifies the tier only and does not establish potency, quality, availability or current product details.",
       },
     ],
     faqs: [
       {
-        q: "What is AAA+ cannabis flower?",
-        a: "AAA+ is a flower tier between AA and Premium, with current product cards shown on the AAA+ page.",
+        q: "What is the AAA+ weed tier at Mohawk Medicine?",
+        a: "AAA+ is one of Mohawk Medicine's separate cannabis flower categories.",
       },
       {
-        q: "How much does AAA+ flower cost?",
-        a: "AAA+ is listed at $10/g, with 3g and 6g bundle pricing shown where listed.",
+        q: "Is AAA+ different from AA?",
+        a: "Yes. AAA+ and AA are separate named flower tiers.",
       },
       {
-        q: "Is AAA+ good quality?",
-        a: "Use the current product cards and staff guidance to compare the listed AAA+ options before buying.",
+        q: "Does AAA+ make a potency or availability claim?",
+        a: "No. AAA+ is the category label only.",
       },
     ],
   },
 
   AA: {
-    seoTitle: "AA Cannabis Flower Scarborough | Mohawk Medicine",
+    seoTitle: "AA Weed & Cannabis Flower in Scarborough",
     seoIntro:
-      "Shop AA cannabis flower at Mohawk Medicine in Scarborough. AA is a value-focused flower tier with current listings shown on the category page.",
+      "AA is its own Mohawk Medicine flower category for adults 19+ exploring weed and cannabis flower in Scarborough. The section remains distinct from Budget, AAA+, Premium and Exotic.",
     sections: [
       {
-        heading: "What Is AA Flower?",
+        heading: "Browse AA Weed & Flower",
         body:
-          "AA is a value-focused tier for shoppers who want to compare lower-priced flower options before visiting Eglinton Ave E.",
+          "Use the AA section when you want to stay focused on that specific Mohawk Medicine flower category.",
       },
       {
-        heading: "AA Pricing",
+        heading: "AA as a Defined Flower Tier",
         body:
-          "AA flower is listed at $4 per gram in the current tier configuration. Check the AA page for current product cards and any larger-format listings.",
+          "AA is presented as one of five named tiers in the Mohawk Medicine flower lineup. The category label does not imply price, potency, current stock or product availability.",
       },
     ],
     faqs: [
       {
-        q: "What is AA cannabis flower?",
-        a: "AA is a value-focused flower tier with current strain listings shown on the AA page.",
+        q: "What does AA weed mean at Mohawk Medicine?",
+        a: "AA is one of Mohawk Medicine's separate cannabis flower categories.",
       },
       {
-        q: "How much does AA flower cost?",
-        a: "AA is listed at $4/g in the current tier configuration.",
+        q: "Is AA separate from Budget?",
+        a: "Yes. AA and Budget are separate named flower tiers.",
+      },
+      {
+        q: "Does AA imply a current price or availability?",
+        a: "No. AA is the tier label only.",
       },
     ],
   },
 
   BUDGET: {
-    seoTitle: "Budget Cannabis Scarborough | Cheap Weed From $3/g",
+    seoTitle: "Budget Weed & Cannabis Flower in Scarborough",
     seoIntro:
-      "Check the Budget flower tier at Mohawk Medicine in Scarborough. Budget is the lowest-priced flower path shown on the site.",
+      "Budget is a separate Mohawk Medicine flower category for adults 19+ exploring weed and cannabis flower in Scarborough. The Budget label identifies the tier without making a current price, promotion, stock or availability claim.",
     sections: [
       {
-        heading: "Budget Flower Path",
+        heading: "Explore Budget Weed & Flower",
         body:
-          "Budget is a value-focused flower tier on the Mohawk Medicine site. Use it to compare listed names and prices before visiting 2655 Eglinton Ave E.",
+          "The Budget section gives Mohawk Medicine shoppers a dedicated flower category that stays separate from AA, AAA+, Premium and Exotic.",
       },
       {
-        heading: "Budget Pricing",
+        heading: "Budget Is the Category Name",
         body:
-          "Budget flower is listed at $3 per gram. The current tier configuration also shows a $10 / 3g special where listed.",
+          "Budget describes the flower tier only. It does not establish a current deal, discount, price, promotion or product availability.",
       },
     ],
     faqs: [
       {
-        q: "What is the cheapest flower tier at Mohawk Medicine?",
-        a: "Budget is the lowest-priced flower tier shown on the site, listed at $3/g in the current tier configuration.",
+        q: "What is Budget weed at Mohawk Medicine?",
+        a: "Budget is one of Mohawk Medicine's separate cannabis flower categories.",
       },
       {
-        q: "Does Budget flower have bundle pricing?",
-        a: "The current tier configuration shows a $10 / 3g special where listed.",
+        q: "Does Budget mean there is a current sale or promotion?",
+        a: "No. Budget is the category name only.",
       },
       {
-        q: "Do Budget listings change?",
-        a: "Yes. Product names, formats, and listings can rotate, so check the current Budget page before visiting.",
+        q: "Can Budget be compared with the other flower tiers?",
+        a: "Yes. Budget is separate from AA, AAA+, Premium and Exotic.",
       },
     ],
   },
