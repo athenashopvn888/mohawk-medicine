@@ -82,11 +82,11 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
             <h3 className={styles.colTitle}>Quick Links</h3>
             <nav className={styles.links}>
               <Link href="/">Home</Link>
-              <Link href="/exotic">Exotic Flower</Link>
-              <Link href="/premium">Premium Flower</Link>
-              <Link href="/aaa">AAA+ Flower</Link>
-              <Link href="/aa">AA Flower</Link>
-              <Link href="/budget">Budget Flower</Link>
+              <Link href="/exotic-weed">Exotic Weed</Link>
+              <Link href="/premium-weed">Premium Weed</Link>
+              <Link href="/aaa-weed">AAA+ Weed</Link>
+              <Link href="/aa-weed">AA Weed</Link>
+              <Link href="/budget-weed">Budget Weed</Link>
               <Link href="/items/edibles">Edibles</Link>
               <Link href="/items/prerolls">Pre-Rolls</Link>
               <Link href="/items/vapes">Nic Vape</Link>
@@ -100,7 +100,7 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
               <Link href="/info/nicotine-vapes-scarborough">Nicotine Vapes Scarborough</Link>
               <Link href="/info/weed-store-near-eglinton-east">Weed Store Near Eglinton East</Link>
               <Link href="/items/add-ons">Accessories</Link>
-              <Link href="/delivery">Delivery Menu</Link>
+              <Link href="/weed-delivery-toronto">Weed Delivery</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/weed-dispensary-toronto/">Mohawk Medicine Weed Dispensary in Toronto</Link>
               <Link href="/contact">Contact</Link>
@@ -120,4 +120,3 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
     </footer>
   );
 }
-

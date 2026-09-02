@@ -4,7 +4,7 @@ const chat = await readFile(new URL("../app/delivery/MohawkMedicineWebChat.tsx",
 const delivery = await readFile(new URL("../app/delivery/DeliveryContent.tsx", import.meta.url), "utf8");
 const footer = await readFile(new URL("../app/components/Footer.tsx", import.meta.url), "utf8");
 for (const expected of ['storeId: "MCM01"', 'sod-web-chat:MCM01', 'smsConsent', 'required type="checkbox"', 'workflowVersion: "READY_V1"', 'I agree to receive one READY delivery-link text for this order.', '/api/web-chat/session', '/api/web-chat/messages', '/api/web-chat/id-review', '/api/web-chat/phone', 'phoneConfirmation: replacementPhoneConfirmation', 'phoneVersion: conversation.phoneVersion', 'START ANOTHER ORDER', '/api/web-chat/order-cycle', 'requestId: crypto.randomUUID()', 'securely retained for future identity and address verification', 'NEW_CUSTOMER', 'RETURNING_CUSTOMER']) assert.ok(chat.includes(expected), `Missing Web Chat contract: ${expected}`);
-assert.ok(delivery.includes("<MohawkMedicineWebChat />")); assert.ok(delivery.includes("$60 PRODUCT MINIMUM")); assert.ok(delivery.includes("HOW TO ORDER")); assert.ok(footer.includes('Delivery Menu'));
+assert.ok(delivery.includes("<MohawkMedicineWebChat />")); assert.ok(delivery.includes("$60 PRODUCT MINIMUM")); assert.ok(delivery.includes("HOW TO ORDER")); assert.ok(footer.includes('<Link href="/weed-delivery-toronto">Weed Delivery</Link>'));
 assert.ok(delivery.includes("store=MCM01")); assert.ok(!chat.includes('storeId: "LC01"'), "Reference identity must not remain");
 assert.doesNotMatch(`${chat}\n${delivery}`, /href=["'{`]sms:|DELIVERY TEXT NUMBER|Reply YES|YES confirmation/i);
 assert.doesNotMatch(delivery, /Call <strong>|href=["'{`]tel:/i, "Delivery page must not expose a customer-facing phone CTA");

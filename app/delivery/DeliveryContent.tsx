@@ -50,7 +50,6 @@ function ProductPricing({ product }: { product: Product }) {
     </div>
   </div>;
 }
-
 export default function DeliveryContent() {
   const [products, setProducts] = useState<Product[]>(fallbackProducts);
   const [filter, setFilter] = useState<Filter>("ALL");
@@ -109,7 +108,7 @@ export default function DeliveryContent() {
   return <main className={styles.main}>
     <Navbar />
     <section className={`${styles.hero} ${styles.heroPlain}`}>
-      <div><p>Mohawk Medicine</p><h1>Weed Delivery Menu</h1><span>Browse the shared product catalog. The store confirms current availability and delivery details before an order is accepted.</span></div>
+      <div><p>Mohawk Medicine</p><h1>Weed Delivery in Toronto</h1><span>Browse the shared product catalog. The store confirms current availability and delivery details before an order is accepted.</span></div>
     </section>
     <section className={styles.deliveryDetails} aria-label="Mohawk Medicine delivery details"><strong>$60 PRODUCT MINIMUM</strong></section>
     <section className={styles.loyalty} aria-labelledby="loyalty-title">
