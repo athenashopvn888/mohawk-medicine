@@ -44,6 +44,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Explore the five Weed flower collections." },
       { title: "Value Guide", href: "/resources/value-guide", text: "Review Budget, AA, and AAA+ options before comparing higher tiers." },
       { title: "Native Smokes Prices", href: "/resources/native-smokes", text: "Brand and price notes for cigarettes, Backwoods, grabba, and pouch listings." },
+      { title: "Cannabis Dispensary vs. Weed Dispensary", href: "/resources/cannabis-dispensary-vs-weed-dispensary", text: "Learn how dispensary, cannabis dispensary, weed dispensary and cannabis store searches relate." },
     ],
     sections: [
       {
@@ -277,6 +278,61 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         heading: "Keep Cigarettes Separate From Cannabis Categories",
         body:
           "When the same visit includes flower, pre-rolls, edibles, THC vapes, concentrates, or accessories, keep cigarette items in their own category so the list stays easier to compare.",
+      },
+    ],
+  },
+  {
+    slug: "cannabis-dispensary-vs-weed-dispensary",
+    title: "Cannabis Dispensary vs. Weed Dispensary in Toronto: What's the Difference?",
+    seoTitle: "Cannabis vs Weed Dispensary | Mohawk Medicine Toronto",
+    description:
+      "Cannabis dispensary vs weed dispensary: learn why Toronto shoppers use both terms and how “dispensary near me” fits into local cannabis searches.",
+    eyebrow: "Dispensary Search Terminology",
+    intro:
+      "Toronto customers use several different phrases when trying to find a nearby cannabis business. One person may search “cannabis dispensary near me.” Another may use “weed dispensary near me.” Others shorten the search to “dispensary near me,” “cannabis near me,” or “weed near me.”",
+    cards: [
+      { title: "Weed Dispensary in Toronto", href: "/weed-dispensary-toronto", text: "Use the existing local page for Mohawk Medicine visit information." },
+      { title: "Resource Home", href: "/resources", text: "Return to the Mohawk Medicine resource hub." },
+    ],
+    sections: [
+      {
+        heading: "Different Words, Similar Local Intent",
+        body:
+          "Cannabis is the broader formal term. Weed is familiar everyday language. Dispensary describes the type of local business someone is trying to locate. Cannabis store is another common description.",
+        bullets: [
+          "cannabis dispensary near me",
+          "weed dispensary near me",
+          "dispensary near me",
+          "cannabis store near me",
+          "cannabis near me",
+          "weed near me",
+        ],
+      },
+      {
+        heading: "Why Location Still Matters",
+        body:
+          "The words someone types are only the beginning of a local search. Once a nearby business is identified, customers need accurate real-world information such as the correct address, business identity, hours, location, visit information and current website resources. Mohawk Medicine is located at 2655 Eglinton Ave E in Toronto. Its existing Toronto weed-dispensary page remains the primary website resource for local visit intent.",
+      },
+      {
+        heading: "Should a Website Use Weed or Cannabis?",
+        body:
+          "A useful cannabis website can naturally use both. It does not need to choose only one term. The objective is to clearly establish the business as a local cannabis and dispensary entity while maintaining readable, useful content.",
+      },
+      {
+        heading: "What is the difference between a weed dispensary and cannabis dispensary?",
+        body: "The main difference is usually wording. Cannabis is the formal term; weed is common conversational terminology.",
+      },
+      {
+        heading: "What does cannabis store near me mean?",
+        body: "It indicates local intent: the user is trying to locate a nearby cannabis business.",
+      },
+      {
+        heading: "Is “dispensary near me” related to weed-dispensary searches?",
+        body: "Yes. In cannabis context, the shorter phrase can express a closely related local-search goal.",
+      },
+      {
+        heading: "Where is Mohawk Medicine?",
+        body: "Mohawk Medicine is located at 2655 Eglinton Ave E in Toronto, Ontario.",
       },
     ],
   },
