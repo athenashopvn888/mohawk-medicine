@@ -117,7 +117,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     cards: [
       ...menuCards,
       { title: "Cannabis 101", href: "/resources/cannabis-101", text: "Start with cannabis formats, labels, genetics and common terminology." },
-      { title: "Weed & Flower Quality Guide", href: "/resources/weed-flower-guide", text: "Understand the five protected Weed collections and the quality language behind them." },
+      { title: "Weed & Flower Quality Guide", href: "/resources/weed-flower-guide", text: "Understand the five Weed flower collections and the quality language behind them." },
       { title: "First Visit to Mohawk Medicine", href: "/resources/eglinton-east-scarborough-visit-guide", text: "Plan a visit using the current Eglinton East and Scarborough store information." },
       { title: "Store Page", href: "/weed-dispensary-toronto", text: "Return to store details, address, hours, and contact information." },
     ],
@@ -360,7 +360,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     cards: [
       { title: "Resource Home", href: "/resources", text: "Start with the full Mohawk Medicine resource hub." },
       { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: "Plan a first or repeat visit using the current Eglinton East / Scarborough store information." },
-      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Understand the five protected Weed collections and the quality language behind them." },
+      { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Understand the five Weed flower collections and the quality language behind them." },
       { title: "Native Smokes Guide", href: "/resources/native-smokes", text: "Learn commercial tobacco terminology without relying on old prices or stock." },
     ],
     sections: [
@@ -504,11 +504,11 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "p",
-        "text": "For Mohawk Medicine, the protected local owner is /weed-dispensary-toronto."
+        "text": "For Mohawk Medicine, use the Toronto store page for current local visit information."
       },
       {
         "type": "p",
-        "text": "This resource explains terminology. The local owner handles the visit."
+        "text": "This resource explains terminology. The Toronto store page handles the visit details."
       },
       {
         "type": "h2",
@@ -642,7 +642,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "question": "Where should I check current Mohawk Medicine visit details?",
-        "answer": "Use the protected local store page for current store information."
+        "answer": "Use the Mohawk Medicine Toronto store page for current store information."
       }
     ]
   },
@@ -715,7 +715,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "p",
-        "text": "Use the protected local owner for current visit information."
+        "text": "Use the Mohawk Medicine Toronto store page for current visit information."
       },
       {
         "type": "p",
@@ -747,7 +747,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "p",
-        "text": "It should not become a duplicate local owner."
+        "text": "It should support the store page rather than repeat the same visit information."
       },
       {
         "type": "h2",
@@ -767,7 +767,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "p",
-        "text": "Start with one of the five Weed owners:"
+        "text": "Start with one of the five Weed flower collections:"
       },
       {
         "type": "p",
@@ -875,7 +875,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "p",
-        "text": "Mohawk Medicine's five Weed owners create a clean way to browse flower."
+        "text": "Mohawk Medicine's five Weed flower collections create a clean way to browse flower."
       },
       {
         "type": "p",
@@ -1053,7 +1053,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "question": "Are the Weed tiers official grades?",
-        "answer": "No. They are store browsing owners, not one universal government grading system."
+        "answer": "No. They are store browsing categories, not one universal government grading system."
       },
       {
         "question": "Should I choose the product with the highest THC?",
@@ -1070,7 +1070,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
     "seoTitle": "Weed & Cannabis Flower Quality Guide | Mohawk Medicine",
     "description": "Understand Mohawk Medicine's Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed plus the quality language behind them.",
     "eyebrow": "Mohawk Medicine Guide",
-    "intro": "Mohawk Medicine already has five clear Weed flower owners.",
+    "intro": "Mohawk Medicine already has five clear Weed flower collections.",
     "cards": [
       {
         "title": "Exotic Weed",
@@ -1152,11 +1152,11 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
     "blocks": [
       {
         "type": "p",
-        "text": "Mohawk Medicine already has five clear Weed flower owners."
+        "text": "Mohawk Medicine already has five clear Weed flower collections."
       },
       {
         "type": "p",
-        "text": "This page should remain the main education hub that explains what those tiers can and cannot tell a shopper."
+        "text": "This guide explains what those tiers can and cannot tell a shopper."
       },
       {
         "type": "h2",
@@ -1164,7 +1164,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "p",
-        "text": "The protected flower owners are:"
+        "text": "The five flower collections are:"
       },
       {
         "type": "p",
@@ -1420,7 +1420,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "p",
-        "text": "Do not turn Mohawk Medicine's five Weed owners into five THC brackets."
+        "text": "Mohawk Medicine's five Weed flower collections should not be read as five THC brackets."
       },
       {
         "type": "p",
@@ -1567,7 +1567,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
     "seoTitle": "Native Cigarettes in Ontario | Mohawk Medicine Guide",
     "description": "Learn what “Native cigarettes” can mean in Ontario, how brand identity differs from tax status, and how to read commercial tobacco terminology carefully.",
     "eyebrow": "Commercial Tobacco Guide",
-    "intro": "Replace the current price-led authority copy with the following evergreen educational copy. Do not freeze current prices, current stock, current flavour availability or direct purchase language into this page.",
+    "intro": "This guide explains how to separate consumer wording, brand identity, manufacturer identity, tax status and commercial-tobacco product types.",
     "cards": [
       {
         "title": "Native Smokes overview",
@@ -1594,7 +1594,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
     "blocks": [
       {
         "type": "p",
-        "text": "Replace the current price-led authority copy with the following evergreen educational copy. Do not freeze current prices, current stock, current flavour availability or direct purchase language into this page."
+        "text": "This guide explains how to separate consumer wording, brand identity, manufacturer identity, tax status and commercial-tobacco product types."
       },
       {
         "type": "p",
@@ -2123,9 +2123,9 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
   "native-smokes": {
     "title": "Mohawk Medicine Native Smokes Guide",
     "seoTitle": "Mohawk Medicine Native Smokes Guide | Commercial Tobacco Terms",
-    "description": "A general Mohawk Medicine tobacco guide for adults 19+ covering cigarette terminology, brand variants, Backwoods, Grabba and nicotine-pouch categories without fixed price claims.",
+    "description": "A general Mohawk Medicine tobacco guide for adults 19+ covering cigarette terminology, brand variants, Backwoods, Grabba and nicotine-pouch categories.",
     "eyebrow": "Commercial Tobacco Guide",
-    "intro": "Replace the existing price-led hub copy with the following evergreen hub copy.",
+    "intro": "Commercial tobacco listings are easier to read when product type, brand, variant and current package details are kept separate.",
     "cards": [
       {
         "title": "Native Cigarettes in Ontario",
@@ -2147,7 +2147,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
     "blocks": [
       {
         "type": "p",
-        "text": "Replace the existing price-led hub copy with the following evergreen hub copy."
+        "text": "Commercial tobacco listings are easier to read when product type, brand, variant and current package details are kept separate."
       },
       {
         "type": "p",
@@ -2316,9 +2316,9 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
   "value-guide": {
     "title": "Mohawk Medicine Weed Value Guide",
     "seoTitle": "Mohawk Medicine Weed Value Guide | Budget, AA & AAA+ Explained",
-    "description": "Understand Mohawk Medicine's Budget Weed, AA Weed and AAA+ Weed value lanes without freezing current prices, deals, stock or availability into an evergreen guide.",
+    "description": "Compare Mohawk Medicine's Budget Weed, AA Weed and AAA+ Weed value lanes, then use the current category pages for today's product and price details.",
     "eyebrow": "Mohawk Medicine Guide",
-    "intro": "Replace fixed-dollar and bundle/deal copy with the following evergreen value copy.",
+    "intro": "Value is easier to compare when you start with one flower collection and then check the current listing.",
     "cards": [
       {
         "title": "Budget Weed",
@@ -2350,7 +2350,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
     "blocks": [
       {
         "type": "p",
-        "text": "Replace fixed-dollar and bundle/deal copy with the following evergreen value copy."
+        "text": "Value is easier to compare when you start with one flower collection and then check the current listing."
       },
       {
         "type": "p",
@@ -2394,11 +2394,11 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "h2",
-        "text": "Start With the Value-Oriented Weed Owners"
+        "text": "Start With the Value-Oriented Weed Collections"
       },
       {
         "type": "p",
-        "text": "For adults starting with value, the first three flower owners to compare are:"
+        "text": "For adults starting with value, the first three flower collections to compare are:"
       },
       {
         "type": "p",
@@ -2426,7 +2426,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "p",
-        "text": "Budget Weed is the clearest value-positioned owner."
+        "text": "Budget Weed is the clearest value-positioned collection."
       },
       {
         "type": "p",
@@ -2458,7 +2458,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "p",
-        "text": "AA Weed is another separate flower owner."
+        "text": "AA Weed is another separate flower collection."
       },
       {
         "type": "p",
@@ -2474,7 +2474,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "type": "p",
-        "text": "AAA+ Weed sits in its own protected lane."
+        "text": "AAA+ Weed has its own separate flower lane."
       },
       {
         "type": "p",
@@ -2600,7 +2600,7 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
       },
       {
         "question": "Where should I check today's Weed prices?",
-        "answer": "Use the current protected Weed owner/category pages."
+        "answer": "Use the current Weed category pages."
       }
     ]
   }
@@ -2690,7 +2690,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "Mohawk Medicine organizes flower across five protected Weed owners:"
+        "text": "Mohawk Medicine organizes flower across five Weed flower collections:"
       },
       {
         "type": "p",
@@ -2714,7 +2714,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "Use those owners as the shelf map."
+        "text": "Use those collections as the shelf map."
       },
       {
         "type": "p",
@@ -3002,7 +3002,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "That keeps the main guide simple and lets each deeper question have its own owner."
+        "text": "That keeps the main guide simple and lets each deeper question have its own guide."
       }
     ],
     "faqs": [
@@ -3012,7 +3012,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "question": "Are Mohawk Medicine's five Weed tiers official government grades?",
-        "answer": "No. They are store browsing owners, not one universal government grading system."
+        "answer": "No. They are store browsing categories, not one universal government grading system."
       },
       {
         "question": "Does higher THC automatically mean better flower?",
@@ -3576,11 +3576,11 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "Mohawk Medicine's protected owner is:"
+        "text": "At Mohawk Medicine, AAA+ Weed is its own flower collection."
       },
       {
         "type": "h2",
-        "text": "AAA+ Weed → /aaa-weed"
+        "text": "AAA+ Weed at Mohawk Medicine"
       },
       {
         "type": "p",
@@ -3600,11 +3600,11 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "Mohawk Medicine's protected owner is:"
+        "text": "At Mohawk Medicine, AA Weed is its own flower collection."
       },
       {
         "type": "h2",
-        "text": "AA Weed → /aa-weed"
+        "text": "AA Weed at Mohawk Medicine"
       },
       {
         "type": "p",
@@ -3632,7 +3632,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "At Mohawk Medicine, both are protected commercial owners with distinct roles."
+        "text": "At Mohawk Medicine, Premium Weed and Exotic Weed are separate flower collections."
       },
       {
         "type": "h2",
@@ -3730,7 +3730,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "question": "Are Mohawk Medicine's Weed-tier names changing?",
-        "answer": "No. Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed remain the protected owners."
+        "answer": "No. Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed remain the established flower collections."
       }
     ]
   },
@@ -3931,7 +3931,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "Mohawk Medicine's five Weed owners are retail/menu categories."
+        "text": "Mohawk Medicine's five Weed flower collections are retail/menu categories."
       },
       {
         "type": "p",
@@ -5572,7 +5572,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "A craft-labelled product does not automatically belong in the Exotic Weed owner."
+        "text": "A craft-labelled product does not automatically belong in the Exotic Weed collection."
       },
       {
         "type": "p",
@@ -6566,7 +6566,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "Mohawk Medicine's protected owner is AAA+ Weed at /aaa-weed."
+        "text": "Mohawk Medicine has a separate AAA+ Weed flower collection."
       },
       {
         "type": "h2",
@@ -6578,7 +6578,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "Mohawk Medicine's protected owner is AA Weed at /aa-weed."
+        "text": "Mohawk Medicine has a separate AA Weed flower collection."
       },
       {
         "type": "h2",
@@ -6590,7 +6590,7 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
       },
       {
         "type": "p",
-        "text": "At Mohawk Medicine, Exotic Weed is a protected commercial owner."
+        "text": "At Mohawk Medicine, Exotic Weed is a separate flower collection."
       },
       {
         "type": "h2",

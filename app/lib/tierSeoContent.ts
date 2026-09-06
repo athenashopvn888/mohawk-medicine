@@ -83,7 +83,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     h1: "AAA+ Weed & Cannabis Flower in Toronto",
     seoTitle: "AAA+ Weed & Cannabis Flower in Scarborough",
     seoIntro:
-      "AAA+ is a distinct Mohawk Medicine flower category for adults 19+ who want to focus on that part of the weed and cannabis flower lineup. It sits alongside Exotic, Premium, AA and Budget without changing the broader role of the Mohawk Medicine Weed owner page.",
+      "AAA+ is a distinct Mohawk Medicine flower category for adults 19+ who want to focus on that part of the weed and cannabis flower lineup. It sits alongside Exotic, Premium, AA and Budget within the broader Mohawk Medicine Weed selection.",
     sections: [
       {
         heading: "Explore AAA+ Weed & Flower",
@@ -185,23 +185,23 @@ export const TIER_SEO: Record<string, TierSeoData> = {
 const MEB01_TIER_EDUCATION = {
   "EXOTIC": {
     "heading": "What “Exotic Weed” Means on the Mohawk Medicine Menu",
-    "body": "Exotic is broad cannabis culture and retail language. It can point toward unusual genetics, distinctive aroma, rarity, strong bag appeal or high-end positioning. It is not a regulated government grade and it does not guarantee one THC range. At Mohawk Medicine, Exotic Weed is a protected flower owner. Use the collection to narrow the browse, then read the actual product information inside the current listing. If an adult calls a product exotic, the useful follow-up is to ask what they mean: cultivar; aroma; appearance; trichomes; rarity; presentation. The word is a starting point, not the whole grade."
+    "body": "Exotic is broad cannabis culture and retail language. It can point toward unusual genetics, distinctive aroma, rarity, strong bag appeal or high-end positioning. It is not a regulated government grade and it does not guarantee one THC range. At Mohawk Medicine, Exotic Weed is a separate flower collection. Use the collection to narrow the browse, then read the actual product information inside the current listing. If an adult calls a product exotic, the useful follow-up is to ask what they mean: cultivar; aroma; appearance; trichomes; rarity; presentation. The word is a starting point, not the whole grade."
   },
   "PREMIUM": {
     "heading": "Premium Weed Is Positioning, Not One Formula",
-    "body": "Premium usually means a product or collection is positioned above a standard or value starting point. In cannabis, that positioning may reflect a mix of: producer; genetics; aroma; trim; cure; freshness; presentation. There is no universal rule saying Premium Weed must have one exact THC percentage, bud size or growing method. At Mohawk Medicine, Premium Weed remains the protected owner for the current Premium collection. Use the resource guides to understand the quality language and the current Premium page to understand the current products."
+    "body": "Premium usually means a product or collection is positioned above a standard or value starting point. In cannabis, that positioning may reflect a mix of: producer; genetics; aroma; trim; cure; freshness; presentation. There is no universal rule saying Premium Weed must have one exact THC percentage, bud size or growing method. At Mohawk Medicine, Premium Weed is a separate flower collection. Use the resource guides to understand the quality language and the current Premium page to understand the current products."
   },
   "AAA+": {
     "heading": "What AAA+ Weed Means as a Mohawk Medicine Tier",
-    "body": "AAA and AAA+ are familiar Canadian cannabis retail shorthand. They are not one regulated national grading system. AAA+ generally suggests positioning above a basic AAA label, but there is no universal formula requiring one potency, aroma or visual score. At Mohawk Medicine, AAA+ Weed is the established protected owner. Use the tier to narrow the flower menu, then compare the actual product information."
+    "body": "AAA and AAA+ are familiar Canadian cannabis retail shorthand. They are not one regulated national grading system. AAA+ generally suggests positioning above a basic AAA label, but there is no universal formula requiring one potency, aroma or visual score. At Mohawk Medicine, AAA+ Weed is a separate AAA+ flower collection. Use the tier to narrow the flower menu, then compare the actual product information."
   },
   "AA": {
     "heading": "AA Weed as a Browsing Category",
-    "body": "AA is familiar cannabis grade shorthand. It is not a government laboratory grade. At Mohawk Medicine, AA Weed is a protected flower owner. The label helps narrow the browse. It does not promise: one THC range; one aroma; one bud size; one cultivation method. Use the current AA page for current products and the Resource Centre for broader grade language."
+    "body": "AA is familiar cannabis grade shorthand. It is not a government laboratory grade. At Mohawk Medicine, AA Weed is a separate flower collection. The label helps narrow the browse. It does not promise: one THC range; one aroma; one bud size; one cultivation method. Use the current AA page for current products and the Resource Centre for broader grade language."
   },
   "BUDGET": {
     "heading": "Budget Weed Means Value Positioning",
-    "body": "Budget is a value-oriented browsing term. It should not be used as shorthand for: unsafe; automatically weak; automatically stale; automatically low quality. Mohawk Medicine's Budget Weed page is the protected owner for adults who want to begin with value. The products inside it still have their own labels, cultivars, producers and current menu details. Price positioning and quality overlap imperfectly. Use the current listing for today's price. Use the Resource Centre for the quality language."
+    "body": "Budget is a value-oriented browsing term. It should not be used as shorthand for: unsafe; automatically weak; automatically stale; automatically low quality. Mohawk Medicine's Budget Weed collection is the value-oriented flower section for adults who want to begin with value. The products inside it still have their own labels, cultivars, producers and current menu details. Price positioning and quality overlap imperfectly. Use the current listing for today's price. Use the Resource Centre for the quality language."
   }
 };
 for (const [key, section] of Object.entries(MEB01_TIER_EDUCATION)) TIER_SEO[key].sections.push(section);
