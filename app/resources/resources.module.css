@@ -11,6 +11,14 @@
 .card span { color: var(--text-primary, #101815); font-size: 16px; font-weight: 900; }
 .card p { margin: 0; color: var(--text-secondary, #425047); font-size: 14px; line-height: 1.55; }
 .body { max-width: 900px; margin: 0 auto; padding: 24px 24px 72px; display: grid; gap: 28px; }
+.body > h2 { margin: 20px 0 0; color: var(--text-primary, #101815); font-size: clamp(24px, 4vw, 34px); line-height: 1.18; }
+.body > h3 { margin: 8px 0 0; color: var(--text-primary, #101815); font-size: clamp(20px, 3vw, 26px); line-height: 1.25; }
+.body > p { margin: 0; color: var(--text-secondary, #425047); font-size: 17px; line-height: 1.8; }
+.body > ul { margin: 0; padding-left: 22px; color: var(--text-secondary, #425047); }
+.body > ul li { margin: 8px 0; line-height: 1.65; }
+.section details { border-top: 1px solid var(--border-subtle, rgba(0,0,0,0.1)); padding: 16px 0; }
+.section summary { cursor: pointer; color: var(--text-primary, #101815); font-weight: 800; }
+.section details p { margin-top: 10px; }
 .section { border-top: 1px solid var(--border-subtle, rgba(0,0,0,0.1)); padding-top: 28px; }
 .section h2 { margin: 0 0 12px; color: var(--text-primary, #101815); font-size: clamp(24px, 4vw, 34px); line-height: 1.18; letter-spacing: 0; }
 .section p { margin: 0; color: var(--text-secondary, #425047); font-size: 17px; line-height: 1.8; }
