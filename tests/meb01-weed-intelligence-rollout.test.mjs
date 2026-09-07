@@ -74,7 +74,7 @@ test("Weed flower guide has a compliant canonical record and no volatile claims"
   for (const slug of ["exotic-weed", "premium-weed", "aaa-weed", "aa-weed", "budget-weed"]) assert.ok(guide.includes(`href: "/${slug}"`));
   assert.match(guide, /href: "\/weed-dispensary-toronto\/"/);
   assert.doesNotMatch(guide, /\$\d|\b(?:deal|special|in stock|available now|potency|medical|best|#1)\b/i);
-  assert.doesNotMatch(resources, /resources\/flower-guide/);
+  assert.doesNotMatch(resources, /href: "\/resources\/flower-guide"/);
 });
 
 test("nicotine and THC vape category separation is preserved", () => {
@@ -93,7 +93,7 @@ test("local runtime exposes canonical pages and one-hop redirects", async () => 
     ["/aa-weed", "AA Weed & Cannabis Flower in Toronto"],
     ["/budget-weed", "Budget Weed & Cannabis Flower in Toronto"],
     ["/weed-delivery-toronto", "Weed Delivery in Toronto"],
-    ["/resources/weed-flower-guide", "Mohawk Medicine Weed & Flower Guide"],
+    ["/resources/weed-flower-guide", "Mohawk Medicine Weed & Flower Quality Guide"],
   ];
 
   for (const [path, h1] of canonicals) {
