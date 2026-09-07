@@ -39,9 +39,9 @@ export const SEO_PAGES: SeoPageData[] = [
           "Mohawk Medicine lists Open 24 Hours for adult shoppers. Bring valid 19+ government ID, check the current category page before visiting, and use the contact or FAQ pages for store basics.",
       },
       {
-        heading: "Eglinton East And Kennedy Area",
+        heading: "Mohawk Medicine's Scarborough Store Page",
         body:
-          "The store identity is tied to Eglinton Ave E in Scarborough, with nearby-area language focused on Eglinton East, Kennedy Road, Brimley Road, Golden Mile, Birchmount, Warden, and surrounding Toronto routes.",
+          "Use this page for Scarborough store information for Mohawk Medicine at 2655 Eglinton Ave E. Use the Toronto store page for broader visit information, the Eglinton East page for that local context, and the current category pages to compare menu sections before visiting.",
       },
     ],
     faqs: [
@@ -52,6 +52,10 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         q: "What are the hours for Mohawk Medicine?",
         a: "The store lists Open 24 Hours. Bring valid 19+ government ID when visiting.",
+      },
+      {
+        q: "Where can I find Mohawk Medicine's Scarborough store information?",
+        a: "Use this page for Mohawk Medicine store information connected to 2655 Eglinton Ave E in Scarborough.",
       },
       {
         q: "What product categories are shown on the site?",

@@ -19,67 +19,29 @@ const categoryLinks: { [key: string]: string } = {
   "Accessories": "/items/add-ons"
 };
 
-type StoreSchemaMarkup = {
+type WebPageSchemaMarkup = {
   "@context": string;
   "@type": string;
+  "@id": string;
   name: string;
   url: string;
-  telephone: string;
-  address: {
-    "@type": string;
-    streetAddress: string;
-    addressLocality: string;
-    addressRegion: string;
-    postalCode: string;
-    addressCountry: string;
-  };
-  priceRange: string;
-  openingHours?: string[];
-  geo?: {
-    "@type": string;
-    latitude: number;
-    longitude: number;
-  };
+  about: { "@id": string };
 };
 
 export function GBPLandingPage() {
-  const landmarkList = gbpLocation.localLandmarks.join(", ");
-  const nearbyAreaList = gbpLocation.nearbyAreas.slice(0, 4).join(", ");
   const categoryGuideLinks = gbpLocation.products.slice(0, 6).map((product) => ({
     label: product,
     href: categoryLinks[product] || "/"
   }));
 
-  // Generate schema.org markup dynamically
-  const schemaMarkup: StoreSchemaMarkup = {
+  const schemaMarkup: WebPageSchemaMarkup = {
     "@context": "https://schema.org",
-    "@type": "Store",
-    "name": gbpLocation.storeName,
+    "@type": "WebPage",
+    "@id": `https://${gbpLocation.domain}/${gbpLocation.slug}/#webpage`,
+    "name": `${gbpLocation.storeName} — Weed Dispensary in ${gbpLocation.city}`,
     "url": `https://${gbpLocation.domain}/${gbpLocation.slug}/`,
-    "telephone": gbpLocation.phone,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": gbpLocation.streetAddress,
-      "addressLocality": gbpLocation.city,
-      "addressRegion": gbpLocation.province,
-      "postalCode": gbpLocation.postalCode,
-      "addressCountry": gbpLocation.country
-    },
-    "priceRange": "$$"
+    "about": { "@id": "https://mohawkmedicine.com/#store" }
   };
-
-  // Inject real opening hours and coordinates if they exist
-  if (gbpLocation.hours && gbpLocation.hours.length > 0) {
-    schemaMarkup.openingHours = gbpLocation.hours;
-  }
-
-  if (gbpLocation.latitude && gbpLocation.longitude) {
-    schemaMarkup.geo = {
-      "@type": "GeoCoordinates",
-      "latitude": Number(gbpLocation.latitude),
-      "longitude": Number(gbpLocation.longitude)
-    };
-  }
 
   return (
     <div className={styles.container}>
@@ -92,7 +54,7 @@ export function GBPLandingPage() {
       {/* Hero Header */}
       <header className={styles.hero}>
         <h1 className={styles.h1}>{gbpLocation.storeName} — Weed Dispensary in {gbpLocation.city}</h1>
-        <p className={styles.heroTagline}>Serving {gbpLocation.city} & Nearby Neighborhoods</p>
+        <p className={styles.heroTagline}>Mohawk Medicine on Eglinton Ave E in Scarborough</p>
       </header>
 
       {/* Call to Actions */}
@@ -114,11 +76,26 @@ export function GBPLandingPage() {
         </p>
       </section>
 
+      <section className={styles.section}>
+        <h2 className={styles.h2}>Use the Most Specific Mohawk Medicine Page</h2>
+        <p className={styles.infoText}>
+          Use this Toronto store page for Mohawk Medicine&apos;s general visit information.
+        </p>
+        <p className={styles.infoText}>
+          For the exact Scarborough storefront context, use the{" "}
+          <Link href="/info/scarborough-weed-dispensary">Scarborough Weed Dispensary</Link> page. For Eglinton Avenue East context, use the{" "}
+          <Link href="/info/weed-store-near-eglinton-east">Eglinton East store page</Link>. Adults looking for category information can continue to the five Weed tiers or the separate cigarette and nicotine-vape guides.
+        </p>
+        <p className={styles.infoText}>
+          <Link href="/resources/eglinton-east-scarborough-visit-guide">First Visit to Mohawk Medicine</Link>
+        </p>
+      </section>
+
       {/* Product Section */}
       <section className={styles.section}>
         <h2 className={styles.h2}>Weed and Cannabis Products Available</h2>
         <p className={styles.infoText}>
-          At {gbpLocation.storeName}, we offer a curated selection of weed and cannabis products for adults 19+ in {gbpLocation.city}. Enjoy some of Ontario&apos;s finest quality and value in the following categories:
+          Adults 19+ can use these category links to browse the current weed and cannabis menu sections before visiting Mohawk Medicine:
         </p>
         <div className={styles.productGrid}>
           {gbpLocation.products.map((p) => {
@@ -134,10 +111,10 @@ export function GBPLandingPage() {
       <section className={styles.section}>
         <h2 className={styles.h2}>Plan a Visit to {gbpLocation.storeName}</h2>
         <p className={styles.infoText}>
-          Planning a visit to {gbpLocation.storeName} is easier when the main store details are in one place. Adults 19+ can use this page to confirm the store address, phone number, hours, local area, and menu-category links before heading to {gbpLocation.city}.
+          Planning a visit to {gbpLocation.storeName} is easier when the main store details are in one place. Adults 19+ can use this page to confirm the store address, phone number, hours, and menu-category links before heading to the store.
         </p>
         <p className={styles.infoText}>
-          The store is near {gbpLocation.neighborhood || gbpLocation.city}, with local reference points including {landmarkList}. Nearby shoppers also use this page from {nearbyAreaList}.
+          Mohawk Medicine is at 2655 Eglinton Ave E in Scarborough. Use the Eglinton East page when that exact local context is useful.
         </p>
         <p className={styles.infoText}>
           For a fuller local overview, read the{" "}
@@ -174,11 +151,6 @@ export function GBPLandingPage() {
                 ))}
               </div>
             )}
-            <div className={styles.napItem} style={{ marginTop: "10px" }}>
-              <p className={styles.infoBlock} style={{ fontSize: "0.9rem", fontStyle: "italic", margin: 0 }}>
-                * {gbpLocation.parkingNote}.
-              </p>
-            </div>
           </div>
           <div className={styles.mapWrapper}>
             {gbpLocation.mapEmbedUrl ? (
@@ -198,20 +170,7 @@ export function GBPLandingPage() {
         </div>
       </section>
 
-      {/* Nearby Areas Section */}
-      <section className={styles.section}>
-        <h2 className={styles.h2}>{gbpLocation.sectionTitle}</h2>
-        <p className={styles.infoText}>
-          {gbpLocation.neighborhoodDescription} {gbpLocation.transitNote}. We proudly welcome customers from:
-        </p>
-        <div className={styles.areaList}>
-          {gbpLocation.nearbyAreas.map((area) => (
-            <span key={area} className={styles.areaTag}>
-              {area}
-            </span>
-          ))}
-        </div>
-      </section>      {/* Category Link Context Section */}
+      {/* Category Link Context Section */}
       <section className={styles.section}>
         <h2 className={styles.h2}>Compare Menu Categories Before You Visit</h2>
         <p className={styles.infoText}>
@@ -233,7 +192,7 @@ export function GBPLandingPage() {
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>How should I plan a visit to {gbpLocation.storeName}?</h3>
             <p className={styles.faqAnswer}>
-              Check the store address, phone number, hours, menu links, and nearby-area notes on this page before visiting. {gbpLocation.storeName} serves adults 19+ near {gbpLocation.neighborhood || gbpLocation.city} and surrounding {gbpLocation.city} areas.
+              Check the store address, phone number, hours, and menu links on this page before visiting Mohawk Medicine at 2655 Eglinton Ave E in Scarborough.
             </p>
           </div>
           <div className={styles.faqItem}>
@@ -249,13 +208,13 @@ export function GBPLandingPage() {
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>Is {gbpLocation.storeName} a weed dispensary in {gbpLocation.city}?</h3>
             <p className={styles.faqAnswer}>
-              Yes, {gbpLocation.storeName} is a fully licensed local weed dispensary in {gbpLocation.city} serving cannabis customers aged 19 and older with valid identification.
+              {gbpLocation.storeName} is a local weed dispensary in {gbpLocation.city} for adults aged 19 and older with valid identification.
             </p>
           </div>
           <div className={styles.faqItem}>
             <h3 className={styles.faqQuestion}>What products does {gbpLocation.storeName} carry?</h3>
             <p className={styles.faqAnswer}>
-              We carry a complete line of weed products including premium flower, pre-rolls, THC edibles, concentrates, shatter, THC vape cartridges, CBD oils, and accessories.
+              Use the current category links on this page to browse flower, pre-rolls, edibles, vapes, concentrates, and accessories before visiting.
             </p>
           </div>
           <div className={styles.faqItem}>
@@ -264,14 +223,6 @@ export function GBPLandingPage() {
               Yes, to visit our cannabis store or order from our menu, you must be at least 19 years of age. Valid government-issued photo ID is required for verification.
             </p>
           </div>
-          {gbpLocation.neighborhood && (
-            <div className={styles.faqItem}>
-              <h3 className={styles.faqQuestion}>Is {gbpLocation.storeName} near {gbpLocation.neighborhood}?</h3>
-              <p className={styles.faqAnswer}>
-                Yes, {gbpLocation.storeName} is located near {gbpLocation.neighborhood} and serves customers from nearby landmarks like {gbpLocation.localLandmarks.join(", ")}.
-              </p>
-            </div>
-          )}
         </div>
       </section>
 

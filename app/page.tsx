@@ -66,6 +66,26 @@ const CATEGORIES = [
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/03_Mohawk_Accessories.webp" },
 ];
 
+const HELPFUL_PAGES = [
+  { name: "Toronto Weed Dispensary", href: "/weed-dispensary-toronto/", description: "Confirm broad Toronto store and visit information." },
+  { name: "Scarborough Weed Dispensary", href: "/info/scarborough-weed-dispensary", description: "Review Scarborough storefront information." },
+  { name: "Weed Store Near Eglinton East", href: "/info/weed-store-near-eglinton-east", description: "Review Eglinton East store context." },
+  { name: "First Visit to Mohawk Medicine", href: "/resources/eglinton-east-scarborough-visit-guide", description: "Plan a visit around the exact Eglinton Ave E address." },
+  { name: "Cheap Weed in Scarborough", href: "/info/cheap-weed-scarborough", description: "Open the value-intent guide and current tier links." },
+  { name: "Native Cigarettes in Scarborough", href: "/info/native-cigarettes-scarborough", description: "Open the cigarette-information guide." },
+  { name: "Nicotine Vapes in Scarborough", href: "/info/nicotine-vapes-scarborough", description: "Open the nicotine guide, separate from THC vape." },
+  { name: "Mohawk Medicine Resources", href: "/resources", description: "Browse the store's informational guides." },
+];
+
+const homePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://mohawkmedicine.com/#webpage",
+  url: "https://mohawkmedicine.com/",
+  name: "Mohawk Medicine | 24-Hour Scarborough Cannabis Dispensary",
+  about: { "@id": "https://mohawkmedicine.com/#store" },
+};
+
 /* FAQs */
 const FAQS = [
   {
@@ -118,6 +138,7 @@ export default function HomePage() {
 
   return (
     <main className={styles.main}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }} />
       <Navbar />
 
       {/* A) HERO BANNER */}
@@ -148,7 +169,7 @@ export default function HomePage() {
         <div className={styles.container}>
           <h1 className={styles.welcomeH1}>MOHAWK MEDICINE</h1>
           <p className={styles.welcomeSub}>
-            Scarborough Cannabis Dispensary &bull; 2655 Eglinton Ave E
+            24-Hour Scarborough Cannabis Dispensary on Eglinton Ave E
           </p>
           <div className={styles.trustBadges}>
             <span className={styles.trustBadge}> Open 24/7</span>
@@ -255,12 +276,31 @@ export default function HomePage() {
       <section className={styles.aboutSection}>
         <div className={styles.container}>
           <div className={styles.aboutPanel}>
-            <h2 className={styles.aboutTitle}>Scarborough Cannabis On Eglinton Ave E</h2>
+            <p className={styles.aboutEyebrow}>Mohawk Medicine · Scarborough · Open 24 Hours</p>
+            <h2 className={styles.aboutTitle}>A 24-Hour Cannabis Dispensary on Eglinton Avenue East</h2>
             <p className={styles.aboutText}>
-              Mohawk Medicine at 2655 Eglinton Ave E organizes the menu by flower tiers,
-              edibles, pre-rolls, vapes, concentrates, cigarettes, accessories, and specialty
-              categories. The store lists Open 24 Hours. Check the current category page before visiting.
+              Find Mohawk Medicine at 2655 Eglinton Ave E in Scarborough. Adults 19+ can use this site to compare the five Weed flower tiers, browse separate cannabis and smoke-shop categories, review local store information, and plan an in-store visit at any hour.
             </p>
+            <p className={styles.aboutText}>
+              Mohawk Medicine is open 24 hours at 2655 Eglinton Ave E in Scarborough. The exact address, current phone number, store hours and primary local pages are kept together so adults can confirm the storefront before visiting. Use the Toronto store page for broad visit information, or open the Scarborough and Eglinton East pages for more specific local context.
+            </p>
+            <h2 className={styles.aboutTitle}>Compare Weed, Cannabis and Smoke-Shop Categories</h2>
+            <p className={styles.aboutText}>
+              Start with Exotic Weed, Premium Weed, AAA+ Weed, AA Weed or Budget Weed when the visit is about flower. Separate pages organize pre-rolls, edibles, THC vapes, concentrates and accessories. Native cigarettes and nicotine vapes remain separate from cannabis products so adults can reach the correct category without confusing nicotine with THC.
+            </p>
+          </div>
+          <div className={styles.helpfulPanel}>
+            <h2 className={styles.aboutTitle}>Helpful Mohawk Medicine Pages</h2>
+            <div className={styles.helpfulGrid}>
+              {HELPFUL_PAGES.map((page) => (
+                <Link key={page.href} href={page.href} className={styles.helpfulCard}>
+                  <strong>{page.name}</strong>
+                  <span>{page.description}</span>
+                </Link>
+              ))}
+            </div>
+            <Link href="/weed-dispensary-toronto/" className={styles.helpfulCta}>Plan Your Visit</Link>
+            <p className={styles.helpfulSupport}>Confirm the exact address, phone and hours on the store page before heading to Mohawk Medicine.</p>
           </div>
         </div>
       </section>

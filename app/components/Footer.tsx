@@ -4,40 +4,6 @@ import styles from "./Footer.module.css";
 export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean }) {
   return (
     <footer className={styles.footer}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Store",
-            name: "Mohawk Medicine",
-            description: "Toronto's 24-hour cannabis dispensary at 2655 Eglinton Ave E, Scarborough.",
-            url: "https://mohawkmedicine.com",
-            telephone: "+14375249335",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "2655 Eglinton Ave E",
-              addressLocality: "Toronto",
-              addressRegion: "ON",
-              postalCode: "M1K 2S2",
-              addressCountry: "CA",
-            },
-            geo: {
-              "@type": "GeoCoordinates",
-              latitude: 43.73562,
-              longitude: -79.25086,
-            },
-            openingHoursSpecification: [
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-                opens: "00:00",
-                closes: "23:59",
-              },
-            ],
-          }),
-        }}
-      />
       <div className={styles.inner}>
         <div className={styles.grid}>
           {/* Column 1  Store Description */}
