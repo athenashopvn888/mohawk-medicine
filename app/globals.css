@@ -192,3 +192,27 @@ button { cursor: pointer; font-family: inherit; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
 .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(16px); border: 1px solid var(--border-green); }
+
+/* Fleet homepage announcements: reserve their full height above the fixed navigation. */
+:root {
+  --fleet-homepage-announcement-height: 144px;
+}
+
+[data-fleet-homepage-announcement] {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  height: var(--fleet-homepage-announcement-height);
+}
+
+[data-fleet-homepage-announcement] > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+main:has(> [data-fleet-homepage-announcement]) > #main-nav {
+  top: calc(var(--delivery-announcement-height, 0px) + var(--fleet-homepage-announcement-height)) !important;
+}
