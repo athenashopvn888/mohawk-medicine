@@ -125,11 +125,14 @@ export function GBPLandingPage() {
       {/* Location & NAP Section */}
       <section className={styles.section}>
         <h2 className={styles.h2}>Visit {gbpLocation.storeName} in {gbpLocation.city}</h2>
+        <p className={styles.infoText}>
+          Store listings use the name Mohawk Craft Dispensary for this Eglinton Ave E shop. This website uses Mohawk Medicine as the site brand for the same storefront.
+        </p>
         <div className={styles.napGrid}>
           <div className={styles.napDetails}>
             <div className={styles.napItem}>
               <span className={styles.napLabel}>Store Name</span>
-              <strong>{gbpLocation.storeName}</strong>
+              <strong>{gbpLocation.legalName}</strong>
             </div>
             <div className={styles.napItem}>
               <span className={styles.napLabel}>Address</span>
@@ -155,7 +158,7 @@ export function GBPLandingPage() {
           <div className={styles.mapWrapper}>
             {gbpLocation.mapEmbedUrl ? (
               <iframe
-                title={`Map of ${gbpLocation.storeName}`}
+                title={`Map of ${gbpLocation.legalName}`}
                 src={gbpLocation.mapEmbedUrl}
                 className={styles.mapIframe}
                 allowFullScreen={true}

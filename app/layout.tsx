@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import AgeGate from "./components/AgeGate";
+import { storeJsonLd } from "./lib/nap";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mohawkmedicine.com"),
@@ -24,18 +25,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://mohawkmedicine.com" },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "@id": "https://mohawkmedicine.com/#store",
-  name: "Mohawk Medicine",
-  description: "24-hour cannabis dispensary at 2655 Eglinton Ave E in Scarborough.",
-  url: "https://mohawkmedicine.com/",
-  telephone: "+14375249335",
-  address: { "@type": "PostalAddress", streetAddress: "2655 Eglinton Ave E", addressLocality: "Toronto", addressRegion: "ON", postalCode: "M1K 2S2", addressCountry: "CA" },
-  geo: { "@type": "GeoCoordinates", latitude: 43.7356759, longitude: -79.2508842 },
-  openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "00:00", closes: "23:59" }],
-};
+const jsonLd = storeJsonLd;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

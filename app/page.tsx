@@ -8,7 +8,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
 import SmokePilotSpotlight from "./components/SmokePilotSpotlight";
+import StoreMap from "./components/StoreMap";
 import { allFlowers, type FlowerProduct } from "./lib/products";
+import { STORE_NAP } from "./lib/nap";
 
 /* Tier Grid Config */
 const TIER_CARDS = [
@@ -109,7 +111,21 @@ const FAQS = [
     q: "Do you offer delivery?",
     a: "Yes! We offer local delivery. Visit our Delivery page for details.",
   },
+  {
+    q: "What is the listed store name at 2655 Eglinton Ave E?",
+    a: "The store listing name is Mohawk Craft Dispensary. This website uses Mohawk Medicine as the site brand for the same 24-hour shop at 2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
+  },
 ];
+
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
 
 export default function HomePage() {
   const [featuredStrains, setFeaturedStrains] = useState<FlowerProduct[]>([]);
@@ -141,6 +157,7 @@ export default function HomePage() {
     <main className={styles.main}>
       <FleetAnnouncementBanner />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }} />
       <Navbar />
 
       {/* A) HERO BANNER */}
@@ -286,6 +303,9 @@ export default function HomePage() {
             <p className={styles.aboutText}>
               Mohawk Medicine is open 24 hours at 2655 Eglinton Ave E in Scarborough. The exact address, current phone number, store hours and primary local pages are kept together so adults can confirm the storefront before visiting. Use the Toronto store page for broad visit information, or open the Scarborough and Eglinton East pages for more specific local context.
             </p>
+            <p className={styles.aboutText}>
+              The shop sits on Eglinton Avenue East in Scarborough, near Brimley Rd. Call {STORE_NAP.phoneDisplay} or use the contact page before you head out. Walk-ins are welcome at any hour. Adults 19+ should bring valid government photo ID.
+            </p>
             <h2 className={styles.aboutTitle}>Compare Weed, Cannabis and Smoke-Shop Categories</h2>
             <p className={styles.aboutText}>
               Start with Exotic Weed, Premium Weed, AAA+ Weed, AA Weed or Budget Weed when the visit is about flower. Separate pages organize pre-rolls, edibles, THC vapes, concentrates and accessories. Native cigarettes and nicotine vapes remain separate from cannabis products so adults can reach the correct category without confusing nicotine with THC.
@@ -332,8 +352,10 @@ export default function HomePage() {
               <span className={styles.storeIcon}></span>
               <h3 className={styles.storeCardTitle}>Location</h3>
               <p className={styles.storeCardText}>
+                {STORE_NAP.legalName}<br />
                 2655 Eglinton Ave E<br />
                 Toronto, ON M1K 2S2<br />
+                <span className={styles.storeHighlight}>Scarborough, near Brimley Rd</span>
               </p>
             </div>
             <div className={styles.storeCard}>
@@ -342,6 +364,14 @@ export default function HomePage() {
               <p className={styles.storeCardText}>
                 Open 7 Days a Week<br />
                 <span className={styles.storeHighlight}>Open 24 Hours</span>
+              </p>
+            </div>
+            <div className={styles.storeCard}>
+              <span className={styles.storeIcon}></span>
+              <h3 className={styles.storeCardTitle}>Phone</h3>
+              <p className={styles.storeCardText}>
+                <a href={`tel:${STORE_NAP.phoneIntl}`} className={styles.storeLink}>{STORE_NAP.phoneDisplay}</a><br />
+                Website: <a href={STORE_NAP.website} className={styles.storeLink}>{STORE_NAP.domain}/</a>
               </p>
             </div>
             <div className={styles.storeCard}>
@@ -356,6 +386,7 @@ export default function HomePage() {
 
           {/* I) GOOGLE MAP */}
           <div className={styles.mapWrap}>
+            <StoreMap showActions />
           </div>
         </div>
       </section>

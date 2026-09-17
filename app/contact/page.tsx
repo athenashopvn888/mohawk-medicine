@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import StoreMap from "../components/StoreMap";
+import { STORE_NAP } from "../lib/nap";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Contact Us - Mohawk Medicine | 2655 Eglinton Ave E, Toronto",
   description:
-    "Visit Mohawk Medicine at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Open 24 Hours a day, 7 days a week. Walk-ins welcome.",
+    "Visit Mohawk Craft Dispensary (Mohawk Medicine) at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Call +1 (437) 524-9335. Open 24 Hours a day, 7 days a week. Walk-ins welcome.",
   alternates: {
     canonical: "https://mohawkmedicine.com/contact",
   },
@@ -34,13 +36,14 @@ export default function ContactPage() {
         <div className={styles.content}>
           <h1 className={styles.h1}>Contact Mohawk Medicine</h1>
           <p className={styles.subtext}>
-            Have a question? Stop by any time or browse the FAQ below.
+            Mohawk Craft Dispensary is the listed store name for this 24-hour shop at 2655 Eglinton Ave E in Scarborough. Have a question? Call, stop by any time, or browse the FAQ.
           </p>
 
           <div className={styles.grid}>
             <div className={styles.infoCard}>
               <span className={styles.icon}>📍</span>
               <h2 className={styles.cardTitle}>Location</h2>
+              <p>{STORE_NAP.legalName}</p>
               <p>2655 Eglinton Ave E</p>
               <p>Toronto, ON M1K 2S2</p>
               <p>Scarborough, near Brimley Rd</p>
@@ -54,6 +57,13 @@ export default function ContactPage() {
             </div>
 
             <div className={styles.infoCard}>
+              <span className={styles.icon}>📞</span>
+              <h2 className={styles.cardTitle}>Phone</h2>
+              <p><a href={`tel:${STORE_NAP.phoneIntl}`}>{STORE_NAP.phoneDisplay}</a></p>
+              <p>Website: <a href={STORE_NAP.website}>{STORE_NAP.website}</a></p>
+            </div>
+
+            <div className={styles.infoCard}>
               <span className={styles.icon}>💬</span>
               <h2 className={styles.cardTitle}>Questions?</h2>
               <p>Visit our FAQ page for common questions, or stop by the store.</p>
@@ -62,6 +72,7 @@ export default function ContactPage() {
           </div>
 
           <div className={styles.mapWrap}>
+            <StoreMap showActions />
           </div>
         </div>
       </div>

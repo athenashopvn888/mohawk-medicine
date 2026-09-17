@@ -43,6 +43,16 @@ export const SEO_PAGES: SeoPageData[] = [
         body:
           "Use this page for Scarborough store information for Mohawk Medicine at 2655 Eglinton Ave E. Use the Toronto store page for broader visit information, the Eglinton East page for that local context, and the current category pages to compare menu sections before visiting.",
       },
+      {
+        heading: "How To Find The Scarborough Shop",
+        body:
+          "The storefront is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2, in Scarborough near Brimley Rd. Use that exact address when you map the trip. Call +1 (437) 524-9335 if you want to confirm the stop before you head out. The listed store name is Mohawk Craft Dispensary; this website uses Mohawk Medicine as the site brand for the same shop.",
+      },
+      {
+        heading: "Walk In On Eglinton Ave E",
+        body:
+          "No appointment is needed. Adults 19+ with valid government photo ID can walk in at any hour. Check the current category page before visiting so you know which flower tier or format you want to compare in store.",
+      },
     ],
     faqs: [
       {
@@ -60,6 +70,10 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         q: "What product categories are shown on the site?",
         a: "The site includes flower tiers, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, and specialty categories.",
+      },
+      {
+        q: "What phone number should I use for the Scarborough shop?",
+        a: "Call +1 (437) 524-9335. The website homepage is https://mohawkmedicine.com/.",
       },
     ],
   },
@@ -88,6 +102,11 @@ export const SEO_PAGES: SeoPageData[] = [
         heading: "Current Listings Matter",
         body:
           "Brands, strains, and value options can rotate. The budget page is useful as a starting point, while product detail pages and staff can confirm current product details.",
+      },
+      {
+        heading: "Value Shopping On Eglinton Ave E",
+        body:
+          "The Budget, AA, and other flower pages are for the same 24-hour shop at 2655 Eglinton Ave E in Scarborough. Call +1 (437) 524-9335 if you want to confirm the stop before visiting.",
       },
     ],
     faqs: [
@@ -211,6 +230,11 @@ export const SEO_PAGES: SeoPageData[] = [
         body:
           "This page keeps the local focus around Eglinton East, Kennedy Road, Brimley Road, Golden Mile, Birchmount, Warden, and nearby Scarborough routes.",
       },
+      {
+        heading: "Door-Test Details On Eglinton Avenue East",
+        body:
+          "The shop is on Eglinton Avenue East in Scarborough at 2655 Eglinton Ave E. If you are coming along Eglinton East, Kennedy Road, Brimley Road, Golden Mile, Birchmount, Warden, or the Kennedy Station area, use that exact address rather than a generic Toronto pin. The store lists Open 24 Hours. Call +1 (437) 524-9335 before a special trip if you want to confirm the stop.",
+      },
     ],
     faqs: [
       {
@@ -224,6 +248,10 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         q: "Do older local info routes still work?",
         a: "Older local info routes now point to the Eglinton East local page so the public copy stays focused on Mohawk Medicine's actual area.",
+      },
+      {
+        q: "What is the phone number for the Eglinton East shop?",
+        a: "Call +1 (437) 524-9335. The website homepage is https://mohawkmedicine.com/.",
       },
     ],
   },
@@ -252,6 +280,11 @@ export const SEO_PAGES: SeoPageData[] = [
         heading: "Local Resource Pages",
         body:
           "The Resource hub adds guides for Eglinton Ave E visits, Scarborough menu planning, flower tiers, value shopping, pre-rolls, and native smokes.",
+      },
+      {
+        heading: "Confirm This Scarborough Address",
+        body:
+          "If you searched for a cannabis dispensary near me in Scarborough or along Eglinton Ave E, this page points to one storefront: 2655 Eglinton Ave E, Toronto, ON M1K 2S2. It is a 24-hour walk-in shop. Use +1 (437) 524-9335 and the homepage at https://mohawkmedicine.com/ to confirm details before you go.",
       },
     ],
     faqs: [

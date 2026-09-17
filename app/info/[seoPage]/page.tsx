@@ -3,9 +3,19 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import StoreMap from "../../components/StoreMap";
+import StoreNap from "../../components/StoreNap";
 import { SEO_PAGES, getLegacySeoRedirect, getSeoPageBySlug } from "../../lib/seoPages";
 import { TIER_CONFIG } from "../../lib/products";
 import styles from "./seo.module.css";
+
+const LOCAL_GUIDES = [
+  { href: "/weed-dispensary-toronto/", label: "Toronto Weed Dispensary" },
+  { href: "/info/scarborough-weed-dispensary", label: "Scarborough Weed Dispensary" },
+  { href: "/info/weed-store-near-eglinton-east", label: "Weed Store Near Eglinton East" },
+  { href: "/resources/eglinton-east-scarborough-visit-guide", label: "Eglinton East Visit Guide" },
+  { href: "/contact", label: "Contact And Hours" },
+] as const;
 
 /* ── Generate all SEO pages ── */
 export function generateStaticParams() {
@@ -46,9 +56,33 @@ export default async function SeoLandingPage({
   if (!page) notFound();
 
   const tiers = Object.values(TIER_CONFIG);
+  const currentPath = `/info/${page.slug}`;
+  const faqSchema = page.faqs.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: page.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: { "@type": "Answer", text: faq.a },
+        })),
+      }
+    : null;
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://mohawkmedicine.com/" },
+      { "@type": "ListItem", position: 2, name: page.h1, item: `https://mohawkmedicine.com/info/${page.slug}` },
+    ],
+  };
 
   return (
     <main className={styles.main}>
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
 
       {/* Banner Image */}
@@ -65,6 +99,11 @@ export default async function SeoLandingPage({
       {/* Hero */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
+          <nav className={styles.crumbs} aria-label="Breadcrumb">
+            <Link href="/">Home</Link>
+            <span aria-hidden="true"> / </span>
+            <span>{page.h1}</span>
+          </nav>
           <span className={styles.heroIcon}>{page.icon}</span>
           <h1 className={styles.heroH1}>{page.h1}</h1>
           <p className={styles.heroTagline}>{page.heroTagline}</p>
@@ -103,12 +142,27 @@ export default async function SeoLandingPage({
             </div>
           </div>
 
+          <div className={styles.section}>
+            <h2 className={styles.sectionTitle}>Store Details</h2>
+            <StoreNap />
+          </div>
+
           {/* Map */}
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Find Us</h2>
             <div className={styles.mapWrap}>
+              <StoreMap showActions />
             </div>
-            <div className={styles.visitBtns}>
+          </div>
+
+          <div className={styles.section}>
+            <h2 className={styles.sectionTitle}>Nearby Local Pages</h2>
+            <div className={styles.localLinks}>
+              {LOCAL_GUIDES.filter((guide) => guide.href !== currentPath).map((guide) => (
+                <Link key={guide.href} href={guide.href} className={styles.localLink}>
+                  {guide.label}
+                </Link>
+              ))}
             </div>
           </div>
 

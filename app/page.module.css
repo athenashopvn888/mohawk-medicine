@@ -350,7 +350,8 @@
   margin-bottom: 40px;
 }
 
-@media (min-width: 640px) { .storeGrid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 640px) { .storeGrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .storeGrid { grid-template-columns: repeat(4, 1fr); } }
 
 .storeCard {
   text-align: center;
