@@ -28,6 +28,8 @@ const nextConfig: NextConfig = {
       { source: "/add-ons", destination: "/items/add-ons", permanent: true },
       { source: "/cigarettes", destination: "/items/cigarettes", permanent: true },
       { source: "/magic", destination: "/items/magic", permanent: true },
+      { source: "/info/24-hour-dispensary-scarborough", destination: "/visit", permanent: true },
+      { source: "/info/24-hour-dispensary-scarborough/", destination: "/visit", permanent: true },
     ];
   },
 };
