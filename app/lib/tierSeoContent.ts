@@ -11,171 +11,191 @@ export interface TierSeoData {
 
 export const TIER_SEO: Record<string, TierSeoData> = {
   EXOTIC: {
-    metadataTitle: "Exotic Weed & Cannabis Flower Toronto | Mohawk Medicine",
-    h1: "Exotic Weed & Cannabis Flower in Toronto",
-    seoTitle: "Exotic Weed & Cannabis Flower in Scarborough",
+    metadataTitle: "Exotic Weed Scarborough | Eglinton East Flower | Mohawk Medicine",
+    h1: "Exotic Weed in Scarborough on Eglinton East",
+    seoTitle: "Exotic Flower at the 24-Hour Eglinton East Shop",
     seoIntro:
-      "Mohawk Medicine keeps Exotic as its own cannabis flower category for adults 19+ exploring weed and flower in Scarborough. The Exotic tier stands on its own within the broader Mohawk Medicine flower lineup and remains separate from Premium, AAA+, AA and Budget.",
+      "Exotic Weed is its own flower collection at Mohawk Medicine, the 24-hour walk-in shop at 2655 Eglinton Ave E in Scarborough. Adults 19+ can browse this tier on its live /exotic-weed page, then walk in on Eglinton East without an appointment. Exotic stays separate from Premium, AAA+, AA, and Budget.",
     sections: [
       {
-        heading: "Explore Exotic Weed & Flower",
+        heading: "Browse Exotic Weed on Eglinton Ave E",
         body:
-          "Use the Exotic section when that specific flower category is what you want to explore. Mohawk Medicine keeps each tier distinct so shoppers can move through the flower lineup without mixing every category together.",
+          "Use this Exotic Weed page when that named flower collection is the reason for the Scarborough stop. The shop is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2, near Brimley Rd. Check the current cards here, then use the homepage, 24-hour walk-in guide, or Mohawk Craft visit FAQ if you need arrival or brand details.",
       },
       {
-        heading: "Exotic Within the Mohawk Medicine Flower Lineup",
+        heading: "Exotic Stays Its Own Flower Collection",
         body:
-          "Exotic is one of five named flower categories at Mohawk Medicine alongside Premium, AAA+, AA and Budget. The tier label identifies the section only and does not make a claim about current products, stock, potency or availability.",
+          "Exotic is one of five named flower categories at this Eglinton East storefront. The label identifies the collection only. It does not confirm current stock, potency, rarity, or a regulated grade. Compare Premium, AAA+, AA, and Budget on their own *-weed pages.",
       },
     ],
     faqs: [
       {
-        q: "What is Exotic weed at Mohawk Medicine?",
-        a: "Exotic is one of Mohawk Medicine's separate cannabis flower categories.",
+        q: "Where do I browse Exotic weed for this Scarborough shop?",
+        a: "This /exotic-weed page is the Exotic flower collection for Mohawk Medicine at 2655 Eglinton Ave E in Scarborough. Use it to compare current Exotic listings before a walk-in on Eglinton East.",
       },
       {
-        q: "Is Exotic separate from Premium flower?",
-        a: "Yes. Exotic and Premium are separate named flower tiers at Mohawk Medicine.",
+        q: "Is Exotic weed at Mohawk Medicine the same as Premium?",
+        a: "No. Exotic and Premium are separate named flower collections. Premium has its own /premium-weed page.",
       },
       {
-        q: "Does the Exotic section confirm what is currently available?",
-        a: "No. The Exotic label identifies the flower category only and does not confirm current stock or availability.",
+        q: "Can I walk in after midnight for Exotic flower on Eglinton East?",
+        a: "The store lists Open 24 Hours / 7 Days a Week. Adults 19+ with valid government photo ID can walk in at any hour. Use the 24-hour Scarborough walk-in guide for arrival details.",
+      },
+      {
+        q: "Does Exotic weed confirm what is in stock today?",
+        a: "No. Exotic is the collection name only. Read the current product cards on this page and confirm details in store.",
       },
     ],
   },
 
   PREMIUM: {
-    metadataTitle: "Premium Weed & Cannabis Flower Toronto | Mohawk Medicine",
-    h1: "Premium Weed & Cannabis Flower in Toronto",
-    seoTitle: "Premium Weed & Cannabis Flower in Scarborough",
+    metadataTitle: "Premium Weed Scarborough | Near Brimley on Eglinton East",
+    h1: "Premium Weed in Scarborough near Brimley",
+    seoTitle: "Premium Flower for the Scarborough Walk-In Counter",
     seoIntro:
-      "Premium has its own place in the Mohawk Medicine flower lineup for adults 19+ exploring weed and cannabis flower around Scarborough and Eglinton East. It remains a separate category from Exotic, AAA+, AA and Budget.",
+      "Premium Weed is a separate flower collection at the Scarborough walk-in shop near Brimley Rd. Mohawk Medicine lists this tier on /premium-weed for adults 19+ comparing flower at 2655 Eglinton Ave E. Premium is not Exotic, AAA+, AA, or Budget.",
     sections: [
       {
-        heading: "Browse Premium Weed & Flower",
+        heading: "Compare Premium Weed Before You Walk In",
         body:
-          "The Premium section gives shoppers a focused flower category without combining it with the rest of the Mohawk Medicine tier lineup.",
+          "Start here when Premium is the flower collection you want to compare. The storefront sits on Eglinton Avenue East in Scarborough at 2655 Eglinton Ave E, near Brimley Rd. Listed store name is Mohawk Craft Dispensary. This website uses Mohawk Medicine as the site brand for the same shop.",
       },
       {
-        heading: "Premium as a Separate Flower Category",
+        heading: "Premium Is Positioning, Not a Shared Grade",
         body:
-          "Mohawk Medicine presents Premium alongside Exotic, AAA+, AA and Budget as distinct named tiers. The Premium label describes the category and does not imply current availability, potency or product characteristics.",
+          "Premium sits beside the other named flower collections so shoppers can stay on one path. The Premium label does not set a required THC range, bud size, or current availability. Use /exotic-weed, /aaa-weed, /aa-weed, and /budget-weed when you want a different collection.",
       },
     ],
     faqs: [
       {
-        q: "What is Premium weed at Mohawk Medicine?",
-        a: "Premium is one of Mohawk Medicine's separate cannabis flower categories.",
+        q: "What is Premium weed at the Eglinton East counter?",
+        a: "Premium is one named flower collection at Mohawk Medicine, 2655 Eglinton Ave E in Scarborough near Brimley Rd. This /premium-weed page is the Premium browse path.",
       },
       {
-        q: "Is Premium the same as Exotic?",
-        a: "No. Premium and Exotic are separate named flower tiers.",
+        q: "How is Premium different from AAA+ at this shop?",
+        a: "Premium and AAA+ are separate named collections. AAA+ has its own /aaa-weed page. Neither label is a government grade.",
       },
       {
-        q: "Does Premium mean a particular product is currently available?",
-        a: "No. Premium is the tier name only and does not confirm current product availability.",
+        q: "Do I need an appointment to compare Premium flower in Scarborough?",
+        a: "No. Adults 19+ can walk in at 2655 Eglinton Ave E. Bring valid government photo ID. Call +1 (437) 524-9335 if you want to confirm the stop.",
+      },
+      {
+        q: "Does Premium mean a product is available right now?",
+        a: "No. Premium names the collection. Current cards on this page are the browse list; staff can confirm what is on the counter.",
       },
     ],
   },
 
   "AAA+": {
-    metadataTitle: "AAA+ Weed & Cannabis Flower Toronto | Mohawk Medicine",
-    h1: "AAA+ Weed & Cannabis Flower in Toronto",
-    seoTitle: "AAA+ Weed & Cannabis Flower in Scarborough",
+    metadataTitle: "AAA+ Weed Scarborough | 24-Hour Eglinton East Dispensary",
+    h1: "AAA+ Weed at Mohawk Medicine on Eglinton East",
+    seoTitle: "AAA+ Flower on the Scarborough 24-Hour Menu",
     seoIntro:
-      "AAA+ is a distinct Mohawk Medicine flower category for adults 19+ who want to focus on that part of the weed and cannabis flower lineup. It sits alongside Exotic, Premium, AA and Budget within the broader Mohawk Medicine Weed selection.",
+      "AAA+ Weed is a distinct flower collection at Mohawk Medicine on Eglinton East. Adults 19+ use this /aaa-weed page to browse AAA+ listings for the 24-hour Scarborough shop at 2655 Eglinton Ave E. AAA+ stays separate from Exotic, Premium, AA, and Budget.",
     sections: [
       {
-        heading: "Explore AAA+ Weed & Flower",
+        heading: "AAA+ Weed for a Scarborough Walk-In",
         body:
-          "The AAA+ section keeps this flower category separate so shoppers can explore it without moving through every Mohawk Medicine tier at once.",
+          "This page is the AAA+ flower path for the shop at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Use it when you want that collection only. For late-night arrival, open the 24-hour walk-in guide. For Mohawk Craft Dispensary / Mohawk Medicine name questions, open the brand visit FAQ.",
       },
       {
-        heading: "AAA+ in the Mohawk Medicine Tier Lineup",
+        heading: "AAA+ Is Retail Shorthand, Not a Lab Grade",
         body:
-          "AAA+ is one of the five named flower categories used by Mohawk Medicine. The label identifies the tier only and does not establish potency, quality, availability or current product details.",
+          "AAA+ is familiar Canadian retail shorthand. It is not a regulated national grade and it does not lock one potency or aroma score. Compare AA on /aa-weed and the other named collections on their own *-weed URLs.",
       },
     ],
     faqs: [
       {
-        q: "What is the AAA+ weed tier at Mohawk Medicine?",
-        a: "AAA+ is one of Mohawk Medicine's separate cannabis flower categories.",
+        q: "What does AAA+ weed mean at this Scarborough dispensary?",
+        a: "AAA+ is a named flower collection at Mohawk Medicine on Eglinton East. Use this /aaa-weed page to browse that collection for the shop at 2655 Eglinton Ave E.",
       },
       {
-        q: "Is AAA+ different from AA?",
-        a: "Yes. AAA+ and AA are separate named flower tiers.",
+        q: "Is AAA+ the same as AA weed on this site?",
+        a: "No. AAA+ and AA are separate named collections. AA lives at /aa-weed.",
+      },
+      {
+        q: "Is the AAA+ page the right stop for a 24-hour Scarborough flower visit?",
+        a: "Use this page to browse AAA+ flower. Use the 24-hour walk-in guide for open-now arrival on Eglinton East, and the dispensary near me FAQ if you need the Scarborough pin.",
       },
       {
         q: "Does AAA+ make a potency or availability claim?",
-        a: "No. AAA+ is the category label only.",
+        a: "No. AAA+ is the collection label only. Read the current cards and confirm details in store.",
       },
     ],
   },
 
   AA: {
-    metadataTitle: "AA Weed & Cannabis Flower Toronto | Mohawk Medicine",
-    h1: "AA Weed & Cannabis Flower in Toronto",
-    seoTitle: "AA Weed & Cannabis Flower in Scarborough",
+    metadataTitle: "AA Weed Scarborough | 2655 Eglinton Ave E Flower Menu",
+    h1: "AA Weed in Scarborough at 2655 Eglinton Ave E",
+    seoTitle: "AA Flower for the Eglinton East Storefront",
     seoIntro:
-      "AA is its own Mohawk Medicine flower category for adults 19+ exploring weed and cannabis flower in Scarborough. The section remains distinct from Budget, AAA+, Premium and Exotic.",
+      "AA Weed is its own flower collection for the walk-in shop at 2655 Eglinton Ave E in Scarborough. Adults 19+ can browse /aa-weed, then visit the same Eglinton East door. AA is not Budget, AAA+, Premium, or Exotic.",
     sections: [
       {
-        heading: "Browse AA Weed & Flower",
+        heading: "Stay on the AA Weed Path",
         body:
-          "Use the AA section when you want to stay focused on that specific Mohawk Medicine flower category.",
+          "Use this AA page when you want that named collection at the Scarborough storefront. The postal address is 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Scarborough is the borough; Eglinton East is the corridor. Map that pin rather than a generic downtown result.",
       },
       {
-        heading: "AA as a Defined Flower Tier",
+        heading: "AA Helps Narrow the Browse",
         body:
-          "AA is presented as one of five named tiers in the Mohawk Medicine flower lineup. The category label does not imply price, potency, current stock or product availability.",
+          "AA is retail grade shorthand, not a laboratory certificate. It does not promise one price, THC range, or bud size. Budget flower has a separate /budget-weed page. Higher named collections stay on /aaa-weed, /premium-weed, and /exotic-weed.",
       },
     ],
     faqs: [
       {
-        q: "What does AA weed mean at Mohawk Medicine?",
-        a: "AA is one of Mohawk Medicine's separate cannabis flower categories.",
+        q: "Where is AA weed listed for this Eglinton East shop?",
+        a: "This /aa-weed page lists the AA flower collection for Mohawk Medicine at 2655 Eglinton Ave E in Scarborough.",
       },
       {
-        q: "Is AA separate from Budget?",
-        a: "Yes. AA and Budget are separate named flower tiers.",
+        q: "Is AA weed the same as Budget weed here?",
+        a: "No. AA and Budget are separate named collections. Budget is at /budget-weed.",
       },
       {
-        q: "Does AA imply a current price or availability?",
-        a: "No. AA is the tier label only.",
+        q: "Should I use a Toronto pin or a Scarborough pin for AA flower?",
+        a: "Use 2655 Eglinton Ave E in Scarborough. Toronto appears on the postal line because Scarborough is a Toronto borough. The dispensary near me FAQ explains that pin.",
+      },
+      {
+        q: "Does AA imply a current price or pack size?",
+        a: "No. AA is the collection name. Current listed prices are on the product cards and can change.",
       },
     ],
   },
 
   BUDGET: {
-    metadataTitle: "Budget Weed & Cannabis Flower Toronto | Mohawk Medicine",
-    h1: "Budget Weed & Cannabis Flower in Toronto",
-    seoTitle: "Budget Weed & Cannabis Flower in Scarborough",
+    metadataTitle: "Budget Weed Scarborough | Eglinton East Value Flower",
+    h1: "Budget Weed in Scarborough on Eglinton East",
+    seoTitle: "Value Flower Path at the Scarborough Walk-In Shop",
     seoIntro:
-      "Budget is a separate Mohawk Medicine flower category for adults 19+ exploring weed and cannabis flower in Scarborough. The Budget label identifies the tier without making a current price, promotion, stock or availability claim.",
+      "Budget Weed is the value-oriented flower collection at Mohawk Medicine on Eglinton East. Adults 19+ can browse /budget-weed for the 24-hour Scarborough shop at 2655 Eglinton Ave E. Budget names the collection. It is not a sale banner, and it is not AA, AAA+, Premium, or Exotic.",
     sections: [
       {
-        heading: "Explore Budget Weed & Flower",
+        heading: "Start Value Shopping on Eglinton East",
         body:
-          "The Budget section gives Mohawk Medicine shoppers a dedicated flower category that stays separate from AA, AAA+, Premium and Exotic.",
+          "This Budget Weed page is the value flower path for the walk-in shop at 2655 Eglinton Ave E in Scarborough. Call +1 (437) 524-9335 if you want to confirm the stop. For cheap-weed context, the Scarborough value guide is a separate page from this live /budget-weed collection.",
       },
       {
-        heading: "Budget Is the Category Name",
+        heading: "Budget Names the Collection, Not a Discount",
         body:
-          "Budget describes the flower tier only. It does not establish a current deal, discount, price, promotion or product availability.",
+          "Budget is a browsing term for the value-oriented flower section. It does not mean unsafe, automatically weak, or a live promotion. Each listing still has its own name, producer, and current price. Use /aa-weed when you want the AA collection instead.",
       },
     ],
     faqs: [
       {
-        q: "What is Budget weed at Mohawk Medicine?",
-        a: "Budget is one of Mohawk Medicine's separate cannabis flower categories.",
+        q: "What is Budget weed at Mohawk Medicine in Scarborough?",
+        a: "Budget is the value-oriented flower collection at 2655 Eglinton Ave E. This /budget-weed page is the live Budget browse path for the Eglinton East shop.",
       },
       {
-        q: "Does Budget mean there is a current sale or promotion?",
-        a: "No. Budget is the category name only.",
+        q: "Does Budget weed mean there is a current sale?",
+        a: "No. Budget is the collection name. Sale or bundle labels appear only where a current card or tier deal is listed.",
       },
       {
-        q: "Can Budget be compared with the other flower tiers?",
-        a: "Yes. Budget is separate from AA, AAA+, Premium and Exotic.",
+        q: "How do I get to Budget flower from a near-me search?",
+        a: "If you searched dispensary near me in Scarborough, use the near-me FAQ for the Eglinton East pin, then return here for the Budget collection. The shop is at 2655 Eglinton Ave E.",
+      },
+      {
+        q: "Is Budget separate from AA and the other flower pages?",
+        a: "Yes. Budget, AA, AAA+, Premium, and Exotic each keep their own *-weed URL so the browse paths stay distinct.",
       },
     ],
   },

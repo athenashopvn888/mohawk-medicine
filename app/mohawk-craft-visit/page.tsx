@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import StoreMap from "../components/StoreMap";
 import StoreNap from "../components/StoreNap";
 import { STORE_NAP } from "../lib/nap";
+import ParityHubLinks from "../components/ParityHubLinks";
 import styles from "./page.module.css";
 
 const CANONICAL = "https://mohawkmedicine.com/mohawk-craft-visit";
@@ -164,6 +165,11 @@ export default function MohawkCraftVisitPage() {
               <Link href="/visit">24-hour Scarborough walk-in guide</Link>. For Scarborough pin questions, use
               the <Link href="/near-me">dispensary near me FAQ</Link>.
             </p>
+            <ParityHubLinks
+              currentPath="/mohawk-craft-visit"
+              includeCorridor
+              lead="This page stays the retail brand visit FAQ. Use the homepage and *-weed pages for flower, the 24-hour walk-in guide for late-night arrival, and the near-me FAQ for the Scarborough pin."
+            />
           </article>
 
           <article className={styles.section}>
@@ -180,7 +186,7 @@ export default function MohawkCraftVisitPage() {
             <h2 className={styles.h2}>CTA</h2>
             <p>
               Plan the stop from the <Link href="/">homepage</Link> menu, or use the trailing-slash{" "}
-              <Link href="/weed-dispensary-toronto/">Toronto weed dispensary</Link> page for city-level visit
+              <Link href="/weed-dispensary-toronto/">Scarborough weed hub</Link> for store visit
               information. Call the shop if you want a quick confirmation before a special trip.
             </p>
             <div className={styles.ctaRow}>
@@ -191,7 +197,7 @@ export default function MohawkCraftVisitPage() {
                 Homepage menu
               </Link>
               <Link href="/weed-dispensary-toronto/" className={styles.ctaSecondary}>
-                Toronto weed dispensary
+                Weed Dispensary Scarborough
               </Link>
             </div>
             <div className={styles.localLinks}>
@@ -199,13 +205,28 @@ export default function MohawkCraftVisitPage() {
                 Homepage
               </Link>
               <Link href="/weed-dispensary-toronto/" className={styles.localLink}>
-                Toronto Weed Dispensary
+                Weed Dispensary Scarborough
               </Link>
               <Link href="/visit" className={styles.localLink}>
                 24-Hour Walk-In Guide
               </Link>
               <Link href="/near-me" className={styles.localLink}>
                 Dispensary Near Me FAQ
+              </Link>
+              <Link href="/exotic-weed" className={styles.localLink}>
+                Exotic Weed
+              </Link>
+              <Link href="/premium-weed" className={styles.localLink}>
+                Premium Weed
+              </Link>
+              <Link href="/aaa-weed" className={styles.localLink}>
+                AAA+ Weed
+              </Link>
+              <Link href="/aa-weed" className={styles.localLink}>
+                AA Weed
+              </Link>
+              <Link href="/budget-weed" className={styles.localLink}>
+                Budget Weed
               </Link>
               <Link href="/contact" className={styles.localLink}>
                 Contact And Hours

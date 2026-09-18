@@ -270,6 +270,18 @@
   background: #FFFFFF;
 }
 
+.welcomeHub {
+  max-width: 960px;
+  margin: 28px auto 0;
+  text-align: left;
+}
+
+.hubPanel {
+  margin-top: 24px;
+  padding-top: 8px;
+  text-align: left;
+}
+
 .aboutPanel {
   max-width: 760px;
   margin: 0 auto;

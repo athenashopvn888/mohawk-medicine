@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import StoreMap from "../components/StoreMap";
 import StoreNap from "../components/StoreNap";
 import { STORE_NAP } from "../lib/nap";
+import ParityHubLinks from "../components/ParityHubLinks";
 import styles from "./page.module.css";
 
 const CANONICAL = "https://mohawkmedicine.com/near-me";
@@ -169,6 +170,11 @@ export default function NearMePage() {
               This FAQ is visit and arrival copy only. It describes the storefront, hours, and listed
               menu categories for adults 19+.
             </p>
+            <ParityHubLinks
+              currentPath="/near-me"
+              includeCorridor
+              lead="Keep this FAQ for dispensary near me / Scarborough pin questions. Open a *-weed page for flower, the 24-hour walk-in guide for open-now arrival, or the Mohawk Craft visit FAQ for listed-name questions."
+            />
           </article>
 
           <article className={styles.section}>
@@ -199,13 +205,28 @@ export default function NearMePage() {
                 Homepage
               </Link>
               <Link href="/weed-dispensary-toronto/" className={styles.localLink}>
-                Toronto Weed Dispensary
+                Weed Dispensary Scarborough
               </Link>
               <Link href="/visit" className={styles.localLink}>
                 24-Hour Walk-In Guide
               </Link>
               <Link href="/mohawk-craft-visit" className={styles.localLink}>
                 Mohawk Craft Visit FAQ
+              </Link>
+              <Link href="/exotic-weed" className={styles.localLink}>
+                Exotic Weed
+              </Link>
+              <Link href="/premium-weed" className={styles.localLink}>
+                Premium Weed
+              </Link>
+              <Link href="/aaa-weed" className={styles.localLink}>
+                AAA+ Weed
+              </Link>
+              <Link href="/aa-weed" className={styles.localLink}>
+                AA Weed
+              </Link>
+              <Link href="/budget-weed" className={styles.localLink}>
+                Budget Weed
               </Link>
               <Link href="/info/scarborough-weed-dispensary" className={styles.localLink}>
                 Scarborough Weed Dispensary

@@ -11,6 +11,7 @@ import SmokePilotSpotlight from "./components/SmokePilotSpotlight";
 import StoreMap from "./components/StoreMap";
 import { allFlowers, type FlowerProduct } from "./lib/products";
 import { STORE_NAP } from "./lib/nap";
+import ParityHubLinks from "./components/ParityHubLinks";
 
 /* Tier Grid Config */
 const TIER_CARDS = [
@@ -70,7 +71,7 @@ const CATEGORIES = [
 ];
 
 const HELPFUL_PAGES = [
-  { name: "Toronto Weed Dispensary", href: "/weed-dispensary-toronto/", description: "Confirm broad Toronto store and visit information." },
+  { name: "Weed Dispensary Scarborough", href: "/weed-dispensary-toronto/", description: "Confirm the live Scarborough / Eglinton East weed hub." },
   { name: "24-Hour Walk-In Guide", href: "/visit", description: "Scarborough / Eglinton East open-now arrival details." },
   { name: "Dispensary Near Me FAQ", href: "/near-me", description: "Eglinton East arrival FAQ for Scarborough near-me searches." },
   { name: "Mohawk Craft Visit FAQ", href: "/mohawk-craft-visit", description: "Retail brand visit FAQ for Mohawk Craft Dispensary / Mohawk Medicine." },
@@ -117,6 +118,10 @@ const FAQS = [
   {
     q: "What is the listed store name at 2655 Eglinton Ave E?",
     a: "The store listing name is Mohawk Craft Dispensary. This website uses Mohawk Medicine as the site brand for the same 24-hour shop at 2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
+  },
+  {
+    q: "Where are the Exotic, Premium, AAA+, AA, and Budget flower pages?",
+    a: "Each flower collection keeps its own URL: /exotic-weed, /premium-weed, /aaa-weed, /aa-weed, and /budget-weed. Use the 24-hour walk-in guide for Eglinton East arrival and the Mohawk Craft visit FAQ for listed-name questions.",
   },
 ];
 
@@ -197,6 +202,13 @@ export default function HomePage() {
             <span className={styles.trustBadge}> Open 24/7</span>
             <span className={styles.trustBadge}> Scarborough, Toronto</span>
             <span className={styles.trustBadge}> Walk-Ins Welcome</span>
+          </div>
+          <div className={styles.welcomeHub}>
+            <ParityHubLinks
+              currentPath="/"
+              includeCorridor
+              lead="Plan a Scarborough walk-in or open a named Weed flower page. Exotic, Premium, AAA+, AA, and Budget keep their live *-weed URLs."
+            />
           </div>
         </div>
       </section>

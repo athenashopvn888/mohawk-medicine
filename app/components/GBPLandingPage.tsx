@@ -2,6 +2,7 @@ import Link from "next/link";
 import Script from "next/script";
 import styles from "./GBPLandingPage.module.css";
 import { gbpLocation } from "../lib/gbp-location";
+import ParityHubLinks from "./ParityHubLinks";
 
 const preferredSourceAttribute = {
   "google-add-preferred-source-btn": "",
@@ -38,7 +39,7 @@ export function GBPLandingPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `https://${gbpLocation.domain}/${gbpLocation.slug}/#webpage`,
-    "name": `${gbpLocation.storeName} — Weed Dispensary in ${gbpLocation.city}`,
+    "name": "Weed Dispensary in Scarborough on Eglinton East",
     "url": `https://${gbpLocation.domain}/${gbpLocation.slug}/`,
     "about": { "@id": "https://mohawkmedicine.com/#store" }
   };
@@ -53,7 +54,7 @@ export function GBPLandingPage() {
 
       {/* Hero Header */}
       <header className={styles.hero}>
-        <h1 className={styles.h1}>{gbpLocation.storeName} — Weed Dispensary in {gbpLocation.city}</h1>
+        <h1 className={styles.h1}>Weed Dispensary in Scarborough on Eglinton East</h1>
         <p className={styles.heroTagline}>Mohawk Medicine on Eglinton Ave E in Scarborough</p>
       </header>
 
@@ -93,6 +94,11 @@ export function GBPLandingPage() {
           <Link href="/mohawk-craft-visit">Mohawk Craft visit FAQ</Link>. For a first-stop overview, use{" "}
           <Link href="/resources/eglinton-east-scarborough-visit-guide">First Visit to Mohawk Medicine</Link>.
         </p>
+        <ParityHubLinks
+          currentPath="/weed-dispensary-toronto/"
+          includeCorridor
+          lead="This page is the live weed hub for the Scarborough shop on Eglinton East. Open a *-weed flower page, the 24-hour walk-in guide, the Mohawk Craft visit FAQ, or the near-me pin FAQ without leaving this store."
+        />
       </section>
 
       {/* Product Section */}

@@ -7,10 +7,11 @@ import StoreMap from "../../components/StoreMap";
 import StoreNap from "../../components/StoreNap";
 import { SEO_PAGES, getLegacySeoRedirect, getSeoPageBySlug } from "../../lib/seoPages";
 import { TIER_CONFIG } from "../../lib/products";
+import ParityHubLinks from "../../components/ParityHubLinks";
 import styles from "./seo.module.css";
 
 const LOCAL_GUIDES = [
-  { href: "/weed-dispensary-toronto/", label: "Toronto Weed Dispensary" },
+  { href: "/weed-dispensary-toronto/", label: "Weed Dispensary Scarborough" },
   { href: "/visit", label: "24-Hour Walk-In Guide" },
   { href: "/near-me", label: "Dispensary Near Me FAQ" },
   { href: "/mohawk-craft-visit", label: "Mohawk Craft Visit FAQ" },
@@ -156,6 +157,11 @@ export default async function SeoLandingPage({
             <div className={styles.mapWrap}>
               <StoreMap showActions />
             </div>
+          </div>
+
+          <div className={styles.section}>
+            <h2 className={styles.sectionTitle}>Scarborough Visit Hubs And Flower Tiers</h2>
+            <ParityHubLinks currentPath={currentPath} includeCorridor />
           </div>
 
           <div className={styles.section}>

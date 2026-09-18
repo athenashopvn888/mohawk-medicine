@@ -75,7 +75,7 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
               <Link href="/items/add-ons">Accessories</Link>
               <Link href="/weed-delivery-toronto">Weed Delivery</Link>
               <Link href="/faq">FAQ</Link>
-              <Link href="/weed-dispensary-toronto/">Mohawk Medicine Weed Dispensary in Toronto</Link>
+              <Link href="/weed-dispensary-toronto/">Weed Dispensary Scarborough</Link>
               <Link href="/contact">Contact</Link>
                           <Link href="/resources">Resources</Link>
             </nav>
