@@ -1,0 +1,53 @@
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import test from "node:test";
+
+const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
+
+const nap = read("app/lib/nap.ts");
+const home = read("app/page.tsx");
+const footer = read("app/components/Footer.tsx");
+const contact = read("app/contact/page.tsx");
+const torontoPage = read("app/components/GBPLandingPage.tsx");
+const seoTemplate = read("app/info/[seoPage]/page.tsx");
+const seoPages = read("app/lib/seoPages.ts");
+const visitGuide = read("app/resources/resourceData.ts");
+const nativeCigarettes = read("app/info/native-cigarettes-scarborough/page.tsx");
+
+const INVENTED_NATIVE = /Indigenous|First Nation|on reserve|healing|traditional medicine|ceremonial|Mohawk Nation|sacred/i;
+
+test("visible NAP blocks share the same MEB01 facts", () => {
+  for (const source of [home, footer, contact, torontoPage, seoTemplate]) {
+    assert.match(source, /StoreMap|mapEmbedUrl|Mohawk Craft Dispensary|legalName/);
+  }
+  assert.match(home, /\+1 \(437\) 524-9335|STORE_NAP\.phoneDisplay/);
+  assert.match(contact, /STORE_NAP\.phoneDisplay/);
+  assert.match(footer, /\+1 \(437\) 524-9335/);
+  assert.match(nap, /website: "https:\/\/mohawkmedicine\.com\/"/);
+  assert.doesNotMatch(nap, /mohawkcraftsandmedicine\.com|kennedyloudcannabis\.com|stclaircannabis\.com/);
+});
+
+test("Eglinton East landing keeps existing nearby-area door-test language only", () => {
+  const start = seoPages.indexOf('slug: "weed-store-near-eglinton-east"');
+  const end = seoPages.indexOf('slug: "dispensary-near-me-scarborough"');
+  const eglinton = seoPages.slice(start, end);
+  assert.ok(start >= 0 && end > start);
+  assert.match(eglinton, /Eglinton East, Kennedy Road, Brimley Road, Golden Mile, Birchmount, Warden/);
+  assert.match(eglinton, /Door-Test Details On Eglinton Avenue East/);
+  assert.match(eglinton, /\+1 \(437\) 524-9335/);
+  assert.doesNotMatch(eglinton, INVENTED_NATIVE);
+});
+
+test("visit guide adds phone without new Native claims", () => {
+  const start = visitGuide.indexOf('slug: "eglinton-east-scarborough-visit-guide"');
+  const end = visitGuide.indexOf('slug: "menu-guide"');
+  const guide = visitGuide.slice(start, end);
+  assert.match(guide, /\+1 \(437\) 524-9335/);
+  assert.match(guide, /Mohawk Craft Dispensary/);
+  assert.doesNotMatch(guide, INVENTED_NATIVE);
+});
+
+test("Native cigarette page copy was not expanded", () => {
+  assert.match(nativeCigarettes, /Native Cigarettes in Scarborough/);
+  assert.doesNotMatch(nativeCigarettes, INVENTED_NATIVE);
+});

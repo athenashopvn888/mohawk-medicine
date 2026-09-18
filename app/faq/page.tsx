@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "Where is Mohawk Medicine located?",
-    a: "Mohawk Medicine is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2, in the Scarborough area near Brimley Rd.",
+    a: "Mohawk Medicine is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2, in the Scarborough area near Brimley Rd. The listed store name is Mohawk Craft Dispensary. Call +1 (437) 524-9335.",
   },
   {
     q: "What are your hours?",
@@ -54,9 +54,20 @@ const FAQS = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: { "@type": "Answer", text: faq.a },
+  })),
+};
+
 export default function FAQPage() {
   return (
     <main style={{ minHeight: "100vh", paddingTop: "100px", background: "#FFFFFF" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Navbar />
 
       <section style={{ width: "100%", overflow: "hidden" }}>

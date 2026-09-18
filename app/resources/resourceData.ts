@@ -91,7 +91,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       {
         heading: "Address Anchor",
         body:
-          "Mohawk Medicine is listed at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Keep that address as the anchor, then check whether the visit is about flower, pre-rolls, edibles, THC vapes, concentrates, accessories, or cigarettes.",
+          "Mohawk Medicine is listed at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Keep that address as the anchor, then check whether the visit is about flower, pre-rolls, edibles, THC vapes, concentrates, accessories, or cigarettes. Call +1 (437) 524-9335 if you want to confirm the stop. The listed store name is Mohawk Craft Dispensary.",
       },
       {
         heading: "Nearby Scarborough Areas",

@@ -23,6 +23,13 @@
   border-bottom: 1px solid var(--border-subtle);
 }
 .heroInner { max-width: 800px; margin: 0 auto; }
+.crumbs {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+.crumbs a { color: var(--green-dark, #1B5E20); text-decoration: none; }
 .heroIcon { font-size: 52px; display: block; margin-bottom: 16px; }
 .heroH1 {
   font-size: clamp(26px, 5vw, 40px);
@@ -117,6 +124,25 @@
   transition: background 0.2s;
 }
 .visitBtn:hover { background: #1B4332; }
+
+.localLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+.localLink {
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--green-dark, #1B5E20);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.localLink:hover { border-color: var(--green-dark, #1B5E20); }
 
 /* FAQ */
 .faqItem {

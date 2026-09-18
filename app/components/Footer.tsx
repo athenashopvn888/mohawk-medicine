@@ -24,6 +24,10 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
+              <span className={styles.infoLabel}>Store Name</span>
+              <span>Mohawk Craft Dispensary</span>
+            </div>
+            <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Address</span>
               <span>2655 Eglinton Ave E</span>
               <span>Toronto, ON M1K 2S2</span>
@@ -39,7 +43,7 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Website</span>
-              <span>mohawkmedicine.com</span>
+              <span><a href="https://mohawkmedicine.com/" style={{ color: "inherit" }}>https://mohawkmedicine.com/</a></span>
             </div>
           </div>
 
