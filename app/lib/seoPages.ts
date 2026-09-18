@@ -255,53 +255,6 @@ export const SEO_PAGES: SeoPageData[] = [
       },
     ],
   },
-
-  {
-    slug: "dispensary-near-me-scarborough",
-    title: "Cannabis Dispensary Near Me Scarborough | Mohawk Medicine",
-    metaDescription:
-      "Find Mohawk Medicine at 2655 Eglinton Ave E in Scarborough. Open 24 Hours with flower tiers, edibles, vapes, concentrates, cigarettes, accessories, and local store details.",
-    h1: "Cannabis Dispensary Near Me In Scarborough",
-    icon: "NEAR",
-    heroTagline: "A 24-hour Eglinton Ave E dispensary path for nearby Toronto shoppers.",
-    banner: "/banners/23_Mohawk_Welcome_Banner.webp",
-    sections: [
-      {
-        heading: "Find The Eglinton Ave E Shop",
-        body:
-          "Mohawk Medicine is located at 2655 Eglinton Ave E, Toronto, ON M1K 2S2. Nearby shoppers can use the menu to pick a flower tier or format category before visiting.",
-      },
-      {
-        heading: "Categories For Repeat Visits",
-        body:
-          "The site is organized for fast scanning: Exotic, Premium, AAA+, AA, Budget, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, and specialty categories.",
-      },
-      {
-        heading: "Local Resource Pages",
-        body:
-          "The Resource hub adds guides for Eglinton Ave E visits, Scarborough menu planning, flower tiers, value shopping, pre-rolls, and native smokes.",
-      },
-      {
-        heading: "Confirm This Scarborough Address",
-        body:
-          "If you searched for a cannabis dispensary near me in Scarborough or along Eglinton Ave E, this page points to one storefront: 2655 Eglinton Ave E, Toronto, ON M1K 2S2. It is a 24-hour walk-in shop. Use +1 (437) 524-9335 and the homepage at https://mohawkmedicine.com/ to confirm details before you go.",
-      },
-    ],
-    faqs: [
-      {
-        q: "What is the address?",
-        a: "2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
-      },
-      {
-        q: "Is Mohawk Medicine walk-in friendly?",
-        a: "The site presents Mohawk Medicine as a 24-hour Scarborough dispensary. Bring valid 19+ ID and check the current menu before visiting.",
-      },
-      {
-        q: "Where are the Resource pages?",
-        a: "Use /resources for Mohawk Medicine guides covering visits, flower tiers, value shopping, pre-rolls, cigarettes, and menu planning.",
-      },
-    ],
-  },
 ];
 
 export function getSeoPageBySlug(slug: string): SeoPageData | undefined {
@@ -313,7 +266,6 @@ const LEGACY_SEO_REDIRECTS: Record<string, string> = {
   "cheap-weed-york": "cheap-weed-scarborough",
   "native-cigarettes-york": "native-cigarettes-scarborough",
   "weed-store-near-mississauga": "weed-store-near-eglinton-east",
-  "dispensary-near-me-york": "dispensary-near-me-scarborough",
 };
 
 export function getLegacySeoRedirect(slug: string): string | undefined {

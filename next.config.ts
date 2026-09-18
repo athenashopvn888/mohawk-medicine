@@ -30,6 +30,10 @@ const nextConfig: NextConfig = {
       { source: "/magic", destination: "/items/magic", permanent: true },
       { source: "/info/24-hour-dispensary-scarborough", destination: "/visit", permanent: true },
       { source: "/info/24-hour-dispensary-scarborough/", destination: "/visit", permanent: true },
+      { source: "/info/dispensary-near-me-scarborough", destination: "/near-me", permanent: true },
+      { source: "/info/dispensary-near-me-scarborough/", destination: "/near-me", permanent: true },
+      { source: "/info/dispensary-near-me-york", destination: "/near-me", permanent: true },
+      { source: "/info/dispensary-near-me-york/", destination: "/near-me", permanent: true },
     ];
   },
 };
