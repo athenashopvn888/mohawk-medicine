@@ -28,7 +28,7 @@ export interface ResourcePage {
   faqs?: ResourceFaq[];
 }
 
-const localAreas = "Eglinton East, Kennedy Road, Scarborough, Golden Mile, Birchmount, Warden, and the Kennedy Station area";
+const localAreas = "Eglinton East, Scarborough, and Brimley Rd";
 
 const menuCards: ResourceCard[] = [
   { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Explore Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, and Budget Weed." },

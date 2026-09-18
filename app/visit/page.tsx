@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import StoreMap from "../components/StoreMap";
 import StoreNap from "../components/StoreNap";
 import { STORE_NAP } from "../lib/nap";
+import ParityHubLinks from "../components/ParityHubLinks";
 import styles from "./page.module.css";
 
 const CANONICAL = "https://mohawkmedicine.com/visit";
@@ -151,9 +152,9 @@ export default function VisitPage() {
           <article className={styles.section}>
             <h2 className={styles.h2}>Nearby Transit Landmarks</h2>
             <p>
-              This Eglinton East stop is useful if you are coming along Eglinton East, Kennedy Road,
-              Brimley Road, Golden Mile, Birchmount, Warden, or the Kennedy Station area. Check
-              current TTC or map details before visiting.
+              This Eglinton East stop is useful if you are coming along Eglinton Avenue East toward
+              Brimley Road. Use 2655 Eglinton Ave E as the pin. Check current TTC or map details
+              before visiting.
             </p>
             <p>
               The shop sits in a retail plaza on Eglinton Ave E. Use the map pin below for the lot
@@ -175,6 +176,11 @@ export default function VisitPage() {
               <Link href="/">homepage</Link> to start with flower tiers or other categories. This
               page is a walk-in retail guide only.
             </p>
+            <ParityHubLinks
+              currentPath="/visit"
+              includeCorridor
+              lead="Stay on this 24-hour Scarborough walk-in guide for arrival. Open a named *-weed page when the visit is about flower, or use the Mohawk Craft visit FAQ and near-me pin FAQ for brand and map questions."
+            />
           </article>
 
           <article className={styles.section}>
@@ -206,7 +212,7 @@ export default function VisitPage() {
                 Homepage
               </Link>
               <Link href="/weed-dispensary-toronto/" className={styles.localLink}>
-                Toronto Weed Dispensary
+                Weed Dispensary Scarborough
               </Link>
               <Link href="/near-me" className={styles.localLink}>
                 Dispensary Near Me FAQ
@@ -219,6 +225,21 @@ export default function VisitPage() {
               </Link>
               <Link href="/info/weed-store-near-eglinton-east" className={styles.localLink}>
                 Weed Store Near Eglinton East
+              </Link>
+              <Link href="/exotic-weed" className={styles.localLink}>
+                Exotic Weed
+              </Link>
+              <Link href="/premium-weed" className={styles.localLink}>
+                Premium Weed
+              </Link>
+              <Link href="/aaa-weed" className={styles.localLink}>
+                AAA+ Weed
+              </Link>
+              <Link href="/aa-weed" className={styles.localLink}>
+                AA Weed
+              </Link>
+              <Link href="/budget-weed" className={styles.localLink}>
+                Budget Weed
               </Link>
               <Link href="/resources/eglinton-east-scarborough-visit-guide" className={styles.localLink}>
                 First Visit Guide

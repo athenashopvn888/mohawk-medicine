@@ -13,8 +13,8 @@ export const gbpLocation = {
   postalCode: STORE_NAP.postalCode,
   phone: STORE_NAP.phoneDisplay,
   phoneIntl: STORE_NAP.phoneIntl,
-  neighborhood: "Eglinton East / Scarborough / Kennedy",
-  nearbyAreas: ["Eglinton East", "Kennedy Road", "Scarborough", "Golden Mile", "Birchmount", "Warden", "Kennedy Station area", "TTC"],
+  neighborhood: "Eglinton East / Scarborough / Brimley",
+  nearbyAreas: ["Eglinton East", "Brimley Rd", "Scarborough"],
   products: [
     "Flower",
     "Pre-rolls",
@@ -31,12 +31,12 @@ export const gbpLocation = {
   latitude: String(STORE_NAP.latitude),
   longitude: String(STORE_NAP.longitude),
   hours: [STORE_NAP.hours],
-  seoTitle: "Mohawk Medicine | Weed Dispensary in Toronto",
-  metaDescription: "Mohawk Medicine is a local weed dispensary in Toronto offering flower, pre-rolls, edibles, vapes, concentrates, CBD, and service for adults 19+.",
-  localLandmarks: ["Eglinton East", "Kennedy Road", "Scarborough"],
-  introVariant: "Mohawk Medicine is a weed dispensary in Toronto situated at 2655 Eglinton Ave E. Adults 19+ can use this page to check store basics, menu categories, and current public listings before visiting the Scarborough area shop.",
-  neighborhoodDescription: "Located in the vibrant Eglinton East / Scarborough / Kennedy district, our cannabis store fits right into this active and historic community, surrounded by local retail shops and convenient transit links.",
+  seoTitle: "Mohawk Medicine | Weed Dispensary Scarborough | Eglinton East",
+  metaDescription: "Mohawk Medicine is a 24-hour weed dispensary in Scarborough on Eglinton Ave E, with flower tiers, pre-rolls, edibles, vapes, concentrates, and walk-in details for adults 19+.",
+  localLandmarks: ["Eglinton East", "Brimley Rd"],
+  introVariant: "Mohawk Medicine is a weed dispensary in Scarborough at 2655 Eglinton Ave E. Adults 19+ can use this page to check store basics, menu categories, and current public listings before visiting the Eglinton East shop.",
+  neighborhoodDescription: "The shop is on Eglinton Avenue East in Scarborough, near Brimley Rd, with local retail around the plaza and mapable walk-in access at 2655 Eglinton Ave E.",
   parkingNote: "Ample free parking is available in the retail plaza lot",
   transitNote: "Check current local transit or map details before visiting.",
-  sectionTitle: "Serving Customers Near Eglinton East and Scarborough"
+  sectionTitle: "Serving Customers on Eglinton East near Brimley"
 };

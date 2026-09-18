@@ -1,0 +1,49 @@
+.hub {
+  margin: 0;
+}
+
+.lead {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary, #526056);
+  margin: 0 0 16px;
+}
+
+.group {
+  margin-bottom: 14px;
+}
+
+.group:last-child {
+  margin-bottom: 0;
+}
+
+.groupLabel {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-dark, #1b5e20);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.link {
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--bg-secondary, #f6fbf7);
+  border: 1px solid var(--border-subtle, rgba(27, 94, 32, 0.13));
+  color: var(--green-dark, #1b5e20);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link:hover {
+  border-color: var(--green-dark, #1b5e20);
+}

@@ -207,51 +207,55 @@ export const SEO_PAGES: SeoPageData[] = [
 
   {
     slug: "weed-store-near-eglinton-east",
-    title: "Weed Store Near Eglinton East | Mohawk Medicine",
+    title: "Weed Store Near Eglinton East | Brimley Rd | Mohawk Medicine",
     metaDescription:
-      "Mohawk Medicine is a 24-hour weed store on Eglinton Ave E in Scarborough with flower, edibles, vapes, concentrates, cigarettes, accessories, and local store details.",
-    h1: "Weed Store Near Eglinton East",
+      "Mohawk Medicine is a 24-hour weed store on Eglinton Ave E in Scarborough, near Brimley Rd, with flower tiers, edibles, vapes, concentrates, cigarettes, and walk-in details.",
+    h1: "Weed Store Near Eglinton East and Brimley",
     icon: "EG",
-    heroTagline: "A Scarborough cannabis stop tied to Eglinton Ave E.",
+    heroTagline: "A Scarborough cannabis stop on Eglinton Ave E, near Brimley Rd.",
     banner: "/banners/23_Mohawk_Welcome_Banner.webp",
     sections: [
       {
         heading: "Eglinton Ave E Store Details",
         body:
-          "Mohawk Medicine is located at 2655 Eglinton Ave E in Toronto's Scarborough area. The site keeps store details and menu categories close together so shoppers can plan the visit without relying on stale city pages.",
+          "Mohawk Medicine is the 24-hour walk-in shop at 2655 Eglinton Ave E in Scarborough. The useful landmark for this corridor is Brimley Rd. Use that exact address when you map the trip rather than a generic Toronto pin. The listed store name is Mohawk Craft Dispensary. This website uses Mohawk Medicine as the site brand for the same storefront.",
+      },
+      {
+        heading: "Arrive Along Eglinton East Toward Brimley",
+        body:
+          "If you are moving along Eglinton Avenue East toward Brimley Road, this is the Scarborough door to use: 2655 Eglinton Ave E, Toronto, ON M1K 2S2. The shop sits in a retail plaza on that stretch. Call +1 (437) 524-9335 if you want to confirm the stop before a special trip. The store lists Open 24 Hours / 7 Days a Week.",
       },
       {
         heading: "Start With A Category",
         body:
-          "Use the category that matches the visit: flower tier, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, or specialty items.",
+          "Use the category that matches the visit: Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, Budget Weed, edibles, pre-rolls, THC Vape, Nic Vape, concentrates, cigarettes, accessories, or specialty items. Flower collections keep their live *-weed URLs.",
       },
       {
-        heading: "Built For Nearby Scarborough Shoppers",
+        heading: "Walk-In Facts For This Corridor",
         body:
-          "This page keeps the local focus around Eglinton East, Kennedy Road, Brimley Road, Golden Mile, Birchmount, Warden, and nearby Scarborough routes.",
-      },
-      {
-        heading: "Door-Test Details On Eglinton Avenue East",
-        body:
-          "The shop is on Eglinton Avenue East in Scarborough at 2655 Eglinton Ave E. If you are coming along Eglinton East, Kennedy Road, Brimley Road, Golden Mile, Birchmount, Warden, or the Kennedy Station area, use that exact address rather than a generic Toronto pin. The store lists Open 24 Hours. Call +1 (437) 524-9335 before a special trip if you want to confirm the stop.",
+          "No appointment is needed. Adults 19+ with valid government photo ID can walk in at any hour. Keep this page for Eglinton East / Brimley corridor context. Use the 24-hour walk-in guide for open-now arrival, the near-me FAQ for Scarborough pin questions, and the Mohawk Craft visit FAQ for listed-name questions.",
       },
     ],
     faqs: [
       {
-        q: "Is Mohawk Medicine near Eglinton East?",
-        a: "The store is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2, in the Scarborough area.",
+        q: "Is Mohawk Medicine on Eglinton East near Brimley?",
+        a: "Yes. The walk-in shop is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2, in Scarborough near Brimley Rd.",
       },
       {
-        q: "What should I check before visiting?",
-        a: "Check the current category page for listed product names, prices, and package details before visiting.",
+        q: "What landmark should I use for this Eglinton East dispensary?",
+        a: "Use Brimley Rd with 2655 Eglinton Ave E. That is the corridor landmark for this storefront.",
       },
       {
-        q: "Do older local info routes still work?",
-        a: "Older local info routes now point to the Eglinton East local page so the public copy stays focused on Mohawk Medicine's actual area.",
+        q: "What should I check before visiting the Eglinton East shop?",
+        a: "Check the current category page for listed product names, prices, and package details. Bring valid 19+ government photo ID.",
       },
       {
         q: "What is the phone number for the Eglinton East shop?",
         a: "Call +1 (437) 524-9335. The website homepage is https://mohawkmedicine.com/.",
+      },
+      {
+        q: "Which page should I use for a late-night walk-in on Eglinton East?",
+        a: "Use the 24-hour Scarborough walk-in guide for open-now arrival. This page stays the Eglinton East / Brimley corridor page.",
       },
     ],
   },
