@@ -87,7 +87,9 @@ export function GBPLandingPage() {
           <Link href="/info/weed-store-near-eglinton-east">Eglinton East store page</Link>. Adults looking for category information can continue to the five Weed tiers or the separate cigarette and nicotine-vape guides.
         </p>
         <p className={styles.infoText}>
-          <Link href="/resources/eglinton-east-scarborough-visit-guide">First Visit to Mohawk Medicine</Link>
+          For 24-hour walk-in arrival on Eglinton East, use the{" "}
+          <Link href="/visit">24-hour Scarborough walk-in guide</Link>. For a first-stop overview, use{" "}
+          <Link href="/resources/eglinton-east-scarborough-visit-guide">First Visit to Mohawk Medicine</Link>.
         </p>
       </section>
 

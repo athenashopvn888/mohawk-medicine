@@ -12,12 +12,13 @@ const torontoPage = read("app/components/GBPLandingPage.tsx");
 const seoTemplate = read("app/info/[seoPage]/page.tsx");
 const seoPages = read("app/lib/seoPages.ts");
 const visitGuide = read("app/resources/resourceData.ts");
+const walkInGuide = read("app/visit/page.tsx");
 const nativeCigarettes = read("app/info/native-cigarettes-scarborough/page.tsx");
 
 const INVENTED_NATIVE = /Indigenous|First Nation|on reserve|healing|traditional medicine|ceremonial|Mohawk Nation|sacred/i;
 
 test("visible NAP blocks share the same MEB01 facts", () => {
-  for (const source of [home, footer, contact, torontoPage, seoTemplate]) {
+  for (const source of [home, footer, contact, torontoPage, seoTemplate, walkInGuide]) {
     assert.match(source, /StoreMap|mapEmbedUrl|Mohawk Craft Dispensary|legalName/);
   }
   assert.match(home, /\+1 \(437\) 524-9335|STORE_NAP\.phoneDisplay/);
@@ -50,4 +51,12 @@ test("visit guide adds phone without new Native claims", () => {
 test("Native cigarette page copy was not expanded", () => {
   assert.match(nativeCigarettes, /Native Cigarettes in Scarborough/);
   assert.doesNotMatch(nativeCigarettes, INVENTED_NATIVE);
+});
+
+test("B05 24-hour walk-in guide stays neighbourhood door-test only", () => {
+  assert.match(walkInGuide, /24-Hour Dispensary Scarborough/);
+  assert.match(walkInGuide, /const CANONICAL = "https:\/\/mohawkmedicine\.com\/visit"/);
+  assert.match(walkInGuide, /href="\/weed-dispensary-toronto\/"/);
+  assert.match(walkInGuide, /href="\/items\/cigarettes"/);
+  assert.doesNotMatch(walkInGuide, INVENTED_NATIVE);
 });

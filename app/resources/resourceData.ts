@@ -48,6 +48,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro:
       "A practical resource hub for Mohawk Medicine shoppers near Eglinton East and Kennedy Road. Use these guides to compare menu categories, plan the visit, and check the current category pages before heading to the store.",
     cards: [
+      { title: "24-Hour Walk-In Guide", href: "/visit", text: "Eglinton East arrival, open-now hours, and Scarborough store details." },
       { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: `Plan the stop around ${localAreas}.` },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the category that matches the visit." },
       { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Explore the five Weed flower collections." },
@@ -83,7 +84,8 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro:
       `Use this guide when visiting Mohawk Medicine from ${localAreas}. Confirm current store details and category listings before making a special trip.`,
     cards: [
-      { title: "Store Page", href: "/weed-dispensary-toronto", text: "Use the main store page for address, hours, and contact details." },
+      { title: "24-Hour Walk-In Guide", href: "/visit", text: "Open-now hours and Scarborough arrival details for 2655 Eglinton Ave E." },
+      { title: "Store Page", href: "/weed-dispensary-toronto/", text: "Use the main store page for address, hours, and contact details." },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Pick the category that matches the visit." },
       { title: "Value Guide", href: "/resources/value-guide", text: "Review Budget, AA, and AAA+ flower notes." },
     ],
@@ -654,8 +656,13 @@ const MEB01_RESOURCE_OVERRIDES: Record<string, Partial<ResourcePage>> = {
     "intro": "A first cannabis-store visit should not feel like homework.",
     "cards": [
       {
+        "title": "24-Hour Walk-In Guide",
+        "href": "/visit",
+        "text": "Open-now hours and Scarborough arrival details for 2655 Eglinton Ave E."
+      },
+      {
         "title": "Mohawk Medicine in Toronto",
-        "href": "/weed-dispensary-toronto",
+        "href": "/weed-dispensary-toronto/",
         "text": "Continue with Mohawk Medicine in Toronto."
       },
       {
@@ -6663,6 +6670,11 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
 ];
 RESOURCE_PAGES[0].sections.push({ heading: "Learn the Category, Then Check the Current Listing", body: "Mohawk Medicine's Resource Centre should separate stable education from changing menu details. Use the Resource Centre to understand: cannabis terminology; first-visit planning; Weed tiers; flower quality; THC; trichomes; aroma; drying and curing; growing methods; genetics; Weed slang; commercial tobacco terminology. Use current category/product pages for: current products; current prices; current package details; current flavours; current stock; current availability. That keeps the guides useful when the menu changes." });
 RESOURCE_PAGES[0].cards.push(...[
+  {
+    "title": "24-Hour Walk-In Guide",
+    "href": "/visit",
+    "text": "Eglinton East arrival, open-now hours, and Scarborough store details."
+  },
   {
     "title": "Cannabis 101",
     "href": "/resources/cannabis-101",

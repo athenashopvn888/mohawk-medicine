@@ -71,6 +71,7 @@ const CATEGORIES = [
 
 const HELPFUL_PAGES = [
   { name: "Toronto Weed Dispensary", href: "/weed-dispensary-toronto/", description: "Confirm broad Toronto store and visit information." },
+  { name: "24-Hour Walk-In Guide", href: "/visit", description: "Scarborough / Eglinton East open-now arrival details." },
   { name: "Scarborough Weed Dispensary", href: "/info/scarborough-weed-dispensary", description: "Review Scarborough storefront information." },
   { name: "Weed Store Near Eglinton East", href: "/info/weed-store-near-eglinton-east", description: "Review Eglinton East store context." },
   { name: "First Visit to Mohawk Medicine", href: "/resources/eglinton-east-scarborough-visit-guide", description: "Plan a visit around the exact Eglinton Ave E address." },

@@ -73,6 +73,7 @@ test("approved MEB01 Scarborough page stays borough-level", () => {
 test("homepage routing is bounded and protected category separation remains visible", () => {
   for (const [label, href] of [
     ["Toronto Weed Dispensary", "/weed-dispensary-toronto/"],
+    ["24-Hour Walk-In Guide", "/visit"],
     ["Scarborough Weed Dispensary", "/info/scarborough-weed-dispensary"],
     ["Weed Store Near Eglinton East", "/info/weed-store-near-eglinton-east"],
     ["First Visit to Mohawk Medicine", "/resources/eglinton-east-scarborough-visit-guide"],
