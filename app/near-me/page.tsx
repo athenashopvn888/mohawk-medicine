@@ -204,6 +204,9 @@ export default function NearMePage() {
               <Link href="/visit" className={styles.localLink}>
                 24-Hour Walk-In Guide
               </Link>
+              <Link href="/mohawk-craft-visit" className={styles.localLink}>
+                Mohawk Craft Visit FAQ
+              </Link>
               <Link href="/info/scarborough-weed-dispensary" className={styles.localLink}>
                 Scarborough Weed Dispensary
               </Link>

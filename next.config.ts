@@ -34,6 +34,8 @@ const nextConfig: NextConfig = {
       { source: "/info/dispensary-near-me-scarborough/", destination: "/near-me", permanent: true },
       { source: "/info/dispensary-near-me-york", destination: "/near-me", permanent: true },
       { source: "/info/dispensary-near-me-york/", destination: "/near-me", permanent: true },
+      { source: "/visit-faq", destination: "/mohawk-craft-visit", permanent: true },
+      { source: "/visit-faq/", destination: "/mohawk-craft-visit", permanent: true },
     ];
   },
 };

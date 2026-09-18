@@ -50,6 +50,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     cards: [
       { title: "24-Hour Walk-In Guide", href: "/visit", text: "Eglinton East arrival, open-now hours, and Scarborough store details." },
       { title: "Dispensary Near Me FAQ", href: "/near-me", text: "Scarborough / Eglinton East pin FAQ for dispensary near me searches." },
+      { title: "Mohawk Craft Visit FAQ", href: "/mohawk-craft-visit", text: "Retail brand visit FAQ for Mohawk Craft Dispensary / Mohawk Medicine." },
       { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: `Plan the stop around ${localAreas}.` },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Choose the category that matches the visit." },
       { title: "Weed Flower Guide", href: "/resources/weed-flower-guide", text: "Explore the five Weed flower collections." },
@@ -87,6 +88,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     cards: [
       { title: "24-Hour Walk-In Guide", href: "/visit", text: "Open-now hours and Scarborough arrival details for 2655 Eglinton Ave E." },
       { title: "Dispensary Near Me FAQ", href: "/near-me", text: "Eglinton East pin FAQ if you searched dispensary near me in Scarborough." },
+      { title: "Mohawk Craft Visit FAQ", href: "/mohawk-craft-visit", text: "Retail brand visit FAQ for listed store name and hours." },
       { title: "Store Page", href: "/weed-dispensary-toronto/", text: "Use the main store page for address, hours, and contact details." },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Pick the category that matches the visit." },
       { title: "Value Guide", href: "/resources/value-guide", text: "Review Budget, AA, and AAA+ flower notes." },

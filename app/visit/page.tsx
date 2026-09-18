@@ -211,6 +211,9 @@ export default function VisitPage() {
               <Link href="/near-me" className={styles.localLink}>
                 Dispensary Near Me FAQ
               </Link>
+              <Link href="/mohawk-craft-visit" className={styles.localLink}>
+                Mohawk Craft Visit FAQ
+              </Link>
               <Link href="/info/scarborough-weed-dispensary" className={styles.localLink}>
                 Scarborough Weed Dispensary
               </Link>

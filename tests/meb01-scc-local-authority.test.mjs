@@ -75,6 +75,7 @@ test("homepage routing is bounded and protected category separation remains visi
     ["Toronto Weed Dispensary", "/weed-dispensary-toronto/"],
     ["24-Hour Walk-In Guide", "/visit"],
     ["Dispensary Near Me FAQ", "/near-me"],
+    ["Mohawk Craft Visit FAQ", "/mohawk-craft-visit"],
     ["Scarborough Weed Dispensary", "/info/scarborough-weed-dispensary"],
     ["Weed Store Near Eglinton East", "/info/weed-store-near-eglinton-east"],
     ["First Visit to Mohawk Medicine", "/resources/eglinton-east-scarborough-visit-guide"],

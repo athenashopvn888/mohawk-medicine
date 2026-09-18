@@ -66,6 +66,7 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
               <Link href="/items/cigarettes">Cigarettes</Link>
               <Link href="/visit">24-Hour Walk-In Guide</Link>
               <Link href="/near-me">Dispensary Near Me FAQ</Link>
+              <Link href="/mohawk-craft-visit">Mohawk Craft Visit FAQ</Link>
               <Link href="/info/scarborough-weed-dispensary">Scarborough Dispensary</Link>
               <Link href="/info/cheap-weed-scarborough">Cheap Weed Scarborough</Link>
               <Link href="/info/native-cigarettes-scarborough">Native Cigarettes Scarborough</Link>
