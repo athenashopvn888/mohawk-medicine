@@ -1,7 +1,7 @@
 import { STORE_NAP } from "../lib/nap";
 import styles from "./StoreNap.module.css";
 
-export default function StoreNap() {
+export default function StoreNap({ hoursLabel = "Hours" }: { hoursLabel?: string }) {
   return (
     <div className={styles.wrap}>
       <div className={styles.item}>
@@ -29,7 +29,7 @@ export default function StoreNap() {
         </span>
       </div>
       <div className={styles.item}>
-        <span className={styles.label}>Hours</span>
+        <span className={styles.label}>{hoursLabel}</span>
         <span className={styles.value}>{STORE_NAP.hoursLong}</span>
       </div>
     </div>

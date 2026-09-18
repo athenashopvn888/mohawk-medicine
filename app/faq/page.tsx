@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -34,7 +35,7 @@ const FAQS = [
   },
   {
     q: "Do you offer delivery?",
-    a: "The delivery page is being kept as a local update page while delivery details are prepared. Do not rely on delivery until the store confirms availability.",
+    a: "Yes. Local delivery is available from the Eglinton East shop at 2655 Eglinton Ave E. Browse the live delivery menu, then start LIVE ORDER so the dispatcher can confirm availability, range, and timing. Delivery is not listed as 24 hours. The walk-in shop lists Open 24 Hours / 7 Days a Week separately. Use the Scarborough cannabis delivery page at /cannabis-delivery-scarborough for neighbourhood details.",
   },
   {
     q: "What ID is accepted?",
@@ -106,6 +107,10 @@ export default function FAQPage() {
               </details>
             ))}
           </div>
+          <p style={{ marginTop: "24px", fontSize: "14px", color: "#424242", lineHeight: 1.7 }}>
+            For Scarborough / Eglinton East delivery hours, area, and how to order, open the{" "}
+            <Link href="/cannabis-delivery-scarborough">Scarborough cannabis delivery page</Link>.
+          </p>
         </div>
       </div>
       <Footer />

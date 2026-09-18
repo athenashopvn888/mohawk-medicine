@@ -20,6 +20,7 @@ const ALL_LINKS: { href: string; label: string; featured?: boolean }[] = [
   { href: "/items/cigarettes", label: "Cigarettes" },
   { href: "/items/add-ons", label: "Accessories" },
   { href: "/weed-delivery-toronto", label: "Weed Delivery" },
+  { href: "/cannabis-delivery-scarborough", label: "Scarborough Delivery" },
     { href: "/careers/budtender", label: "Join Team", featured: true },
 
   { href: "/visit", label: "Visit" },

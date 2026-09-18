@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FlowerCard from "../components/FlowerCard";
@@ -218,6 +219,11 @@ export default async function TierPage({
 
             <div className={styles.seoBlock}>
               <h3 className={styles.seoHeading}>Scarborough Visit Hubs And Other Flower Tiers</h3>
+              <p className={styles.seoBody}>
+                For Scarborough / Eglinton East delivery, use the{" "}
+                <Link href="/cannabis-delivery-scarborough">cannabis delivery page</Link>. Delivery hours are
+                dispatcher-confirmed and stay separate from 24-hour walk-in hours.
+              </p>
               <ParityHubLinks currentPath={`/${tierSlug}`} includeCorridor />
             </div>
           </div>

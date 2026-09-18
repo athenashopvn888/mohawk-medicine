@@ -24,6 +24,12 @@ export const STORE_NAP = {
   domain: "mohawkmedicine.com",
   hours: "Open 24 Hours",
   hoursLong: "Open 24 Hours / 7 Days a Week",
+  deliveryHours: "Dispatcher confirms current delivery availability",
+  deliveryHoursLong:
+    "Delivery is not listed as 24 hours. The dispatcher confirms whether delivery is available for your Scarborough / Eglinton East address and time before an order is accepted.",
+  deliveryMinimum: "$60 product minimum",
+  deliveryArea:
+    "Local delivery from the Scarborough shop on Eglinton East. The dispatcher confirms whether an address is in range.",
   latitude: 43.7356759,
   longitude: -79.2508842,
   image: "https://mohawkmedicine.com/banners/13_Mohawk_Home_Hero.webp",

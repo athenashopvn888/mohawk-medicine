@@ -16,6 +16,7 @@ const WAVE1_FILES = [
   "app/visit/page.tsx",
   "app/mohawk-craft-visit/page.tsx",
   "app/near-me/page.tsx",
+  "app/cannabis-delivery-scarborough/page.tsx",
   "app/components/GBPLandingPage.tsx",
   "app/[tier]/page.tsx",
 ] as const;
@@ -27,6 +28,7 @@ const HUB_MOUNTS = {
   "app/visit/page.tsx": 'currentPath="/visit"',
   "app/mohawk-craft-visit/page.tsx": 'currentPath="/mohawk-craft-visit"',
   "app/near-me/page.tsx": 'currentPath="/near-me"',
+  "app/cannabis-delivery-scarborough/page.tsx": 'currentPath="/cannabis-delivery-scarborough"',
   "app/components/GBPLandingPage.tsx": 'currentPath="/weed-dispensary-toronto/"',
   "app/[tier]/page.tsx": "currentPath={`/${tierSlug}`}",
 } as const;
@@ -80,7 +82,7 @@ test("each flower tier has a unique Scarborough / Eglinton East H1, title, and F
 test("Wave 1 hub graph is shared and mounted on homepage, visit, brand FAQ, near-me, geo LP, and tiers", () => {
   assert.deepEqual(
     VISIT_HUBS.map((item) => item.href),
-    ["/", "/visit", "/mohawk-craft-visit", "/near-me", "/weed-dispensary-toronto/"],
+    ["/", "/visit", "/mohawk-craft-visit", "/near-me", "/weed-dispensary-toronto/", "/cannabis-delivery-scarborough"],
   );
   assert.deepEqual(
     FLOWER_TIER_HUBS.map((item) => item.href),

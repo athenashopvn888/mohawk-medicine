@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -108,7 +109,7 @@ export default function DeliveryContent() {
   return <main className={styles.main}>
     <Navbar />
     <section className={`${styles.hero} ${styles.heroPlain}`}>
-      <div><p>Mohawk Medicine</p><h1>Weed Delivery in Toronto</h1><span>Browse the shared product catalog. The store confirms current availability and delivery details before an order is accepted.</span></div>
+      <div><p>Mohawk Medicine</p><h1>Weed Delivery in Toronto</h1><span>Browse the shared product catalog. The store confirms current availability and delivery details before an order is accepted. For Scarborough / Eglinton East delivery hours and area, use the <Link href="/cannabis-delivery-scarborough">neighbourhood delivery guide</Link>.</span></div>
     </section>
     <section className={styles.deliveryDetails} aria-label="Mohawk Medicine delivery details"><strong>$60 PRODUCT MINIMUM</strong></section>
     <section className={styles.loyalty} aria-labelledby="loyalty-title">
@@ -117,7 +118,7 @@ export default function DeliveryContent() {
       <ol><li><strong>Qualify</strong><span>Purchase an eligible regular-price ounce or selected two-ounce tier offer.</span></li><li><strong>Return</strong><span>On your next visit, save $30 on an eligible regular-price 28g item in the selected tier.</span></li><li><strong>Use your coupon later</strong><span>A 3g Craft coupon earned with a qualifying $120+ purchase is redeemed on your next order.</span></li><li><strong>Keep access active</strong><span>Make a $50+ purchase within 14 days, or requalify with an eligible full-price purchase.</span></li></ol>
       <aside><strong>Important conditions</strong><p>Complimentary items apply only to regular-price Craft or Exotic ounces—not BC Premium. Loyalty prices are firm and cannot be reduced with points. Loyalty-price orders do not include extra complimentary items. The dispatcher confirms current eligibility and any included item before checkout.</p></aside>
     </section>
-    <section className={styles.howToOrder} aria-labelledby="how-to-order-title"><div><p>HOW TO ORDER</p><h2 id="how-to-order-title">Order with the Mohawk Medicine dispatcher</h2><span>LIVE ORDER connects you with the Mohawk Medicine dispatcher.</span></div><ol><li><strong>Browse the delivery menu</strong><span>Note the product names and weights you want.</span></li><li><strong>Select LIVE ORDER</strong><span>Open Web Chat at the bottom-right and send your choices.</span></li><li><strong>Verify privately if you are new</strong><span>New customers complete the private selfie-with-ID step in Web Chat.</span></li><li><strong>Confirm with the dispatcher</strong><span>The dispatcher confirms availability, delivery details, and next steps.</span></li></ol></section>
+    <section className={styles.howToOrder} aria-labelledby="how-to-order-title"><div><p>HOW TO ORDER</p><h2 id="how-to-order-title">Order with the Mohawk Medicine dispatcher</h2><span>LIVE ORDER connects you with the Mohawk Medicine dispatcher. For Scarborough / Eglinton East hours, area, and walk-in vs delivery, use the <Link href="/cannabis-delivery-scarborough">neighbourhood delivery guide</Link>. Delivery is not listed as 24 hours.</span></div><ol><li><strong>Browse the delivery menu</strong><span>Note the product names and weights you want.</span></li><li><strong>Select LIVE ORDER</strong><span>Open Web Chat at the bottom-right and send your choices.</span></li><li><strong>Verify privately if you are new</strong><span>New customers complete the private selfie-with-ID step in Web Chat.</span></li><li><strong>Confirm with the dispatcher</strong><span>The dispatcher confirms availability, delivery details, and next steps.</span></li></ol></section>
     <section className={styles.catalogShell}>
       <aside className={styles.filters}><h2>Flower tiers</h2>{filters.map((tier) => <button type="button" key={tier} className={filter === tier ? styles.active : ""} onClick={() => setFilter(tier)}>{tier}<span>{tier === "ALL" ? products.length : products.filter((product) => product.tier === tier).length}</span></button>)}</aside>
       <div className={styles.catalog}>

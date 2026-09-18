@@ -199,6 +199,9 @@ export default function MohawkCraftVisitPage() {
               <Link href="/weed-dispensary-toronto/" className={styles.ctaSecondary}>
                 Weed Dispensary Scarborough
               </Link>
+              <Link href="/cannabis-delivery-scarborough" className={styles.ctaSecondary}>
+                Scarborough Delivery
+              </Link>
             </div>
             <div className={styles.localLinks}>
               <Link href="/" className={styles.localLink}>
@@ -206,6 +209,9 @@ export default function MohawkCraftVisitPage() {
               </Link>
               <Link href="/weed-dispensary-toronto/" className={styles.localLink}>
                 Weed Dispensary Scarborough
+              </Link>
+              <Link href="/cannabis-delivery-scarborough" className={styles.localLink}>
+                Scarborough Cannabis Delivery
               </Link>
               <Link href="/visit" className={styles.localLink}>
                 24-Hour Walk-In Guide

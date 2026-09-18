@@ -71,6 +71,7 @@ const CATEGORIES = [
 ];
 
 const HELPFUL_PAGES = [
+  { name: "Scarborough Cannabis Delivery", href: "/cannabis-delivery-scarborough", description: "Local Eglinton East delivery hours, area, and how to order." },
   { name: "Weed Dispensary Scarborough", href: "/weed-dispensary-toronto/", description: "Confirm the live Scarborough / Eglinton East weed hub." },
   { name: "24-Hour Walk-In Guide", href: "/visit", description: "Scarborough / Eglinton East open-now arrival details." },
   { name: "Dispensary Near Me FAQ", href: "/near-me", description: "Eglinton East arrival FAQ for Scarborough near-me searches." },
@@ -113,7 +114,7 @@ const FAQS = [
   },
   {
     q: "Do you offer delivery?",
-    a: "Yes! We offer local delivery. Visit our Delivery page for details.",
+    a: "Yes. Mohawk Medicine offers local cannabis delivery from 2655 Eglinton Ave E in Scarborough. Delivery hours are confirmed by the dispatcher and are separate from 24-hour walk-in hours. Use /cannabis-delivery-scarborough for area, minimum, and how to order.",
   },
   {
     q: "What is the listed store name at 2655 Eglinton Ave E?",
