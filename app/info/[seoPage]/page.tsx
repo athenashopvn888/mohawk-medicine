@@ -13,6 +13,7 @@ const LOCAL_GUIDES = [
   { href: "/weed-dispensary-toronto/", label: "Toronto Weed Dispensary" },
   { href: "/visit", label: "24-Hour Walk-In Guide" },
   { href: "/near-me", label: "Dispensary Near Me FAQ" },
+  { href: "/mohawk-craft-visit", label: "Mohawk Craft Visit FAQ" },
   { href: "/info/scarborough-weed-dispensary", label: "Scarborough Weed Dispensary" },
   { href: "/info/weed-store-near-eglinton-east", label: "Weed Store Near Eglinton East" },
   { href: "/resources/eglinton-east-scarborough-visit-guide", label: "Eglinton East Visit Guide" },

@@ -14,12 +14,13 @@ const seoPages = read("app/lib/seoPages.ts");
 const visitGuide = read("app/resources/resourceData.ts");
 const walkInGuide = read("app/visit/page.tsx");
 const nearMeFaq = read("app/near-me/page.tsx");
+const brandVisitFaq = read("app/mohawk-craft-visit/page.tsx");
 const nativeCigarettes = read("app/info/native-cigarettes-scarborough/page.tsx");
 
 const INVENTED_NATIVE = /Indigenous|First Nation|on reserve|healing|traditional medicine|ceremonial|Mohawk Nation|sacred/i;
 
 test("visible NAP blocks share the same MEB01 facts", () => {
-  for (const source of [home, footer, contact, torontoPage, seoTemplate, walkInGuide, nearMeFaq]) {
+  for (const source of [home, footer, contact, torontoPage, seoTemplate, walkInGuide, nearMeFaq, brandVisitFaq]) {
     assert.match(source, /StoreMap|mapEmbedUrl|Mohawk Craft Dispensary|legalName/);
   }
   assert.match(home, /\+1 \(437\) 524-9335|STORE_NAP\.phoneDisplay/);
@@ -67,4 +68,12 @@ test("B11 near-me FAQ stays neighbourhood door-test only", () => {
   assert.match(nearMeFaq, /href="\/weed-dispensary-toronto\/"/);
   assert.match(nearMeFaq, /href="\/visit"/);
   assert.doesNotMatch(nearMeFaq, INVENTED_NATIVE);
+});
+
+test("B17 brand visit FAQ stays retail voice only", () => {
+  assert.match(brandVisitFaq, /Mohawk Craft Dispensary Visit FAQ/);
+  assert.match(brandVisitFaq, /const CANONICAL = "https:\/\/mohawkmedicine\.com\/mohawk-craft-visit"/);
+  assert.match(brandVisitFaq, /href="\/weed-dispensary-toronto\/"/);
+  assert.match(brandVisitFaq, /href="\/"/);
+  assert.doesNotMatch(brandVisitFaq, INVENTED_NATIVE);
 });
