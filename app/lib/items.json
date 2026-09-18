@@ -36,6 +36,18 @@
     "promoImage": "CIG_2_FOR_5"
   },
   {
+    "sku": "868",
+    "name": "*NEW* AFGHAN HASH",
+    "slug": "new-afghan-hash",
+    "category": "CONCENTRATES",
+    "type": "",
+    "thc": "",
+    "mg": "",
+    "price": "$25",
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/Afghan-Hash.webp",
+    "promoImage": null
+  },
+  {
     "sku": "999",
     "name": "10 X PREMIUM MIX CIGARETTES",
     "slug": "10-x-premium-mix-cigarettes",

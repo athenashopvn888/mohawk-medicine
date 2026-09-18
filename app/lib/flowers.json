@@ -18,6 +18,24 @@
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/105_SPACE_COOKIES_(SHREDS).webp"
   },
   {
+    "sku": "106",
+    "name": "GRANDADDY PURPLE (SHREDS)",
+    "slug": "grandaddy-purple-shreds",
+    "tier": "BUDGET",
+    "type": "indica",
+    "isHot": false,
+    "isSale": false,
+    "thc": "24%",
+    "price3g": null,
+    "price5g": null,
+    "price14g": null,
+    "price28g": {
+      "regular": 40,
+      "sale": null
+    },
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/106_GRANDADDY_PURPLE_(SHREDS).webp"
+  },
+  {
     "sku": "107",
     "name": "NORTHERN LIGHTS (SHREDS)",
     "slug": "northern-lights-shreds",
@@ -50,11 +68,29 @@
     },
     "price5g": null,
     "price14g": null,
+    "price28g": null,
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/172-LAVENDER-KUSH-SHOWCASE.webp"
+  },
+  {
+    "sku": "184",
+    "name": "APPLE KUSH",
+    "slug": "apple-kush",
+    "tier": "BUDGET",
+    "type": "indica",
+    "isHot": false,
+    "isSale": false,
+    "thc": "26%",
+    "price3g": {
+      "regular": 10,
+      "sale": null
+    },
+    "price5g": null,
+    "price14g": null,
     "price28g": {
       "regular": 50,
       "sale": null
     },
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/172-LAVENDER-KUSH-SHOWCASE.webp"
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/184_APPLE_KUSH_showcase_600x600.webp"
   },
   {
     "sku": "185",
@@ -71,7 +107,10 @@
     },
     "price5g": null,
     "price14g": null,
-    "price28g": null,
+    "price28g": {
+      "regular": 50,
+      "sale": null
+    },
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/185_HALIE_BERRY_S_showcase_600x600.webp"
   },
   {
@@ -89,7 +128,10 @@
     },
     "price5g": null,
     "price14g": null,
-    "price28g": null,
+    "price28g": {
+      "regular": 50,
+      "sale": null
+    },
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/187_CHOCOLATE_KUSH.webp"
   },
   {
@@ -106,7 +148,10 @@
       "regular": 20,
       "sale": null
     },
-    "price14g": null,
+    "price14g": {
+      "regular": 45,
+      "sale": null
+    },
     "price28g": null,
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/204-ROYAL-GORILLA2.webp"
   },
@@ -145,7 +190,10 @@
       "regular": 20,
       "sale": null
     },
-    "price14g": null,
+    "price14g": {
+      "regular": 45,
+      "sale": null
+    },
     "price28g": null,
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/211-BC-KUSH-99225.webp"
   },
@@ -349,6 +397,27 @@
     "price14g": null,
     "price28g": null,
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/99349_310_MASTER_KUSH.webp"
+  },
+  {
+    "sku": "371",
+    "name": "PURPLE GRAPES (S)",
+    "slug": "purple-grapes-s",
+    "tier": "AAA+",
+    "type": "sativa",
+    "isHot": false,
+    "isSale": false,
+    "thc": "32%",
+    "price3g": {
+      "regular": 20,
+      "sale": null
+    },
+    "price5g": {
+      "regular": 30,
+      "sale": null
+    },
+    "price14g": null,
+    "price28g": null,
+    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/371_PURPLE_GRAPES_(S).webp"
   },
   {
     "sku": "376",
@@ -576,24 +645,6 @@
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/99258-539-PEANUT-BUTTER-ROCKSTAR.webp"
   },
   {
-    "sku": "542",
-    "name": "PINK VELVET",
-    "slug": "pink-velvet",
-    "tier": "EXOTIC",
-    "type": "indica",
-    "isHot": false,
-    "isSale": false,
-    "thc": "39%",
-    "price3g": null,
-    "price5g": {
-      "regular": 60,
-      "sale": null
-    },
-    "price14g": null,
-    "price28g": null,
-    "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/505-542PINK-VELVET.webp"
-  },
-  {
     "sku": "563",
     "name": "PURPLE SKUNK",
     "slug": "purple-skunk",
@@ -759,7 +810,10 @@
       "regular": 20,
       "sale": null
     },
-    "price5g": null,
+    "price5g": {
+      "regular": 30,
+      "sale": null
+    },
     "price14g": null,
     "price28g": null,
     "image": ""
@@ -956,7 +1010,10 @@
     "isHot": false,
     "isSale": false,
     "thc": "",
-    "price3g": null,
+    "price3g": {
+      "regular": 30,
+      "sale": null
+    },
     "price5g": {
       "regular": 45,
       "sale": null
@@ -1024,10 +1081,7 @@
       "regular": 60,
       "sale": null
     },
-    "price14g": {
-      "regular": 140,
-      "sale": null
-    },
+    "price14g": null,
     "price28g": null,
     "image": "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/502_ALIEN_SMACK_PINK_showcase.webp"
   },
@@ -1065,7 +1119,7 @@
     "isSale": false,
     "thc": "36%",
     "price3g": {
-      "regular": 45,
+      "regular": 40,
       "sale": null
     },
     "price5g": {
@@ -1086,7 +1140,7 @@
     "isSale": false,
     "thc": "",
     "price3g": {
-      "regular": 45,
+      "regular": 40,
       "sale": null
     },
     "price5g": {
