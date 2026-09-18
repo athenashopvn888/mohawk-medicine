@@ -88,7 +88,8 @@ export function GBPLandingPage() {
         </p>
         <p className={styles.infoText}>
           For 24-hour walk-in arrival on Eglinton East, use the{" "}
-          <Link href="/visit">24-hour Scarborough walk-in guide</Link>. For a first-stop overview, use{" "}
+          <Link href="/visit">24-hour Scarborough walk-in guide</Link>. For dispensary near me / Scarborough pin questions, use the{" "}
+          <Link href="/near-me">Eglinton East arrival FAQ</Link>. For a first-stop overview, use{" "}
           <Link href="/resources/eglinton-east-scarborough-visit-guide">First Visit to Mohawk Medicine</Link>.
         </p>
       </section>

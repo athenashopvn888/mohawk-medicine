@@ -74,6 +74,7 @@ test("homepage routing is bounded and protected category separation remains visi
   for (const [label, href] of [
     ["Toronto Weed Dispensary", "/weed-dispensary-toronto/"],
     ["24-Hour Walk-In Guide", "/visit"],
+    ["Dispensary Near Me FAQ", "/near-me"],
     ["Scarborough Weed Dispensary", "/info/scarborough-weed-dispensary"],
     ["Weed Store Near Eglinton East", "/info/weed-store-near-eglinton-east"],
     ["First Visit to Mohawk Medicine", "/resources/eglinton-east-scarborough-visit-guide"],
@@ -90,7 +91,8 @@ test("homepage routing is bounded and protected category separation remains visi
 });
 
 test("held routes and slash convention are unchanged", () => {
-  assert.doesNotMatch(redirects, /dispensary-near-me-scarborough/);
+  assert.match(redirects, /source: "\/info\/dispensary-near-me-scarborough"/);
+  assert.match(redirects, /destination: "\/near-me"/);
   assert.match(home, /href: "\/weed-dispensary-toronto\/"/);
   assert.match(torontoPage, /`https:\/\/\$\{gbpLocation\.domain\}\/\$\{gbpLocation\.slug\}\/`/);
 });
