@@ -17,6 +17,8 @@ const nextConfig: NextConfig = {
       { source: "/aa", destination: "/aa-weed", permanent: true },
       { source: "/budget", destination: "/budget-weed", permanent: true },
       { source: "/delivery", destination: "/weed-delivery-toronto", permanent: true },
+      { source: "/weed-delivery-eglinton-east", destination: "/cannabis-delivery-scarborough", permanent: true },
+      { source: "/weed-delivery-eglinton-east/", destination: "/cannabis-delivery-scarborough", permanent: true },
       { source: "/resources/flower-guide", destination: "/resources/weed-flower-guide", permanent: true },
       { source: "/blog", destination: "/", permanent: true },
       { source: "/blog/:path*", destination: "/", permanent: true },

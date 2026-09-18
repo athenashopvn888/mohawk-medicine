@@ -12,6 +12,7 @@ import styles from "./seo.module.css";
 
 const LOCAL_GUIDES = [
   { href: "/weed-dispensary-toronto/", label: "Weed Dispensary Scarborough" },
+  { href: "/cannabis-delivery-scarborough", label: "Scarborough Cannabis Delivery" },
   { href: "/visit", label: "24-Hour Walk-In Guide" },
   { href: "/near-me", label: "Dispensary Near Me FAQ" },
   { href: "/mohawk-craft-visit", label: "Mohawk Craft Visit FAQ" },

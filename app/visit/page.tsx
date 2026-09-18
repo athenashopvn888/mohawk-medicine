@@ -214,6 +214,9 @@ export default function VisitPage() {
               <Link href="/weed-dispensary-toronto/" className={styles.localLink}>
                 Weed Dispensary Scarborough
               </Link>
+              <Link href="/cannabis-delivery-scarborough" className={styles.localLink}>
+                Scarborough Cannabis Delivery
+              </Link>
               <Link href="/near-me" className={styles.localLink}>
                 Dispensary Near Me FAQ
               </Link>

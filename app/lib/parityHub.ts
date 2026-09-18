@@ -14,6 +14,7 @@ export const VISIT_HUBS = [
   { href: "/mohawk-craft-visit", label: "Mohawk Craft Visit FAQ" },
   { href: "/near-me", label: "Dispensary Near Me FAQ" },
   { href: "/weed-dispensary-toronto/", label: "Weed Dispensary Scarborough" },
+  { href: "/cannabis-delivery-scarborough", label: "Scarborough Cannabis Delivery" },
 ] as const;
 
 export const CORRIDOR_HUB = {

@@ -16,7 +16,7 @@ type ParityHubLinksProps = {
 export default function ParityHubLinks({
   currentPath,
   includeCorridor = false,
-  lead = "Use the Scarborough walk-in hubs and the five Weed flower pages for this Eglinton East shop. Each flower tier keeps its own *-weed URL.",
+  lead = "Use the Scarborough walk-in hubs, the Eglinton East delivery page, and the five Weed flower pages for this shop. Each flower tier keeps its own *-weed URL.",
 }: ParityHubLinksProps) {
   const visitLinks = VISIT_HUBS.filter((item) => !isCurrentHubPath(item.href, currentPath));
   const tierLinks = FLOWER_TIER_HUBS.filter((item) => !isCurrentHubPath(item.href, currentPath));
