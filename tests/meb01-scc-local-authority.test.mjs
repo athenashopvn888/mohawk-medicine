@@ -72,7 +72,7 @@ test("approved MEB01 Scarborough page stays borough-level", () => {
 
 test("homepage routing is bounded and protected category separation remains visible", () => {
   for (const [label, href] of [
-    ["Toronto Weed Dispensary", "/weed-dispensary-toronto/"],
+    ["Weed Dispensary Scarborough", "/weed-dispensary-toronto/"],
     ["24-Hour Walk-In Guide", "/visit"],
     ["Dispensary Near Me FAQ", "/near-me"],
     ["Mohawk Craft Visit FAQ", "/mohawk-craft-visit"],
@@ -80,8 +80,8 @@ test("homepage routing is bounded and protected category separation remains visi
     ["Weed Store Near Eglinton East", "/info/weed-store-near-eglinton-east"],
     ["First Visit to Mohawk Medicine", "/resources/eglinton-east-scarborough-visit-guide"],
     ["Cheap Weed in Scarborough", "/info/cheap-weed-scarborough"],
-    ["Native Cigarettes in Scarborough", "/info/native-cigarettes-scarborough"],
-    ["Nicotine Vapes in Scarborough", "/info/nicotine-vapes-scarborough"],
+    ["Native Cigarettes in Scarborough", "/native-cigarettes-scarborough"],
+    ["Nicotine Vapes in Scarborough", "/nicotine-vape-scarborough"],
     ["Mohawk Medicine Resources", "/resources"],
   ]) {
     assert.ok(home.includes(`name: "${label}", href: "${href}"`));

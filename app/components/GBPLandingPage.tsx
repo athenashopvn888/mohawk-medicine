@@ -85,7 +85,9 @@ export function GBPLandingPage() {
         <p className={styles.infoText}>
           For the exact Scarborough storefront context, use the{" "}
           <Link href="/info/scarborough-weed-dispensary">Scarborough Weed Dispensary</Link> page. For Eglinton Avenue East context, use the{" "}
-          <Link href="/info/weed-store-near-eglinton-east">Eglinton East store page</Link>. Adults looking for category information can continue to the five Weed tiers or the separate cigarette and nicotine-vape guides.
+          <Link href="/info/weed-store-near-eglinton-east">Eglinton East store page</Link>. Adults looking for category information can continue to the five Weed tiers or the separate{" "}
+          <Link href="/native-cigarettes-scarborough">Native cigarettes Scarborough guide</Link> and{" "}
+          <Link href="/nicotine-vape-scarborough">nicotine vape Scarborough guide</Link>.
         </p>
         <p className={styles.infoText}>
           For 24-hour walk-in arrival on Eglinton East, use the{" "}

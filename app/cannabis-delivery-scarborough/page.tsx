@@ -287,6 +287,12 @@ export default function CannabisDeliveryScarboroughPage() {
               <Link href="/budget-weed" className={styles.localLink}>
                 Budget Weed
               </Link>
+              <Link href="/native-cigarettes-scarborough" className={styles.localLink}>
+                Native Cigarettes Scarborough
+              </Link>
+              <Link href="/nicotine-vape-scarborough" className={styles.localLink}>
+                Nicotine Vapes Scarborough
+              </Link>
               <Link href="/info/weed-store-near-eglinton-east" className={styles.localLink}>
                 Weed Store Near Eglinton East
               </Link>

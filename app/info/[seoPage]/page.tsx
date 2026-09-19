@@ -16,6 +16,8 @@ const LOCAL_GUIDES = [
   { href: "/visit", label: "24-Hour Walk-In Guide" },
   { href: "/near-me", label: "Dispensary Near Me FAQ" },
   { href: "/mohawk-craft-visit", label: "Mohawk Craft Visit FAQ" },
+  { href: "/native-cigarettes-scarborough", label: "Native Cigarettes Scarborough" },
+  { href: "/nicotine-vape-scarborough", label: "Nicotine Vapes Scarborough" },
   { href: "/info/scarborough-weed-dispensary", label: "Scarborough Weed Dispensary" },
   { href: "/info/weed-store-near-eglinton-east", label: "Weed Store Near Eglinton East" },
   { href: "/resources/eglinton-east-scarborough-visit-guide", label: "Eglinton East Visit Guide" },

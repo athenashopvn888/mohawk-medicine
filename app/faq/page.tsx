@@ -110,6 +110,10 @@ export default function FAQPage() {
           <p style={{ marginTop: "24px", fontSize: "14px", color: "#424242", lineHeight: 1.7 }}>
             For Scarborough / Eglinton East delivery hours, area, and how to order, open the{" "}
             <Link href="/cannabis-delivery-scarborough">Scarborough cannabis delivery page</Link>.
+            For a 24-hour walk-in, use the <Link href="/visit">24-hour Scarborough walk-in guide</Link>.
+            Native cigarettes and nicotine vapes have separate guides at{" "}
+            <Link href="/native-cigarettes-scarborough">/native-cigarettes-scarborough</Link> and{" "}
+            <Link href="/nicotine-vape-scarborough">/nicotine-vape-scarborough</Link>.
           </p>
         </div>
       </div>

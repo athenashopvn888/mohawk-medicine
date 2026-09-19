@@ -15,7 +15,7 @@ const visitGuide = read("app/resources/resourceData.ts");
 const walkInGuide = read("app/visit/page.tsx");
 const nearMeFaq = read("app/near-me/page.tsx");
 const brandVisitFaq = read("app/mohawk-craft-visit/page.tsx");
-const nativeCigarettes = read("app/info/native-cigarettes-scarborough/page.tsx");
+const nativeCigarettes = read("app/native-cigarettes-scarborough/page.tsx");
 
 const INVENTED_NATIVE = /Indigenous|First Nation|on reserve|healing|traditional medicine|ceremonial|Mohawk Nation|sacred/i;
 
@@ -32,11 +32,13 @@ test("visible NAP blocks share the same MEB01 facts", () => {
 
 test("Eglinton East landing keeps existing nearby-area door-test language only", () => {
   const start = seoPages.indexOf('slug: "weed-store-near-eglinton-east"');
-  const eglinton = seoPages.slice(start);
-  assert.ok(start >= 0);
-  assert.match(eglinton, /Eglinton East, Kennedy Road, Brimley Road, Golden Mile, Birchmount, Warden/);
-  assert.match(eglinton, /Door-Test Details On Eglinton Avenue East/);
+  const end = seoPages.indexOf("export function getSeoPageBySlug");
+  const eglinton = seoPages.slice(start, end);
+  assert.ok(start >= 0 && end > start);
+  assert.match(eglinton, /Arrive Along Eglinton East Toward Brimley/);
+  assert.match(eglinton, /Brimley Rd/);
   assert.match(eglinton, /\+1 \(437\) 524-9335/);
+  assert.doesNotMatch(eglinton, /Kennedy|Golden Mile|Birchmount|Warden/);
   assert.doesNotMatch(eglinton, INVENTED_NATIVE);
 });
 

@@ -49,6 +49,14 @@ const FAQS = [
     q: "What does this Scarborough dispensary sell?",
     a: "This is a retail dispensary listing flower tiers, pre-rolls, edibles, THC vapes, nicotine vapes, concentrates, accessories, and cigarettes. Check the current category page before visiting. Product mix and prices can change.",
   },
+  {
+    q: "Is a late-night walk-in on Eglinton East treated as open now?",
+    a: "Yes, when the store listing says Open 24 Hours / 7 Days a Week. A late-night or early-morning visit at 2655 Eglinton Ave E is treated as an open-now walk-in on that listing. Bring valid 19+ government photo ID. Call +1 (437) 524-9335 if you want to confirm the stop.",
+  },
+  {
+    q: "Do 24-hour hours apply to cannabis delivery too?",
+    a: "No. Walk-in hours and delivery hours are separate. The Eglinton East storefront lists Open 24 Hours / 7 Days a Week for walk-in shopping only. Delivery is dispatcher-confirmed and is not listed as 24 hours. Use the Scarborough cannabis delivery page for delivery questions.",
+  },
 ];
 
 const pageSchema = {
@@ -172,7 +180,10 @@ export default function VisitPage() {
             </p>
             <p>
               Cigarette listings are on the{" "}
-              <Link href="/items/cigarettes">cigarettes menu</Link>. Use the{" "}
+              <Link href="/items/cigarettes">cigarettes menu</Link> and the{" "}
+              <Link href="/native-cigarettes-scarborough">Native cigarettes Scarborough guide</Link>.
+              Nicotine vapes stay on the{" "}
+              <Link href="/nicotine-vape-scarborough">nicotine vape Scarborough guide</Link>. Use the{" "}
               <Link href="/">homepage</Link> to start with flower tiers or other categories. This
               page is a walk-in retail guide only.
             </p>
@@ -246,6 +257,12 @@ export default function VisitPage() {
               </Link>
               <Link href="/resources/eglinton-east-scarborough-visit-guide" className={styles.localLink}>
                 First Visit Guide
+              </Link>
+              <Link href="/native-cigarettes-scarborough" className={styles.localLink}>
+                Native Cigarettes Scarborough
+              </Link>
+              <Link href="/nicotine-vape-scarborough" className={styles.localLink}>
+                Nicotine Vapes Scarborough
               </Link>
               <Link href="/items/cigarettes" className={styles.localLink}>
                 Cigarettes Menu

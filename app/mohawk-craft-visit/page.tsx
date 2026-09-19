@@ -216,6 +216,12 @@ export default function MohawkCraftVisitPage() {
               <Link href="/visit" className={styles.localLink}>
                 24-Hour Walk-In Guide
               </Link>
+              <Link href="/native-cigarettes-scarborough" className={styles.localLink}>
+                Native Cigarettes Scarborough
+              </Link>
+              <Link href="/nicotine-vape-scarborough" className={styles.localLink}>
+                Nicotine Vapes Scarborough
+              </Link>
               <Link href="/near-me" className={styles.localLink}>
                 Dispensary Near Me FAQ
               </Link>
