@@ -72,7 +72,7 @@ test("approved MEB01 Scarborough page stays borough-level", () => {
 
 test("homepage routing is bounded and protected category separation remains visible", () => {
   for (const [label, href] of [
-    ["Toronto Weed Dispensary", "/weed-dispensary-toronto/"],
+    ["Weed Dispensary Scarborough", "/weed-dispensary-toronto/"],
     ["24-Hour Walk-In Guide", "/visit"],
     ["Dispensary Near Me FAQ", "/near-me"],
     ["Mohawk Craft Visit FAQ", "/mohawk-craft-visit"],
