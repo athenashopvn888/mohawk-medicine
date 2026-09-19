@@ -90,6 +90,9 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       { title: "Dispensary Near Me FAQ", href: "/near-me", text: "Eglinton East pin FAQ if you searched dispensary near me in Scarborough." },
       { title: "Mohawk Craft Visit FAQ", href: "/mohawk-craft-visit", text: "Retail brand visit FAQ for listed store name and hours." },
       { title: "Store Page", href: "/weed-dispensary-toronto/", text: "Use the main store page for address, hours, and contact details." },
+      { title: "Scarborough Cannabis Delivery", href: "/cannabis-delivery-scarborough", text: "Local Eglinton East delivery hours, area, and how to order." },
+      { title: "Native Cigarettes Scarborough", href: "/native-cigarettes-scarborough", text: "Retail cigarette guide for the Eglinton East counter." },
+      { title: "Nicotine Vapes Scarborough", href: "/nicotine-vape-scarborough", text: "Nicotine vape guide, separate from THC vapes." },
       { title: "Menu Guide", href: "/resources/menu-guide", text: "Pick the category that matches the visit." },
       { title: "Value Guide", href: "/resources/value-guide", text: "Review Budget, AA, and AAA+ flower notes." },
     ],
@@ -278,6 +281,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     intro:
       "If the visit includes cigarettes, start with brand and price first. This guide keeps Native cigarettes, Backwoods, grabba, pouches, and mixed smoke items separate from cannabis category browsing.",
     cards: [
+      { title: "Native Cigarettes Scarborough", href: "/native-cigarettes-scarborough", text: "Open the live Scarborough / Eglinton East Native cigarettes retail guide." },
       { title: "Cigarette Category", href: "/items/cigarettes", text: "Open the current cigarette category." },
       { title: "Native Smokes Overview", href: "/resources/native-smokes", text: "Return to the shorter price guide." },
       { title: "Local Visit Guide", href: "/resources/eglinton-east-scarborough-visit-guide", text: "Plan the store stop around the local area." },

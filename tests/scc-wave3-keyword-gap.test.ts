@@ -109,6 +109,48 @@ test("Wave 3 copy prefers Scarborough / Eglinton East and stays retail voice", (
   }
 });
 
+test("Master GO: four Scarborough / Eglinton East pillars have FAQs and hub cards", () => {
+  const cig = read(CIG_PAGE);
+  const nic = read(NIC_PAGE);
+  const visit = read(VISIT_PAGE);
+  const delivery = read("app/cannabis-delivery-scarborough/page.tsx");
+  const home = read("app/page.tsx");
+  const footer = read("app/components/Footer.tsx");
+  const resources = read("app/resources/resourceData.ts");
+
+  for (const [name, page] of [
+    ["cig", cig],
+    ["nic", nic],
+    ["visit", visit],
+    ["delivery", delivery],
+  ] as const) {
+    assert.match(page, /"@type": "FAQPage"/, `${name} needs FAQ schema`);
+    assert.match(page, /<h1 className=\{styles\.h1\}>/);
+    assert.match(page, /Scarborough/);
+    assert.match(page, /Eglinton/);
+    assert.match(page, /Adults 19\+|19\+/);
+    assert.match(page, /href="\/weed-delivery-toronto"|href="\/cannabis-delivery-scarborough"/);
+    assert.doesNotMatch(page, BLOCKED, name);
+    assert.doesNotMatch(page, INVENTED_NATIVE, name);
+  }
+
+  assert.match(home, /name: "24-Hour Walk-In Guide", href: "\/visit"/);
+  assert.match(home, /name: "Scarborough Cannabis Delivery", href: "\/cannabis-delivery-scarborough"/);
+  assert.match(home, /name: "Native Cigarettes in Scarborough", href: "\/native-cigarettes-scarborough"/);
+  assert.match(home, /name: "Nicotine Vapes in Scarborough", href: "\/nicotine-vape-scarborough"/);
+  assert.match(home, /cigaretteHref="\/native-cigarettes-scarborough"/);
+  assert.match(home, /nicotineHref="\/nicotine-vape-scarborough"/);
+
+  assert.match(footer, /href="\/visit">24-Hour Walk-In Guide</);
+  assert.match(footer, /href="\/cannabis-delivery-scarborough">Scarborough Delivery</);
+  assert.match(footer, /href="\/native-cigarettes-scarborough">Native Cigarettes Scarborough</);
+  assert.match(footer, /href="\/nicotine-vape-scarborough">Nicotine Vapes Scarborough</);
+
+  assert.match(resources, /href: "\/native-cigarettes-scarborough"/);
+  assert.match(resources, /slug: "native-smokes\/native-cigarettes-guide"[\s\S]*href: "\/native-cigarettes-scarborough"/);
+  assert.doesNotMatch(read("app/lib/gbp-location.ts"), /LEARN_MORE|GBP Updates/);
+});
+
 test("Wave 3 LPs link homepage, visit, brand FAQ, geo, *-weed, and delivery", () => {
   for (const file of [CIG_PAGE, NIC_PAGE]) {
     const page = read(file);
