@@ -73,15 +73,15 @@ const CATEGORIES = [
 const HELPFUL_PAGES = [
   { name: "Scarborough Cannabis Delivery", href: "/cannabis-delivery-scarborough", description: "Local Eglinton East delivery hours, area, and how to order." },
   { name: "Weed Dispensary Scarborough", href: "/weed-dispensary-toronto/", description: "Confirm the live Scarborough / Eglinton East weed hub." },
-  { name: "24-Hour Walk-In Guide", href: "/visit", description: "Scarborough / Eglinton East open-now arrival details." },
+  { name: "24-Hour Walk-In Guide", href: "/visit", description: "24-hour Scarborough / Eglinton East open-now walk-in. Listed Open 24 Hours / 7 Days a Week." },
   { name: "Dispensary Near Me FAQ", href: "/near-me", description: "Eglinton East arrival FAQ for Scarborough near-me searches." },
   { name: "Mohawk Craft Visit FAQ", href: "/mohawk-craft-visit", description: "Retail brand visit FAQ for Mohawk Craft Dispensary / Mohawk Medicine." },
   { name: "Scarborough Weed Dispensary", href: "/info/scarborough-weed-dispensary", description: "Review Scarborough storefront information." },
   { name: "Weed Store Near Eglinton East", href: "/info/weed-store-near-eglinton-east", description: "Review Eglinton East store context." },
   { name: "First Visit to Mohawk Medicine", href: "/resources/eglinton-east-scarborough-visit-guide", description: "Plan a visit around the exact Eglinton Ave E address." },
   { name: "Cheap Weed in Scarborough", href: "/info/cheap-weed-scarborough", description: "Open the value-intent guide and current tier links." },
-  { name: "Native Cigarettes in Scarborough", href: "/info/native-cigarettes-scarborough", description: "Open the cigarette-information guide." },
-  { name: "Nicotine Vapes in Scarborough", href: "/info/nicotine-vapes-scarborough", description: "Open the nicotine guide, separate from THC vape." },
+  { name: "Native Cigarettes in Scarborough", href: "/native-cigarettes-scarborough", description: "Open the cigarette-information guide." },
+  { name: "Nicotine Vapes in Scarborough", href: "/nicotine-vape-scarborough", description: "Open the nicotine guide, separate from THC vape." },
   { name: "Mohawk Medicine Resources", href: "/resources", description: "Browse the store's informational guides." },
 ];
 
@@ -99,6 +99,10 @@ const FAQS = [
   {
     q: "What are Mohawk Medicine's hours?",
     a: "Mohawk Medicine at 2655 Eglinton Ave E, Toronto is open 24 hours a day, 7 days a week. We never close.",
+  },
+  {
+    q: "Is Mohawk Medicine a 24-hour dispensary in Scarborough?",
+    a: "Yes. The walk-in shop at 2655 Eglinton Ave E on Eglinton East lists Open 24 Hours / 7 Days a Week. Use the 24-hour walk-in guide at /visit for open-now arrival. Delivery hours are separate and dispatcher-confirmed.",
   },
   {
     q: "Where is Mohawk Medicine located?",
@@ -257,8 +261,8 @@ export default function HomePage() {
       <SmokePilotSpotlight
         storeName="Mohawk Medicine"
         locationLabel="Scarborough"
-        cigaretteHref="/info/native-cigarettes-scarborough"
-        nicotineHref="/info/nicotine-vapes-scarborough"
+        cigaretteHref="/native-cigarettes-scarborough"
+        nicotineHref="/nicotine-vape-scarborough"
       />
 
       {/* E) HOT RIGHT NOW BANNER */}

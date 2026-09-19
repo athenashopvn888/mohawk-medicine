@@ -19,6 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/weed-delivery-toronto`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/cannabis-delivery-scarborough`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/native-cigarettes-scarborough`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/nicotine-vape-scarborough`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
   ];
 
   /* Tier pages */

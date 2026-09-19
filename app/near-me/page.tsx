@@ -49,6 +49,10 @@ const FAQS = [
     q: "What are the hours for this Scarborough walk-in?",
     a: "The store lists Open 24 Hours / 7 Days a Week. Adults 19+ can walk in without an appointment. Call +1 (437) 524-9335 if you want to confirm the stop before a special trip.",
   },
+  {
+    q: "Is the dispensary near me in Scarborough open now?",
+    a: "The Eglinton East shop lists Open 24 Hours / 7 Days a Week, so a late-night or early-morning walk-in is treated as an open-now visit on that listing. Use the 24-hour Scarborough walk-in guide for arrival details. Delivery hours are separate.",
+  },
 ];
 
 const pageSchema = {
@@ -154,7 +158,8 @@ export default function NearMePage() {
             <p>
               For late-night open-now arrival on Eglinton East, use the{" "}
               <Link href="/visit">24-hour Scarborough walk-in guide</Link>. This page stays the near-me /
-              Scarborough pin FAQ.
+              Scarborough pin FAQ. Native cigarettes and nicotine vapes have their own Scarborough
+              guides if that is the reason for the stop.
             </p>
           </article>
 
@@ -212,6 +217,12 @@ export default function NearMePage() {
               </Link>
               <Link href="/visit" className={styles.localLink}>
                 24-Hour Walk-In Guide
+              </Link>
+              <Link href="/native-cigarettes-scarborough" className={styles.localLink}>
+                Native Cigarettes Scarborough
+              </Link>
+              <Link href="/nicotine-vape-scarborough" className={styles.localLink}>
+                Nicotine Vapes Scarborough
               </Link>
               <Link href="/mohawk-craft-visit" className={styles.localLink}>
                 Mohawk Craft Visit FAQ

@@ -3,10 +3,9 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 
 const route = readFileSync(
-  new URL("../app/info/nicotine-vapes-scarborough/page.tsx", import.meta.url),
+  new URL("../app/nicotine-vape-scarborough/page.tsx", import.meta.url),
   "utf8",
 );
-const smokePilot = readFileSync(new URL("../app/components/SmokePilot.tsx", import.meta.url), "utf8");
 const navbar = readFileSync(new URL("../app/components/Navbar.tsx", import.meta.url), "utf8");
 const footer = readFileSync(new URL("../app/components/Footer.tsx", import.meta.url), "utf8");
 
@@ -23,15 +22,14 @@ test("Scarborough nicotine page declares exactly six audited products in order",
   const declared = [...route.matchAll(/slug: "([^"]+)",\s*name: "([^"]+)",\s*image: "([^"]+)"/g)]
     .map((match) => [match[1], match[2], match[3]]);
   assert.deepEqual(declared, expectedProducts);
-  assert.match(route, /canonical: "https:\/\/mohawkmedicine\.com\/info\/nicotine-vapes-scarborough"/);
-  assert.match(route, /menuHref="\/items\/vapes"/);
-  assert.match(route, /heroDisclosure="Six live-checked product pages only\./);
-  assert.match(route, /warning="Adults 19\+\. Nicotine is addictive\."/);
-  assert.match(route, /reducedCardsOnly/);
+  assert.match(route, /canonical: CANONICAL/);
+  assert.match(route, /const CANONICAL = "https:\/\/mohawkmedicine\.com\/nicotine-vape-scarborough"/);
+  assert.match(route, /href="\/items\/vapes"/);
+  assert.match(route, /Six live-checked product pages only\./);
+  assert.match(route, /Adults 19\+\. Nicotine is addictive\./);
   assert.match(route, /<Navbar hideThcVape \/>/);
   assert.match(route, /<Footer hideThcVape \/>/);
-  assert.match(route, /href: "\/info\/native-cigarettes-scarborough"/);
-  assert.match(route, /items=\{\[\]\}/);
+  assert.match(route, /href="\/native-cigarettes-scarborough"/);
 });
 
 test("stale, image-less and THC products are absent from the curated page", () => {
@@ -47,13 +45,9 @@ test("stale, image-less and THC products are absent from the curated page", () =
   }
 });
 
-test("reduced-card rendering keeps product cards menu-scoped and removes dynamic commerce sections", () => {
-  assert.match(smokePilot, /href=\{menuHref\}[\s\S]*?data-product-slug=\{item\.slug\}/);
-  assert.match(smokePilot, /unoptimized=\{item\.image\.startsWith\("http"\)\}/);
-  assert.match(smokePilot, /\{!reducedCardsOnly && <section className=\{styles\.menuSection\}/);
-  assert.match(smokePilot, /\{!reducedCardsOnly && <section className=\{styles\.visitSection\}/);
-  assert.match(smokePilot, /\{!reducedCardsOnly && <div className=\{styles\.storeLine\}/);
+test("reduced-card rendering keeps product cards menu-scoped and hides THC vape chrome", () => {
+  assert.match(route, /href=\{`\/item\/\$\{item\.slug\}`\}/);
+  assert.match(route, /data-product-slug=\{item\.slug\}/);
   assert.match(navbar, /hideThcVape \? ALL_LINKS\.filter\(\(link\) => link\.href !== "\/items\/vape-disposables"\)/);
   assert.match(footer, /!hideThcVape && <Link href="\/items\/vape-disposables">/);
 });
-

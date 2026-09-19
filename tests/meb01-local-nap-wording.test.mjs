@@ -15,7 +15,7 @@ const visitGuide = read("app/resources/resourceData.ts");
 const walkInGuide = read("app/visit/page.tsx");
 const nearMeFaq = read("app/near-me/page.tsx");
 const brandVisitFaq = read("app/mohawk-craft-visit/page.tsx");
-const nativeCigarettes = read("app/info/native-cigarettes-scarborough/page.tsx");
+const nativeCigarettes = read("app/native-cigarettes-scarborough/page.tsx");
 
 const INVENTED_NATIVE = /Indigenous|First Nation|on reserve|healing|traditional medicine|ceremonial|Mohawk Nation|sacred/i;
 

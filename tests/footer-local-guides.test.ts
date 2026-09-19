@@ -7,8 +7,8 @@ import { SEO_PAGES } from "../app/lib/seoPages.ts";
 const EXPECTED_FOOTER_GUIDES = [
   ["/info/scarborough-weed-dispensary", "Scarborough Dispensary"],
   ["/info/cheap-weed-scarborough", "Cheap Weed Scarborough"],
-  ["/info/native-cigarettes-scarborough", "Native Cigarettes Scarborough"],
-  ["/info/nicotine-vapes-scarborough", "Nicotine Vapes Scarborough"],
+  ["/native-cigarettes-scarborough", "Native Cigarettes Scarborough"],
+  ["/nicotine-vape-scarborough", "Nicotine Vapes Scarborough"],
   ["/info/weed-store-near-eglinton-east", "Weed Store Near Eglinton East"],
 ] as const;
 
@@ -18,9 +18,13 @@ test("footer exposes the exact five verified Scarborough guides", async () => {
 
   for (const [href, label] of EXPECTED_FOOTER_GUIDES) {
     assert.match(footer, new RegExp(`href="${href}"[^>]*>${label}<`));
-    assert.equal(slugs.has(href.replace("/info/", "")), true, `${href} must remain a generated SEO page`);
+    if (href.startsWith("/info/")) {
+      assert.equal(slugs.has(href.replace("/info/", "")), true, `${href} must remain a generated SEO page`);
+    }
   }
 
   assert.doesNotMatch(footer, /href="\/info\/dispensary-near-me-scarborough"/);
+  assert.doesNotMatch(footer, /href="\/info\/native-cigarettes-scarborough"/);
+  assert.doesNotMatch(footer, /href="\/info\/nicotine-vapes-scarborough"/);
 });
 

@@ -247,6 +247,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     cards: [
       { title: "$25 Cigarette Brands", href: "/items/cigarettes", text: "The cigarette category lists several Canadian, Canadian Goose, Canadian Classics, Rolled Gold, Nexus, Time, and Backwoods items at $25 where shown." },
       { title: "Backwoods And Grabba", href: "/items/cigarettes", text: "The cigarette category also lists nicotine pouches, grabba, grabba shaker, Backwoods, and 10 x Premium Mix Cigarettes where shown." },
+      { title: "Native Cigarettes Scarborough", href: "/native-cigarettes-scarborough", text: "Open the Scarborough / Eglinton East Native cigarettes retail guide." },
       { title: "Native Cigarettes Guide", href: "/resources/native-smokes/native-cigarettes-guide", text: "Open the fuller brand and price breakdown." },
     ],
     sections: [

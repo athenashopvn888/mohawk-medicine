@@ -38,6 +38,16 @@ const nextConfig: NextConfig = {
       { source: "/info/dispensary-near-me-york/", destination: "/near-me", permanent: true },
       { source: "/visit-faq", destination: "/mohawk-craft-visit", permanent: true },
       { source: "/visit-faq/", destination: "/mohawk-craft-visit", permanent: true },
+      { source: "/24-hour-scarborough-dispensary", destination: "/visit", permanent: true },
+      { source: "/24-hour-scarborough-dispensary/", destination: "/visit", permanent: true },
+      { source: "/info/native-cigarettes-scarborough", destination: "/native-cigarettes-scarborough", permanent: true },
+      { source: "/info/native-cigarettes-scarborough/", destination: "/native-cigarettes-scarborough", permanent: true },
+      { source: "/info/native-cigarettes-york", destination: "/native-cigarettes-scarborough", permanent: true },
+      { source: "/info/native-cigarettes-york/", destination: "/native-cigarettes-scarborough", permanent: true },
+      { source: "/info/nicotine-vapes-scarborough", destination: "/nicotine-vape-scarborough", permanent: true },
+      { source: "/info/nicotine-vapes-scarborough/", destination: "/nicotine-vape-scarborough", permanent: true },
+      { source: "/nicotine-vapes-scarborough", destination: "/nicotine-vape-scarborough", permanent: true },
+      { source: "/nicotine-vapes-scarborough/", destination: "/nicotine-vape-scarborough", permanent: true },
     ];
   },
 };

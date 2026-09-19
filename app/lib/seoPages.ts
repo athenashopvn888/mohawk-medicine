@@ -126,86 +126,6 @@ export const SEO_PAGES: SeoPageData[] = [
   },
 
   {
-    slug: "native-cigarettes-scarborough",
-    title: "Native Cigarettes Scarborough | Mohawk Medicine",
-    metaDescription:
-      "Mohawk Medicine lists cigarette options at 2655 Eglinton Ave E in Scarborough. Check the current cigarette category for brands, prices, and listings before visiting.",
-    h1: "Native Cigarettes Scarborough",
-    icon: "CG",
-    heroTagline: "Cigarette category details for Mohawk Medicine shoppers.",
-    banner: "/banners/24_Mohawk_Edibles_Concentrates_More.webp",
-    sections: [
-      {
-        heading: "Cigarette Category At Mohawk Medicine",
-        body:
-          "Mohawk Medicine has a cigarette category for shoppers checking listed brands, pack options, and prices before visiting 2655 Eglinton Ave E.",
-      },
-      {
-        heading: "Check The Current Brand Mix",
-        body:
-          "Brand mix, flavours, carton options, and prices can rotate. Use the cigarette category to see what is listed, then confirm exact details with staff when needed.",
-      },
-      {
-        heading: "One Store, Separate Categories",
-        body:
-          "Cigarettes sit beside the cannabis categories, but shoppers should still use the matching page for the product type they need: flower, edibles, vapes, concentrates, accessories, or cigarettes.",
-      },
-    ],
-    faqs: [
-      {
-        q: "Does Mohawk Medicine list cigarettes?",
-        a: "Yes. The site includes a cigarette category with listed brands and prices where listed.",
-      },
-      {
-        q: "Do cigarette brands and prices change?",
-        a: "Yes. Brand mix, flavours, carton options, and prices can rotate, so check the current cigarette category before visiting.",
-      },
-      {
-        q: "Where is the store?",
-        a: "Mohawk Medicine is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
-      },
-    ],
-  },
-
-  {
-    slug: "nicotine-vapes-scarborough",
-    title: "Nicotine Vapes Scarborough | Mohawk Medicine",
-    metaDescription:
-      "Browse nicotine vape devices, flavours, formats, and listed menu prices at Mohawk Medicine, 2655 Eglinton Ave E in Scarborough. Open 24 hours.",
-    h1: "Nicotine Vapes Scarborough",
-    icon: "NV",
-    heroTagline: "Nicotine vapes on Eglinton Avenue East.",
-    sections: [
-      {
-        heading: "Nicotine Vape Menu",
-        body: "Browse nicotine vape devices, formats, and listed prices at Mohawk Medicine.",
-      },
-      {
-        heading: "Separate From THC Vapes",
-        body: "Nicotine vapes and THC vapes have separate menu categories, making each lineup easier to browse.",
-      },
-      {
-        heading: "Open 24 Hours",
-        body: "Mohawk Medicine is at 2655 Eglinton Ave E in Scarborough and lists open 24 hours.",
-      },
-    ],
-    faqs: [
-      {
-        q: "Does Mohawk Medicine list nicotine vapes?",
-        a: "Yes. Use the nicotine vape menu for the devices and prices listed.",
-      },
-      {
-        q: "Where are THC vapes?",
-        a: "THC vapes have a separate menu category on the site.",
-      },
-      {
-        q: "Where is Mohawk Medicine?",
-        a: "The store is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2.",
-      },
-    ],
-  },
-
-  {
     slug: "weed-store-near-eglinton-east",
     title: "Weed Store Near Eglinton East | Brimley Rd | Mohawk Medicine",
     metaDescription:
@@ -268,7 +188,6 @@ export function getSeoPageBySlug(slug: string): SeoPageData | undefined {
 const LEGACY_SEO_REDIRECTS: Record<string, string> = {
   "york-weed-dispensary": "scarborough-weed-dispensary",
   "cheap-weed-york": "cheap-weed-scarborough",
-  "native-cigarettes-york": "native-cigarettes-scarborough",
   "weed-store-near-mississauga": "weed-store-near-eglinton-east",
 };
 
