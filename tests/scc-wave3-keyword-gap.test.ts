@@ -109,11 +109,12 @@ test("Wave 3 copy prefers Scarborough / Eglinton East and stays retail voice", (
   }
 });
 
-test("Master GO: four Scarborough / Eglinton East pillars have FAQs and hub cards", () => {
+test("Master GO: five Scarborough / Eglinton East pillars have FAQs and hub cards", () => {
   const cig = read(CIG_PAGE);
   const nic = read(NIC_PAGE);
   const visit = read(VISIT_PAGE);
   const delivery = read("app/cannabis-delivery-scarborough/page.tsx");
+  const weedHub = read("app/components/GBPLandingPage.tsx");
   const home = read("app/page.tsx");
   const footer = read("app/components/Footer.tsx");
   const resources = read("app/resources/resourceData.ts");
@@ -123,6 +124,7 @@ test("Master GO: four Scarborough / Eglinton East pillars have FAQs and hub card
     ["nic", nic],
     ["visit", visit],
     ["delivery", delivery],
+    ["weed", weedHub],
   ] as const) {
     assert.match(page, /"@type": "FAQPage"/, `${name} needs FAQ schema`);
     assert.match(page, /<h1 className=\{styles\.h1\}>/);
@@ -136,6 +138,7 @@ test("Master GO: four Scarborough / Eglinton East pillars have FAQs and hub card
 
   assert.match(home, /name: "24-Hour Walk-In Guide", href: "\/visit"/);
   assert.match(home, /name: "Scarborough Cannabis Delivery", href: "\/cannabis-delivery-scarborough"/);
+  assert.match(home, /name: "Weed Dispensary Scarborough", href: "\/weed-dispensary-toronto\/"/);
   assert.match(home, /name: "Native Cigarettes in Scarborough", href: "\/native-cigarettes-scarborough"/);
   assert.match(home, /name: "Nicotine Vapes in Scarborough", href: "\/nicotine-vape-scarborough"/);
   assert.match(home, /cigaretteHref="\/native-cigarettes-scarborough"/);

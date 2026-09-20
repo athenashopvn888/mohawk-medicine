@@ -102,7 +102,7 @@ test("geo weed hub leans Scarborough / Eglinton East while keeping the live Toro
   assert.match(gbp, /slug: "weed-dispensary-toronto"/);
   assert.match(gbp, /Weed Dispensary Scarborough/);
   assert.match(landing, /Weed Dispensary in Scarborough on Eglinton East/);
-  assert.match(landing, /weed dispensary near me in \{gbpLocation\.city\}/);
+  assert.match(landing, /weed dispensary near me in Scarborough or on Eglinton East/);
   assert.doesNotMatch(landing, /Ottawa|Gatineau|ByWard/);
 });
 

@@ -18,6 +18,6 @@ test("existing weed and delivery owners carry the intended query language", () =
   const localOwner = read("app/components/GBPLandingPage.tsx");
   const deliveryOwner = read("app/delivery/DeliveryContent.tsx");
 
-  assert.match(localOwner, /weed dispensary near me in \{gbpLocation\.city\}/);
+  assert.match(localOwner, /weed dispensary near me in Scarborough or on Eglinton East/);
   assert.match(deliveryOwner, /<h1>Weed Delivery Menu<\/h1>/);
 });
