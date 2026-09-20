@@ -10,10 +10,11 @@ import {
   TIER_CONFIG,
 } from "../lib/products";
 import { TIER_SEO } from "../lib/tierSeoContent";
+import { SITE_ORIGIN } from "../lib/collectionPageSchema";
+import { buildTierCollectionJsonLd } from "../lib/tierStructuredData";
+import { serializeJsonLd } from "../lib/nap";
 import ParityHubLinks from "../components/ParityHubLinks";
 import styles from "./tier.module.css";
-
-const SITE_ORIGIN = "https://mohawkmedicine.com";
 
 /* -- Generate all tier pages at build -- */
 export function generateStaticParams() {
@@ -60,10 +61,16 @@ export default async function TierPage({
 
   const saleFlowers = flowers.filter((f) => f.isSale);
   const regularFlowers = flowers.filter((f) => !f.isSale);
+  const displayFlowers = [...saleFlowers, ...regularFlowers];
   const hotFlowers = flowers.filter((f) => f.isHot);
-  const faqSchema = seo?.faqs.length
+  const collectionJsonLd = buildTierCollectionJsonLd({
+    canonicalPath: `/${tierSlug}`,
+    name: seo?.h1 || config.name,
+    description: seo?.seoIntro || `Shop ${flowers.length} ${config.name.toLowerCase()} cannabis strains at Mohawk Medicine.`,
+    flowers: displayFlowers,
+  });
+  const faqNode = seo?.faqs.length
     ? {
-        "@context": "https://schema.org",
         "@type": "FAQPage",
         mainEntity: seo.faqs.map((faq) => ({
           "@type": "Question",
@@ -72,15 +79,16 @@ export default async function TierPage({
         })),
       }
     : null;
+  const tierJsonLd = faqNode
+    ? { ...collectionJsonLd, "@graph": [...collectionJsonLd["@graph"], faqNode] }
+    : collectionJsonLd;
 
   return (
     <main className={styles.main}>
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }}
-        />
-      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(tierJsonLd) }}
+      />
       <Navbar />
 
       {/* ── Banner Image (standalone, no overlay text) ── */}
