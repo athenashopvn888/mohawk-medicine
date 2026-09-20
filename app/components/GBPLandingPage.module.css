@@ -1,10 +1,58 @@
 /* Premium styled Google Business Profile Local Landing Page */
+.page {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 88px 20px 40px;
   font-family: var(--font-body);
   color: var(--text-primary);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--green-light, #5EE89F);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.infoText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary, #4B5563);
+  margin: 0 0 14px;
+}
+
+.infoText:last-child {
+  margin-bottom: 0;
+}
+
+.localLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.localLink {
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--bg-secondary, #f8faf9);
+  border: 1px solid var(--border-subtle, rgba(0, 0, 0, 0.05));
+  color: var(--green-dark, #1b5e20);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.localLink:hover {
+  border-color: var(--green-dark, #1b5e20);
 }
 
 .hero {

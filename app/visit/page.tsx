@@ -211,12 +211,12 @@ export default function VisitPage() {
           </article>
 
           <article className={styles.section}>
-            <h2 className={styles.h2}>Home And Toronto Store Pages</h2>
+            <h2 className={styles.h2}>Home And Scarborough Weed Hub</h2>
             <p>
               Keep this page for 24-hour Scarborough / Eglinton East arrival. Use the homepage for
-              current menu categories. Use the Toronto store page for broader city-level visit
-              information. Those two URLs stay on the homepage root and the trailing-slash Toronto
-              landing so the same shop is not split across extra website addresses.
+              current menu categories. Use the Scarborough weed-dispensary hub for neighbourhood
+              store details. Those two URLs stay on the homepage root and the live trailing-slash
+              weed hub so the same shop is not split across extra website addresses.
             </p>
             <div className={styles.localLinks}>
               <Link href="/" className={styles.localLink}>

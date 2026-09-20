@@ -48,6 +48,8 @@ const nextConfig: NextConfig = {
       { source: "/info/nicotine-vapes-scarborough/", destination: "/nicotine-vape-scarborough", permanent: true },
       { source: "/nicotine-vapes-scarborough", destination: "/nicotine-vape-scarborough", permanent: true },
       { source: "/nicotine-vapes-scarborough/", destination: "/nicotine-vape-scarborough", permanent: true },
+      { source: "/weed-dispensary-scarborough", destination: "/weed-dispensary-toronto/", permanent: true },
+      { source: "/weed-dispensary-scarborough/", destination: "/weed-dispensary-toronto/", permanent: true },
     ];
   },
 };

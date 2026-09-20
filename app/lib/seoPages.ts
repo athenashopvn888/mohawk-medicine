@@ -41,7 +41,7 @@ export const SEO_PAGES: SeoPageData[] = [
       {
         heading: "Mohawk Medicine's Scarborough Store Page",
         body:
-          "Use this page for Scarborough store information for Mohawk Medicine at 2655 Eglinton Ave E. Use the Toronto store page for broader visit information, the Eglinton East page for that local context, and the current category pages to compare menu sections before visiting.",
+          "Use this page for Scarborough store information for Mohawk Medicine at 2655 Eglinton Ave E. Use the live Scarborough weed-dispensary hub for neighbourhood visit information, the Eglinton East page for that local context, and the current category pages to compare menu sections before visiting.",
       },
       {
         heading: "How To Find The Scarborough Shop",

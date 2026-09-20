@@ -321,7 +321,7 @@ export default function HomePage() {
               Find Mohawk Medicine at 2655 Eglinton Ave E in Scarborough. Adults 19+ can use this site to compare the five Weed flower tiers, browse separate cannabis and smoke-shop categories, review local store information, and plan an in-store visit at any hour.
             </p>
             <p className={styles.aboutText}>
-              Mohawk Medicine is open 24 hours at 2655 Eglinton Ave E in Scarborough. The exact address, current phone number, store hours and primary local pages are kept together so adults can confirm the storefront before visiting. Use the Toronto store page for broad visit information, or open the Scarborough and Eglinton East pages for more specific local context.
+              Mohawk Medicine is open 24 hours at 2655 Eglinton Ave E in Scarborough. The exact address, current phone number, store hours and primary local pages are kept together so adults can confirm the storefront before visiting. Use the Scarborough weed-dispensary hub for neighbourhood store details, or open the 24-hour walk-in guide and Eglinton East corridor page for arrival context.
             </p>
             <p className={styles.aboutText}>
               The shop sits on Eglinton Avenue East in Scarborough, near Brimley Rd. Call {STORE_NAP.phoneDisplay} or use the contact page before you head out. Walk-ins are welcome at any hour. Adults 19+ should bring valid government photo ID.

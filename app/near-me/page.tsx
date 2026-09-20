@@ -43,7 +43,7 @@ const FAQS = [
   },
   {
     q: "Is this a Toronto dispensary or a Scarborough dispensary?",
-    a: "Both labels can appear in search. The shop is in Scarborough on Eglinton Avenue East, with a Toronto postal address. Use the Toronto store page for city-level visit information and this FAQ for the Scarborough / Eglinton East pin.",
+    a: "Both labels can appear in search. The shop is in Scarborough on Eglinton Avenue East, with a Toronto postal address. Use the Scarborough weed-dispensary hub for neighbourhood store details and this FAQ for the Scarborough / Eglinton East pin.",
   },
   {
     q: "What are the hours for this Scarborough walk-in?",
@@ -144,8 +144,9 @@ export default function NearMePage() {
             </p>
             <p>
               Keep this FAQ for the Scarborough pin. Use the{" "}
-              <Link href="/weed-dispensary-toronto/">Toronto weed dispensary</Link> page for city-level visit
-              information. Use the <Link href="/">homepage</Link> for current menu categories.
+              <Link href="/weed-dispensary-toronto/">Scarborough weed dispensary hub</Link> for
+              neighbourhood store details. Use the <Link href="/">homepage</Link> for current menu
+              categories.
             </p>
           </article>
 
@@ -199,11 +200,11 @@ export default function NearMePage() {
           </article>
 
           <article className={styles.section}>
-            <h2 className={styles.h2}>Home, Toronto Store, And Walk-In Guide</h2>
+            <h2 className={styles.h2}>Home, Scarborough Weed Hub, And Walk-In Guide</h2>
             <p>
               Keep this page for dispensary near me / Scarborough arrival. Use the homepage for menu
-              categories. Use the trailing-slash Toronto landing for city-level visit information. Use the
-              24-hour walk-in guide for open-now Eglinton East details.
+              categories. Use the live Scarborough weed-dispensary hub for neighbourhood store
+              details. Use the 24-hour walk-in guide for open-now Eglinton East details.
             </p>
             <div className={styles.localLinks}>
               <Link href="/" className={styles.localLink}>

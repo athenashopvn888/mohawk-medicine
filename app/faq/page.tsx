@@ -108,6 +108,8 @@ export default function FAQPage() {
             ))}
           </div>
           <p style={{ marginTop: "24px", fontSize: "14px", color: "#424242", lineHeight: 1.7 }}>
+            For the neighbourhood weed-dispensary hub, open{" "}
+            <Link href="/weed-dispensary-toronto/">Weed Dispensary Scarborough</Link>.
             For Scarborough / Eglinton East delivery hours, area, and how to order, open the{" "}
             <Link href="/cannabis-delivery-scarborough">Scarborough cannabis delivery page</Link>.
             For a 24-hour walk-in, use the <Link href="/visit">24-hour Scarborough walk-in guide</Link>.

@@ -47,8 +47,8 @@ test("canonical NAP uses Mohawk Craft Dispensary with Mohawk Medicine as site br
   assert.match(home, /Mohawk Craft Dispensary/);
   assert.match(contact, /Mohawk Craft Dispensary/);
   assert.match(torontoPage, /legalName/);
-  assert.match(torontoPage, /Use this Toronto store page for Mohawk Medicine&apos;s general visit information\./);
-  assert.match(torontoPage, /For the exact Scarborough storefront context/);
+  assert.match(torontoPage, /Use this Scarborough \/ Eglinton East weed-dispensary hub for neighbourhood store/);
+  assert.match(torontoPage, /For the supporting Scarborough storefront notes/);
   assert.doesNotMatch(torontoPage, /Kennedy|Golden Mile|Birchmount|Warden|parkingNote|fully licensed|complete line|finest quality/i);
 });
 
