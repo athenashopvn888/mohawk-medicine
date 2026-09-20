@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import AgeGate from "./components/AgeGate";
-import { storeJsonLd } from "./lib/nap";
+import { serializeJsonLd, storeJsonLd, websiteJsonLd } from "./lib/nap";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mohawkmedicine.com"),
@@ -25,8 +25,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://mohawkmedicine.com" },
 };
 
-const jsonLd = storeJsonLd;
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
@@ -37,7 +35,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="geo.position" content="43.7356759;-79.2508842" />
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Toronto, Scarborough" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(websiteJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(storeJsonLd) }} />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-56DQVKRW14"></script>
         <script
           dangerouslySetInnerHTML={{

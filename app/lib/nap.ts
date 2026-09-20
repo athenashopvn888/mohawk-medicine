@@ -78,3 +78,17 @@ export const storeJsonLd = {
     },
   ],
 } as const;
+
+/** Identity node referenced by CollectionPage.isPartOf. Do not mint a second Store. */
+export const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://mohawkmedicine.com/#website",
+  url: STORE_NAP.website,
+  name: STORE_NAP.brandName,
+  publisher: { "@id": "https://mohawkmedicine.com/#store" },
+} as const;
+
+export function serializeJsonLd(data: unknown) {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
