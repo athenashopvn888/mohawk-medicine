@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useCallback, useRef } from "react";
 import styles from "./tv2.module.css";
 import HiringRibbon from "../components/HiringRibbon";
 import TvStoreHeader from "../components/TvStoreHeader";
@@ -200,12 +200,14 @@ export default function TV2Page() {
   const [highlights, setHighlights] = useState<Record<string,number>>({});
   const [lastUpdate, setLastUpdate] = useState("");
   const [stockUpdated, setStockUpdated] = useState<string | null>(null);
-  const [daytime, setDaytime] = useState(() => isTv2Daytime());
+  const [daytime, setDaytime] = useState(false);
   const [cigaretteOfferVisible, setCigaretteOfferVisible] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const iv = setInterval(() => setDaytime(isTv2Daytime()), 60_000);
+  useLayoutEffect(() => {
+    const sync = () => setDaytime(isTv2Daytime());
+    sync();
+    const iv = setInterval(sync, 60_000);
     return () => clearInterval(iv);
   }, []);
 
