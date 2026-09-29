@@ -1,4 +1,8 @@
 "use client";
+import { HOME_TITLE } from "./lib/homeDelivery";
+import CohortDeliveryActions from "./components/CohortDeliveryActions";
+import HomeDeliverySection from "./components/HomeDeliverySection";
+import HomepageTopNotices from "./components/HomepageTopNotices";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -168,10 +172,12 @@ export default function HomePage() {
 
   return (
     <main className={styles.main}>
+      <Navbar />
+      <HomepageTopNotices />
       <FleetAnnouncementBanner />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }} />
-      <Navbar />
+
 
       {/* A) HERO BANNER */}
       <section className={styles.heroBanner}>
@@ -199,7 +205,8 @@ export default function HomePage() {
       {/* B) WELCOME STRIP */}
       <section className={styles.welcomeStrip}>
         <div className={styles.container}>
-          <h1 className={styles.welcomeH1}>MOHAWK MEDICINE</h1>
+          <h1 className={styles.welcomeH1}>{HOME_TITLE}</h1>
+            <CohortDeliveryActions variant="hero" />
           <p className={styles.welcomeSub}>
             24-Hour Scarborough Cannabis Dispensary on Eglinton Ave E
           </p>
@@ -217,6 +224,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <HomeDeliverySection />
 
       {/* C) TIER GRID */}
       <section className={styles.tierSection}>
