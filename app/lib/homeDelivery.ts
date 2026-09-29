@@ -1,4 +1,4 @@
-export const HOME_TITLE = "Mohawk Craft Dispensary - Cannabis Delivery in Scarborough";
+export const HOME_TITLE = "Mohawk Craft Dispensary - Weed Delivery in Scarborough";
 export const HOME_MENU_HREF = "/exotic-weed";
 export const HOME_DELIVERY_HREF = "/delivery";
 export const HOME_DELIVERY_H2 = "Cannabis Delivery in Scarborough";
