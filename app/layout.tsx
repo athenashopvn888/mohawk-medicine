@@ -1,3 +1,4 @@
+import { HOME_TITLE } from "./lib/homeDelivery";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
@@ -7,7 +8,7 @@ import { serializeJsonLd, storeJsonLd, websiteJsonLd } from "./lib/nap";
 export const metadata: Metadata = {
   metadataBase: new URL("https://mohawkmedicine.com"),
   title: {
-    default: "Mohawk Medicine | 24-Hour Scarborough Cannabis Dispensary",
+    default: HOME_TITLE,
     template: "%s | Mohawk Medicine",
   },
   description:
@@ -17,12 +18,14 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: "https://mohawkmedicine.com",
     siteName: "Mohawk Medicine",
-    title: "Mohawk Medicine - Scarborough Cannabis Dispensary",
+    title: HOME_TITLE,
     description: "Flower tiers, edibles, vapes, concentrates, cigarettes, and accessories at 2655 Eglinton Ave E. Open 24 Hours.",
     images: [{ url: "https://mohawkmedicine.com/banners/13_Mohawk_Home_Hero.webp", width: 1200, height: 630, alt: "Mohawk Medicine" }],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "https://mohawkmedicine.com" },
+
+  twitter: { card: "summary_large_image", title: HOME_TITLE },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
