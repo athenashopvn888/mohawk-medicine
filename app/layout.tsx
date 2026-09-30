@@ -2,7 +2,6 @@ import { HOME_TITLE } from "./lib/homeDelivery";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
-import AgeGate from "./components/AgeGate";
 import { serializeJsonLd, storeJsonLd, websiteJsonLd } from "./lib/nap";
 
 export const metadata: Metadata = {
@@ -57,7 +56,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           EXPLORE WEED DELIVERY
         </Link>
         {children}
-        <AgeGate />
       </body>
     </html>
   );
