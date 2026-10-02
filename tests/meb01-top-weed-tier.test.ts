@@ -38,7 +38,7 @@ test("sitewide strip and homepage stack match the approved order", () => {
   assert.match(banner, /top-weed-tier-meb01\.webp/);
   assert.match(banner, /2pack5cig\.webp/);
   assert.match(banner, /bb-premium-grade-full-lights\.webp/);
-  for (const file of ["public/banners/top-weed-tier-meb01.webp", "public/banners/2pack5cig.webp", "public/banners/bb-premium-grade-full-lights.webp"]) assert.ok(fs.statSync(file).size > 1000, file);
+  for (const file of ["public/banners/top-weed-tier-meb01.webp", "public/banners/2pack5cig.webp", "public/banners/BB_Belmont_Premium_Grade.webp"]) assert.ok(fs.statSync(file).size > 1000, file);
 });
 
 test("mobile strip is one red bar and protected surfaces stay untouched", () => {
