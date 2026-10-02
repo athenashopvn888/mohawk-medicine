@@ -24,4 +24,4 @@
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 .actions a { padding: .8rem 1rem; border: 1px solid #9892d6; border-radius: 999px; color: #fff; text-decoration: none; white-space: nowrap; }
 @media (max-width: 800px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .nextSteps { margin-right: 1rem; margin-left: 1rem; flex-direction: column; align-items: flex-start; } }
-@media (max-width: 520px) { .hero { padding-top: 3.5rem; } .grid { grid-template-columns: 1fr; } .groupHeading { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 520px) { .hero { padding-top: 14rem; } .grid { grid-template-columns: 1fr; } .groupHeading { align-items: flex-start; flex-direction: column; } }
