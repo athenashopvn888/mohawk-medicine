@@ -78,7 +78,8 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
               <Link href="/faq">FAQ</Link>
               <Link href="/weed-dispensary-toronto/">Weed Dispensary Scarborough</Link>
               <Link href="/contact">Contact</Link>
-                          <Link href="/resources">Resources</Link>
+              <Link href="/resources">Resources</Link>
+              <Link href="/guides">Guides</Link>
             </nav>
           </div>
         </div>
