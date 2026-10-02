@@ -6802,6 +6802,11 @@ RESOURCE_PAGES[0].cards.push(...[
 ]);
 for (const page of RESOURCE_PAGES) Object.assign(page, MEB01_RESOURCE_OVERRIDES[page.slug] || {});
 RESOURCE_PAGES.push(...MEB01_RESOURCE_ADDITIONS);
+RESOURCE_PAGES[0].cards.unshift({
+  title: "Name Guides",
+  href: "/guides",
+  text: "Browse all strain, Native Cigarettes, Nicotine Vape, and THC Vape name guides in one directory.",
+});
 
 export const RESOURCE_HOME = RESOURCE_PAGES[0];
 
