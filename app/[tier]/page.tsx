@@ -18,6 +18,8 @@ import { formatAsLowAsAfterPromos, formatPerGram, isBogoDeal, type BoardDeal } f
 import styles from "./tier.module.css";
 import { getTierGuideLinks } from "../lib/guideRegistry";
 
+export const revalidate = 300;
+
 /* -- Generate all tier pages at build -- */
 export function generateStaticParams() {
   return Object.values(TIER_CONFIG).map((t) => ({ tier: t.slug }));

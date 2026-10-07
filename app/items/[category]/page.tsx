@@ -16,6 +16,8 @@ import { getCategoryGuideGroups } from "../../lib/guideRegistry";
 
 const SITE_ORIGIN = "https://mohawkmedicine.com";
 
+export const revalidate = 300;
+
 /* ── Generate all category pages ── */
 export function generateStaticParams() {
   return Object.values(CATEGORY_CONFIG).map((c) => ({ category: c.slug }));
