@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import FlowerCard from "../components/FlowerCard";
 import {
-  getFlowersByTier,
+  fetchLiveProducts,
   getTierFromSlug,
   TIER_CONFIG,
 } from "../lib/products";
@@ -17,6 +17,8 @@ import ParityHubLinks from "../components/ParityHubLinks";
 import { formatAsLowAsAfterPromos, formatPerGram, isBogoDeal, type BoardDeal } from "../lib/flowerDeals";
 import styles from "./tier.module.css";
 import { getTierGuideLinks } from "../lib/guideRegistry";
+
+export const revalidate = 300;
 
 /* -- Generate all tier pages at build -- */
 export function generateStaticParams() {
@@ -31,7 +33,8 @@ export async function generateMetadata({
   const { tier: tierSlug } = await params;
   const tierInfo = getTierFromSlug(tierSlug);
   if (!tierInfo) return {};
-  const flowers = getFlowersByTier(tierInfo.key);
+  const { flowers: liveFlowers } = await fetchLiveProducts();
+  const flowers = liveFlowers.filter((flower) => flower.tier.toUpperCase() === tierInfo.key.toUpperCase());
   const seo = TIER_SEO[tierInfo.key];
 
   return {
@@ -57,7 +60,8 @@ export default async function TierPage({
   const tierInfo = getTierFromSlug(tierSlug);
   if (!tierInfo) notFound();
 
-  const flowers = getFlowersByTier(tierInfo.key);
+  const { flowers: liveFlowers } = await fetchLiveProducts();
+  const flowers = liveFlowers.filter((flower) => flower.tier.toUpperCase() === tierInfo.key.toUpperCase());
   const { config } = tierInfo;
   const guideLinks = getTierGuideLinks(`/${tierSlug}`);
   const seo = TIER_SEO[tierInfo.key];
