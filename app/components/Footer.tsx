@@ -76,6 +76,7 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
               <Link href="/weed-delivery-toronto">Weed Delivery Menu</Link>
               <Link href="/cannabis-delivery-scarborough">Scarborough Delivery</Link>
               <Link href="/faq">FAQ</Link>
+              <Link href="/hours">Store Hours</Link>
               <Link href="/weed-dispensary-toronto/">Weed Dispensary Scarborough</Link>
               <Link href="/contact">Contact</Link>
               <Link href="/resources">Resources</Link>
