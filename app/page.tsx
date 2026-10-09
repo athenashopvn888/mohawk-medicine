@@ -13,9 +13,10 @@ import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
 import SmokePilotSpotlight from "./components/SmokePilotSpotlight";
 import StoreMap from "./components/StoreMap";
-import { allFlowers, type FlowerProduct } from "./lib/products";
+import { type FlowerProduct } from "./lib/products";
 import { STORE_NAP } from "./lib/nap";
 import ParityHubLinks from "./components/ParityHubLinks";
+import { useLiveFlowers } from "./lib/useLiveMenu";
 
 /* Tier Grid Config */
 const TIER_CARDS = [
@@ -145,11 +146,12 @@ const homeFaqSchema = {
 };
 
 export default function HomePage() {
+    const __liveFlowers = useLiveFlowers();
   const [featuredStrains, setFeaturedStrains] = useState<FlowerProduct[]>([]);
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
-      const pool = [...allFlowers].filter((f) => f.image);
+      const pool = [...__liveFlowers].filter((f) => f.image);
       for (let i = pool.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [pool[i], pool[j]] = [pool[j], pool[i]];
@@ -168,7 +170,7 @@ export default function HomePage() {
     });
 
     return () => window.cancelAnimationFrame(frame);
-  }, []);
+  }, [__liveFlowers]);
 
   return (
     <main className={styles.main}>
