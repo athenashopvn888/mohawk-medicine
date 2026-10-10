@@ -173,6 +173,7 @@ export function GBPLandingPage() {
             looking for category information can continue to the five Weed tiers or the separate{" "}
             <Link href="/native-cigarettes-scarborough">Native cigarettes Scarborough guide</Link>{" "}
             and <Link href="/nicotine-vape-scarborough">nicotine vape Scarborough guide</Link>.
+            See also <Link href="/vape-shop-scarborough">current Scarborough nicotine vape listings</Link>.
           </p>
           <p className={styles.infoText}>
             For 24-hour walk-in arrival on Eglinton East, use the{" "}

@@ -36,6 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/cannabis-delivery-scarborough`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/native-cigarettes-scarborough`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/nicotine-vape-scarborough`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/vape-shop-scarborough`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
   ];
 
   /* Tier pages */
