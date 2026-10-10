@@ -23,6 +23,11 @@
   border-bottom: 1px solid var(--border-subtle);
 }
 
+/* The dedicated live-feed page starts with the hero; clear the fixed site header. */
+.main > .hero:first-of-type {
+  padding-top: 260px;
+}
+
 .heroInner {
   max-width: 800px;
   margin: 0 auto;
