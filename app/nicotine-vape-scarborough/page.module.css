@@ -24,8 +24,8 @@
 }
 
 /* The dedicated live-feed page starts with the hero; clear the fixed site header. */
-.main > .hero:first-of-type {
-  padding-top: 260px;
+.main > nav + .hero {
+  padding-top: 260px !important;
 }
 
 .heroInner {
