@@ -13,6 +13,7 @@ import {
 } from "../../lib/products";
 import styles from "./items.module.css";
 import { getCategoryGuideGroups } from "../../lib/guideRegistry";
+import VapeActionPanel from "../../components/VapeActionPanel";
 
 const SITE_ORIGIN = "https://mohawkmedicine.com";
 
@@ -126,6 +127,8 @@ export default async function ItemsCategoryPage({
           )}
         </div>
       </section>
+
+      {(catInfo.key === "VAPE PENS" || catInfo.key === "VAPE DISPOSABLE") && <VapeActionPanel />}
 
       {/* SEO Content */}
       <section className={styles.seoSection}>

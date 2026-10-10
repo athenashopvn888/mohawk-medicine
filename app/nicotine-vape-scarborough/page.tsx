@@ -7,6 +7,7 @@ import StoreNap from "../components/StoreNap";
 import { STORE_NAP } from "../lib/nap";
 import ParityHubLinks from "../components/ParityHubLinks";
 import styles from "./page.module.css";
+import VapeActionPanel from "../components/VapeActionPanel";
 
 const CANONICAL = "https://mohawkmedicine.com/nicotine-vape-scarborough";
 const TITLE = "Nicotine Vape Scarborough | Eglinton East | Mohawk Medicine";
@@ -147,6 +148,7 @@ export default function NicotineVapeScarboroughPage() {
           </p>
         </div>
       </section>
+      <VapeActionPanel />
 
       <section className={styles.content}>
         <div className={styles.container}>

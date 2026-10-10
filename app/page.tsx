@@ -87,6 +87,7 @@ const HELPFUL_PAGES = [
   { name: "Cheap Weed in Scarborough", href: "/info/cheap-weed-scarborough", description: "Open the value-intent guide and current tier links." },
   { name: "Native Cigarettes in Scarborough", href: "/native-cigarettes-scarborough", description: "Open the cigarette-information guide." },
   { name: "Nicotine Vapes in Scarborough", href: "/nicotine-vape-scarborough", description: "Open the nicotine guide, separate from THC vape." },
+  { name: "Current Scarborough Vape Listings", href: "/vape-shop-scarborough", description: "Live-feed nicotine vape names, prices, and contact options." },
   { name: "Mohawk Medicine Resources", href: "/resources", description: "Browse the store's informational guides." },
 ];
 
