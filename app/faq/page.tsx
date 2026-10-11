@@ -39,7 +39,7 @@ const FAQS = [
   },
   {
     q: "Can I get the store price on a delivery order?",
-    a: "No. In-store prices are for purchases made in the store. Delivery orders always use delivery prices.",
+    a: "In-store prices are for purchases made in the store. Delivery orders always use delivery prices.",
   },
   {
     q: "What ID is accepted?",
@@ -96,6 +96,7 @@ export default function FAQPage() {
               <details
                 key={i}
                 id={faq.q === "Can I get the store price on a delivery order?" ? "delivery-price-rule" : undefined}
+                open={faq.q === "Can I get the store price on a delivery order?"}
                 style={{
                   border: "1px solid rgba(27,94,32,0.15)",
                   borderRadius: "10px",
