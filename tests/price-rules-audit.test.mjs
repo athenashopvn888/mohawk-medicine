@@ -15,4 +15,5 @@ test("audited FAQ deep link and server-rendered homepage ranges stay wired", () 
   assert.match(page, /(?:getLiveMenu|fetchLiveProducts)/);
   assert.match(page, /tierRangeText\(storeTierRange\(flowers, tier\)\)/);
   assert.match(home, /initialTierRanges\[tier\.key\]/);
+  assert.match(home, /storeTierRange\(__liveFlowers, tier\.key\)/);
 });

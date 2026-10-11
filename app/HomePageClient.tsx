@@ -17,6 +17,7 @@ import { allFlowers, type FlowerProduct } from "./lib/products";
 import { STORE_NAP } from "./lib/nap";
 import ParityHubLinks from "./components/ParityHubLinks";
 import { useLiveFlowers } from "./lib/useLiveMenu";
+import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
 
 /* Tier Grid Config */
 const TIER_CARDS = [
@@ -246,7 +247,7 @@ export default function HomePageClient({ initialTierRanges }: { initialTierRange
           </div>
           <p className="price-rule-notice"><strong>IN-STORE PRICES ONLY.</strong> These prices do not apply to delivery orders. Delivery has its own prices. Why? <Link href="/faq#delivery-price-rule">See the FAQ</Link></p>
           <div className={styles.tierGrid}>
-            {TIER_CARDS.map((tier) => { const rangeLine = tier.key ? initialTierRanges[tier.key] : null; return (
+            {TIER_CARDS.map((tier) => { const rangeLine = tier.key ? initialTierRanges[tier.key] || tierRangeText(storeTierRange(__liveFlowers, tier.key)) : null; return (
               <Link key={tier.slug + tier.name} href={`/${tier.slug}`} className={styles.tierCard}>
                 <div className={styles.tierCardImg}>
                   <img src={tier.banner} alt={tier.name} loading="lazy" />
