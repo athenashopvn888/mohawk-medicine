@@ -13,5 +13,6 @@ test("audited FAQ deep link and server-rendered homepage ranges stay wired", () 
   assert.match(faq, /open=\{faq\.q === "Can I get the store price on a delivery order\?"\}/);
   assert.match(page, /export const dynamic = "force-dynamic"/);
   assert.match(page, /(?:getLiveMenu|fetchLiveProducts)/);
-  assert.match(home, /storeTierRange\((?:initialFlowers|__menu\.flowers|liveFlowers)/);
+  assert.match(page, /tierRangeText\(storeTierRange\(flowers, tier\)\)/);
+  assert.match(home, /initialTierRanges\[tier\.key\]/);
 });
