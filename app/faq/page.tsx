@@ -38,6 +38,10 @@ const FAQS = [
     a: "Yes. Local delivery is available from the Eglinton East shop at 2655 Eglinton Ave E. Browse the live delivery menu, then start LIVE ORDER so the dispatcher can confirm availability, range, and timing. Delivery is not listed as 24 hours. The walk-in shop lists Open 24 Hours / 7 Days a Week separately. Use the Scarborough cannabis delivery page at /cannabis-delivery-scarborough for neighbourhood details.",
   },
   {
+    q: "Can I get the store price on a delivery order?",
+    a: "No. In-store prices are for purchases made in the store. Delivery orders always use delivery prices.",
+  },
+  {
     q: "What ID is accepted?",
     a: "Bring valid government-issued photo ID proving you are 19 years of age or older.",
   },
@@ -91,6 +95,7 @@ export default function FAQPage() {
             {FAQS.map((faq, i) => (
               <details
                 key={i}
+                id={faq.q === "Can I get the store price on a delivery order?" ? "delivery-price-rule" : undefined}
                 style={{
                   border: "1px solid rgba(27,94,32,0.15)",
                   borderRadius: "10px",
