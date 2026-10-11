@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
 import SmokePilotSpotlight from "./components/SmokePilotSpotlight";
 import StoreMap from "./components/StoreMap";
-import { type FlowerProduct } from "./lib/products";
+import { allFlowers, type FlowerProduct } from "./lib/products";
 import { STORE_NAP } from "./lib/nap";
 import ParityHubLinks from "./components/ParityHubLinks";
 import { useLiveFlowers } from "./lib/useLiveMenu";
@@ -155,11 +155,12 @@ const homeFaqSchema = {
 
 export default function HomePage() {
   const __liveFlowers = useLiveFlowers();
+  const feedFlowers = __liveFlowers.length > 0 ? __liveFlowers : allFlowers;
   const [featuredStrains, setFeaturedStrains] = useState<FlowerProduct[]>([]);
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
-      const pool = [...__liveFlowers].filter((f) => f.image);
+      const pool = [...feedFlowers].filter((f) => f.image);
       for (let i = pool.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [pool[i], pool[j]] = [pool[j], pool[i]];
@@ -178,7 +179,7 @@ export default function HomePage() {
     });
 
     return () => window.cancelAnimationFrame(frame);
-  }, [__liveFlowers]);
+  }, [feedFlowers]);
 
   return (
     <main className={styles.main}>
@@ -246,7 +247,7 @@ export default function HomePage() {
           </div>
           <p className="price-rule-notice">IN-STORE PRICES ONLY. These prices do not apply to delivery orders. Delivery has its own prices. Why? <Link href="/faq#delivery-price-rule">See the FAQ</Link></p>
           <div className={styles.tierGrid}>
-            {TIER_CARDS.map((tier) => { const rangeLine = tier.key ? tierRangeText(storeTierRange(__liveFlowers, tier.key)) : null; return (
+            {TIER_CARDS.map((tier) => { const rangeLine = tier.key ? tierRangeText(storeTierRange(feedFlowers, tier.key)) : null; return (
               <Link key={tier.slug + tier.name} href={`/${tier.slug}`} className={styles.tierCard}>
                 <div className={styles.tierCardImg}>
                   <img src={tier.banner} alt={tier.name} loading="lazy" />
