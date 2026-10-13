@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
-import CategoryCoreBanners from "../../components/CategoryCoreBanners";
 import SafeImage from "../../components/SafeImage";
 import { getItemPriceDisplay } from "../../lib/itemPricing";
 import Footer from "../../components/Footer";
@@ -70,17 +69,15 @@ export default async function ItemsCategoryPage({
     items = [...items, ...uniqueAccessories];
   }
   const { config } = catInfo;
-  const coreKind = catSlug === "cigarettes" ? "cigarettes" : (catSlug === "vapes" || catSlug === "vape-disposables") ? "vapes" : null;
   const guideGroups = getCategoryGuideGroups(`/items/${catSlug}`);
 
   return (
     <main className={styles.main}>
       <Navbar />
-      {coreKind && <CategoryCoreBanners kind={coreKind} storeName="Mohawk Medicine" weedHref="/exotic-weed" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />}
 
       {/* Hero Banner */}
       <section style={{ width: "100%", overflow: "hidden", marginTop: "92px", marginBottom: "24px" }}>
-        {config.banner && !coreKind ? (
+        {config.banner ? (
           <>
             <img
               src={config.banner}

@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
-import CategoryCoreBanners from "../components/CategoryCoreBanners";
 import Footer from "../components/Footer";
 import FlowerCard from "../components/FlowerCard";
 import {
@@ -65,7 +64,6 @@ export default async function TierPage({
   const { flowers: liveFlowers } = await fetchLiveProducts();
   const flowers = liveFlowers.filter((flower) => flower.tier.toUpperCase() === tierInfo.key.toUpperCase());
   const { config } = tierInfo;
-  const isCoreWeedTier = ["exotic-weed", "premium-weed", "aaa-weed"].includes(tierSlug);
   const guideLinks = getTierGuideLinks(`/${tierSlug}`);
   const seo = TIER_SEO[tierInfo.key];
   const rangeLine = tierRangeText(storeTierRange(flowers, tierInfo.key));
@@ -101,16 +99,15 @@ export default async function TierPage({
         dangerouslySetInnerHTML={{ __html: serializeJsonLd(tierJsonLd) }}
       />
       <Navbar />
-      {isCoreWeedTier && <CategoryCoreBanners kind="weed" storeName="Mohawk Medicine" weedHref="/exotic-weed" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />}
 
       {/* ── Banner Image (standalone, no overlay text) ── */}
-      {!isCoreWeedTier && <section className={styles.bannerSection}>
+      <section className={styles.bannerSection}>
         <img
           src={config.banner}
           alt={`${config.name} Cannabis Flower — ${config.tagline}`}
           className={styles.bannerImg}
         />
-      </section>}
+      </section>
 
       {/* ── Hero Content BELOW banner ── */}
       <section

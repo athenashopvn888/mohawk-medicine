@@ -7,7 +7,7 @@ import HomepageTopNotices from "./components/HomepageTopNotices";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
-import FourCoreBannerStack from "./components/FourCoreBannerStack";
+import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
@@ -184,8 +184,8 @@ export default function HomePageClient({ initialTierRanges }: { initialTierRange
   return (
     <main className={styles.main}>
       <Navbar />
-      <FourCoreBannerStack title={HOME_TITLE} storeName="Mohawk Medicine" storeArea="Scarborough" storeOrigin="https://mohawkmedicine.com" weedHref="/exotic-weed" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />
       <HomepageTopNotices />
+      <FleetAnnouncementBanner />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }} />
 
@@ -216,7 +216,7 @@ export default function HomePageClient({ initialTierRanges }: { initialTierRange
       {/* B) WELCOME STRIP */}
       <section className={styles.welcomeStrip}>
         <div className={styles.container}>
-          <div className={styles.welcomeH1}>{HOME_TITLE}</div>
+          <h1 className={styles.welcomeH1}>{HOME_TITLE}</h1>
             <CohortDeliveryActions variant="hero" />
           <p className={styles.welcomeSub}>
             24-Hour Scarborough Cannabis Dispensary on Eglinton Ave E
