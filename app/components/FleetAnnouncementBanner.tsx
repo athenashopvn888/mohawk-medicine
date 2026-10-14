@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import FlowerBogoStrip from "./FlowerBogoStrip";
 
-function isThanksgivingNoticeActive(date: Date) {
+function isHalloweenNoticeActive(date: Date) {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "America/Toronto",
     year: "numeric",
@@ -14,15 +14,15 @@ function isThanksgivingNoticeActive(date: Date) {
   const value = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
   const dateKey = Number(`${value.year}${value.month}${value.day}`);
 
-  return dateKey >= 20260930 && dateKey <= 20261012;
+  return dateKey >= 20261014 && dateKey <= 20261031;
 }
 
 export default function FleetAnnouncementBanner() {
-  const [showThanksgivingNotice, setShowThanksgivingNotice] = useState(false);
+  const [showHalloweenNotice, setShowHalloweenNotice] = useState(false);
 
   useEffect(() => {
     const updateVisibility = () =>
-      setShowThanksgivingNotice(isThanksgivingNoticeActive(new Date()));
+      setShowHalloweenNotice(isHalloweenNoticeActive(new Date()));
 
     updateVisibility();
     const timer = window.setInterval(updateVisibility, 60_000);
@@ -31,9 +31,9 @@ export default function FleetAnnouncementBanner() {
 
   return (
     <aside data-fleet-homepage-announcement="" aria-label="Store announcements">
-      {showThanksgivingNotice ? (
-        <p data-thanksgiving-hours-notice="">
-          Thanksgiving Monday (Oct 12): We are open regular hours.
+      {showHalloweenNotice ? (
+        <p data-halloween-hours-notice="">
+          Happy Halloween! Mohawk Medicine is open regular hours on Saturday, October 31.
         </p>
       ) : null}
       <FlowerBogoStrip hero />
