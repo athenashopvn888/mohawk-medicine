@@ -3,6 +3,7 @@ import { HOME_TITLE } from "./lib/homeDelivery";
 import CohortDeliveryActions from "./components/CohortDeliveryActions";
 import HomeDeliverySection from "./components/HomeDeliverySection";
 import HomepageTopNotices from "./components/HomepageTopNotices";
+import HalloweenNotice from "./components/HalloweenNotice";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -188,6 +189,7 @@ export default function HomePageClient({ initialTierRanges }: { initialTierRange
       <Navbar />
       <FourCoreBannerStack title={HOME_TITLE} storeName="Mohawk Medicine" storeArea="Scarborough" storeOrigin="https://mohawkmedicine.com" weedHref="/exotic-weed" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />
       <HomepageTopNotices />
+      <HalloweenNotice storeName="Mohawk Medicine" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }} />
 
