@@ -18,6 +18,8 @@ import { STORE_NAP } from "./lib/nap";
 import ParityHubLinks from "./components/ParityHubLinks";
 import { useLiveFlowers } from "./lib/useLiveMenu";
 import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
+import NearMeFaq from "./components/NearMeFaq";
+import nearMeFaq from "./lib/nearMeFaq.json";
 
 /* Tier Grid Config */
 const TIER_CARDS = [
@@ -431,6 +433,8 @@ export default function HomePageClient({ initialTierRanges }: { initialTierRange
           </div>
         </div>
       </section>
+
+      <NearMeFaq id="local-near-me" q={nearMeFaq.home.q} a={nearMeFaq.home.a} />
 
       <Footer />
     </main>
