@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import CigaretteSeasonalNotice from "../components/CigaretteSeasonalNotice";
 import Footer from "../components/Footer";
 import StoreMap from "../components/StoreMap";
 import StoreNap from "../components/StoreNap";
@@ -90,6 +91,7 @@ export default function NativeCigarettesScarboroughPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }}
       />
       <Navbar />
+      <CigaretteSeasonalNotice sticky />
 
       <section className={styles.bannerSection}>
         <img

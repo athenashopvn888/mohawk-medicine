@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import CategoryCoreBanners from "../../components/CategoryCoreBanners";
+import CigaretteSeasonalNotice from "../../components/CigaretteSeasonalNotice";
 import SafeImage from "../../components/SafeImage";
 import { getItemPriceDisplay } from "../../lib/itemPricing";
 import Footer from "../../components/Footer";
@@ -76,6 +77,7 @@ export default async function ItemsCategoryPage({
   return (
     <main className={styles.main}>
       <Navbar />
+      {catSlug === "cigarettes" && <CigaretteSeasonalNotice sticky />}
       {coreKind && <CategoryCoreBanners kind={coreKind} storeName="Mohawk Medicine" weedHref="/exotic-weed" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />}
 
       {/* Hero Banner */}
