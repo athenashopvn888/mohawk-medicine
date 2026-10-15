@@ -2,6 +2,7 @@ import { HOME_DOC_TITLE } from "./lib/homeDelivery";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import PinnedNavClearance from "./components/PinnedNavClearance";
 import { serializeJsonLd, storeJsonLd, websiteJsonLd } from "./lib/nap";
 
 export const metadata: Metadata = {
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           EXPLORE WEED DELIVERY
         </Link>
         {children}
+        <PinnedNavClearance />
       </body>
     </html>
   );
