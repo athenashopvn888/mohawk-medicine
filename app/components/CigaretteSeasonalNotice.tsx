@@ -15,6 +15,9 @@ const wrapStyle = {
   background: "transparent",
 };
 
+// Sticky strip is opaque (page background) so products never show around/through the pill.
+const stickyStripBg = "var(--bg-primary, #ffffff)";
+
 const pillStyle = {
   display: "flex",
   alignItems: "center",
@@ -54,7 +57,7 @@ export default function CigaretteSeasonalNotice({ sticky = false }: { sticky?: b
     const update = () => {
       const pos = window.getComputedStyle(nav).position;
       const pinned = pos === "sticky" || pos === "fixed";
-      const bottom = pinned ? Math.ceil(nav.getBoundingClientRect().bottom) : 0;
+      const bottom = pinned ? Math.floor(nav.getBoundingClientRect().bottom) : 0;
       setNavBottom(bottom);
       // A fixed nav sits on top of page flow: push the notice below it (measured at top of page only).
       if (pos === "fixed" && window.scrollY < 2) {
@@ -77,12 +80,12 @@ export default function CigaretteSeasonalNotice({ sticky = false }: { sticky?: b
     <div
       ref={ref}
       data-cigarette-seasonal-wrap={sticky ? "sticky" : "inline"}
-      style={sticky ? { ...wrapStyle, position: "sticky", top: navBottom, marginTop: clearance, zIndex: 40, pointerEvents: "none" } : wrapStyle}
+      style={sticky ? { ...wrapStyle, background: stickyStripBg, position: "sticky", top: navBottom, marginTop: clearance, zIndex: 900, isolation: "isolate" } : wrapStyle}
     >
       <p
         role="note"
         data-cigarette-seasonal-notice={sticky ? "sticky" : "inline"}
-        style={{ ...pillStyle, pointerEvents: "auto" }}
+        style={pillStyle}
       >
         <span aria-hidden="true" style={{ flex: "0 0 auto", fontSize: "1.15em" }}>🚬</span>
         <span>{CIGARETTE_SEASONAL_TEXT}</span>
