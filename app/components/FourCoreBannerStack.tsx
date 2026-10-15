@@ -51,8 +51,15 @@ export default function FourCoreBannerStack({
       window.cancelAnimationFrame(frame);
       frame = window.requestAnimationFrame(() => {
         const currentMargin = Number.parseFloat(window.getComputedStyle(announcement).marginTop);
-        const flowTop = announcement.getBoundingClientRect().top - (currentMargin || 0);
-        const nextClearance = Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom - flowTop));
+        // Measure in document coordinates so the result does not depend on scroll position.
+        // (Viewport-relative maths blew the margin up to thousands of px when a resize/nav
+        // change fired while scrolled, e.g. the mobile URL bar collapsing.)
+        const navPos = window.getComputedStyle(nav).position;
+        const flowTopDoc = announcement.getBoundingClientRect().top + window.scrollY - (currentMargin || 0);
+        // Only a fixed nav sits on top of page flow; an in-flow/sticky nav never needs clearance.
+        const nextClearance = navPos === "fixed"
+          ? Math.min(400, Math.max(0, Math.ceil(nav.getBoundingClientRect().bottom - flowTopDoc)))
+          : 0;
         setNavClearance((current) => current === nextClearance ? current : nextClearance);
       });
     };
