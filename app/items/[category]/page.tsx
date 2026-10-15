@@ -80,7 +80,12 @@ export default async function ItemsCategoryPage({
       {catSlug === "cigarettes" && <CigaretteSeasonalNotice sticky />}
       {coreKind && <CategoryCoreBanners kind={coreKind} storeName="Mohawk Medicine" weedHref="/exotic-weed" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />}
 
-      {/* Hero Banner */}
+      {/* Hero Banner (cigarettes: gray icon tile + count removed per owner 2026-10-15; H1 kept as plain heading) */}
+      {catSlug === "cigarettes" ? (
+        <div style={{ width: "100%", background: "#ffffff", padding: "18px 16px 6px", textAlign: "center" }}>
+          <h1 style={{ margin: 0, color: "#111827", fontSize: "clamp(24px, 4vw, 34px)", fontWeight: 900 }}>{config.name}</h1>
+        </div>
+      ) : (
       <section style={{ width: "100%", overflow: "hidden", marginTop: "92px", marginBottom: "24px" }}>
         {config.banner && !coreKind ? (
           <>
@@ -105,6 +110,7 @@ export default async function ItemsCategoryPage({
           </div>
         )}
       </section>
+      )}
 
       {guideGroups.length > 0 && (
         <nav className={styles.guideStrip} aria-label={`${config.name} guides`}>

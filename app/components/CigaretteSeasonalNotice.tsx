@@ -27,7 +27,7 @@ const pillStyle = {
   maxWidth: "1100px",
   boxSizing: "border-box" as const,
   margin: 0,
-  padding: "12px 24px",
+  padding: "12px 22px",
   borderRadius: "999px",
   background: "linear-gradient(90deg, #7a4a1f 0%, #a0672e 100%)",
   border: "1.5px solid #e8c27a",
@@ -87,8 +87,15 @@ export default function CigaretteSeasonalNotice({ sticky = false }: { sticky?: b
         data-cigarette-seasonal-notice={sticky ? "sticky" : "inline"}
         style={pillStyle}
       >
-        <span aria-hidden="true" style={{ flex: "0 0 auto", fontSize: "1.15em" }}>🚬</span>
-        <span>{CIGARETTE_SEASONAL_TEXT}</span>
+        <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px", maxWidth: "100%", margin: "0 auto" }}>
+          <svg aria-hidden="true" focusable="false" width="26" height="14" viewBox="0 0 26 14" style={{ flex: "0 0 auto", display: "block" }}>
+            <rect x="1" y="6" width="17" height="6" rx="1" fill="#fff8ea" />
+            <rect x="18" y="6" width="6" height="6" rx="1" fill="#e8a24a" />
+            <rect x="1" y="6" width="2.5" height="6" rx="0.5" fill="#ff7a3d" />
+            <path d="M5 4.5c0-1.5 1.6-1.5 1.6-3M8.5 4.5c0-1.5 1.6-1.5 1.6-3" stroke="#fff8ea" strokeWidth="1.2" fill="none" strokeLinecap="round" opacity=".75" />
+          </svg>
+          <span style={{ textAlign: "center" }}>{CIGARETTE_SEASONAL_TEXT}</span>
+        </span>
       </p>
     </div>
   );
