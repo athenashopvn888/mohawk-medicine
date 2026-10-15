@@ -36,6 +36,9 @@ body > .deliveryAnnouncement ~ * nav {
   left: 0;
   /* Keep the fixed nav above page content (cards, badges, animated heroes). */
   z-index: 1000 !important;
+  /* Solid white pinned header: nothing scrolls visibly behind the logo row, tier nav or buttons. */
+  background: #ffffff !important;
+  background-color: #ffffff !important;
 }
 
 .deliveryAnnouncement:hover,
