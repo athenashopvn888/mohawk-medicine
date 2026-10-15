@@ -5,25 +5,47 @@ import { useEffect, useRef, useState } from "react";
 export const CIGARETTE_SEASONAL_TEXT =
   "Cigarettes are seasonal and in limited stock. Please check in store for availability.";
 
-const baseStyle = {
+const wrapStyle = {
   width: "100%",
   boxSizing: "border-box" as const,
   margin: 0,
-  padding: "10px 16px",
-  background: "#5a3417",
-  borderBottom: "2px solid #3b200c",
-  color: "#fff7ec",
+  padding: "10px 12px",
+  display: "flex",
+  justifyContent: "center",
+  background: "transparent",
+};
+
+// Sticky strip is opaque (page background) so products never show around/through the pill.
+const stickyStripBg = "var(--bg-primary, #ffffff)";
+
+const pillStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "10px",
+  width: "100%",
+  maxWidth: "1100px",
+  boxSizing: "border-box" as const,
+  margin: 0,
+  padding: "12px 24px",
+  borderRadius: "999px",
+  background: "linear-gradient(90deg, #7a4a1f 0%, #a0672e 100%)",
+  border: "1.5px solid #e8c27a",
+  boxShadow: "0 6px 18px rgba(0,0,0,.35)",
+  color: "#fff8ea",
   textAlign: "center" as const,
   fontWeight: 800,
-  fontSize: "clamp(15px, 2.2vw, 18px)",
+  fontSize: "clamp(14px, 2.1vw, 18px)",
   lineHeight: 1.35,
   textTransform: "none" as const,
   letterSpacing: "normal",
+  textShadow: "0 1px 2px rgba(0,0,0,.35)",
+  overflowWrap: "anywhere" as const,
 };
 
 /** Brown seasonal-stock notice. `sticky` pins it just under the site nav on scroll. */
 export default function CigaretteSeasonalNotice({ sticky = false }: { sticky?: boolean }) {
-  const ref = useRef<HTMLParagraphElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [navBottom, setNavBottom] = useState(0);
   const [clearance, setClearance] = useState(0);
 
@@ -35,7 +57,7 @@ export default function CigaretteSeasonalNotice({ sticky = false }: { sticky?: b
     const update = () => {
       const pos = window.getComputedStyle(nav).position;
       const pinned = pos === "sticky" || pos === "fixed";
-      const bottom = pinned ? Math.ceil(nav.getBoundingClientRect().bottom) : 0;
+      const bottom = pinned ? Math.floor(nav.getBoundingClientRect().bottom) : 0;
       setNavBottom(bottom);
       // A fixed nav sits on top of page flow: push the notice below it (measured at top of page only).
       if (pos === "fixed" && window.scrollY < 2) {
@@ -55,13 +77,19 @@ export default function CigaretteSeasonalNotice({ sticky = false }: { sticky?: b
   }, [sticky]);
 
   return (
-    <p
+    <div
       ref={ref}
-      role="note"
-      data-cigarette-seasonal-notice={sticky ? "sticky" : "inline"}
-      style={sticky ? { ...baseStyle, position: "sticky", top: navBottom, marginTop: clearance, zIndex: 40 } : baseStyle}
+      data-cigarette-seasonal-wrap={sticky ? "sticky" : "inline"}
+      style={sticky ? { ...wrapStyle, background: stickyStripBg, position: "sticky", top: navBottom, marginTop: clearance, zIndex: 900, isolation: "isolate" } : wrapStyle}
     >
-      {CIGARETTE_SEASONAL_TEXT}
-    </p>
+      <p
+        role="note"
+        data-cigarette-seasonal-notice={sticky ? "sticky" : "inline"}
+        style={pillStyle}
+      >
+        <span aria-hidden="true" style={{ flex: "0 0 auto", fontSize: "1.15em" }}>🚬</span>
+        <span>{CIGARETTE_SEASONAL_TEXT}</span>
+      </p>
+    </div>
   );
 }

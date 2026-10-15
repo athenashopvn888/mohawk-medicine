@@ -34,6 +34,8 @@ body > .deliveryAnnouncement ~ * nav {
   top: var(--delivery-announcement-height) !important;
   right: 0;
   left: 0;
+  /* Keep the fixed nav above page content (cards, badges, animated heroes). */
+  z-index: 1000 !important;
 }
 
 .deliveryAnnouncement:hover,
