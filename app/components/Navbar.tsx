@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 import FlowerBogoStrip from "./FlowerBogoStrip";
+import GoogleReviewButton from "./GoogleReviewButton";
 
 const ALL_LINKS: { href: string; label: string; featured?: boolean }[] = [
   { href: "/exotic-weed", label: "Exotic Weed" },
@@ -55,6 +56,7 @@ export default function Navbar({ hideThcVape = false }: { hideThcVape?: boolean 
           />
         </Link>
         <div className={styles.topBarRight}>
+          <GoogleReviewButton />
           <span className={styles.open}>
             <span className={styles.dot}></span>
             OPEN NOW 24/7

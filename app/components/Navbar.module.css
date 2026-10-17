@@ -1,4 +1,4 @@
-﻿.navbar {
+.navbar {
   position: sticky;
   top: 0;
   left: 0;
@@ -173,3 +173,56 @@
 }
 
 @media (prefers-reduced-motion: reduce) { .scrollAdvance, .pill { transition: none; } }
+
+/* MEB01 Google review button (top bar, beside OPEN NOW). Store greens + hiring gold star; height matches the OPEN pill
+   so the right-hand group is one even, vertically centred row. Top bar height (56px) is unchanged, so the measured
+   pinned-nav clearance and the sticky cigarette notice offset are unaffected. */
+.topBar { gap: 12px; }
+.logo { flex-shrink: 0; min-width: 0; }
+.topBarRight { flex-shrink: 0; gap: 8px; }
+.open { box-sizing: border-box; height: 32px; }
+
+.reviewBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-sizing: border-box;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 100px;
+  background: #1B5E20;
+  border: 1.5px solid #1B5E20;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(27, 94, 32, 0.28);
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.reviewBtn:hover, .reviewBtn:focus { background: #2E7D32; border-color: #2E7D32; color: #FFFFFF; box-shadow: 0 3px 10px rgba(27, 94, 32, 0.34); }
+.reviewBtn:active { transform: scale(0.96); }
+.reviewBtn:focus-visible { outline: 2px solid #fbbf24; outline-offset: 2px; }
+.reviewStar { display: inline-flex; color: #fbbf24; line-height: 0; }
+.reviewLong { display: inline; }
+
+@media (max-width: 640px) {
+  .reviewLong { display: none; }
+}
+
+/* Android phone widths (412/390) and smaller: tighten spacing so logo + REVIEW + OPEN NOW sit on one row with even gaps. */
+@media (max-width: 440px) {
+  /* logo, REVIEW and OPEN NOW become three evenly spaced items across the bar */
+  .topBar { padding: 0 14px; gap: 8px; justify-content: space-between; }
+  .topBarRight { display: contents; }
+  .open { padding: 0 10px; gap: 5px; font-size: 10px; letter-spacing: 0.05em; }
+  .reviewBtn { padding: 0 10px; gap: 4px; font-size: 10px; letter-spacing: 0.05em; }
+}
+@media (max-width: 360px) {
+  .logoImg { height: 38px; }
+}
+@media (prefers-reduced-motion: reduce) { .reviewBtn { transition: none; } }
