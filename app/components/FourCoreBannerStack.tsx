@@ -1,4 +1,5 @@
 "use client";
+import { FULL_NAME_NAP } from "../lib/fullNameNap";
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -83,6 +84,7 @@ export default function FourCoreBannerStack({
     >
       <div data-home-title-block="" style={{ width: "100%", boxSizing: "border-box", padding: "10px 16px", background: "#0b1018", color: "#ffffff", textAlign: "center" }}>
         <h1 style={{ margin: 0, fontSize: "clamp(24px, 3.5vw, 38px)", lineHeight: 1.2, fontWeight: 900 }}>{title}</h1>
+        <p data-fullname-subline="" style={{ margin: "4px 0 0", fontSize: "13px", fontWeight: 600, lineHeight: 1.35, opacity: 0.85, color: "inherit", overflowWrap: "anywhere" }}>{FULL_NAME_NAP.fullName}</p>
       </div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": imageObjects }).replace(/</g, "\\u003c") }} />
       <figure data-core-banner="weed" style={figureStyle}><Link href={weedHref} aria-label={`Shop Exotic, Premium and AAA+ weed tiers at ${storeName}`} style={linkStyle}>{/* eslint-disable-next-line @next/next/no-img-element */}<img src={TOP_WEED_IMAGE} alt={`${storeName} in ${storeArea} — Exotic, Premium and AAA+ top weed tiers`} title={`${storeName} top weed tiers — Exotic, Premium and AAA+`} style={imageStyle} /></Link><figcaption style={captionStyle}>Top 3 tiers only (Exotic, Premium, AAA+): Buy 2g Get 1g FREE · Buy 3g Get 3g FREE (6g)</figcaption></figure>

@@ -1,3 +1,4 @@
+import FullNameNap from "./components/FullNameNap";
 import { HOME_DOC_TITLE } from "./lib/homeDelivery";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           EXPLORE WEED DELIVERY
         </Link>
         {children}
+        <FullNameNap />
         <PinnedNavClearance />
       </body>
     </html>
