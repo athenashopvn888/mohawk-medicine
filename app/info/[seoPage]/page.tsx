@@ -8,6 +8,7 @@ import StoreNap from "../../components/StoreNap";
 import { SEO_PAGES, getLegacySeoRedirect, getSeoPageBySlug } from "../../lib/seoPages";
 import { TIER_CONFIG } from "../../lib/products";
 import ParityHubLinks from "../../components/ParityHubLinks";
+import { isHiddenSmokePath } from "../../lib/showCigarettes";
 import styles from "./seo.module.css";
 
 const LOCAL_GUIDES = [
@@ -170,7 +171,7 @@ export default async function SeoLandingPage({
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>Nearby Local Pages</h2>
             <div className={styles.localLinks}>
-              {LOCAL_GUIDES.filter((guide) => guide.href !== currentPath).map((guide) => (
+              {LOCAL_GUIDES.filter((guide) => guide.href !== currentPath && !isHiddenSmokePath(guide.href)).map((guide) => (
                 <Link key={guide.href} href={guide.href} className={styles.localLink}>
                   {guide.label}
                 </Link>

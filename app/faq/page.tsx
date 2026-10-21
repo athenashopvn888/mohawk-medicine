@@ -1,4 +1,4 @@
-import { cigaretteSafeContent } from "../lib/siteConfig";
+import { SHOW_CIGARETTES, cigaretteSafeContent } from "../lib/siteConfig";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -122,9 +122,18 @@ export default function FAQPage() {
             For Scarborough / Eglinton East delivery hours, area, and how to order, open the{" "}
             <Link href="/cannabis-delivery-scarborough">Scarborough cannabis delivery page</Link>.
             For a 24-hour walk-in, use the <Link href="/visit">24-hour Scarborough walk-in guide</Link>.
-            Native cigarettes and nicotine vapes have separate guides at{" "}
-            <Link href="/native-cigarettes-scarborough">/native-cigarettes-scarborough</Link> and{" "}
-            <Link href="/nicotine-vape-scarborough">/nicotine-vape-scarborough</Link>.
+            {SHOW_CIGARETTES ? (
+              <>
+                Native cigarettes and nicotine vapes have separate guides at{" "}
+                <Link href="/native-cigarettes-scarborough">/native-cigarettes-scarborough</Link> and{" "}
+                <Link href="/nicotine-vape-scarborough">/nicotine-vape-scarborough</Link>.
+              </>
+            ) : (
+              <>
+                Nicotine vapes have a separate guide at{" "}
+                <Link href="/nicotine-vape-scarborough">/nicotine-vape-scarborough</Link>.
+              </>
+            )}
           </p>
         </div>
       </div>

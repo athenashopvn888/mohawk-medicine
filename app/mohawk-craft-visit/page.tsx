@@ -6,6 +6,7 @@ import StoreMap from "../components/StoreMap";
 import StoreNap from "../components/StoreNap";
 import { STORE_NAP } from "../lib/nap";
 import ParityHubLinks from "../components/ParityHubLinks";
+import { SHOW_CIGARETTES } from "../lib/showCigarettes";
 import styles from "./page.module.css";
 
 const CANONICAL = "https://mohawkmedicine.com/mohawk-craft-visit";
@@ -216,9 +217,11 @@ export default function MohawkCraftVisitPage() {
               <Link href="/visit" className={styles.localLink}>
                 24-Hour Walk-In Guide
               </Link>
+              {SHOW_CIGARETTES && (
               <Link href="/native-cigarettes-scarborough" className={styles.localLink}>
                 Native Cigarettes Scarborough
               </Link>
+              )}
               <Link href="/nicotine-vape-scarborough" className={styles.localLink}>
                 Nicotine Vapes Scarborough
               </Link>

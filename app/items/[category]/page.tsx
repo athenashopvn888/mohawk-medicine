@@ -15,6 +15,7 @@ import {
 } from "../../lib/products";
 import styles from "./items.module.css";
 import { getCategoryGuideGroups } from "../../lib/guideRegistry";
+import { SHOW_CIGARETTES, isGrabbaItem } from "../../lib/showCigarettes";
 import VapeActionPanel from "../../components/VapeActionPanel";
 
 const SITE_ORIGIN = "https://mohawkmedicine.com";
@@ -69,6 +70,9 @@ export default async function ItemsCategoryPage({
     const existingIds = new Set(items.map(i => i.sku));
     const uniqueAccessories = accessories.filter(a => !existingIds.has(a.sku));
     items = [...items, ...uniqueAccessories];
+  }
+  if (!SHOW_CIGARETTES) {
+    items = items.filter((item) => !isGrabbaItem(item));
   }
   const { config } = catInfo;
   const coreKind = catSlug === "cigarettes" ? "cigarettes" : (catSlug === "vapes" || catSlug === "vape-disposables") ? "vapes" : null;

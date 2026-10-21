@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import { DELIVERY_GUIDE_REGISTRY, getDeliveryGuide } from "../../lib/deliveryGuideRegistry";
 import { GUIDE_REGISTRY, GUIDE_STORE, getGuide, resolveGuideProduct, type GuideEntry } from "../../lib/guideRegistry";
+import { SHOW_CIGARETTES, isGrabbaText } from "../../lib/showCigarettes";
 import GuideBody, { stripMarkdown } from "./GuideBody";
 import DeliveryGuidePage from "./DeliveryGuidePage";
 import styles from "./guide.module.css";
@@ -38,7 +39,10 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
   };
 }
 
-const relatedEntries = (guide: GuideEntry) => guide.relatedSlugs.map(getGuide).filter((entry): entry is GuideEntry => Boolean(entry));
+const relatedEntries = (guide: GuideEntry) => guide.relatedSlugs.map(getGuide).filter((entry): entry is GuideEntry => {
+  if (!entry) return false;
+  return SHOW_CIGARETTES || !isGrabbaText(entry.slug);
+});
 
 export default async function GuidePage({ params }: GuidePageProps) {
   const slug = (await params).slug;

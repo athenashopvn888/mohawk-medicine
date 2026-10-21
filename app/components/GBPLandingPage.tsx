@@ -5,6 +5,7 @@ import { gbpLocation } from "../lib/gbp-location";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ParityHubLinks from "./ParityHubLinks";
+import { SHOW_CIGARETTES, isHiddenSmokePath } from "../lib/showCigarettes";
 
 const preferredSourceAttribute = {
   "google-add-preferred-source-btn": "",
@@ -107,10 +108,17 @@ export function GBPLandingPage() {
     ],
   };
 
+  const visibleFaqs = FAQS.map((faq) => SHOW_CIGARETTES ? faq : {
+    ...faq,
+    a: faq.a.replace(
+      "Native cigarettes and nicotine vapes have their own Scarborough guides.",
+      "Nicotine vapes have their own Scarborough guide.",
+    ),
+  });
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQS.map((faq) => ({
+    mainEntity: visibleFaqs.map((faq) => ({
       "@type": "Question",
       name: faq.q,
       acceptedAnswer: { "@type": "Answer", text: faq.a },
@@ -170,9 +178,19 @@ export function GBPLandingPage() {
             <Link href="/info/scarborough-weed-dispensary">Scarborough Weed Dispensary</Link> page.
             For Eglinton Avenue East corridor context, use the{" "}
             <Link href="/info/weed-store-near-eglinton-east">Eglinton East store page</Link>. Adults
-            looking for category information can continue to the five Weed tiers or the separate{" "}
-            <Link href="/native-cigarettes-scarborough">Native cigarettes Scarborough guide</Link>{" "}
-            and <Link href="/nicotine-vape-scarborough">nicotine vape Scarborough guide</Link>.
+            looking for category information can continue to the five Weed tiers
+            {SHOW_CIGARETTES ? (
+              <>
+                {" "}or the separate{" "}
+                <Link href="/native-cigarettes-scarborough">Native cigarettes Scarborough guide</Link>{" "}
+                and <Link href="/nicotine-vape-scarborough">nicotine vape Scarborough guide</Link>
+              </>
+            ) : (
+              <>
+                {" "}or the <Link href="/nicotine-vape-scarborough">nicotine vape Scarborough guide</Link>
+              </>
+            )}
+            .
             See also <Link href="/vape-shop-scarborough">current Scarborough nicotine vape listings</Link>.
           </p>
           <p className={styles.infoText}>
@@ -315,7 +333,7 @@ export function GBPLandingPage() {
             flower. Use the cigarette or nicotine guides when that is the reason for the stop.
           </p>
           <div className={styles.localLinks}>
-            {LOCAL_LINKS.map((link) => (
+            {LOCAL_LINKS.filter((link) => !isHiddenSmokePath(link.href)).map((link) => (
               <Link key={link.href} href={link.href} className={styles.localLink}>
                 {link.label}
               </Link>
@@ -326,7 +344,7 @@ export function GBPLandingPage() {
         <section id="faq" className={styles.section}>
           <h2 className={styles.h2}>FAQ: Scarborough / Eglinton East Weed Dispensary</h2>
           <div className={styles.faqList}>
-            {FAQS.map((faq) => (
+            {visibleFaqs.map((faq) => (
               <div key={faq.q} className={styles.faqItem}>
                 <h3 className={styles.faqQuestion}>{faq.q}</h3>
                 <p className={styles.faqAnswer}>{faq.a}</p>

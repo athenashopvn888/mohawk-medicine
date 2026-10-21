@@ -8,6 +8,7 @@ import { STORE_NAP } from "../lib/nap";
 import ParityHubLinks from "../components/ParityHubLinks";
 import styles from "./page.module.css";
 import VapeActionPanel from "../components/VapeActionPanel";
+import { SHOW_CIGARETTES } from "../lib/showCigarettes";
 
 const CANONICAL = "https://mohawkmedicine.com/nicotine-vape-scarborough";
 const TITLE = "Nicotine Vape Scarborough | Eglinton East | Mohawk Medicine";
@@ -196,9 +197,11 @@ export default function NicotineVapeScarboroughPage() {
               <Link href="/items/vapes" className={styles.ctaPrimary}>
                 Browse Nicotine Vapes
               </Link>
+              {SHOW_CIGARETTES && (
               <Link href="/native-cigarettes-scarborough" className={styles.ctaSecondary}>
                 Native Cigarettes guide
               </Link>
+              )}
             </div>
           </article>
 
@@ -251,9 +254,11 @@ export default function NicotineVapeScarboroughPage() {
               <Link href="/visit" className={styles.localLink}>
                 24-Hour Walk-In Guide
               </Link>
+              {SHOW_CIGARETTES && (
               <Link href="/native-cigarettes-scarborough" className={styles.localLink}>
                 Native Cigarettes Scarborough
               </Link>
+              )}
               <Link href="/items/vapes" className={styles.localLink}>
                 Nicotine Vape Menu
               </Link>
