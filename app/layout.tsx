@@ -1,3 +1,4 @@
+import { cigaretteSafeContent } from "./lib/siteConfig";
 import FullNameNap from "./components/FullNameNap";
 import { HOME_DOC_TITLE } from "./lib/homeDelivery";
 import type { Metadata } from "next";
@@ -6,7 +7,7 @@ import "./globals.css";
 import PinnedNavClearance from "./components/PinnedNavClearance";
 import { serializeJsonLd, storeJsonLd, websiteJsonLd } from "./lib/nap";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = cigaretteSafeContent({
   metadataBase: new URL("https://mohawkmedicine.com"),
   title: {
     default: HOME_DOC_TITLE,
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://mohawkmedicine.com" },
 
   twitter: { card: "summary_large_image", title: HOME_DOC_TITLE },
-};
+});
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -39,8 +40,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="geo.position" content="43.7356759;-79.2508842" />
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Toronto, Scarborough" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(websiteJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(storeJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(cigaretteSafeContent(websiteJsonLd)) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(cigaretteSafeContent(storeJsonLd)) }} />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-56DQVKRW14"></script>
         <script
           dangerouslySetInnerHTML={{

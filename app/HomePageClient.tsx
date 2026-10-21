@@ -1,4 +1,7 @@
 "use client";
+
+import { cigaretteSafeContent } from "./lib/siteConfig";
+
 import { HOME_TITLE } from "./lib/homeDelivery";
 import CohortDeliveryActions from "./components/CohortDeliveryActions";
 import HomeDeliverySection from "./components/HomeDeliverySection";
@@ -85,7 +88,7 @@ const CATEGORIES = [
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/03_Mohawk_Accessories.webp" },
 ];
 
-const HELPFUL_PAGES = [
+const HELPFUL_PAGES = cigaretteSafeContent([
   { name: "Scarborough Cannabis Delivery", href: "/cannabis-delivery-scarborough", description: "Local Eglinton East delivery hours, area, and how to order." },
   { name: "Weed Dispensary Scarborough", href: "/weed-dispensary-toronto/", description: "Confirm the live Scarborough / Eglinton East weed hub." },
   { name: "24-Hour Walk-In Guide", href: "/visit", description: "24-hour Scarborough / Eglinton East open-now walk-in. Listed Open 24 Hours / 7 Days a Week." },
@@ -99,7 +102,7 @@ const HELPFUL_PAGES = [
   { name: "Nicotine Vapes in Scarborough", href: "/nicotine-vape-scarborough", description: "Open the nicotine guide, separate from THC vape." },
   { name: "Current Scarborough Vape Listings", href: "/vape-shop-scarborough", description: "Live-feed nicotine vape names, prices, and contact options." },
   { name: "Mohawk Medicine Resources", href: "/resources", description: "Browse the store's informational guides." },
-];
+]);
 
 const homePageSchema = {
   "@context": "https://schema.org",
@@ -111,7 +114,7 @@ const homePageSchema = {
 };
 
 /* FAQs */
-const FAQS = [
+const FAQS = cigaretteSafeContent([
   {
     q: "What are Mohawk Medicine's hours?",
     a: "Mohawk Medicine at 2655 Eglinton Ave E, Toronto is open 24 hours a day, 7 days a week. We never close.",
@@ -144,7 +147,7 @@ const FAQS = [
     q: "Where are the Exotic, Premium, AAA+, AA, and Budget flower pages?",
     a: "Each flower collection keeps its own URL: /exotic-weed, /premium-weed, /aaa-weed, /aa-weed, and /budget-weed. Use the 24-hour walk-in guide for Eglinton East arrival and the Mohawk Craft visit FAQ for listed-name questions.",
   },
-];
+]);
 
 const homeFaqSchema = {
   "@context": "https://schema.org",

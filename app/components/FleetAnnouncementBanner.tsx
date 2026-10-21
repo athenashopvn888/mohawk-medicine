@@ -1,5 +1,8 @@
 "use client";
 
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
+
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import FlowerBogoStrip from "./FlowerBogoStrip";
@@ -44,14 +47,14 @@ export default function FleetAnnouncementBanner() {
           alt="TOP WEED TIER at Mohawk Medicine — Exotic, Premium, and AAA+ weed with Buy 2g Get 1g FREE and Buy 3g Get 3g FREE."
         />
       </Link>
-<Link href="/items/cigarettes" data-cig-mix-banner="" aria-label="Shop cigarette mix-and-match deals">
+{SHOW_CIGARETTES ? (<Link href="/items/cigarettes" data-cig-mix-banner="" aria-label="Shop cigarette mix-and-match deals">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/banners/native-cigarette-offer-20260822.webp"
           alt="Cigarette deal at Mohawk Medicine — 2 packs for $5 mix and match. Adults 19+."
           style={{ display: "block", width: "100%", height: "auto" }}
         />
-      </Link>
+      </Link>) : null}
 </aside>
   );
 }

@@ -1,3 +1,4 @@
+import { SHOW_CIGARETTES, cigaretteSafeContent, isCigarettePath } from "./siteConfig";
 /* Local information pages for Mohawk Medicine / Scarborough */
 
 export interface SeoPageData {
@@ -12,7 +13,7 @@ export interface SeoPageData {
   faqs: { q: string; a: string }[];
 }
 
-export const SEO_PAGES: SeoPageData[] = [
+const SEO_PAGES_RAW: SeoPageData[] = [
   {
     slug: "scarborough-weed-dispensary",
     title: "Scarborough Weed Dispensary | Mohawk Medicine | Eglinton Ave E",
@@ -180,6 +181,12 @@ export const SEO_PAGES: SeoPageData[] = [
     ],
   },
 ];
+
+export const SEO_PAGES = SHOW_CIGARETTES
+  ? SEO_PAGES_RAW
+  : SEO_PAGES_RAW
+      .filter((page) => !isCigarettePath(page.slug))
+      .map((page) => cigaretteSafeContent(page));
 
 export function getSeoPageBySlug(slug: string): SeoPageData | undefined {
   return SEO_PAGES.find((p) => p.slug === slug);
