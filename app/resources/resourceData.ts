@@ -1,3 +1,4 @@
+import { SHOW_CIGARETTES, cigaretteSafeContent, isCigarettePath } from "../lib/siteConfig";
 export interface ResourceCard {
   title: string;
   href: string;
@@ -37,7 +38,7 @@ const menuCards: ResourceCard[] = [
   { title: "Native Smokes", href: "/resources/native-smokes", text: "Review cigarette, Backwoods, grabba, and pouch notes where listed." },
 ];
 
-export const RESOURCE_PAGES: ResourcePage[] = [
+const RESOURCE_PAGES_RAW: ResourcePage[] = [
   {
     slug: "",
     title: "Mohawk Medicine Resources",
@@ -6677,8 +6678,8 @@ const MEB01_RESOURCE_ADDITIONS: ResourcePage[] = [
     ]
   }
 ];
-RESOURCE_PAGES[0].sections.push({ heading: "Learn the Category, Then Check the Current Listing", body: "Mohawk Medicine's Resource Centre should separate stable education from changing menu details. Use the Resource Centre to understand: cannabis terminology; first-visit planning; Weed tiers; flower quality; THC; trichomes; aroma; drying and curing; growing methods; genetics; Weed slang; commercial tobacco terminology. Use current category/product pages for: current products; current prices; current package details; current flavours; current stock; current availability. That keeps the guides useful when the menu changes." });
-RESOURCE_PAGES[0].cards.push(...[
+RESOURCE_PAGES_RAW[0].sections.push({ heading: "Learn the Category, Then Check the Current Listing", body: "Mohawk Medicine's Resource Centre should separate stable education from changing menu details. Use the Resource Centre to understand: cannabis terminology; first-visit planning; Weed tiers; flower quality; THC; trichomes; aroma; drying and curing; growing methods; genetics; Weed slang; commercial tobacco terminology. Use current category/product pages for: current products; current prices; current package details; current flavours; current stock; current availability. That keeps the guides useful when the menu changes." });
+RESOURCE_PAGES_RAW[0].cards.push(...[
   {
     "title": "24-Hour Walk-In Guide",
     "href": "/visit",
@@ -6800,13 +6801,19 @@ RESOURCE_PAGES[0].cards.push(...[
     "text": "Continue with Native Cigarettes in Ontario."
   }
 ]);
-for (const page of RESOURCE_PAGES) Object.assign(page, MEB01_RESOURCE_OVERRIDES[page.slug] || {});
-RESOURCE_PAGES.push(...MEB01_RESOURCE_ADDITIONS);
-RESOURCE_PAGES[0].cards.unshift({
+for (const page of RESOURCE_PAGES_RAW) Object.assign(page, MEB01_RESOURCE_OVERRIDES[page.slug] || {});
+RESOURCE_PAGES_RAW.push(...MEB01_RESOURCE_ADDITIONS);
+RESOURCE_PAGES_RAW[0].cards.unshift({
   title: "Name Guides",
   href: "/guides",
   text: "Browse all strain, Native Cigarettes, Nicotine Vape, and THC Vape name guides in one directory.",
 });
+
+export const RESOURCE_PAGES = SHOW_CIGARETTES
+  ? RESOURCE_PAGES_RAW
+  : RESOURCE_PAGES_RAW
+      .filter((page) => !isCigarettePath((page as { slug?: string; path?: string }).slug ?? (page as { path?: string }).path))
+      .map((page) => cigaretteSafeContent(page));
 
 export const RESOURCE_HOME = RESOURCE_PAGES[0];
 

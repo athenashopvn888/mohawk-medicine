@@ -1,3 +1,4 @@
+import { cigaretteSafeContent } from "../lib/siteConfig";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
   },
 };
 
-const FAQS = [
+const FAQS_RAW = [
   {
     q: "Where is Mohawk Medicine located?",
     a: "Mohawk Medicine is at 2655 Eglinton Ave E, Toronto, ON M1K 2S2, in the Scarborough area near Brimley Rd. The listed store name is Mohawk Craft Dispensary. Call +1 (437) 524-9335.",
@@ -58,6 +59,8 @@ const FAQS = [
     a: "Use the online menu for browsing and planning. Confirm ordering details with the store before relying on any purchase flow.",
   },
 ];
+
+const FAQS = cigaretteSafeContent(FAQS_RAW);
 
 const faqSchema = {
   "@context": "https://schema.org",

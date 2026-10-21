@@ -1,4 +1,7 @@
 "use client";
+
+import { filterCigaretteEntries } from "../lib/siteConfig";
+
 import CohortDeliveryActions from "./CohortDeliveryActions";
 
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -42,7 +45,7 @@ export default function Navbar({ hideThcVape = false }: { hideThcVape?: boolean 
   const updateScrollState = useCallback(() => { const scrollBar = scrollBarRef.current; if (!scrollBar) return; setCanAdvance(scrollBar.scrollWidth - scrollBar.clientWidth - scrollBar.scrollLeft > 2); }, []);
   useEffect(() => { const scrollBar = scrollBarRef.current; if (!scrollBar) return; updateScrollState(); scrollBar.addEventListener("scroll", updateScrollState, { passive: true }); window.addEventListener("resize", updateScrollState); const resizeObserver = new ResizeObserver(updateScrollState); resizeObserver.observe(scrollBar); if (scrollBar.firstElementChild) resizeObserver.observe(scrollBar.firstElementChild); return () => { scrollBar.removeEventListener("scroll", updateScrollState); window.removeEventListener("resize", updateScrollState); resizeObserver.disconnect(); }; }, [pathname, updateScrollState]);
   const advanceScrollBar = () => { const scrollBar = scrollBarRef.current; if (!scrollBar) return; const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches; scrollBar.scrollBy({ left: Math.max(180, scrollBar.clientWidth * 0.75), behavior: reduceMotion ? "auto" : "smooth" }); };
-  const visibleLinks = hideThcVape ? ALL_LINKS.filter((link) => link.href !== "/items/vape-disposables") : ALL_LINKS;
+  const visibleLinks = hideThcVape ? filterCigaretteEntries(ALL_LINKS).filter((link) => link.href !== "/items/vape-disposables") : filterCigaretteEntries(ALL_LINKS);
 
   return (
     <nav className={styles.navbar} id="main-nav">
