@@ -3,12 +3,37 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./resources.module.css";
 import type { ResourcePage } from "./resourceData";
+import { SHOW_CIGARETTES, isGrabbaText, isHiddenSmokePath } from "../lib/showCigarettes";
 
 type ResourceViewProps = {
   page: ResourcePage;
 };
 
+function withoutGrabbaLabel(value: string) {
+  return value
+    .replace(/\s*(,|and|&)?\s*grabba shaker/ig, "")
+    .replace(/\s*(,|and|&)?\s*grabba/ig, "")
+    .replace(/,\s*,/g, ",")
+    .replace(/\s{2,}/g, " ")
+    .replace(/\s+,/g, ",")
+    .replace(/^,\s*|,\s*$/g, "")
+    .trim();
+}
+
+function presentCard(card: ResourcePage["cards"][number]) {
+  if (SHOW_CIGARETTES) return card;
+  if (isHiddenSmokePath(card.href)) return null;
+  if (isGrabbaText(card.title) && !/backwood/i.test(card.title)) return null;
+  if (!isGrabbaText(`${card.title} ${card.text}`)) return card;
+  return {
+    ...card,
+    title: /backwood/i.test(card.title) ? withoutGrabbaLabel(card.title) : card.title,
+    text: withoutGrabbaLabel(card.text),
+  };
+}
+
 export default function ResourceView({ page }: ResourceViewProps) {
+  const cards = page.cards.map(presentCard).filter((card): card is ResourcePage["cards"][number] => Boolean(card));
   const faqSchema = page.faqs?.length
     ? {
         "@context": "https://schema.org",
@@ -37,10 +62,10 @@ export default function ResourceView({ page }: ResourceViewProps) {
         </div>
       </section>
 
-      {page.cards.length > 0 && (
+      {cards.length > 0 && (
         <section className={styles.cardsSection}>
           <div className={styles.grid}>
-            {page.cards.map((card) => (
+            {cards.map((card) => (
               <Link key={card.href} href={card.href} className={styles.card}>
                 <span>{card.title}</span>
                 <p>{card.text}</p>

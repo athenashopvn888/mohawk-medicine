@@ -1,6 +1,6 @@
 "use client";
 
-import { cigaretteSafeContent } from "./lib/siteConfig";
+import { SHOW_CIGARETTES, cigaretteSafeContent } from "./lib/siteConfig";
 
 import { HOME_TITLE } from "./lib/homeDelivery";
 import CohortDeliveryActions from "./components/CohortDeliveryActions";
@@ -158,6 +158,8 @@ const homeFaqSchema = {
     acceptedAnswer: { "@type": "Answer", text: faq.a },
   })),
 };
+
+const helpfulPages = HELPFUL_PAGES.filter((page) => SHOW_CIGARETTES || page.href !== "/native-cigarettes-scarborough");
 
 export default function HomePageClient({ initialTierRanges }: { initialTierRanges: Record<string, string | null> }) {
   const __liveFlowers = useLiveFlowers();
@@ -356,13 +358,13 @@ export default function HomePageClient({ initialTierRanges }: { initialTierRange
             </p>
             <h2 className={styles.aboutTitle}>Compare Weed, Cannabis and Smoke-Shop Categories</h2>
             <p className={styles.aboutText}>
-              Start with Exotic Weed, Premium Weed, AAA+ Weed, AA Weed or Budget Weed when the visit is about flower. Separate pages organize pre-rolls, edibles, THC vapes, concentrates and accessories. Native cigarettes and nicotine vapes remain separate from cannabis products so adults can reach the correct category without confusing nicotine with THC.
+              Start with Exotic Weed, Premium Weed, AAA+ Weed, AA Weed or Budget Weed when the visit is about flower. Separate pages organize pre-rolls, edibles, THC vapes, concentrates and accessories. {SHOW_CIGARETTES ? "Native cigarettes and nicotine vapes remain separate from cannabis products so adults can reach the correct category without confusing nicotine with THC." : "Nicotine vapes remain separate from cannabis products so adults can reach the correct category without confusing nicotine with THC."}
             </p>
           </div>
           <div className={styles.helpfulPanel}>
             <h2 className={styles.aboutTitle}>Helpful Mohawk Medicine Pages</h2>
             <div className={styles.helpfulGrid}>
-              {HELPFUL_PAGES.map((page) => (
+              {helpfulPages.map((page) => (
                 <Link key={page.href} href={page.href} className={styles.helpfulCard}>
                   <strong>{page.name}</strong>
                   <span>{page.description}</span>

@@ -6,6 +6,7 @@ import StoreMap from "../components/StoreMap";
 import StoreNap from "../components/StoreNap";
 import { STORE_NAP } from "../lib/nap";
 import ParityHubLinks from "../components/ParityHubLinks";
+import { SHOW_CIGARETTES } from "../lib/showCigarettes";
 import styles from "./page.module.css";
 
 const CANONICAL = "https://mohawkmedicine.com/visit";
@@ -180,9 +181,14 @@ export default function VisitPage() {
             </p>
             <p>
               Cigarette listings are on the{" "}
-              <Link href="/items/cigarettes">cigarettes menu</Link> and the{" "}
-              <Link href="/native-cigarettes-scarborough">Native cigarettes Scarborough guide</Link>.
-              Nicotine vapes stay on the{" "}
+              <Link href="/items/cigarettes">cigarettes menu</Link>
+              {SHOW_CIGARETTES && (
+                <>
+                  {" "}and the{" "}
+                  <Link href="/native-cigarettes-scarborough">Native cigarettes Scarborough guide</Link>
+                </>
+              )}
+              . Nicotine vapes stay on the{" "}
               <Link href="/nicotine-vape-scarborough">nicotine vape Scarborough guide</Link>. Use the{" "}
               <Link href="/">homepage</Link> to start with flower tiers or other categories. This
               page is a walk-in retail guide only.
@@ -258,9 +264,11 @@ export default function VisitPage() {
               <Link href="/resources/eglinton-east-scarborough-visit-guide" className={styles.localLink}>
                 First Visit Guide
               </Link>
+              {SHOW_CIGARETTES && (
               <Link href="/native-cigarettes-scarborough" className={styles.localLink}>
                 Native Cigarettes Scarborough
               </Link>
+              )}
               <Link href="/nicotine-vape-scarborough" className={styles.localLink}>
                 Nicotine Vapes Scarborough
               </Link>
