@@ -6,6 +6,8 @@ import StoreMap from "../components/StoreMap";
 import { STORE_NAP } from "../lib/nap";
 import styles from "./page.module.css";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Contact Us - Mohawk Medicine | 2655 Eglinton Ave E, Toronto",
   description:

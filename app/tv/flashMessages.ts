@@ -1,4 +1,4 @@
-import { SHOW_CIGARETTES } from "../lib/siteConfig";
+import { SHOW_CIGARETTES } from "../lib/siteConfig.ts";
 export const CIGARETTE_FLASH_MESSAGE = SHOW_CIGARETTES ? "CIGARETTES 2 PACK $5 MIX MATCH !" : "";
 
 export function isCigaretteFlashWindow(now: Date = new Date()): boolean {
