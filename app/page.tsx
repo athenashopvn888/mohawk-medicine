@@ -1,16 +1,19 @@
 import HomePageClient from "./HomePageClient";
+import { CODED_BANNERS } from "./lib/fleet/config";
+import { getFleetContent } from "./lib/fleetContent";
 import { getLiveMenu } from "./lib/liveMenu";
 import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
 
 export const dynamic = "force-dynamic";
 
 export default async function Page() {
-  const { flowers } = await getLiveMenu();
+  const [{ flowers }, fleet] = await Promise.all([getLiveMenu(), getFleetContent()]);
   const initialTierRanges = Object.fromEntries(
     ["EXOTIC", "PREMIUM", "AAA+", "AA", "BUDGET"].map((tier) => [
       tier,
       tierRangeText(storeTierRange(flowers, tier)),
     ]),
   );
-  return <HomePageClient initialTierRanges={initialTierRanges} />;
+  const contentBanners = fleet.active && fleet.banners.some((banner, index) => banner !== CODED_BANNERS[index]) ? fleet.banners : undefined;
+  return <HomePageClient initialTierRanges={initialTierRanges} contentBanners={contentBanners} />;
 }

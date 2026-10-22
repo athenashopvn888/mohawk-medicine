@@ -11,7 +11,8 @@ import HalloweenNotice from "./components/HalloweenNotice";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
-import FourCoreBannerStack from "./components/FourCoreBannerStack";
+import FleetAnnouncementBanner from "./components/fleet/FleetAnnouncementBanner";
+import type { ResolvedBanner } from "./lib/fleet/types";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FlowerCard from "./components/FlowerCard";
@@ -161,7 +162,7 @@ const homeFaqSchema = {
 
 const helpfulPages = HELPFUL_PAGES.filter((page) => SHOW_CIGARETTES || page.href !== "/native-cigarettes-scarborough");
 
-export default function HomePageClient({ initialTierRanges }: { initialTierRanges: Record<string, string | null> }) {
+export default function HomePageClient({ initialTierRanges, contentBanners }: { initialTierRanges: Record<string, string | null>; contentBanners?: ResolvedBanner[] }) {
   const __liveFlowers = useLiveFlowers();
   const feedFlowers = __liveFlowers.length > 0 ? __liveFlowers : allFlowers;
   const [featuredStrains, setFeaturedStrains] = useState<FlowerProduct[]>([]);
@@ -192,7 +193,7 @@ export default function HomePageClient({ initialTierRanges }: { initialTierRange
   return (
     <main className={styles.main}>
       <Navbar />
-      <FourCoreBannerStack title={HOME_TITLE} storeName="Mohawk Medicine" storeArea="Scarborough" storeOrigin="https://mohawkmedicine.com" weedHref="/exotic-weed" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />
+      <FleetAnnouncementBanner title={HOME_TITLE} banners={contentBanners} storeName="Mohawk Medicine" storeArea="Scarborough" storeOrigin="https://mohawkmedicine.com" weedHref="/exotic-weed" vapeHref="/items/vapes" cigaretteHref="/items/cigarettes" />
       <HomepageTopNotices />
       <HalloweenNotice storeName="Mohawk Medicine" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }} />

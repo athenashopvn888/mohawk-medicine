@@ -1,13 +1,19 @@
 import { cigaretteSafeContent } from "./lib/siteConfig";
+import CigaretteStateProvider from "./components/CigaretteStateProvider";
+import FleetContentProvider from "./components/FleetContentProvider";
 import FullNameNap from "./components/FullNameNap";
 import { HOME_DOC_TITLE } from "./lib/homeDelivery";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import PinnedNavClearance from "./components/PinnedNavClearance";
+import { getCigaretteSnapshot, toPublicCigaretteState } from "./lib/cigaretteFeed";
+import { getFleetContent } from "./lib/fleetContent";
 import { serializeJsonLd, storeJsonLd, websiteJsonLd } from "./lib/nap";
 
-export const metadata: Metadata = cigaretteSafeContent({
+export const revalidate = 300;
+
+const ROOT_METADATA: Metadata = cigaretteSafeContent({
   metadataBase: new URL("https://mohawkmedicine.com"),
   title: {
     default: HOME_DOC_TITLE,
@@ -30,10 +36,48 @@ export const metadata: Metadata = cigaretteSafeContent({
   twitter: { card: "summary_large_image", title: HOME_DOC_TITLE },
 });
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export async function generateMetadata(): Promise<Metadata> {
+  const fleet = await getFleetContent();
+  if (!fleet.active) return ROOT_METADATA;
+  const description = fleet.pages.Home?.metaDescription || "";
+  if (!description || description === ROOT_METADATA.description) return ROOT_METADATA;
+  return {
+    ...ROOT_METADATA,
+    description,
+    openGraph: { ...ROOT_METADATA.openGraph, description },
+    twitter: { ...ROOT_METADATA.twitter, description },
+  };
+}
+
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const [fleet, cigaretteSnapshot] = await Promise.all([getFleetContent(), getCigaretteSnapshot()]);
+  const cigarettes = toPublicCigaretteState(cigaretteSnapshot);
+  const publishedStore = fleet.active
+    ? {
+        ...storeJsonLd,
+        name: fleet.nap.schemaName,
+        alternateName: fleet.nap.name,
+        telephone: fleet.nap.phoneTel,
+        url: fleet.nap.website,
+        hasMap: fleet.nap.mapsSearchUrl,
+        address: {
+          ...storeJsonLd.address,
+          streetAddress: fleet.nap.street,
+          addressLocality: fleet.nap.city,
+          addressRegion: fleet.nap.province,
+          postalCode: fleet.nap.postalCode,
+        },
+        geo: {
+          ...storeJsonLd.geo,
+          latitude: Number(fleet.nap.lat),
+          longitude: Number(fleet.nap.lng),
+        },
+      }
+    : storeJsonLd;
   return (
     <html lang="en">
       <head>
+        <meta name="fleet-content-version" content={fleet.version} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -41,7 +85,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Toronto, Scarborough" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(cigaretteSafeContent(websiteJsonLd)) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(cigaretteSafeContent(storeJsonLd)) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(cigaretteSafeContent(publishedStore)) }} />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-56DQVKRW14"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -58,9 +102,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Link className="deliveryAnnouncement" href="/weed-delivery-toronto">
           EXPLORE WEED DELIVERY
         </Link>
-        {children}
-        <FullNameNap />
-        <PinnedNavClearance />
+        <FleetContentProvider value={{ active: fleet.active, version: fleet.version, nap: fleet.nap }}>
+          <CigaretteStateProvider value={cigarettes}>
+            {children}
+            <FullNameNap />
+            <PinnedNavClearance />
+          </CigaretteStateProvider>
+        </FleetContentProvider>
       </body>
     </html>
   );

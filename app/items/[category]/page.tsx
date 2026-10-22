@@ -17,6 +17,8 @@ import styles from "./items.module.css";
 import { getCategoryGuideGroups } from "../../lib/guideRegistry";
 import { SHOW_CIGARETTES, isGrabbaItem } from "../../lib/showCigarettes";
 import VapeActionPanel from "../../components/VapeActionPanel";
+import CigaretteUnavailable from "../../components/CigaretteUnavailable";
+import { getCigaretteSnapshot } from "../../lib/cigaretteFeed";
 
 const SITE_ORIGIN = "https://mohawkmedicine.com";
 
@@ -75,6 +77,18 @@ export default async function ItemsCategoryPage({
     items = items.filter((item) => !isGrabbaItem(item));
   }
   const { config } = catInfo;
+  if (catSlug === "cigarettes" && SHOW_CIGARETTES) {
+    const cig = await getCigaretteSnapshot();
+    if (!cig.web.show) {
+      return (
+        <main className={styles.main}>
+          <Navbar />
+          <CigaretteUnavailable />
+          <Footer />
+        </main>
+      );
+    }
+  }
   const coreKind = catSlug === "cigarettes" ? "cigarettes" : (catSlug === "vapes" || catSlug === "vape-disposables") ? "vapes" : null;
   const guideGroups = getCategoryGuideGroups(`/items/${catSlug}`);
 
