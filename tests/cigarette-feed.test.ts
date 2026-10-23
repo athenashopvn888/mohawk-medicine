@@ -1,13 +1,17 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
   CIG_WORDING_FALLBACK,
+  cigarettePublicHeaders,
   decideCigaretteGuide,
   decideCigaretteSurface,
+  publicWebsiteCigaretteFlag,
   reconcileSurfaceItems,
   resolveCigWording,
   resolveSurfaceFlag,
 } from "../app/lib/cigDecision.ts";
+import { SHOW_CIGARETTES } from "../app/lib/siteConfig.ts";
 
 const carton = { category: "CIGARETTES", name: "BB FULL CARTON", slug: "bb-full-carton" };
 const grabba = { category: "CIGARETTES", name: "GRABBA", slug: "grabba" };
@@ -80,6 +84,66 @@ test("guide pages follow the master switch and a feed error stays open", () => {
   assert.equal(decideCigaretteGuide({ cig: cig({ on: true, master: true, webOn: false }), items }).show, true);
   assert.equal(decideCigaretteGuide({ cig: null, items, errored: true }).show, true);
   assert.equal(decideCigaretteGuide({ cig: cig({ on: true, master: true }), items, envRaw: "off" }).reason, "env");
+});
+
+test("website flag stays off when the static gate is off, even if the feed web switch is on", () => {
+  assert.equal(SHOW_CIGARETTES, false);
+  const open = decideCigaretteSurface({
+    cig: cig({ on: true, webOn: true, tvOn: true }),
+    items: [carton],
+    surface: "web",
+  });
+  assert.equal(open.show, true);
+  assert.equal(publicWebsiteCigaretteFlag(open, false), false);
+  assert.equal(publicWebsiteCigaretteFlag(open, SHOW_CIGARETTES), false);
+  const headers = cigarettePublicHeaders({
+    web: SHOW_CIGARETTES ? publicWebsiteCigaretteFlag(open, SHOW_CIGARETTES) : false,
+    tv: true,
+    wording,
+  });
+  assert.equal(headers["x-tv-data-cig-web"], "0");
+  assert.equal(headers["x-tv-data-cig-tv"], "1");
+  const feed = readFileSync(new URL("../app/lib/cigaretteFeed.ts", import.meta.url), "utf8");
+  const layout = readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8");
+  const status = readFileSync(new URL("../app/api/content-status/route.ts", import.meta.url), "utf8");
+  assert.match(feed, /publicWebsiteCigaretteFlag\(snap\.web, SHOW_CIGARETTES\)/);
+  assert.match(feed, /web: SHOW_CIGARETTES \? state\.web : false/);
+  assert.match(feed, /tv: state\.tv/);
+  assert.match(layout, /web: SHOW_CIGARETTES \? cigarettes\.web : false/);
+  assert.match(status, /web: SHOW_CIGARETTES \? cigarettes\.web : false/);
+  assert.match(status, /tv: cigarettes\.tv/);
+});
+
+test("website flag is false on a feed error or a missing feed", () => {
+  const errored = decideCigaretteSurface({
+    cig: cig({ on: true, webOn: true, tvOn: true }),
+    items: [carton],
+    surface: "web",
+    errored: true,
+  });
+  assert.equal(errored.reason, "error");
+  assert.equal(publicWebsiteCigaretteFlag(errored, true), false);
+  const missing = decideCigaretteSurface({ cig: null, items: [carton], surface: "web" });
+  assert.equal(missing.reason, "missing");
+  assert.equal(publicWebsiteCigaretteFlag(missing, true), false);
+});
+
+test("TV hides on a feed error or a missing feed, and follows tvOn on a successful feed", () => {
+  const errored = decideCigaretteSurface({
+    cig: cig({ on: true, webOn: true, tvOn: true }),
+    items: [carton, backwoods, pouch],
+    surface: "tv",
+    errored: true,
+  });
+  assert.equal(errored.reason, "error");
+  assert.equal(errored.show, false);
+  const missing = decideCigaretteSurface({ cig: null, items: [carton], surface: "tv" });
+  assert.equal(missing.reason, "missing");
+  assert.equal(missing.show, false);
+  assert.equal(decideCigaretteSurface({ cig: cig({ webOn: false, tvOn: true }), items: [carton], surface: "tv" }).show, true);
+  assert.equal(decideCigaretteSurface({ cig: cig({ webOn: true, tvOn: false }), items: [carton], surface: "tv" }).show, false);
+  const hidden = reconcileSurfaceItems([carton, backwoods, pouch], [carton, backwoods, pouch], errored.show);
+  assert.deepEqual(hidden.map((item) => item.slug), [backwoods.slug, pouch.slug]);
 });
 
 test("each surface hides real cigarettes itself and always keeps wraps and pouches", () => {

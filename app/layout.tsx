@@ -1,4 +1,4 @@
-import { cigaretteSafeContent } from "./lib/siteConfig";
+import { cigaretteSafeContent, SHOW_CIGARETTES } from "./lib/siteConfig";
 import CigaretteStateProvider from "./components/CigaretteStateProvider";
 import FleetContentProvider from "./components/FleetContentProvider";
 import FullNameNap from "./components/FullNameNap";
@@ -103,7 +103,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           EXPLORE WEED DELIVERY
         </Link>
         <FleetContentProvider value={{ active: fleet.active, version: fleet.version, nap: fleet.nap }}>
-          <CigaretteStateProvider value={cigarettes}>
+          <CigaretteStateProvider value={{ ...cigarettes, web: SHOW_CIGARETTES ? cigarettes.web : false }}>
             {children}
             <FullNameNap />
             <PinnedNavClearance />

@@ -3,6 +3,7 @@ import { createRequire } from "node:module";
 import test from "node:test";
 import {
   decideCigaretteSurface,
+  publicWebsiteCigaretteFlag,
   reconcileSurfaceItems,
   webFollowsWebOnOnly,
 } from "../app/lib/cigDecision.ts";
@@ -88,23 +89,61 @@ test("tvOn false hides the card and real cigarettes and keeps wraps and pouches"
   resetTvStockCache();
 });
 
-test("a feed miss does not open the website while TV still follows the decision", () => {
+test("a feed miss keeps the website off and hides TV", () => {
   const missed = decideCigaretteSurface({ cig: null, items: [carton], surface: "web" });
   assert.equal(missed.show, true);
   assert.equal(webFollowsWebOnOnly(missed).show, false);
+  assert.equal(publicWebsiteCigaretteFlag(missed, true), false);
   const errored = decideCigaretteSurface({
-    cig: { on: true, webOn: false, tvOn: false },
-    items: [carton],
+    cig: { on: true, webOn: true, tvOn: true },
+    items: [carton, ...kept],
     surface: "web",
     errored: true,
   });
   assert.equal(webFollowsWebOnOnly(errored).show, false);
-  const tv = decideCigaretteSurface({ cig: null, items: [carton], surface: "tv" });
-  assert.equal(tv.show, true);
+  assert.equal(publicWebsiteCigaretteFlag(errored, true), false);
+  const tvError = decideCigaretteSurface({
+    cig: { on: true, webOn: true, tvOn: true },
+    items: shelf,
+    surface: "tv",
+    errored: true,
+  });
+  assert.equal(tvError.show, false);
+  const tvMissing = decideCigaretteSurface({ cig: null, items: shelf, surface: "tv" });
+  assert.equal(tvMissing.show, false);
+  const hidden = reconcileSurfaceItems(shelf, shelf, tvError.show);
+  assert.equal(hidden.some((item) => item.slug === carton.slug), false);
+  for (const item of kept) assert.ok(hidden.some((row) => row.slug === item.slug), item.slug);
+  assert.equal(decideCigaretteSurface({ cig: { on: true, webOn: false, tvOn: true }, items: [carton, backwoods], surface: "tv" }).show, true);
+  assert.equal(decideCigaretteSurface({ cig: { on: true, webOn: true, tvOn: false }, items: [carton, backwoods], surface: "tv" }).show, false);
   const explicit = decideCigaretteSurface({
-    cig: { on: true, webOn: false, tvOn: true },
+    cig: { on: true, webOn: true, tvOn: true },
     items: [carton, backwoods],
     surface: "web",
   });
-  assert.equal(webFollowsWebOnOnly(explicit).show, false);
+  assert.equal(publicWebsiteCigaretteFlag(explicit, false), false);
+  assert.equal(webFollowsWebOnOnly(explicit).show, true);
+});
+
+test("a recent successful snapshot still drives TV after a later feed failure", async () => {
+  resetTvStockCache();
+  const live = fetchPayload({ on: true, webOn: true, tvOn: true, master: true });
+  const first = await getCigaretteDataset(live);
+  assert.equal(first.source, "live");
+  assert.equal(decideCigaretteSurface({ cig: first.cig, items: first.items, surface: "tv" }).show, true);
+  const failed = await getCigaretteDataset({
+    ...live,
+    now: 70_000,
+    fetchImpl: async () => {
+      throw new Error("feed down");
+    },
+  });
+  assert.notEqual(failed.source, "live");
+  assert.equal(failed.cig.tvOn, true);
+  const tv = decideCigaretteSurface({ cig: failed.cig, items: failed.items, surface: "tv", errored: !failed.cig });
+  assert.equal(tv.show, true);
+  const shown = reconcileSurfaceItems(shelf, failed.items, tv.show);
+  assert.ok(shown.some((item) => item.slug === carton.slug));
+  for (const item of kept) assert.ok(shown.some((row) => row.slug === item.slug), item.slug);
+  resetTvStockCache();
 });
