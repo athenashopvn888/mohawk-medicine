@@ -133,6 +133,11 @@ export function reconcileSurfaceItems<T extends ShelfItem>(menuItems: T[], liveI
   return extras.length ? [...menuItems, ...extras] : menuItems;
 }
 
+/** TV follows the feed flag. Website clients stay behind the static coded gate. */
+export function publicCigaretteFlags(state: { web: boolean; tv: boolean }, codedWeb: boolean): { web: boolean; tv: boolean } {
+  return { web: codedWeb && state.web, tv: state.tv };
+}
+
 export function cigarettePublicHeaders(state: { web: boolean; tv: boolean; wording: CigaretteWording }): Record<string, string> {
   return {
     "x-tv-data-cig-tv": state.tv ? "1" : "0",

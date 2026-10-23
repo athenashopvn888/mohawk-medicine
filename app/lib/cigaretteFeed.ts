@@ -3,12 +3,14 @@ import {
   cigarettePublicHeaders,
   decideCigaretteGuide,
   decideCigaretteSurface,
+  publicCigaretteFlags,
   reconcileSurfaceItems,
   type CigaretteSurfaceDecision,
   type CigaretteWording,
 } from "./cigDecision";
-import { allItems, type ItemProduct } from "./products";
-import { SHOW_CIGARETTES } from "./siteConfig";
+import { allFlowers, allItems, type ItemProduct } from "./products";
+import { cigaretteEnvHardOff, SHOW_CIGARETTES } from "./siteConfig";
+import { getCigaretteDataset } from "./tvStock";
 
 export type CigaretteSnapshot = {
   web: CigaretteSurfaceDecision & { wording: CigaretteWording };
@@ -25,10 +27,6 @@ export type PublicCigaretteState = {
   wording: CigaretteWording;
 };
 
-const MENU_FEED_URL =
-  (process.env.MENU_FEED_URL || "").trim() ||
-  "https://script.google.com/macros/s/AKfycbx09_sDal1eMVF1r-hUck4e7oq_XBHEWhGvA79JuhZNQ6P4CdhCas0xE3FfexWQ3hq4/exec";
-
 function snapshotFrom(cig: unknown, items: ItemProduct[], live: boolean, errored: boolean): CigaretteSnapshot {
   const web = decideCigaretteSurface({ cig, items, surface: "web", errored });
   const tv = decideCigaretteSurface({ cig, items, surface: "tv", errored });
@@ -36,20 +34,18 @@ function snapshotFrom(cig: unknown, items: ItemProduct[], live: boolean, errored
   return { web, tv, guides, wording: web.wording, live, items };
 }
 
-/** Coded gate stays shut unless the env already shows cigarettes. A feed miss keeps that. */
-function codedHidden(): CigaretteSnapshot {
-  return snapshotFrom({ on: false, webOn: false, tvOn: false, master: false }, [], false, false);
-}
-
 export async function readCigaretteFeed(): Promise<CigaretteSnapshot> {
-  if (!SHOW_CIGARETTES) return codedHidden();
+  if (cigaretteEnvHardOff()) return snapshotFrom(null, [], false, false);
   try {
-    const response = await fetch(MENU_FEED_URL, { cache: "no-store", signal: AbortSignal.timeout(2500) });
-    if (!response.ok) return snapshotFrom(null, allItems, false, true);
-    const data = await response.json() as { cig?: unknown; items?: ItemProduct[] };
-    const items = Array.isArray(data.items) && data.items.length ? data.items : allItems;
-    const cig = data.cig ?? null;
-    return snapshotFrom(cig, items, true, !cig);
+    const dataset = await getCigaretteDataset({
+      staticFlowers: allFlowers,
+      staticItems: allItems,
+    });
+    const live = dataset?.source === "live";
+    const items = Array.isArray(dataset?.items) ? dataset.items as ItemProduct[] : allItems;
+    const cig = dataset?.cig ?? null;
+    // Last-good cig is kept on the dataset. A miss with no saved cig fails open.
+    return snapshotFrom(cig, items.length ? items : allItems, live, !live && !cig);
   } catch {
     return snapshotFrom(null, allItems, false, true);
   }
@@ -57,8 +53,9 @@ export async function readCigaretteFeed(): Promise<CigaretteSnapshot> {
 
 export const getCigaretteSnapshot = cache(readCigaretteFeed);
 
-export function toPublicCigaretteState(snap: CigaretteSnapshot): PublicCigaretteState {
-  return { web: snap.web.show, tv: snap.tv.show, wording: snap.wording };
+/** TV follows the feed. Website clients stay behind the static coded gate. */
+export function toPublicCigaretteState(snap: CigaretteSnapshot, codedWeb: boolean = SHOW_CIGARETTES): PublicCigaretteState {
+  return { ...publicCigaretteFlags({ web: snap.web.show, tv: snap.tv.show }, codedWeb), wording: snap.wording };
 }
 
 export function snapshotHeaders(snap: CigaretteSnapshot): Record<string, string> {
