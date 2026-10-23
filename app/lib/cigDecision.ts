@@ -122,6 +122,12 @@ export function decideCigaretteGuide(input: {
   return { show: true, reason: "on" };
 }
 
+/** Website publish follows an explicit webOn decision. A missing feed must not open web. */
+export function webFollowsWebOnOnly<T extends { show: boolean; reason: string }>(decision: T): T {
+  if (decision.reason === "error" || decision.reason === "missing") return { ...decision, show: false };
+  return decision;
+}
+
 /** Drop real cigarettes when this surface is off. Always keep wraps and pouches. */
 export function reconcileSurfaceItems<T extends ShelfItem>(menuItems: T[], liveItems: T[], show: boolean): T[] {
   if (!show) return menuItems.filter((item) => !isRealCigaretteItem(item));

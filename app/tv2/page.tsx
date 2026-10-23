@@ -1,9 +1,10 @@
 "use client";
 
-import { SHOW_CIGARETTES } from "../lib/siteConfig";
-
 import { useState, useEffect, useLayoutEffect, useCallback, useRef } from "react";
 import styles from "./tv2.module.css";
+import { useCigaretteState } from "../components/CigaretteStateProvider";
+import { readCigaretteTvHeader } from "../lib/cigDecision";
+import { cigaretteFlashLine, tvCardsForCigaretteFlag } from "../lib/tvCigaretteBoard";
 import { CIGARETTE_FLASH_MESSAGE, isCigaretteFlashWindow, isNicotineItem } from "../tv/flashMessages";
 import HiringRibbon from "../components/HiringRibbon";
 import TvStoreHeader from "../components/TvStoreHeader";
@@ -36,9 +37,7 @@ const CARD_CONFIG_RAW = [
   { id:"CIGARETTES",      title:"🚬 CIGARETTES",         accent:"#78350f", filter:(it:Item)=>it.category==="CIGARETTES", preset:"" },
   { id:"MAGIC",           title:"🍄 MAGIC & OTHERS",     accent:"#9333ea", filter:(it:Item)=>it.category==="MAGIC & OTHERS", preset:"🍫 START SMALL · WAIT 45 MIN · THEN MORE" },
 ];
-const CARD_CONFIG = SHOW_CIGARETTES
-  ? CARD_CONFIG_RAW
-  : CARD_CONFIG_RAW.filter((card) => card.id !== "CIGARETTES");
+const CARD_CONFIG = CARD_CONFIG_RAW;
 
 /* -- HELPERS -- */
 const fmtPrice = (v?:string) => { const s=String(v||"").trim(); if(!s)return""; return /^\$/.test(s)?s:"$"+s; };
@@ -225,6 +224,11 @@ function VerticalTicker() {
 
 /* -- MAIN TV2 PAGE -- */
 export default function TV2Page() {
+  const seeded = useCigaretteState();
+  const seededRef = useRef(seeded);
+  seededRef.current = seeded;
+  const [tvCig, setTvCig] = useState({ show: seeded.tv, wording: seeded.wording });
+  const cards = tvCardsForCigaretteFlag(CARD_CONFIG, tvCig.show);
   const theme = getTvTheme(tvHiring?.store);
   const [bgUrl, setBgUrl] = useState("");
   useEffect(() => {
@@ -267,6 +271,8 @@ export default function TV2Page() {
     try {
       const res = await fetch("/api/tv-data?type=items");
       const data: Item[] = res.ok ? await res.json() : [];
+      const fallback = seededRef.current;
+      setTvCig(res.ok ? readCigaretteTvHeader(res.headers) : { show: false, wording: fallback.wording });
       setItems(data);
       setStockUpdated(readStockUpdatedAt(res, data));
       const hi: Record<string,number> = {};
@@ -326,13 +332,14 @@ export default function TV2Page() {
 
         {/* GRID */}
         <div className={styles.stage}>
-          <HiringRibbon hiring={tvHiring} />
+          <HiringRibbon hiring={tvHiring} cigaretteLine={cigaretteFlashLine(tvCig.show, tvCig.wording.tickerLine1)} />
           <div className={styles.grid}>
-            {CARD_CONFIG.map(card => {
+            {cards.map(card => {
               const filtered = items.filter(card.filter).filter(it => !(daytime && isNicotineItem(it)));
+              const title = card.id === "CIGARETTES" ? tvCig.wording.tv2BoardTitle : card.title;
               const broken = sheetBroken[card.id] || {};
               const sheet = pickTv2Sheet(fleetTv.cards[card.id], {
-                categoryOff: card.id === "CIGARETTES" && !SHOW_CIGARETTES,
+                categoryOff: card.id === "CIGARETTES" && !tvCig.show,
                 noItems: filtered.length === 0,
                 promoBroken: Boolean(broken.promo),
                 offBroken: Boolean(broken.off),
@@ -341,7 +348,7 @@ export default function TV2Page() {
                 const markBroken = () => setSheetBroken((prev) => ({ ...prev, [card.id]: { ...prev[card.id], [sheet.kind]: true } }));
                 return (
                   <div key={card.id} className={styles.card} data-fleet-tv-card={card.id} data-fleet-tv-kind={sheet.kind} style={{"--accent":card.accent} as React.CSSProperties}>
-                    <div className={styles.cardHeader}>{sheet.kind === "promo" ? "PROMO" : card.title}</div>
+                    <div className={styles.cardHeader}>{sheet.kind === "promo" ? "PROMO" : title}</div>
                     <div className={styles.promoMain}>
                       <div className={styles.promoViewport}>
                         <img
@@ -406,7 +413,7 @@ export default function TV2Page() {
               }
 
               return (
-                <ItemCard key={card.id} title={card.title} accent={card.accent}
+                <ItemCard key={card.id} title={title} accent={card.accent}
                   items={filtered} hiIdx={highlights[card.id]||0} preset={card.preset}
                   offerPromo={card.id === "CIGARETTES" ? getCigaretteOfferPromo(daytime, promoElapsedMs) : undefined} />
               );
