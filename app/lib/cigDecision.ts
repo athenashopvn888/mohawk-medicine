@@ -89,10 +89,12 @@ export function decideCigaretteSurface(input: {
       : undefined,
   );
   if (cigaretteEnvHardOff(input.envRaw)) return { show: false, reason: "env", wording };
-  // A missing feed or a feed error shows cigarettes. Only an explicit false flag hides them.
-  if (input.errored) return { show: true, reason: "error", wording };
+  // TV hides on a feed error or a missing block. The website raw decision stays open
+  // here; publicWebsiteCigaretteFlag closes it. A present block still follows its flag.
+  const hideTvOnMiss = input.surface === "tv";
+  if (input.errored) return { show: !hideTvOnMiss, reason: "error", wording };
   if (!input.cig || typeof input.cig !== "object" || Array.isArray(input.cig)) {
-    return { show: true, reason: "missing", wording };
+    return { show: !hideTvOnMiss, reason: "missing", wording };
   }
   if (!resolveSurfaceFlag(input.cig, input.surface)) return { show: false, reason: "off", wording };
   const items = Array.isArray(input.items) ? input.items : [];
@@ -122,10 +124,20 @@ export function decideCigaretteGuide(input: {
   return { show: true, reason: "on" };
 }
 
+/**
+ * Website flag. The coded switch stays in front of the feed.
+ * A feed error or a missing block stays off, even when that switch is on.
+ * TV does not use this.
+ */
+export function publicWebsiteCigaretteFlag(decision: CigaretteSurfaceDecision, codedOn: boolean): boolean {
+  if (!codedOn) return false;
+  if (decision.reason === "error" || decision.reason === "missing") return false;
+  return decision.show;
+}
+
 /** Website publish follows an explicit webOn decision. A missing feed must not open web. */
 export function webFollowsWebOnOnly<T extends { show: boolean; reason: string }>(decision: T): T {
-  if (decision.reason === "error" || decision.reason === "missing") return { ...decision, show: false };
-  return decision;
+  return { ...decision, show: publicWebsiteCigaretteFlag(decision as CigaretteSurfaceDecision, true) };
 }
 
 /** Drop real cigarettes when this surface is off. Always keep wraps and pouches. */
