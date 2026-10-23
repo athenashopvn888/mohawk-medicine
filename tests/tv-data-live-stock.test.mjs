@@ -6,6 +6,7 @@ import { beforeEach, test } from "node:test";
 const require = createRequire(import.meta.url);
 const {
   DEFAULT_APPS_SCRIPT_URL,
+  getCigaretteDataset,
   getTvData,
   postprocessFlowers,
   postprocessItems,
@@ -278,6 +279,51 @@ test("HTTP 200 HTML, 429, and throws serve last-good with reason and cooldown", 
     await getTvData({ type: "flowers", staticFlowers, staticItems, fetchImpl: failure.fetchImpl, now });
     assert.equal(failure.calls.length, 2);
   }
+});
+
+test("cigarette dataset keeps feed tvOn and does not drop wraps", async () => {
+  const flowers = list(staticFlowers.length, (index) => flower(`F${index}`));
+  const items = list(staticItems.length, (index) => item(`I${index}`));
+  items[0] = item("BB FULL CARTON", "$25");
+  items[0].category = "CIGARETTES";
+  items[0].slug = "bb-full-carton";
+  items[1] = item("BACKWOODS ASSORTED", "$20");
+  items[1].category = "CIGARETTES";
+  items[1].slug = "backwoods";
+  const cig = { on: true, webOn: false, tvOn: true, master: true };
+  const { fetchImpl, calls } = mockFetch({ flowers, items, stockDate: "2026-10-23", cig });
+
+  const dataset = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl,
+    now: 5_000,
+  });
+  assert.equal(dataset.source, "live");
+  assert.equal(dataset.cig.tvOn, true);
+  assert.equal(dataset.cig.webOn, false);
+  assert.equal(calls[0].opts.next.revalidate, 60);
+  assert.equal(dataset.items[0].slug, "bb-full-carton");
+  assert.equal(dataset.items[1].slug, "backwoods");
+
+  const cached = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl: mockFetch({ flowers: [], items: [], cig: { tvOn: false } }).fetchImpl,
+    now: 20_000,
+  });
+  assert.equal(cached.cig.tvOn, true);
+  assert.equal(calls.length, 1);
+
+  resetTvStockCache();
+  const failed = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl: mockFetch(null, { throwError: new Error("down") }).fetchImpl,
+    now: 1,
+  });
+  assert.equal(failed.source, "static-fallback");
+  assert.equal(failed.cig, null);
 });
 
 test("prebuild uses the shared post-processor", () => {
