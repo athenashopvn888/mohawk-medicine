@@ -29,7 +29,6 @@ const ALL_LINKS: { href: string; label: string; featured?: boolean }[] = [
   { href: "/cannabis-delivery-scarborough", label: "Scarborough Delivery" },
     { href: "/careers/budtender", label: "Join Team", featured: true },
 
-  { href: "/visit", label: "Visit" },
   { href: "/near-me", label: "Near Me" },
   { href: "/mohawk-craft-visit", label: "Mohawk Craft" },
   { href: "/faq", label: "FAQ" },
