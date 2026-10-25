@@ -55,6 +55,7 @@ body > .deliveryAnnouncement ~ * nav {
 
 :root {
   --delivery-announcement-height: 42px;
+  --mobile-action-bar-height: 0px;
   --bg-primary: #FFFFFF;
   --bg-secondary: #F8FDF8;
   --bg-accent: #E8F5E9;
@@ -120,6 +121,22 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   padding-top: var(--delivery-announcement-height);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --mobile-action-bar-height: calc(68px + env(safe-area-inset-bottom, 0px));
+  }
+
+  body {
+    padding-bottom: var(--mobile-action-bar-height);
+  }
+}
+
+@media print {
+  body {
+    padding-bottom: 0;
+  }
 }
 
 a { color: inherit; text-decoration: none; }
