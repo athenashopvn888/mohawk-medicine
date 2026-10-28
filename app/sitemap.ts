@@ -83,12 +83,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
-  const resourcePages: MetadataRoute.Sitemap = RESOURCE_PAGES.map((page) => ({
-    url: page.slug ? `${BASE}/resources/${page.slug}` : `${BASE}/resources`,
-    lastModified: now,
-    changeFrequency: "weekly" as const,
-    priority: page.slug ? 0.65 : 0.75,
-  }));
+  const resourcePages: MetadataRoute.Sitemap = [
+    ...RESOURCE_PAGES.map((page) => ({
+      url: page.slug ? `${BASE}/resources/${page.slug}` : `${BASE}/resources`,
+      lastModified: now,
+      changeFrequency: "weekly" as const,
+      priority: page.slug ? 0.65 : 0.75,
+    })),
+    {
+      url: `${BASE}/resources/dense-vs-fluffy-buds`,
+      lastModified: "2026-10-28",
+      changeFrequency: "weekly" as const,
+      priority: 0.65,
+    },
+  ];
 
   const guidePages: MetadataRoute.Sitemap = [...GUIDE_REGISTRY, ...DELIVERY_GUIDE_REGISTRY].map((guide) => ({
     url: `${BASE}/guides/${guide.slug}`,
