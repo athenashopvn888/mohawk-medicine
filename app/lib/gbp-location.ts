@@ -31,7 +31,7 @@ export const gbpLocation = {
   latitude: String(STORE_NAP.latitude),
   longitude: String(STORE_NAP.longitude),
   hours: [STORE_NAP.hours],
-  seoTitle: "Mohawk Medicine | Weed Dispensary Scarborough | Eglinton East",
+  seoTitle: "Mohawk Medicine | Weed Dispensary near me | Scarborough | Eglinton East",
   metaDescription: "Mohawk Medicine is a 24-hour weed dispensary in Scarborough on Eglinton Ave E, with flower tiers, pre-rolls, edibles, vapes, concentrates, and walk-in details for adults 19+.",
   localLandmarks: ["Eglinton East", "Brimley Rd"],
   introVariant: "Mohawk Medicine is the neighbourhood weed dispensary at 2655 Eglinton Ave E in Scarborough on Eglinton East. Adults 19+ can use this hub to check store basics, menu categories, and current public listings before visiting the walk-in shop.",

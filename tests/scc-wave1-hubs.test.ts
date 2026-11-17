@@ -100,7 +100,7 @@ test("geo weed hub leans Scarborough / Eglinton East while keeping the live Toro
   const gbp = read("app/lib/gbp-location.ts");
   const landing = read("app/components/GBPLandingPage.tsx");
   assert.match(gbp, /slug: "weed-dispensary-toronto"/);
-  assert.match(gbp, /Weed Dispensary Scarborough/);
+  assert.match(gbp, /seoTitle: "Mohawk Medicine \| Weed Dispensary near me \| Scarborough \| Eglinton East"/);
   assert.match(landing, /Weed Dispensary in Scarborough on Eglinton East/);
   assert.match(landing, /weed dispensary near me in Scarborough or on Eglinton East/);
   assert.doesNotMatch(landing, /Ottawa|Gatineau|ByWard/);

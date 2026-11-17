@@ -26,5 +26,7 @@ export const HOME_DELIVERY_FAQS = [
   { q: "Is the delivery information limited to Scarborough?", a: "This homepage describes the Scarborough delivery context only. The current delivery page confirms whether a specific address can be served." },
 ] as const;
 
-// Document <title> only (exact Google name | area). H1 keeps HOME_TITLE.
+// Root layout fallback <title> for routes that do not set their own. H1 keeps HOME_TITLE.
 export const HOME_DOC_TITLE = "Mohawk Craft Dispensary Weed Delivery | Scarborough";
+// Homepage document <title> only. Do not use this as the root layout default.
+export const HOME_PAGE_TITLE = "Mohawk Craft Dispensary near me | Weed Delivery | Scarborough";

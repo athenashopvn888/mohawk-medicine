@@ -46,7 +46,7 @@ test("5th pillar keeps the live geo slug and unique Scarborough H1/FAQ", () => {
 
   assert.match(gbp, /slug: "weed-dispensary-toronto"/);
   assert.match(route, /title:\s*\{\s*absolute:\s*gbpLocation\.seoTitle\s*\}/);
-  assert.match(gbp, /Weed Dispensary Scarborough/);
+  assert.match(gbp, /seoTitle: "Mohawk Medicine \| Weed Dispensary near me \| Scarborough \| Eglinton East"/);
   assert.match(landing, /<h1 className=\{styles\.h1\}>\{H1\}<\/h1>/);
   assert.match(landing, /const H1 = "Weed Dispensary in Scarborough on Eglinton East"/);
   assert.match(landing, /FAQ: Scarborough \/ Eglinton East Weed Dispensary/);
