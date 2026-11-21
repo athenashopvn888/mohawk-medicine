@@ -335,7 +335,7 @@ export default function TV2Page() {
           <HiringRibbon hiring={tvHiring} cigaretteLine={cigaretteFlashLine(tvCig.show, tvCig.wording.tickerLine1)} />
           <div className={styles.grid}>
             {cards.map(card => {
-              const filtered = items.filter(card.filter).filter(it => !(daytime && isNicotineItem(it)));
+              const filtered = items.filter(card.filter).filter(it => card.id === "CIGARETTES" || !(daytime && isNicotineItem(it)));
               const title = card.id === "CIGARETTES" ? tvCig.wording.tv2BoardTitle : card.title;
               const broken = sheetBroken[card.id] || {};
               const sheet = pickTv2Sheet(fleetTv.cards[card.id], {
