@@ -102,6 +102,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly" as const,
       priority: 0.65,
     },
+    {
+      url: `${BASE}/resources/what-is-a-percolator`,
+      lastModified: "2026-11-23",
+      changeFrequency: "weekly" as const,
+      priority: 0.65,
+    },
   ];
 
   const guidePages: MetadataRoute.Sitemap = [...GUIDE_REGISTRY, ...DELIVERY_GUIDE_REGISTRY].map((guide) => ({
