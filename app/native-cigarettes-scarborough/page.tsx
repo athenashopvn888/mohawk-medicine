@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import CigaretteUnavailable from "../components/CigaretteUnavailable";
+import { getCigaretteSnapshot, toPublicCigaretteState } from "../lib/cigaretteFeed";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import CigaretteSeasonalNotice from "../components/CigaretteSeasonalNotice";
@@ -81,7 +83,12 @@ const faqSchema = {
   })),
 };
 
-export default function NativeCigarettesScarboroughPage() {
+export const dynamic = "force-dynamic";
+
+export default async function NativeCigarettesScarboroughPage() {
+  if (!toPublicCigaretteState(await getCigaretteSnapshot()).web) {
+    return <><Navbar /><main><CigaretteUnavailable /></main><Footer /></>;
+  }
   return (
     <main className={styles.main}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
