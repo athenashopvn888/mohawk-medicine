@@ -1,8 +1,11 @@
-import { SHOW_CIGARETTES } from "../lib/siteConfig";
+"use client";
+
+import { useCigaretteState } from "./CigaretteStateProvider";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 
 export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean }) {
+  const { web: showCigarettes } = useCigaretteState();
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
@@ -64,13 +67,13 @@ export default function Footer({ hideThcVape = false }: { hideThcVape?: boolean 
               {!hideThcVape && <Link href="/items/vape-disposables">THC Vape</Link>}
               <Link href="/items/concentrates">Concentrates</Link>
               <Link href="/items/magic">Magic Stuff</Link>
-              {SHOW_CIGARETTES ? (<Link href="/items/cigarettes">Cigarettes</Link>) : null}
+              {showCigarettes ? (<Link href="/items/cigarettes">Cigarettes</Link>) : null}
               <Link href="/visit">24-Hour Walk-In Guide</Link>
               <Link href="/near-me">Dispensary Near Me FAQ</Link>
               <Link href="/mohawk-craft-visit">Mohawk Craft Visit FAQ</Link>
               <Link href="/info/scarborough-weed-dispensary">Scarborough Dispensary</Link>
               <Link href="/info/cheap-weed-scarborough">Cheap Weed Scarborough</Link>
-              {SHOW_CIGARETTES ? (<Link href="/native-cigarettes-scarborough">Native Cigarettes Scarborough</Link>) : null}
+              {showCigarettes ? (<Link href="/native-cigarettes-scarborough">Native Cigarettes Scarborough</Link>) : null}
               <Link href="/nicotine-vape-scarborough">Nicotine Vapes Scarborough</Link>
               <Link href="/info/weed-store-near-eglinton-east">Weed Store Near Eglinton East</Link>
               <Link href="/items/add-ons">Accessories</Link>

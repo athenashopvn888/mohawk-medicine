@@ -1,6 +1,6 @@
 "use client";
 
-import { SHOW_CIGARETTES } from "../lib/siteConfig";
+import { useCigaretteState } from "./CigaretteStateProvider";
 
 
 import { useEffect, useState } from "react";
@@ -21,6 +21,7 @@ function isHalloweenNoticeActive(date: Date) {
 }
 
 export default function FleetAnnouncementBanner() {
+  const { web: showCigarettes } = useCigaretteState();
   const [showHalloweenNotice, setShowHalloweenNotice] = useState(false);
 
   useEffect(() => {
@@ -47,7 +48,7 @@ export default function FleetAnnouncementBanner() {
           alt="TOP WEED TIER at Mohawk Medicine — Exotic, Premium, and AAA+ weed with Buy 2g Get 1g FREE and Buy 3g Get 3g FREE."
         />
       </Link>
-{SHOW_CIGARETTES ? (<Link href="/items/cigarettes" data-cig-mix-banner="" aria-label="Shop cigarette mix-and-match deals">
+{showCigarettes ? (<Link href="/items/cigarettes" data-cig-mix-banner="" aria-label="Shop cigarette mix-and-match deals">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/banners/native-cigarette-offer-20260822.webp"
